@@ -1,0 +1,36 @@
+{
+  "mod_elements": [],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {}
+  },
+  "metadata": {
+    "files": [
+      "src/main/pack.mcmeta"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "amigos_do_mine_rp",
+    "modName": "Amigos do Mine RP",
+    "version": "1.0.0",
+    "description": "Amigos do Mine RP",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "resourcepack-1.21.8",
+    "modElementsPackage": "net.mcreator.amigosdominerp"
+  },
+  "mcreatorVersion": 202500345720
+}
