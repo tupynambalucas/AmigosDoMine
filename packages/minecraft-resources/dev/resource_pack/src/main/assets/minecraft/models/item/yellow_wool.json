@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "minecraft:block/yellow_wool"
+  },
+
+  "overrides": [
+    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/sellshop"},
+    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/sellshop"}
+  ]
+}

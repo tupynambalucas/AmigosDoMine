@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/wheat"
+  },
+
+  "overrides": [
+    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/push"},
+    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/push"},
+    {"predicate": { "custom_model_data": 18003}, "model": "magic:icons/spells/smash"},
+    {"predicate": { "custom_model_data": 18004}, "model": "magic:icons_disabled/spells/smash"}
+  ]
+}

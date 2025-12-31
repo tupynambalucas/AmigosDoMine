@@ -1,0 +1,50 @@
+{
+  "name": "@amigos-do-mine/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "author": "Tupynambá Lucas Varela Rodrigues <tupynambalucas.dev>",
+  "license": "CC-BY-NC-4.0",
+  "homepage": "https://github.com/tupynambalucas/EloOrganico/tree/main/packages/frontend#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tupynambalucas/EloOrganico.git",
+    "directory": "packages/frontend"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.build.json && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@amigos-do-mine/shared": "*",
+    "@fontsource/nunito": "^5.2.7",
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-brands-svg-icons": "^7.1.0",
+    "@fortawesome/free-regular-svg-icons": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.1",
+    "@gsap/react": "^2.1.2",
+    "axios": "^1.13.2",
+    "date-fns": "^4.1.0",
+    "gsap": "^3.13.0",
+    "i18next": "^25.7.3",
+    "react": "^19.2.0",
+    "react-datepicker": "^8.10.0",
+    "react-dom": "^19.2.0",
+    "react-i18next": "^16.5.0",
+    "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.0.0-rc.0",
+    "@types/react-dom": "^19.0.0-rc.0",
+    "@vitejs/plugin-react-swc": "^4.0.0",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.1.2",
+    "vite-plugin-svgr": "^4.3.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}

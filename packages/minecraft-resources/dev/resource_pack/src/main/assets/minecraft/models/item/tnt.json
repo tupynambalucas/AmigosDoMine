@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/tnt",
+
+  "overrides": [
+    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/grenade"},
+    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/grenade"},
+    {"predicate": { "custom_model_data": 18003}, "model": "magic:icons/spells/no"},
+    {"predicate": { "custom_model_data": 18004}, "model": "magic:icons_disabled/spells/no"}
+  ]
+}

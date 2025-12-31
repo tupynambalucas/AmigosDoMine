@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/black_carpet",
+
+  "overrides": [
+    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/bomb"},
+    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/bomb"}
+  ]
+}

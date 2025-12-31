@@ -1,0 +1,31 @@
+services:
+  db:
+    restart: always
+
+  redis:
+    restart: always
+
+  backend:
+    restart: on-failure
+    ports:
+      - '3000:3000'
+
+  frontend:
+    restart: always
+    ports:
+      - '80:80'
+
+  minecraft:
+    restart: always
+    user: minecraft
+    ports:
+      - '25565:25565'
+    environment:
+      - MC_ENV=production
+      - API_URL=http://backend:3000
+    deploy:
+      resources:
+        limits:
+          # Limite HARD do Docker (segurança para não estourar a RAM da VPS)
+          # Deve ser um pouco maior que o Xmx definido no .env
+          memory: 9G

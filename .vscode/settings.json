@@ -1,0 +1,61 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.eslintcache": true,
+    "**/node_modules": true,
+    "**/dist": false
+  },
+  "eslint.debug": false,
+  "eslint.trace.server": "off",
+  "eslint.useFlatConfig": true,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.options": {
+    "cache": true,
+    "cacheLocation": ".eslintcache"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "off",
+    "source.organizeImports": "never"
+  },
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[javascriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "off"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "off"
+    }
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.includePackageJsonAutoImports": "off",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "json.schemaDownload.enable": true,
+  "typescript.tsserver.log": "off",
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.suggest.autoImports": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "chat.extensionUnification.enabled": true,
+  "javascript.suggest.includeCompletionsForImportStatements": false,
+  "typescript.suggest.includeCompletionsForImportStatements": false
+}

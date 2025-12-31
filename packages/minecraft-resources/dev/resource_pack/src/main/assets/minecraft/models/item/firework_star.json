@@ -1,0 +1,11 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "minecraft:item/firework_star",
+        "layer1": "minecraft:item/firework_star_overlay"
+    },
+  "overrides": [
+    {"predicate": {"custom_model_data": 18001}, "model": "magic:icons/spells/flare"},
+    {"predicate": {"custom_model_data": 18002}, "model": "magic:icons_disabled/spells/flare"}
+  ]
+}

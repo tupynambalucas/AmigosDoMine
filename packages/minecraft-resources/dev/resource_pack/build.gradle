@@ -1,0 +1,19 @@
+tasks.register('build', Zip.class) {
+    from 'src/main'
+    archiveFileName = 'resource_pack.zip'
+    destinationDirectory = file('../../output/resource_pack/')
+}
+
+tasks.register('syncDataPack', Copy) {
+    from("../dev/output/resource_pack/resource_pack.zip")
+    into("run/resourcepacks/")
+    dependsOn 'build'
+}
+
+project(':packloader') {
+    afterEvaluate {
+        tasks.named('runClient') {
+            dependsOn(rootProject.tasks.named('syncDataPack'))
+        }
+    }
+}
