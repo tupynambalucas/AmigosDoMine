@@ -8,16 +8,16 @@ Whether you are compiling Kotlin or painting pixels, this is your home.
 
 ## 📂 The Dual Structure
 
-We split the work into two dedicated development environments inside the `dev/` folder:
+We split the work into two dedicated development environments inside this folder:
 
 | Folder | Purpose | Tooling | Output |
 | :--- | :--- | :--- | :--- |
-| **`amigos-plugin`** | 🧠 **Server Brain:** Custom mechanics, commands, and events. | **IntelliJ IDEA** (Kotlin/Gradle) | `build/amigos-plugin/` |
-| **`amigos-resourcepack`** | 🎭 **Server Face:** 3D models, textures, sounds, and UI. | **MCreator** | `build/amigos-resourcepack/` |
+| **`masterplugin`** | 🧠 **Server Brain:** Custom mechanics, commands, and events. | **IntelliJ IDEA** (Kotlin/Gradle) | `build/masterplugin/` |
+| **`resourcepack`** | 🎭 **Server Face:** 3D models, textures, sounds, and UI. | **MCreator** | `build/resourcepack/` |
 
 ---
 
-## 🧠 1. The Master Plugin (`amigos-plugin`)
+## 🧠 1. The Master Plugin (`masterplugin`)
 
 This is the custom logic that makes our server unique. It's built with **Kotlin** running on **Paper/Purpur API**.
 
@@ -27,19 +27,19 @@ This is the custom logic that makes our server unique. It's built with **Kotlin*
 *   **Shadowing:** We bundle our deps using `ShadowJar`.
 
 ### 🚀 How to Build
-Open `dev/amigos-plugin` in IntelliJ IDEA.
+Open `masterplugin` in IntelliJ IDEA.
 
 ```bash
-# From packages/minecraft-resources/dev/amigos-plugin
+# From packages/resources-devlopment/masterplugin
 ./gradlew build
 ```
 
 **The Magic:** The `build.gradle.kts` is configured to automatically output the compiled jar to:
-`../../build/amigos-plugin/AmigosPlugin.jar`
+`../build/masterplugin/AmigosPlugin.jar`
 
 ---
 
-## 🎭 2. The Resource Pack (`amigos-resourcepack`)
+## 🎭 2. The Resource Pack (`resourcepack`)
 
 This is where we redefine the look of Minecraft. We use **MCreator** to empower creators to build without complex coding.
 
@@ -51,7 +51,7 @@ This is where we redefine the look of Minecraft. We use **MCreator** to empower 
 1.  Open your workspace in **MCreator**.
 2.  Design your custom blocks, items, and GUIs.
 3.  **Export to Folder:** Select the export option that generates the raw files.
-4.  **Target:** Ensure the output goes to `packages/minecraft-resources/build/amigos-resourcepack/`.
+4.  **Target:** Ensure the output goes to `packages/resources-devlopment/build/resourcepack/`.
 
 ---
 
@@ -60,8 +60,8 @@ This is where we redefine the look of Minecraft. We use **MCreator** to empower 
 Once assets are built, they don't stay here. They are destined for the **Backend**.
 
 1.  **Build Phase:**
-    *   Plugin ➡️ `build/amigos-plugin/`
-    *   Textures ➡️ `build/amigos-resourcepack/`
+    *   Plugin ➡️ `build/masterplugin/`
+    *   Textures ➡️ `build/resourcepack/`
 2.  **Distribution Phase:**
     *   The **Backend** picks up these artifacts to host them for the game server (Resource Pack Hosting) or for deployment scripts.
 

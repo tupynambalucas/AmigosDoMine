@@ -25,7 +25,7 @@
     "dev:minecraft:attach": "docker compose attach minecraft",
     "dev:stack": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "// [3] MINECRAFT RESOURCE DEVELOPMENT": "----------------------------------------------------",
-    "build:plugin": "cd packages/minecraft-resources/dev/amigos-plugin && .\\gradlew shadowJar",
+    "build:plugin": "cd packages/resources-devlopment/masterplugin && .\\gradlew shadowJar",
     "// [3] SEED MONGODB": "----------------------------------------------------",
     "backend:seed": "npm run seed -w @amigos-do-mine/backend",
     "// [4] INFRAESTRUTURA LOCAL (DOCKER)": "---------------------------------------------",

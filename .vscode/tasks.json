@@ -6,13 +6,13 @@
       "type": "shell",
       "command": "./gradlew shadowJar",
       "options": {
-        "cwd": "${workspaceFolder}/packages/minecraft-resources/dev/amigos-plugin"
+        "cwd": "${workspaceFolder}/packages/resources-devlopment/masterplugin"
       },
       "group": {
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": ["$scalac"]
+      "problemMatcher": []
     },
 
     {

@@ -1,5 +1,5 @@
 {
-  "name": "@amigos-do-mine/minecraft-resources",
+  "name": "@amigos-do-mine/resource-devlopment",
   "version": "0.1.0",
   "private": true,
   "description": "Amigos Do Mine - Creative Studio (Plugin & Resource Pack)",
@@ -9,6 +9,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tupynambalucas/EloOrganico.git",
-    "directory": "packages/minecraft-resources"
+    "directory": "packages/resources-devlopment"
   }
 }

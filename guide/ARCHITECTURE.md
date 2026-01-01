@@ -12,7 +12,7 @@ We manage everything with NPM Workspaces. Here's the lineup:
 2.  **`@amigos-do-mine/frontend`**: The Face. A **React 19** SPA that looks pretty and lets you control the chaos.
 3.  **`@amigos-do-mine/shared`**: The Law. **Zod** schemas and Types that everyone must obey.
 4.  **`packages/minecraft`**: The Playground. A dockerized **Purpur 1.21+** server.
-5.  **`packages/minecraft-resources`**: The Studio. Where we cook up custom plugins (Kotlin) and assets (MCreator).
+5.  **`packages/resources-devlopment`**: The Studio. Where we cook up custom plugins (Kotlin) and assets (MCreator).
 
 ## 2. How It Connects (Topology) 🕸️
 
@@ -37,7 +37,7 @@ The **`shared`** package is the boss.
 
 This is our secret sauce for assets:
 
-1.  **Cook**: You make a cool 3D sword in `minecraft-resources`.
+1.  **Cook**: You make a cool 3D sword in `resources-devlopment`.
 2.  **Pack**: Our scripts bundle it into a `.zip`.
 3.  **Serve**: The file moves to the `backend`'s public folder.
 4.  **Eat**: The `minecraft` server sees the update and tells every connected player to download the new pack automatically.

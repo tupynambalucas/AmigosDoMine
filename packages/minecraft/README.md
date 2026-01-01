@@ -34,7 +34,7 @@ This command will:
 ## 🧩 Plugins & Configs
 
 *   **Third-Party Plugins:** Place `.jar` files in `plugins/`.
-*   **Amigos Plugin:** Our custom logic lives in `packages/minecraft-resources`. Build it there, and it will be deployed here! 🧠
+*   **Amigos Plugin:** Our custom logic lives in `packages/resources-devlopment`. Build it there, and it will be deployed here! 🧠
 *   **Configs:** Tweak `config/` files as needed.
 
 > **Note:** The Dockerfile handles the setup during the build/startup phase.

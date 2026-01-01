@@ -18,7 +18,7 @@ We use **NPM Workspaces** to keep everything cozy under one roof. Here's the squ
 | **`frontend`** | 💅 The Face | **React 19**, TailwindCSS v4, Zustand. The admin dashboard. |
 | **`shared`** | 🤝 The Truce | **Zod**, TypeScript. Ensures Backend and Frontend speak the same language. |
 | **`minecraft`** | 🏰 The Castle | **Purpur 1.21+**, Docker. The actual game server environment. |
-| **`minecraft-resources`** | 🎨 The Studio | **Kotlin** & **MCreator**. Home of the Master Plugin & Resource Pack. |
+| **`packages/resources-devlopment`** | 🎨 The Studio | **Kotlin** & **MCreator**. Home of the Master Plugin & Resource Pack. |
 
 ---
 
@@ -45,7 +45,7 @@ npm run dev:stack
 npm run dev:minecraft
 ```
 
-> **💡 Pro Tip:** Check `packages/minecraft-resources` to learn how to compile the custom plugin and textures!
+> **💡 Pro Tip:** Check `packages/resources-devlopment` to learn how to compile the custom plugin and textures!
 
 ---
 
@@ -53,7 +53,7 @@ npm run dev:minecraft
 
 We follow a strict **"Single Source of Truth"** policy.
 *   **Type Safety:** We don't guess types; we define them in `@amigos-do-mine/shared`.
-*   **Asset Integrity:** Textures start in `minecraft-resources`, move to `backend`, and land in `minecraft`.
+*   **Asset Integrity:** Textures start in `resources-devlopment`, move to `backend`, and land in `minecraft`.
 *   **Language:** We code in **English**, but our heart (and project name) is in **Portuguese**.
 
 ---

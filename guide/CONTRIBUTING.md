@@ -45,7 +45,7 @@ This keeps us sane and type-safe!
 *   **Naming**:
     *   TS Files: `camelCase.ts`
     *   Textures: `snake_case.png` (Minecraft hates capital letters in files).
-*   **Assets**: Don't manually dump files in `backend/public`. Use the `minecraft-resources` pipeline. It's there for a reason!
+*   **Assets**: Don't manually dump files in `backend/public`. Use the `resources-devlopment` pipeline. It's there for a reason!
 
 ## 4. Submitting Your Art 🎨
 1.  Run `npm run lint` (Make it pretty).

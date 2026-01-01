@@ -1,0 +1,4 @@
+name: masterplugin
+version: '1.0-SNAPSHOT'
+main: com.amigosdomine.masterplugin.AmigosPlugin
+api-version: '1.21'
