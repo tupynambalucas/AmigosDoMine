@@ -19,14 +19,13 @@
     "fwcd.kotlin",
     "github.copilot",
     "github.copilot-chat",
-    "golang.go",
     "google.gemini-cli-vscode-ide-companion",
     "leonardssh.vscord",
     "redhat.java",
+    "the-repo-mule.sym-pick",
     "vscjava.vscode-gradle",
     "vscjava.vscode-java-debug",
     "vscjava.vscode-java-pack",
-    "vscjava.vscode-java-test",
     "vscjava.vscode-maven"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
