@@ -24,7 +24,7 @@ tasks {
 
     named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
         archiveClassifier.set("")
-        val destPath = projectDir.parentFile.parentFile.resolve("build/plugins")
+        val destPath = projectDir.parentFile.parentFile.resolve("build/amigos-plugin")
         destinationDirectory.set(destPath)
         archiveFileName.set("AmigosPlugin.jar")
     }

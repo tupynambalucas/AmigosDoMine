@@ -76,7 +76,182 @@
   "java.import.gradle.enabled": true,
   "kotlin.compiler.jvm.target": "21",
   "search.exclude": {
-    "**/.gradle": true
+    "**/.gradle": true,
+    "**/packloader": true
   },
-  "java.project.sourcePaths": ["packages/minecraft-resources/dev/amigos-plugin"]
+  "java.import.exclusions": [
+    "**/node_modules/**",
+    "**/.metadata/**",
+    "**/archetype-resources/**",
+    "**/META-INF/maven/**"
+  ],
+  "java.project.sourcePaths": ["packages/minecraft-resources/dev/amigos-plugin"],
+  "java.configuration.updateBuildConfiguration": "interactive",
+
+  "[chatagent]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "on",
+      "other": "on"
+    },
+    "editor.wordBasedSuggestions": "off"
+  },
+  "[clojure]": {
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "[coffeescript]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never"
+  },
+  "[csharp]": {
+    "editor.maxTokenizationLineLength": 2500
+  },
+  "[css]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced"
+  },
+  "[dockerfile]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  "[fsharp]": {
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "[git-commit]": {
+    "editor.rulers": [50, 72],
+    "editor.wordWrap": "off",
+    "workbench.editor.restoreViewState": false
+  },
+  "[git-rebase]": {
+    "workbench.editor.restoreViewState": false
+  },
+  "[go]": {
+    "editor.insertSpaces": false
+  },
+  "[handlebars]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "[html]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "[instructions]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "on",
+      "other": "on"
+    },
+    "editor.wordBasedSuggestions": "off"
+  },
+  "[jade]": {
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "[java]": {
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "[javascript]": {
+    "editor.maxTokenizationLineLength": 2500
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[julia]": {
+    "editor.defaultColorDecorators": "never"
+  },
+  "[less]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false
+  },
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "[plaintext]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false
+  },
+  "[prompt]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "on",
+      "other": "on"
+    },
+    "editor.wordBasedSuggestions": "off"
+  },
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never"
+  },
+  "[ruby]": {
+    "editor.defaultColorDecorators": "never"
+  },
+  "[scss]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "[search-result]": {
+    "editor.lineNumbers": "off"
+  },
+  "[shellscript]": {
+    "files.eol": "\n",
+    "editor.defaultColorDecorators": "never"
+  },
+  "[snippets]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never",
+    "editor.quickSuggestions": {
+      "strings": "on"
+    }
+  }
 }
