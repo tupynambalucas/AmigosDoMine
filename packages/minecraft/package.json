@@ -1,0 +1,14 @@
+{
+  "name": "@amigos-do-mine/minecraft",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Amigos Do Mine - Game Server (Purpur)",
+  "author": "Tupynambá Lucas Varela Rodrigues <tupynambalucas.dev>",
+  "license": "CC-BY-NC-4.0",
+  "homepage": "https://tupynambalucas.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tupynambalucas/EloOrganico.git",
+    "directory": "packages/minecraft"
+  }
+}

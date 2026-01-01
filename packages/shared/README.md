@@ -1,40 +1,31 @@
-# Shared Library - Elo Orgânico (@elo-organico/shared)
+# 🤝 Amigos Do Mine - Shared
 
-This package plays the fundamental role of **Single Source of Truth** within the Elo Orgânico Monorepo architecture.
+**The Single Source of Truth.** 📜⚖️
 
-Its goal is to ensure data integrity and consistency by sharing interface contracts, validation rules, and constants between the **Server (Backend)** and the **Client (Frontend)**.
+This tiny package carries the weight of the world. It ensures that the **Backend** and **Frontend** are always on the same page. If a data structure exists, it is defined **here**.
 
-## 📦 Exported Components
+## 📦 What's Inside?
 
-The library provides the following resources to other modules:
+1.  **Zod Schemas**: Robust validation rules. If it doesn't pass Zod, it doesn't get in. 🛡️
+2.  **TypeScript Interfaces**: Inferred directly from Zod. No manual typing, no human error. 🤖
+3.  **Constants**: Magic numbers and global strings live here.
 
-1.  **Validation Schemas (Zod)**:
-    * Rigorous definitions for entities such as `User`, `Product`, `Cycle`, and `Auth`.
-    * Used in the Backend for Payload validation and in the Frontend for Form validation.
+## 🔄 The Workflow
 
-2.  **TypeScript Typing**:
-    * Static types inferred automatically from Zod Schemas (`z.infer<>`).
-    * Ensures that changes in the data model are reflected at compile time throughout the project.
+Changes here ripple through the entire ecosystem.
 
-3.  **Global Constants**:
-    * Configurations and fixed values shared between environments.
+1.  **Edit**: Change a schema in `src/schemas`.
+2.  **Build**: Run `npm run build`.
+3.  **Enjoy**: Your Frontend and Backend will immediately know about the update (or yell at you if you broke something).
 
----
+## 🛠️ Commands
 
-## 🔄 Development and Maintenance Flow
+```bash
+# Watch mode - perfect for active development
+npm run dev
 
-To maintain system consistency, any change in data modeling must follow this flow:
+# Build - finalize the types
+npm run build
+```
 
-1.  **Modification**: Modify the desired schema or constant in `src/schemas` or `src/constants.ts`.
-2.  **Compilation**: Execute the package build to generate distribution files and type definitions (`.d.ts`):
-    ```bash
-    npm run build
-    ```
-3.  **Propagation**: TypeScript will automatically detect changes in the `@elo-organico/backend` and `@elo-organico/frontend` modules, pointing out any inconsistencies that need refactoring.
-
-## 🛠 Available Commands
-
-* **`npm run build`**: Cleans the `dist` directory, compiles TypeScript, and generates type declarations.
-* **`npm run dev`**: Runs compilation in *Watch* mode, ideal for simultaneous development of business rules and interfaces.
-* **`npm run typecheck`**: Verifies type integrity without generating output files.
-* **`npm run lint`**: Ensures source code standardization.
+> **Remember:** Never duplicate a type in Frontend or Backend. Import it from here! 👈

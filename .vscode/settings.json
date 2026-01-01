@@ -1,17 +1,41 @@
 {
+  // ==================== GitHub Copilot ====================
+  // Enable Copilot for specific file types (disable for plaintext and scminput)
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "json": true,
+    "jsonc": true,
+    "scminput": false
+  },
+  // Use instructions from .github/copilot-instructions.md
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  // Temperature controls randomness: 0 = deterministic (best for code), 1 = creative
+  "github.copilot.chat.agent.temperature": 0.2,
+  // Include current editor context in suggestions
+  "github.copilot.chat.agent.currentEditorContext.enabled": true,
+  // Enable new Responses API for better performance
+  "github.copilot.chat.useResponsesApi": true,
+  // Use project templates for scaffolding
+  "github.copilot.chat.useProjectTemplates": true,
+  // Enable inline edit suggestions
+  "github.copilot.nextEditSuggestions.enabled": true,
+  // Show suggestions for code fixes
+  "github.copilot.nextEditSuggestions.fixes": true,
+  // Enable code review agent
+  "github.copilot.chat.reviewAgent.enabled": true,
+  // Enable test generation
+  "github.copilot.chat.setupTests.enabled": true,
+
+  // ==================== Files & Search ====================
   "files.exclude": {
-    "**/.gradle": true,
     "**/.git": true,
     "**/.eslintcache": true,
-    "**/node_modules": true,
-    "**/dist": false,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/.gradle": false
+    "**/node_modules": true
   },
+  "json.schemaDownload.enable": true,
+  // ==================== ESLint ====================
   "eslint.debug": false,
   "eslint.trace.server": "off",
   "eslint.useFlatConfig": true,
@@ -25,11 +49,9 @@
     "cache": true,
     "cacheLocation": ".eslintcache"
   },
+
+  // ==================== Editor ====================
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "off",
-    "source.organizeImports": "never"
-  },
   "editor.formatOnSave": true,
   "[javascript]": {
     "editor.codeActionsOnSave": {
@@ -51,207 +73,13 @@
       "source.fixAll.eslint": "off"
     }
   },
+  // ==================== TypeScript ====================
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.preferences.includePackageJsonAutoImports": "off",
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
-  "json.schemaDownload.enable": true,
   "typescript.tsserver.log": "off",
   "typescript.tsserver.maxTsServerMemory": 8192,
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.suggest.autoImports": true,
-  "css.validate": false,
-  "scss.validate": false,
-  "less.validate": false,
-  "chat.extensionUnification.enabled": true,
-  "javascript.suggest.includeCompletionsForImportStatements": false,
-  "typescript.suggest.includeCompletionsForImportStatements": false,
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-21",
-      "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.9.10-hotspot",
-      "default": true
-    }
-  ],
-  "java.compile.nullAnalysis.mode": "automatic",
-  "java.import.gradle.enabled": true,
-  "kotlin.compiler.jvm.target": "21",
-  "search.exclude": {
-    "**/.gradle": true,
-    "**/packloader": true
-  },
-  "java.import.exclusions": [
-    "**/node_modules/**",
-    "**/.metadata/**",
-    "**/archetype-resources/**",
-    "**/META-INF/maven/**"
-  ],
-  "java.project.sourcePaths": ["packages/minecraft-resources/dev/amigos-plugin"],
-  "java.configuration.updateBuildConfiguration": "interactive",
-
-  "[chatagent]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "strings": "on",
-      "other": "on"
-    },
-    "editor.wordBasedSuggestions": "off"
-  },
-  "[clojure]": {
-    "diffEditor.ignoreTrimWhitespace": false
-  },
-  "[coffeescript]": {
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.defaultColorDecorators": "never"
-  },
-  "[csharp]": {
-    "editor.maxTokenizationLineLength": 2500
-  },
-  "[css]": {
-    "editor.suggest.insertMode": "replace"
-  },
-  "[dockercompose]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced"
-  },
-  "[dockerfile]": {
-    "editor.quickSuggestions": {
-      "strings": true
-    }
-  },
-  "[fsharp]": {
-    "diffEditor.ignoreTrimWhitespace": false
-  },
-  "[git-commit]": {
-    "editor.rulers": [50, 72],
-    "editor.wordWrap": "off",
-    "workbench.editor.restoreViewState": false
-  },
-  "[git-rebase]": {
-    "workbench.editor.restoreViewState": false
-  },
-  "[go]": {
-    "editor.insertSpaces": false
-  },
-  "[handlebars]": {
-    "editor.suggest.insertMode": "replace"
-  },
-  "[html]": {
-    "editor.suggest.insertMode": "replace"
-  },
-  "[instructions]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "strings": "on",
-      "other": "on"
-    },
-    "editor.wordBasedSuggestions": "off"
-  },
-  "[jade]": {
-    "diffEditor.ignoreTrimWhitespace": false
-  },
-  "[java]": {
-    "editor.suggest.snippetsPreventQuickSuggestions": false
-  },
-  "[javascript]": {
-    "editor.maxTokenizationLineLength": 2500
-  },
-  "[json]": {
-    "editor.quickSuggestions": {
-      "strings": true
-    },
-    "editor.suggest.insertMode": "replace"
-  },
-  "[jsonc]": {
-    "editor.quickSuggestions": {
-      "strings": true
-    },
-    "editor.suggest.insertMode": "replace"
-  },
-  "[julia]": {
-    "editor.defaultColorDecorators": "never"
-  },
-  "[less]": {
-    "editor.suggest.insertMode": "replace"
-  },
-  "[makefile]": {
-    "editor.insertSpaces": false
-  },
-  "[markdown]": {
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "strings": "off",
-      "other": "off"
-    }
-  },
-  "[plaintext]": {
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false
-  },
-  "[prompt]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "strings": "on",
-      "other": "on"
-    },
-    "editor.wordBasedSuggestions": "off"
-  },
-  "[python]": {
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.defaultColorDecorators": "never"
-  },
-  "[ruby]": {
-    "editor.defaultColorDecorators": "never"
-  },
-  "[scss]": {
-    "editor.suggest.insertMode": "replace"
-  },
-  "[search-result]": {
-    "editor.lineNumbers": "off"
-  },
-  "[shellscript]": {
-    "files.eol": "\n",
-    "editor.defaultColorDecorators": "never"
-  },
-  "[snippets]": {
-    "editor.quickSuggestions": {
-      "strings": true
-    },
-    "editor.suggest.insertMode": "replace"
-  },
-  "[yaml]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.defaultColorDecorators": "never",
-    "editor.quickSuggestions": {
-      "strings": "on"
-    }
-  }
+  "typescript.suggest.includeCompletionsForImportStatements": false
 }

@@ -5,7 +5,9 @@
 Any AI assistant interacting with **Amigos Do Mine** must adhere to these non-negotiable standards:
 
 - **Asset Integrity**: Never modify raw assets in `packages/minecraft-resources` without verifying the export path to the `backend` hosting directory.
-- **Type Integrity**: No usage of `any`. All data shapes must derive from `@elo-organico/shared`.
+- **Type Integrity**: No usage of `any`. All data shapes must derive from `@amigos-do-mine/shared`.
+  - **Strict Mode Enforcement**: Strict typing is enforced via `eslint.config.ts` specifically for `@packages/shared`, `@packages/backend`, and `@packages/frontend`.
+  - **Exemption**: Java-based packages (`packages/minecraft`, `packages/minecraft-resources`) are **not** affected by ESLint rules.
 - **Async Integrity**: All Java-based I/O (specifically fetching resource packs or API calls) must be asynchronous to maintain server TPS.
 
 ## 2. Resource & Asset Standards (`packages/minecraft-resources`)

@@ -8,9 +8,9 @@
 
 ### 2.1 Package Domains
 
-- **`@elo-organico/shared`**: The immutable core. It centralizes Zod schemas and TypeScript interfaces to prevent runtime data drift between the API and the Client.
-- **`@elo-organico/backend`**: A scalable Fastify v5 gateway. Beyond business logic and persistence, it serves as the **Asset Distribution Hub**, hosting and providing resource packs via specialized endpoints for in-game consumption.
-- **`@elo-organico/frontend`**: A React 19 SPA optimized with Vite. It features a reactive UI powered by Zustand and TailwindCSS v4 for administrative control.
+- **`@amigos-do-mine/shared`**: The immutable core. It centralizes Zod schemas and TypeScript interfaces to prevent runtime data drift between the API and the Client.
+- **`@amigos-do-mine/backend`**: A scalable Fastify v5 gateway. Beyond business logic and persistence, it serves as the **Asset Distribution Hub**, hosting and providing resource packs via specialized endpoints for in-game consumption.
+- **`@amigos-do-mine/frontend`**: A React 19 SPA optimized with Vite. It features a reactive UI powered by Zustand and TailwindCSS v4 for administrative control.
 - **`packages/minecraft`**: A stateful Purpur server environment. It consumes resources served by the backend and maintains game state with high-performance configurations.
 - **`packages/minecraft-resources` (Creative Layer)**: The dedicated environment for developing textures, 3D models (items/blocks), and custom configurations. Assets developed here are staged for deployment to the Backend's distribution layer.
 

@@ -1,0 +1,25 @@
+{
+  "javascript.suggest.includeCompletionsForImportStatements": false,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.9.10-hotspot",
+      "default": true
+    }
+  ],
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.import.gradle.enabled": true,
+  "kotlin.compiler.jvm.target": "21",
+  "search.exclude": {
+    "**/.gradle": true,
+    "**/packloader": true
+  },
+  "java.import.exclusions": [
+    "**/node_modules/**",
+    "**/.metadata/**",
+    "**/archetype-resources/**",
+    "**/META-INF/maven/**"
+  ],
+  "java.project.sourcePaths": ["packages/minecraft-resources/dev/amigos-plugin"],
+  "java.configuration.updateBuildConfiguration": "interactive"
+}

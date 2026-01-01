@@ -1,82 +1,57 @@
-# Backend Module - Elo Orgânico
+# 🧠 Amigos Do Mine - Backend
 
-This directory contains the API for the Elo Orgânico system, developed with a focus on high performance, security, and long-term maintainability. The application follows **Domain-Driven Design (DDD)** principles to ensure decoupling of business rules and system scalability.
+**The Engine Room of the Ecosystem.** ⚙️🔥
 
-## 🛠 Technology Stack
+Welcome to the backend! This isn't your average API. We are running on **Fastify v5**, making it blazingly fast and efficient. This service handles everything from player authentication to serving the custom resource packs that make our server unique.
 
-The server architecture utilizes cutting-edge technologies from the Node.js ecosystem:
+## 🛠️ The Tech Stack
 
-* **Runtime**: Node.js v20+
-* **Web Framework**: [Fastify v5](https://www.fastify.io/) (Superior performance compared to Express)
-* **Language**: TypeScript (Strict Mode enabled for type safety)
-* **Database**: MongoDB v7 (Modeling via Mongoose)
-* **Cache & Session**: Redis (Management via IORedis)
-* **Data Validation**: Zod (Integrated into Fastify Type Provider)
-* **Asynchronous Processing**: BullMQ (Task queue management)
-* **Payments**: Official EFI Bank SDK (Pix Integration)
-* **Observability**: Sentry (Real-time error monitoring)
+*   **Runtime:** Node.js v20+ (The powerhouse)
+*   **Framework:** [Fastify v5](https://www.fastify.io/) (Because speed matters)
+*   **Database:** MongoDB v7 (Mongoose for modeling)
+*   **Caching:** Redis (Keeping things snappy)
+*   **Validation:** Zod (Trust, but verify)
+*   **Tasks:** BullMQ (For the heavy lifting in the background)
 
----
+## 📂 Architecture
 
-## 📂 Project Architecture
-
-The folder structure reflects the separation by business domains, facilitating navigation and maintenance:
+We keep things tidy with **Domain-Driven Design (DDD)**. No spaghetti code here! 🍝❌
 
 ```text
 src/
-├── config/           # Global configurations (Env, Queues, Fastify)
-├── domains/          # Application Core (Business Rules)
-│   ├── auth/         # Authentication and Session Management
-│   ├── cycle/        # Sharing Cycle Management
-│   └── product/      # Product Catalog and Inventory
-├── models/           # Persistence Schemas (Mongoose)
-├── plugins/          # Fastify Ecosystem Plugins (Security, DB)
-├── scripts/          # Automation and Maintenance Scripts (Seeds)
-└── utils/            # Utility Libraries and Helpers
+├── config/       # ⚙️ Knobs and dials (Env, Fastify setup)
+├── domains/      # 📦 Business logic lives here
+│   ├── auth/     # Security checks
+│   └── product/  # Item management
+├── plugins/      # 🔌 Fastify superpowers (DB, Auth, Sentry)
+└── utils/        # 🛠️ Handy tools
 ```
 
-### Adopted Patterns
-* **Repository Pattern**: Abstraction of the data access layer.
-* **Service Layer**: Encapsulation of complex business logic.
-* **Dependency Injection**: Dependency management through modular structure.
+## 🏃‍♂️ How to Run
 
----
+Since you are in a monorepo, you can run this easily:
 
-## ⚙️ Environment Variables
+```bash
+# Start in Development Mode (Watch & Respawn)
+npm run dev
 
-The application requires the configuration of the following variables for correct operation. In a production environment, the use of *Secrets Management* is recommended.
+# Build for Production
+npm run build
+npm run start
+```
+
+## 🔐 Environment Variables
+
+Make sure you have your `.env` ready!
 
 ```properties
-# Server
-NODE_ENV=production
+# Basics
+NODE_ENV=development
 SERVER_PORT=3000
 
 # Connectivity
-MONGO_URI=mongodb://user:pass@host:27017/db
-REDIS_HOST=redis
-REDIS_PORT=6379
-
-# Encryption and Session
-JWT_SECRET=...
-SESSION_SECRET=...
-USER_SESSION_KEY=user_session
-ADMIN_SESSION_KEY=admin_session
-
-# External Integrations
-EFI_CLIENT_ID=...
-EFI_CLIENT_SECRET=...
-SENTRY_DSN=...
+MONGO_URI=mongodb://...
+REDIS_HOST=localhost
 ```
 
----
-
-## 🚀 Operation Scripts
-
-Commands available via NPM for the application lifecycle:
-
-* **`npm run dev`**: Starts the server in development mode with *watch* and *respawn*.
-* **`npm run build`**: Transpiles TypeScript code to JavaScript (directory `dist/`).
-* **`npm run start`**: Executes the compiled application (Recommended for Production).
-* **`npm run seed`**: Executes *seeding* scripts to populate the database with initial data.
-* **`npm run typecheck`**: Verifies type integrity without emitting files.
-* **`npm run lint`**: Executes code style verification (ESLint).
+> **Note:** This service acts as the **Asset Host**. It exposes endpoints so the Minecraft server can download the latest resource packs automatically. 📦➡️🏰

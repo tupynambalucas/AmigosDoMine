@@ -22,6 +22,7 @@ services:
     environment:
       - MC_ENV=development
       - API_URL=http://localhost:3000
+      - JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
     stdin_open: true
     tty: true
 
