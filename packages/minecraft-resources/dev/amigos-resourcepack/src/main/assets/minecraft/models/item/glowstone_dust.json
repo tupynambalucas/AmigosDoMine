@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/glowstone_dust"
+  },
+
+  "overrides": [
+    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/superblast"},
+    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/superblast"},
+    {"predicate": { "custom_model_data": 18003}, "model": "magic:icons/spells/sparkle"},
+    {"predicate": { "custom_model_data": 18004}, "model": "magic:icons_disabled/spells/sparkle"}
+  ]
+}

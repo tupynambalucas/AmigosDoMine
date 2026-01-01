@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/bone_meal"
+  },
+
+  "overrides": [
+    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/airscooter"},
+    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/airscooter"},
+    {"predicate": { "custom_model_data": 18003}, "model": "magic:icons/spells/levitate"},
+    {"predicate": { "custom_model_data": 18004}, "model": "magic:icons_disabled/spells/levitate"},
+    {"predicate": { "custom_model_data": 18005}, "model": "magic:icons/spells/superfly"},
+    {"predicate": { "custom_model_data": 18006}, "model": "magic:icons_disabled/spells/superfly"},
+    {"predicate": { "custom_model_data": 18007}, "model": "magic:icons/spells/growth"},
+    {"predicate": { "custom_model_data": 18008}, "model": "magic:icons_disabled/spells/growth"}
+  ]
+}

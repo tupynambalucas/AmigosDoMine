@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/birch_fence_inventory",
+  "overrides": [
+    {"predicate": {"custom_model_data": 18001}, "model": "magic:icons/spells/entangle"},
+    {"predicate": {"custom_model_data": 18002}, "model": "magic:icons_disabled/spells/entangle"}
+  ]
+}

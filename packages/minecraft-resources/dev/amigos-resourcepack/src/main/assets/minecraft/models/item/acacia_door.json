@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/acacia_door"
+  },
+
+  "overrides": [
+    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/breach"},
+    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/breach"}
+  ]
+}

@@ -1,0 +1,10 @@
+name: AmigosPlugin
+version: 1.0.0
+main: com.amigosdomine.AmigosPlugin
+api-version: '1.21'
+author: TupynambaLucas
+commands:
+  cash:
+    description: Sistema de Cash
+  login:
+    description: Sistema de Login

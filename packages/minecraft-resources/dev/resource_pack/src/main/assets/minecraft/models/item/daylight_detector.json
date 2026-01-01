@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/daylight_detector",
-
-  "overrides": [
-    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/superemp"},
-    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/superemp"}
-  ]
-}

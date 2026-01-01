@@ -1,9 +1,16 @@
 {
   "files.exclude": {
+    "**/.gradle": true,
     "**/.git": true,
     "**/.eslintcache": true,
     "**/node_modules": true,
-    "**/dist": false
+    "**/dist": false,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.gradle": false
   },
   "eslint.debug": false,
   "eslint.trace.server": "off",
@@ -57,5 +64,19 @@
   "less.validate": false,
   "chat.extensionUnification.enabled": true,
   "javascript.suggest.includeCompletionsForImportStatements": false,
-  "typescript.suggest.includeCompletionsForImportStatements": false
+  "typescript.suggest.includeCompletionsForImportStatements": false,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.9.10-hotspot",
+      "default": true
+    }
+  ],
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.import.gradle.enabled": true,
+  "kotlin.compiler.jvm.target": "21",
+  "search.exclude": {
+    "**/.gradle": true
+  },
+  "java.project.sourcePaths": ["packages/minecraft-resources/dev/amigos-plugin"]
 }

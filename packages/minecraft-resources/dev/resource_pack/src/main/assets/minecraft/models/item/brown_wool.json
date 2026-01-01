@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/brown_wool",
-
-  "overrides": [
-    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/tent"},
-    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/tent"}
-  ]
-}

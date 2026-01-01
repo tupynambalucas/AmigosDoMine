@@ -1,7 +1,0 @@
-{
-    "parent" : "magic:base/icon_full",
-    "textures": {
-        "particle": "magic:icons/generic/down_arrow",
-        "texture": "magic:icons/generic/down_arrow"
-    }
-}

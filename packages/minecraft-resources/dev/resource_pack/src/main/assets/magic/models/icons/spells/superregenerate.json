@@ -1,7 +1,0 @@
-{
-    "parent" : "magic:base/icon",
-    "textures": {
-        "particle": "magic:icons/spells/superregenerate",
-        "texture": "magic:icons/spells/superregenerate"
-    }
-}

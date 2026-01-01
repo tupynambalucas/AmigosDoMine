@@ -1,0 +1,55 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "amigos:armas/katana-efeito",
+		"particle": "amigos:armas/katana-efeito"
+	},
+	"elements": [
+		{
+			"from": [-4.5, 12, 2],
+			"to": [2, 24.75, 2],
+			"faces": {
+				"north": {"uv": [0, 0, 6.5, 13], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 13], "texture": "#0"},
+				"south": {"uv": [7, 0, 13.5, 13], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 13], "texture": "#0"},
+				"up": {"uv": [6.5, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [6.5, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"from": [-1.75, 12, -1.5],
+			"to": [-1.75, 24.75, 5],
+			"faces": {
+				"north": {"uv": [0, 0, 0, 13], "texture": "#0"},
+				"east": {"uv": [0, 0, 6.5, 13], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 13], "texture": "#0"},
+				"west": {"uv": [7, 0, 13.5, 13], "texture": "#0"},
+				"up": {"uv": [6.5, 0, 0, 0], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [6.5, 0, 0, 0], "rotation": 270, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [9.75, -21.5, 7.5],
+			"scale": [1, 1.94, 1]
+		},
+		"thirdperson_lefthand": {
+			"translation": [-9.25, -20.5, 7],
+			"scale": [1, 1.94, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [-39, 0, 0],
+			"translation": [9.25, -5.75, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-24.25, 0, 0],
+			"translation": [-0.5, -8.75, 0]
+		},
+		"ground": {
+			"rotation": [85.84, 28.67, 30.73]
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/spruce_sign"
+  },
+
+  "overrides": [
+    {"predicate": { "custom_model_data": 18001}, "model": "magic:icons/spells/backup"},
+    {"predicate": { "custom_model_data": 18002}, "model": "magic:icons_disabled/spells/backup"}
+  ]
+}
