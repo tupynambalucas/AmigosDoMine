@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "🚀 Build AmigosPlugin",
+      "label": "🔨 Build AmigosPlugin",
       "type": "shell",
       "command": "./gradlew shadowJar",
       "options": {
@@ -16,7 +16,7 @@
     },
 
     {
-      "label": "🚀 Gemini CLI",
+      "label": "🤖 Gemini CLI",
       "type": "shell",
       "command": "Start-Process",
       "args": [

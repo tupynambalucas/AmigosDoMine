@@ -31,6 +31,10 @@
   // ==================== Files & Search ====================
   "files.exclude": {
     "**/.git": true,
+    "**/.idea": true,
+    "**/.gradle": true,
+    "**/.mcreator": true,
+    "**packages/minecraft-resources/dev/**/build/**": true,
     "**/.eslintcache": true,
     "**/node_modules": true
   },

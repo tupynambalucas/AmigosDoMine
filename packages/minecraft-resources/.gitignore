@@ -2,3 +2,4 @@
 *.mcreator/
 *.gradle/
 *.vscode/
+*.idea/
