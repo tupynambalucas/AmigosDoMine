@@ -86,5 +86,8 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.suggest.autoImports": true,
   "typescript.suggest.includeCompletionsForImportStatements": false,
-  "java.compile.nullAnalysis.mode": "disabled"
+  "java.compile.nullAnalysis.mode": "disabled",
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true
+  }
 }
