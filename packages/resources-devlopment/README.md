@@ -12,7 +12,7 @@ We split the work into two dedicated development environments inside this folder
 
 | Folder | Purpose | Tooling | Output |
 | :--- | :--- | :--- | :--- |
-| **`plugins/amigosplugin`** | 🧠 **Server Brain:** Custom mechanics, commands, and events. | **IntelliJ IDEA** (Kotlin/Gradle) | `build/plugins/` |
+| **`plugins/amigosplugin`** | 🧠 **Server Brain:** Custom mechanics, commands, events, and features like Essentials. | **IntelliJ IDEA** (Kotlin/Gradle) | `build/plugins/` |
 | **`resourcepack`** | 🎭 **Server Face:** 3D models, textures, sounds, and UI. | **MCreator** | `build/resourcepack/` |
 
 ---

@@ -181,5 +181,6 @@
   "typescript.suggest.includeCompletionsForImportStatements": false,
   "java.compile.nullAnalysis.mode": "disabled",
 
-  "[ignore]": {}
+  "[ignore]": {},
+  "vscord.status.idle.timeout": 30
 }
