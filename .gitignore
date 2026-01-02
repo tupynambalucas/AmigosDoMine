@@ -79,6 +79,7 @@ packages/minecraft/plugins/*
 !packages/minecraft/plugins/Magic/
 packages/minecraft/plugins/Magic/data/
 # --- Minecraft Resource Dev ---
+packages/resources-devlopment/plugins/amigosmagicplugin/
 packages/resources-devlopment/**/**gradle**/
 packages/resources-devlopment/**/**packloader**/
 packages/resources-devlopment/**/**run**/

@@ -37,7 +37,7 @@ arena:
     sudden_death: '&cSUDDEN DEATH!'
     win: |-
       &b$playerPath &6is the champion of &e$arena
-      &6with &4$hearts &6 hearts, and a total of &a$wins $6wins and &c$losses &6losses.
+      &6with &4$hearts &6hearts, and a total of &a$wins &6wins and &c$losses &6losses.
   stage:
     start_mobs: t:$arena
     win: '&aCongratulations!  &bYou have passed &3$arena'
@@ -321,12 +321,12 @@ currency:
     item_name: '&e$amount &6$type'
     description: Right-click to deposit
     limit: a:&eThe limit for &6$type &eis &c$amount
-    deposited: 'a:&aDepositado &2$amount&a, Valor atual: &2$balance'
+    deposited: 'a:&aDeposited &2$amount&a, balance: &2$balance'
     earned: a:&a+&2$amount
     spent: a:&c-&4$amount
   sp:
-    name: '&bSoul Points'
-    description: Botão direito para ganhar $type
+    name: '&bSpell Points'
+    description: Right-click to earn $type
     name_short: '&bSP'
   xp:
     name: '&dExperience'
@@ -458,37 +458,6 @@ glyphs:
     hotbar_slot_active: 
   icons:
     empty: 
-  space_nosplit:
-    '-1': 
-    '-2': 
-    '-3': 
-    '-4': 
-    '-5': 
-    '-6': 
-    '-7': 
-    '-8': 
-    '-16': 
-    '-32': 
-    '-64': 
-    '-128': 
-    '-255': 
-    '-512': 
-    '-1024': 
-    '1': 
-    '2': 
-    '3': 
-    '4': 
-    '5': 
-    '6': 
-    '7': 
-    '8': 
-    '16': 
-    '32': 
-    '64': 
-    '128': 
-    '256': 
-    '512': 
-    '1024': 
 help:
   main: |-
     `<title text="General Help">`
@@ -698,7 +667,7 @@ help:
     `<li>``<help text="Change mana" topic="mana_customization">`
     `<li>``<help text="Creating new spells, wands and other configs" topic="creating_configs">`
     `<li>``<help text="Customize or create crafting recipes" topic="crafting">`
-    `<li>``<command command="config reset spell missile" text="Reset a spell to its default configuration">`
+    `<li>``<command command="mconfig reset spell missile" text="Reset a spell to its default configuration">`
     `<li>``<help topic="common_customizations" text="Other common customizations">`
     `<li>``<help topic="general_customization" text="General Customization Questions">`&8(&7"Where are all the configs to edit?"&7)
   messages: |-
@@ -707,6 +676,7 @@ help:
     `<p>`You can edit
     `<li>``<command command="meditor messages" text="Edit all messages">`
     `<li>``<help text="Change language or localize text" topic="localization">`
+    `<li>``<help text="Customize individual messages" topic="message_customization">`
   message_customization: |-
     `<title text="Message Customization">`
     `<p>`To edit an individual piece of in-game text, Look in plugins/Magic/defaults/messages.defaults.yml
@@ -756,6 +726,7 @@ help:
     `<title text="Common Customizations">`
     `<li>``<command command="mconfig spell default parameters.target_npc true" text="Allow all spells to target NPCs">`
     `<li>``<command command="mconfig spell default earns_cooldown 2 minutes" text="Reduce SP cooldown to 2 minutes">`
+    `<li>``<command command="mconfig spell override parameters.undo 0" text="Turn off auto-undo, all spell effects made permanent">`
     `<li>``<command command="mconfig config enable_crafting false" text="Disable all Magic crafting recipes">`
     `<li>``<command command="mconfig disable spell blink" text="Disable a specific spell">`
     `<li>``<command command="mconfig config sound_volume 0.1" text="Lower all sound volume to 10%">` &7Note that the survival example is already at 50%
@@ -770,6 +741,7 @@ help:
     `<p>`Scroll down to find the levelled up version of the spell, and change damage parameters there too.
     `<p>`Note that some spells, like &7Fireball&f, &7Boom&f, or &7Fire&f deal indirect damage and as such require special handling to change damage.
     `<p>`For explosions, the &7size&f parameter deals more damage, but take care as a bigger explosion also means more blocks broken.
+    `<p>`You can also `<command command="mconfig material indestructible *" text="make all block types indestructible">` to prevent spells from damaging blocks.
   donator_shops: |-
     `<title text="Donator Shops">`
     `<p>`&dMagic &fcan be used to set up &bdonator shops&f with a variety of EULA-compliant vanity items.
@@ -780,7 +752,7 @@ help:
     `<li>``<link text="See Vanity Items on the wiki for more information" url="https://github.com/elBukkit/MagicPlugin/wiki/Vanity-Items">`
   trails: |-
     `<title text="Trails">`
-    `<p>`Players can purchase (using Soul Points) trails that will show while they are holding their wand.
+    `<p>`Players can purchase (using Spell Points) trails that will show while they are holding their wand.
     `<p>`These include builtin trails like the crown, demon tail and butterfly wings.
     `<p>`This is done in the `<command command="cast effectshop" text="Effect Shop">`
     `<p>`Which is accessible in the `<command command="cast progressmenu" text="enchantment table menu">`
@@ -822,7 +794,7 @@ help:
     `<li>``<command command="help magic" text="See full command help">`
     `<li>``<command command="mage promote" text="Rank yourself up">`
     `<li>``<command command="getrp url" text="Get a download URL for the resource pack">`
-    `<li>``<command command="mgive @p sp 1000" text="Give yourself some Soul Points">`
+    `<li>``<command command="mgive @p sp 1000" text="Give yourself some Spell Points">`
     `<li>``<command command="mage reset @p caster" text="Reset your survival progress">`
     `<li>``<command command="mage reset @p" text="Completely reset your magic player data">`
     `<li>``<help topic="permissions" text="Help with permissions">`
@@ -909,6 +881,7 @@ help:
     `<title text="Compatibility">`
     `<li>`&dMagic&f can use a &4Slimefun&f-compatible resource pack using the &b`<command command="mexample add slimefun" text="slimefun">` &fexample
     `<li>`&dMagic&f can work with &4ItemsAdder&f, use &7`<command command="getrp url" text="/getrp url">` &fto download the correct Magic RP, then unzip it into IA's &7resourcepacks&f folder
+    `<li>`&dMagic&f will disable its resource pack functionality if ItemsAdder is present. &7`<command command="mconfig configure config override_resource_pack_plugins true" text="Click here">` to allow &dMagic&f to override.
     `<li>`Other resource pack compatiblity issues can possibily be resolved using the `<link url="https://merge.elmakers.com" text="RP merge tool">`
     `<li>`Note if merging an ItemsAdder resource pack, you need to turn off the &7protect-file-from-unzip&f setting in ItemsAdder's config, or the merge tool can't read it
     `<li>`&dMagic&f has a &b`<help topic="quests" text="Quests">` module for requirements, objectives and rewards
@@ -960,7 +933,8 @@ help:
     `<li>` &6`<command command="getrp borders" text="borders">`&f: A different set of spell icons with borders on them
     `<li>` &6`<command command="getrp painterly" text="painterly">`&f: A more &oartistic&f set of spell icons
     `<li>` &6`<command command="getrp lowres" text="lowres">`&f: The low-resolution spell icons used in Magic 5 and below, same as the skull textures
-    `<li>` &6`<command command="getrp skulls" text="skulls">`&f: Use player heads instead of resource pack icons
+    `<li>` &6`<command command="getrp skulls" text="skulls">`&f: No wand or other item icons, only flat skulls for spell icons
+    `<li>` &6`<command command="getrp vanilla" text="vanilla">`&f: Uses item-based spell icons, like before version 10.9
     `<li>` &6`<command command="getrp all" text="all">`&f: Combines the httyd, survival, war and robes RPs into one
   classes: |-
     `<title text="Classes">`
@@ -1048,7 +1022,7 @@ help:
     `<li>``<link url="https://reference.elmakers.com/#mobs" text="See all mob properties in the reference guide">`
   loot: |-
     `<title text="Mob Loot">`
-    `<p>`&dMagic&f mobs can drop custom loot, including &6Soul Points&f, wands, spells and other magic items.
+    `<p>`&dMagic&f mobs can drop custom loot, including &6Spell Points&f, wands, spells and other magic items.
     `<p>`Some of the builtin mobs drop custom items, such as the &3warlock wand&f
     `<p>`These items can be sold in the `<command command="mnpc add lootshop" text="loot shop">` when using the `<command command="mexample add spawnmobs" text="spawnmobs">` example.
     `<p>`The items are otherwise useless.
@@ -1079,13 +1053,13 @@ help:
     `<title text="Progression and Ranking Up">`
     `<p>`Players rank up by collecting all spells on their current path.
     `<p>`Spells can be learned by right-clicking an &6enchantment table&f while holding a wand.
-    `<li>``<help topic="spell_points" text="About Soul Points">`
+    `<li>``<help topic="spell_points" text="About spell points">`
     `<li>``<help topic="paths" text="About progression paths">`
     `<li>``<help topic="spell_levels" text="About spell levels">`
   spell_points: |-
-    `<title text="SP: Soul Points">`
-    `<p>`&6Soul Points&f &7(&bSP&7)&f are earned whenever a player &osuccessfully&f casts a spell. For most spells, &bsuccess&f is determined by hitting a valid mob or player target.
-    `<p>`&6Soul Points&f have a &ecooldown &ffor earning. This cooldown is specific to each spell, and defaults to &e15 minutes&f.
+    `<title text="SP: Spell Points">`
+    `<p>`&6Spell points&f &7(&bSP&7)&f are earned whenever a player &osuccessfully&f casts a spell. For most spells, &bsuccess&f is determined by hitting a valid mob or player target.
+    `<p>`&6Spell points&f have a &ecooldown &ffor earning. This cooldown is specific to each spell, and defaults to &e15 minutes&f.
     `<p>`This means that once you have more than one spell, using each one frequently is the fastest way to earn SP!
     `<p>`The &6Magic Missile&f spell is a special case, it allows for faster SP earning at the start to get palyers going.
     `<p>`Once players have more than one spell they can earn SP much faster by using all of their spells frequently.
@@ -1115,9 +1089,6 @@ help:
       `<li>``<command command="mexample set survival none" text="Reset to default survival example">`
       `<li>``<link url="https://github.com/elBukkit/MagicPlugin/wiki/Examples" text="Examples wiki">`
       `<li>``<help topic="examples.survival.main" text="Survival (the default example)">`
-      `<li>``<help topic="instructions.example.automata" text="Automata (block monsters)">`
-      `<li>``<help topic="instructions.example.stars" text="Stars (Star Wars)">`
-      `<li>``<help topic="instructions.example.war" text="War">`
     all: |-
       `<title text="Available Examples">`
       `<li>` &6`<command command="mexample add survival" text="survival">`&f: The default example with craftable wands and items
@@ -1156,7 +1127,7 @@ help:
         `<p>`The &6survival&f example includes a variety of colored dragon mobs you can spawn
         `<p>`These will spawn naturally using the `<help topic="examples.all" text="spawnmobs examples">`
         `<p>`Dragons require the `<link url="https://www.spigotmc.org/resources/libs-disguises-free.81/" text="LibsDisguises">` plugin
-        `<p>`which itself requires the `<link url="https://www.spigotmc.org/resources/protocollib.1997/" text="ProtocolLib">` plugin.
+        `<p>`which itself requires the `<link url="https://www.spigotmc.org/resources/packetevents-api.80279/" text="PacketEvents">` plugin.
         `<p>`Finally, players will need the `<help topic="resourcepack" text="resoure pack">` to see the dragons properly.
         `<p>`If the dragons are invisible, you are missing LibsDisguises or it is not working.
         `<p>`If the dragons look like a strange collection of leather horse armor, you are missing the resource pack.
@@ -1388,8 +1359,10 @@ resource_pack:
     &fYou can use &b/getrp&f to try again.
   declined: |-
     &eSee: &f&nhttps://rp.elmakers.com/&f for &bresource pack&f instructions.
-    &fUse &7/getrp download&f if you prefer to download the RP.
-    &fUse &7/getrp off&f to permanently disable this message.
+    `<p>`The server resource pack should not interfere with any other RPs you are using!
+    `<li>``<command command="getrp skulls" text="Use /getrp skulls">` for a simple RP using flat skull icons.
+    `<li>``<command command="getrp download" text="Use /getrp download">` if you prefer to download the RP.
+    `<li>``<command command="getrp off" text="Use /getrp off">` to permanently disable this message.
 controls:
   drop: '&fDrop &7(&a`{"keybind":"key.drop"}`&7)'
   right_click: '&fInteract &7(&a`{"keybind":"key.use"}`&7)'
@@ -1454,7 +1427,7 @@ potion_effects:
   unluck: Unlock
 requirements:
   unknown: '&cNot Allowed'
-  property_requirement: '&r&cRequer: &6$property &cof $4$value'
+  property_requirement: '&r&cRequires: &6$property &cof &4$value'
   property_max: '&r&cYour &6$property &cis maxed out'
   property_max_inclusive: '&r&cYour &6$property &cis maxed out'
   property_min: '&r&cYour &6$property &cmust be greater than &4$value'
@@ -1470,7 +1443,7 @@ requirements:
   no_required_path: '&cYou must be at least $path&r!'
   no_path_exact: '&cYou must be at $path&r!'
   no_path_end: '&cYou must be ready to advance from $path&r!'
-  no_weather: The weather is not right for that
+  no_weather: '&cThe weather is not right for that'
   no_client_platform: You're not on the right platform for that
   light: Light Level
   time: Time of Day
@@ -1508,7 +1481,7 @@ selector:
   cast_fail: '&cSorry, please try again!'
   warp_fail: '&cSorry, something went wrong!'
   no_items: There is nothing for you to buy here
-  title: Escolha com sabedoria
+  title: Choose Wisely
   sell_title: Sell ($balance&0)
   sell_icon_name: '&6Sell Items'
   buy_icon_name: '&aBuy Items'
@@ -1525,18 +1498,18 @@ selector:
   cast_spell: $spell
   unlock_class: $class
   nothing: Nothing
-  cost_lore: '&6Custa: &e$cost'
+  cost_lore: '&6Costs: &e$cost'
   earn_lore: '&6Earns: &e$earn'
   earn_heading: ''
   cost_heading: ''
   unlock_cost_lore: '&6Unlock Cost: &e$cost'
   locked: '&cLocked, &eUnlock in Donation Shop'
-  required_cost_lore: '&6Custa: &ex$cost'
+  required_cost_lore: '&cCosts: &4$cost'
   required_unlock_cost_lore: '&cUnlock Cost: &4$cost'
   has_class: You already have class $class
   at_limit: You are at your limit of $limit
   unlocked_lore: '&aUnlocked'
-  property_requirement: '&r&cRequer: &6$property &cof $4$value'
+  property_requirement: '&r&cRequires: &6$property &cof $4$value'
   property_max: '&r&cYour &6$property &cis maxed out'
   property_min: '&r&cYour &6$property &cmust be greater than $4$value'
   item_amount: $name x$amount
@@ -1576,7 +1549,6 @@ spell:
   passive: '&2Passive'
   disabled: '&eDeactivated'
   creator: ''
-  reactivate: Reactivating $name
 spells:
   default:
     fizzle: a:&5Your spell fizzled!
@@ -1795,10 +1767,6 @@ spells:
   sniper:
     name: Sniper
     description: Fire a super fast arrow
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
   pull:
     name: Pull
     description: Pull things toward you
@@ -2727,7 +2695,7 @@ spells:
     name: Learn Spells
     title: $path &rSpells ($balance&0)
     description: |-
-      Spend Soul Points to learn new spells.
+      Spend Spell Points to learn new spells.
       When you have learned all the required spells on your current path, you will rank up to the next path!
     no_items: There are no spells for you to buy here
     no_path: You may not learn here.
@@ -2859,8 +2827,8 @@ spells:
     selected: ''
   spshop:
     name: SP Shop
-    description: Exchange money for Soul Points
-    title: Soul Points
+    description: Exchange money for Spell Points
+    title: Spell Points
   lootshop:
     name: Loot Shop
     description: Earn money for mob drops
@@ -3037,22 +3005,22 @@ spells:
     description: Add the sharpness enchantment to your magic sword.
   remove_protection:
     name: Refund Protection
-    description: Refund some of your Overall Protection for Soul Points
+    description: Refund some of your Overall Protection for Spell Points
   remove_fall_protection:
     name: Refund Fall Protection
-    description: Refund some of your Fall Protection for Soul Points
+    description: Refund some of your Fall Protection for Spell Points
   remove_fire_protection:
     name: Refund Fire Protection
-    description: Refund some of your Fire Protection for Soul Points
+    description: Refund some of your Fire Protection for Spell Points
   remove_physical_protection:
     name: Refund Physical Protection
-    description: Refund some of your Physical Protection for Soul Points
+    description: Refund some of your Physical Protection for Spell Points
   remove_projectile_protection:
     name: Refund Projectile Protection
-    description: Refund some of your Projectile Protection for Soul Points
+    description: Refund some of your Projectile Protection for Spell Points
   remove_explosion_protection:
     name: Refund Explosion Protection
-    description: Refund some of your Explosion Protection for Soul Points
+    description: Refund some of your Explosion Protection for Spell Points
   magictorch:
     name: Magic Torch
     description: A light that follows you around
@@ -3066,7 +3034,7 @@ spells:
     no_template: '&cYou may not add this buff to your $wand&c.'
   wanddebuffshop:
     name: Wand Refunds
-    description: Removes buffs from your wand in exchange for Soul Points
+    description: Removes buffs from your wand in exchange for Spell Points
     property_min: '&cYou don''t have that buff!'
     cast_fail: '&cYou don''t have that buff!'
     selected: '&d&oYou selected &r&6$item'
@@ -3247,221 +3215,6 @@ spells:
   thousandpunches:
     name: 1,000 Punches
     description: Throw a furious volley of deadly punches
-  automatashop:
-    name: Automata Shop
-    title: Sell Automata Hearts
-    description: Sell Automata Hearts
-    no_items: There is nothing to sell here!
-    insufficient: Requires $cost
-    confirm_title: Sell $item
-    deducted: '&d&oYou sold &r&6$item &r&d&ofor &r&a$cost'
-  birth_hunter:
-    name: Create Hunter
-  birth_defender:
-    name: Create Defender
-  birth_worm:
-    name: Create Worm
-  birth_virus:
-    name: Create Virus
-  birth_snake:
-    name: Create Snake
-  simulate:
-    name: Simulate
-    description: Conway's Game of Life!
-    cast: You bring the world to life
-  animate:
-    name: Animate
-    description: Animate the target material
-    cast: You create a Magic Golem
-    no_target: You must target two blocks next to each other
-    fail: You can not make a Golem out of $material
-  simulate3:
-    name: Simulate 3D
-    description: Conway's Game of Life ... in 3D!
-    cast: You bring the world to life
-  glider:
-    name: Glider
-    description: Create a powerful Automaton
-    cast: It's alive!
-  virus:
-    name: Virus
-    description: You probably don't want to cast this
-    cast: What have you done?
-    fail: You can not make a Virus out of $material
-  worm:
-    name: Worm
-    description: Release a dangerous giant worm
-    cast: It's not a virus, it's a worm!
-    fail: You can not make a Worm out of $material
-  snake:
-    name: Snake
-    description: Create a deadly snake-like creature
-    cast: Sssssssssnake time!
-    fail: You can not make a Worm out of $material
-  hunter:
-    no_target: You must target two blocks next to each other
-    name: Hunter
-    description: Create a deadly Automaton
-    fail: You can not make a Hunter out of $material
-    cast: Destroy all humans!
-  defender:
-    name: Defender
-    description: Create an Automata hunter
-    cast: I will hunt for you, human
-    fail: You can not make a Defender out of $material
-  life:
-    name: Life
-    description: Create a HUGE Life board
-    cast: Time to experiment!
-  life3:
-    name: Life 3D
-    description: Create a large 3D Life board
-    cast: Mad science!
-  forceignite:
-    name: Force Ignite
-    description: Light a fire from a distance
-  forceleap:
-    name: Force Leap
-    description: Fling yourself in any direction
-  forcepush:
-    name: Force Push
-    description: Push things away from yourself
-  forcepull:
-    name: Force Pull
-    description: Pull things toward yourself
-  forcespeed:
-    name: Force Speed
-    description: Use the force to move faster
-  forcelift:
-    name: Force Lift
-    description: Lift your target into the air
-  forcetelekinesis:
-    name: Force Telekinesis
-    description: Fling your target around like a ragdoll
-  forceblast:
-    name: Force Blast
-    description: Break the target apart
-  forceexplode:
-    name: Force Explode
-    description: Use the force to cause an explosion
-  forcechoke:
-    name: Force Choke
-    description: Use the force to lift choke your target
-  forcecollapse:
-    name: Force Collapse
-    description: Cause your target to collapse and crumble
-  forcethrow:
-    name: Force Throw
-    description: Throw an object using the force
-  forcelightning:
-    name: Force Lightning
-    description: Shoot lightning from your fingertips
-  starshop:
-    name: Star Chooser
-    title: Choose Your Path
-    confirm_title: Choose $item
-  blaster:
-    name: Blaster
-    description: Fire powerful bolts of energy
-    usage: Reflects off of iron blocks
-  vader:
-    name: Vader's Essense
-    cancel: ''
-  radar:
-    name: RADAR
-    cast: $target shows on the RADAR
-    no_target: RADAR is quiet
-    cast_player_message: ''
-    indirect_player_message: ''
-  rifle:
-    name: Marksman Rifle Skill
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
-  ak47:
-    name: AK-47 Skill
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
-  mp5:
-    name: MP5 Skill
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
-  pkp:
-    name: Pecheneg Skill
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
-  thompson:
-    name: Thompson Skill
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
-  pistol:
-    name: Pistol Skill
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
-  shotgun:
-    name: Combat Shotgun Skill
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
-  hawk_shotgun:
-    name: Hawk Shotgun Skill
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
-  rocketlauncher:
-    name: Rocket Launcher Skill
-    cast_player_message: ''
-    indirect_player_message: ''
-    insufficient_resources: a:Left-click to reload
-    cooldown: ''
-  reload_sniper:
-    cooldown: ''
-  reload_ak47:
-    cooldown: ''
-  reload_mp5:
-    cooldown: ''
-  reload_pistol:
-    cooldown: ''
-  reload_shotgun:
-    cooldown: ''
-  reload_rocketlauncher:
-    cooldown: ''
-  reload_pkp:
-    cooldown: ''
-  reload_thompson:
-    cooldown: ''
-  reload_hawk_shotgun:
-    cooldown: ''
-  reload_rifle:
-    cooldown: ''
-  c4:
-    cast_player_message: ''
-    indirect_player_message: ''
-    cooldown: ''
-  incendiary:
-    cast_player_message: ''
-    indirect_player_message: ''
-    cooldown: ''
-  flash_bang:
-    cast_player_message: a:You were hit by $player's flash bang
-    cooldown: ''
-  steal_model3:
-    cast_player_message: a:$player ran you down
-  steal_ferrari:
-    cast_player_message: a:$player ran you down
 stop:
 - i
 - me
@@ -3864,7 +3617,7 @@ wand:
     &8|
     &8 ----------------------------------------------------
   sp_earn_instructions: |-
-    &8| &7> &fYou have earned some &6Soul Points!
+    &8| &7> &fYou have earned some &6Spell Points!
     &8| &7> &fYour &6SP &fis displayed above your mana bar
     &8| &7> &6SP &fmay be spent at an &eenchanting table &fto learn new spells
     &8| &7> &fRepeat casts of the same spell earn less &6SP&f
@@ -3880,7 +3633,7 @@ wand:
   mana_instructions: '&8| &7> &fSpells require &6mana &fto cast, shown in the &7Mana&f
     (or &5XP&f) bar'
   enchant_instructions: |-
-    &8| &7> &fEarn &6Soul Points &fby casting spells
+    &8| &7> &fEarn &6Spell Points &fby casting spells
     &8| &7> &fLearn new spells by using &6SP &fat an &eenchanting table
   path_instructions: |-
     &8| &7> &fCollect all of the &a$path &fspells
@@ -3942,7 +3695,6 @@ wand:
   inventory_open_cycle: '`<li>`Click on this item &7to cycle inventory pages'
   inventory_open_cycle_hotbar: '`<li>`Right-Click on this item &7to cycle hotbars'
   inventory_open_cycle_hotbar_instructions: '`<li>`$button &7to cycle the active hotbar'
-  level_up: '&3You have advanced to &b$path&3!'
 wands:
   testwand:
     name: Test Wand
@@ -4598,140 +4350,6 @@ wands:
     description: Contains ancient alchemical lore
   inthelmet:
     name: Helmet of Intelligence
-  conway:
-    name: Conway's Wand
-    description: The Game of Life
-  defenderheart:
-    name: Heart of Defender
-    description: He sacrified himself to save you
-  virusheart:
-    name: Heart of Virus
-    description: This should be destroyed
-  hunterheart:
-    name: Heart of Hunter
-    description: It wants to be reborn
-  snakeheart:
-    name: Heart of Snake
-    description: Sssssssssave me
-  golemheart:
-    name: Heart of Golem
-    description: It pulsates with power
-  wormheart:
-    name: Heart of Worm
-    description: It wanted to consume the world
-  base_lightsaber:
-    wand_instructions_header: |-
-      &8 ----------------------------------------------------
-      &8|
-      `<p>`&b&lSABER INSTRUCTIONS
-      &8|
-    spell_instructions: ''
-    currency_instructions: |-
-      &8| &7> &fYou have earned some &6$currency!
-      &8| &7> &fYour &6$currency &fis displayed above your mana bar
-      &8| &7> &6$currency &fmay be spent at an &enchanting table &fto learn new powers
-      &8| &7> Repeat uses of the same force powers earn less &6SP&f
-      &8| &7> &fTry &dmixing up your powers &fonce you have more of them!
-    sp_instructions: |-
-      &8| &7> &fYou have earned some &6Skill Points!
-      &8| &7> &fYour &6SP &fis displayed above your energy bar
-      &8| &7> &6SP &fmay be spent at an &eenchanting table &fto learn new powers
-      &8| &7> &fRepeat uses of the same powers earn less &6SP&f
-      &8| &7> &fTry &dmixing up your powers &fonce you have more of them!
-    mana_instructions: '&8| &7> &fThe force requires &6energy &fto use, shown in the
-      &5XP bar'
-    enchant_instructions: |-
-      &8| &7> &fEarn &6Skill Points &fby using the force
-      &8| &7> &fLearn new powers by using &6SP &fat an &eenchanting table
-    page_instructions: |-
-      &8| &7> &eYour &a$wand&8 &fhas more than one page of powers
-      &8| &7> $6Click &foutside the inventory window to change pages
-    inventory_instructions: |-
-      &8| &7> &6$toggle &fto open and close your &eforce powers
-      &8| &7> &6Open your inventory (E) &fto manage hotbar powers
-      &8| &7> &fUse &6number keys &fto use the desired power
-    chest_instructions: |-
-      &8| &7> &6$toggle &fto open and close your &eforce powers
-      &8| &7> &6Click &fon a power to use it
-    skills_instructions: |-
-      &8| &7> &6$toggle &fto open and close your &eforce powers
-      &8| &7> &6Drag &fa power to your hotbar to activate it
-      &8| &7> &fUse &6number keys &fto use the desired power
-    cycle_instructions: '&8| &7> &6$cycle &fto switch your active force power'
-  blaster:
-    name: Blaster
-  blaster_red:
-    name: Red Blaster
-  blaster_green:
-    name: Green Blaster
-  blaster_blue:
-    name: Blue Blaster
-  detonator:
-    name: Thermal Detonator
-  lightsaber_red:
-    name: Lightsaber
-    description: Chosen Weapon of a $path
-  lightsaber_vader:
-    name: Vader's Lightsaber
-    description: Become one with the Dark Side
-  lightsaber_green:
-    name: Lightsaber
-    description: Chosen Weapon of a $path
-  lightsaber_blue:
-    name: Lightsaber
-    description: Chosen Weapon of a $path
-  lightsaber_orange:
-    name: Lightsaber
-    description: Chosen Weapon of a $path
-  lightsaber_purple:
-    name: Lightsaber
-    description: Chosen Weapon of a $path
-  ak47:
-    name: AK-47
-    mana_amount: 'Ammo: $amount'
-  sniper:
-    name: Sniper Rifle
-    mana_amount: 'Ammo: $amount'
-    description: Use swap button for scope
-  pistol:
-    name: Pistol
-    mana_amount: 'Ammo: $amount'
-  rocketlauncher:
-    name: Rocket Launcher
-    mana_amount: 'Ammo: $amount'
-  shotgun:
-    name: Combat Shotgun
-    mana_amount: 'Ammo: $amount'
-  hawk_shotgun:
-    name: Hawk Shotgun
-    mana_amount: 'Ammo: $amount'
-  rifle:
-    name: Marksman Rifle
-    mana_amount: 'Ammo: $amount'
-    description: Use swap button for scope
-  pkp:
-    name: Pecheneg
-    mana_amount: 'Ammo: $amount'
-  thompson:
-    name: Thompson
-    mana_amount: 'Ammo: $amount'
-  mp5:
-    name: MP5
-    mana_amount: 'Ammo: $amount'
-  riotshield:
-    name: Riot Shield
-    block_chance: ''
-  radar:
-    name: RADAR
-  jetpack:
-    name: Jetpack
-    spell_aura: ''
-  incendiary:
-    name: Incendiary Grenade
-  c4:
-    name: C4
-  flashbang:
-    name: Flash Bang
 automata:
   awaken: '&c&o$name &r&5has awakened'
   default_name: Automaton
@@ -4881,27 +4499,24 @@ categories:
   music:
     name: Music
     description: Used for playing music
-  force:
-    name: Force Powers
-    description: Use the force!
 classes:
   battle_mage:
-    name: Mago de batalha
+    name: Battle Mage
     description: A warrior who wields a magic sword
   mage:
-    name: Mago
+    name: Mage
     description: The ultimate spellcaster
   archer_mage:
-    name: Arqueiro Mago
+    name: Archer Mage
     description: Skilled with magic bows
   butterfly:
-    name: Fada
+    name: Butterfly Wings
     description: It gives you wiiiiiiiings
   tail:
-    name: Imp
+    name: Demon Tail
     description: So pointy!
   crown:
-    name: Corvo
+    name: Crown
     description: You'll always be royal
   wizard:
     name: Wizard
@@ -4928,50 +4543,38 @@ classes:
     name: Barbarian
     description: Brutal attacks
   bard:
-    name: Bardo
+    name: Bard
     description: Harness the music of the universe
   druid:
-    name: Druida
+    name: Druid
     description: Guide the forces of nature
   monk:
-    name: Monge
+    name: Monk
     description: Deliver devastating combos
   paladin:
-    name: Paladino
+    name: Paladin
     description: Holy protection
   sorcerer:
-    name: Bruxo
+    name: Sorcerer
     description: Learn to cast a variety of spells
   warlock:
     name: Warlock
     description: Harness dark energy
   human:
-    name: Humano
+    name: Human
     description: Adaptable to all situations
   elf:
-    name: Elfo
+    name: Elf
     description: Grace and magic
   dwarf:
-    name: Anão
+    name: Dwarf
     description: Bold and hardy
   gnome:
-    name: Gnomo
+    name: Gnome
     description: Ambitious and energetic
   halfling:
     name: Halfling
     description: Sneaky and agile
-  jedi:
-    name: Jedi
-    description: Be one with the force
-  sith:
-    name: Sith
-    description: Surrender to the dark side
-  rebel:
-    name: Rebel
-    description: Fight for the cause
-  trooper:
-    name: Trooper
-    description: Hunt down the rebel scum
 examples:
   survival:
     instructions: |-
@@ -4991,37 +4594,6 @@ examples:
       `<p>`Wait them to be completed &r
       `<p>`Use &6/cast classselector &fto test classes &r
       `<p>`Use &6/cast raceselector &fto test races &r
-  bosses:
-    instructions: |-
-      &8| &3&nEXTRA MOBS&r
-      &8|   &fCustom mobs will now spawn naturally all over the world! &r
-      &8|   &fSummon new &cBosses&f to fight them and obtain powerful &eartifacts&f! &r
-      &8|   &fIf your default world is not called &6world&f you will &r
-      &8|   &fneed to customize your configuration using &r
-      &8|   &7/mconfig configure world overworld world yourworld &r
-      &8|   &7/mconfig configure world nether world yournether &r
-  extramobs:
-    instructions: |-
-      &8| &3&nEXTRA MOBS&r
-      &8|   &fCustom mobs will now spawn naturally all over the world! &r
-      &8|   &fSummon new &cBosses&f to fight them and obtain powerful &eartifacts&f! &r
-      &8|   &fIf your default world is not called &6world&f you will &r
-      &8|   &fneed to customize your configuration using &r
-      &8|   &7/mconfig configure world overworld world yourworld &r
-      &8|   &7/mconfig configure world nether world yournether &r
-  automata:
-    instructions: |-
-      `<title text="Automata Instructions">`
-      `<p>`Use &6/cast birth_hunter &fto spawn a hunter &r
-      `<li>``<command command="mnpc add automatashop" text="Set up a Bounty Hunter">` so players can sell automaton hearts.
-      `<p>`These heart items (Hunter Heart, Virus Heart, etc) are otherwise useless.
-      `<p>`See the wiki for more info: &r
-      `<p>`https://github.com/elBukkit/MagicPlugin/wiki/Automata &r
-  stars:
-    instructions: |-
-      `<title text="Stars Instructions">`
-      `<p>`Use &6/mnpc add starshop &fto allow &r
-      `<p>`players to choose between &bJedi&f or &cSith &r
   spawnmobs:
     instructions: |-
       `<title text="Magic Mob Spawning Instructions">`
@@ -5034,11 +4606,6 @@ examples:
       `<p>`&7/mconfig world nether_mobs world yournether
       `<p>`&7/mconfig world end_mobs world yourend
       `<p>`Or &b`<command command="meditor world overworld_mobs" text="use the editor">` to change worlds or spawn rates
-  war:
-    instructions: |-
-      `<title text="War Instructions">`
-      `<p>`Use &6/mnpc add gunshop &fto buy guns &r
-      `<p>`And &6/mnpc add carshop &ffor cars &r
 items:
   emerald_sword:
     name: Emerald Sword
@@ -5205,8 +4772,6 @@ mobs:
     name: Spinny Fox
   giant:
     name: Giant
-  automatashop:
-    name: Bounty Hunter
 modifiers:
   antiknockback:
     name: Anti-Knockback
@@ -5248,26 +4813,6 @@ paths:
   archer:
     name: '&6Archer'
     description: Archer spells
-  youngling:
-    name: '&6Youngling'
-  padawan:
-    name: '&6Padawan'
-  jedi_knight:
-    name: '&6Jedi Knight'
-  jedi_master:
-    name: '&eJedi Master'
-  acolyte:
-    name: '&4Sith Acolyte'
-  sith_apprentice:
-    name: '&4Sith Apprentice'
-  sith:
-    name: '&4Sith'
-  marauder:
-    name: '&4Sith Marauder'
-  sith_master:
-    name: '&4Sith Master'
-  sith_lord:
-    name: '&cSith Lord'
 wand_sets:
   wizard_armor:
     name: Wizard Armor
@@ -5277,8 +4822,3 @@ wand_slots:
   controls:
     lore_instructions: '`<li>`&eChange controls using an &benchant table'
     control_instructions: '&8| &7> &eChange controls using an &benchant table'
-costs:
-  xp_amount: $amount XP
-  mana_amount: $amount Energy
-  mana: Energy
-  xp: XP

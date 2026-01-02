@@ -36,12 +36,3 @@
 #
 # NOTE: If you add a new crafting recipe or disable an existing one, you will need a complete server restart for it to take effect.
 #
-dwarven_battle_axe:
-  enabled: true
-  output: dwarven_battle_axe
-  ingredients:
-    d: diamond_block
-    s: stick
-  row_1: ddd
-  row_2: dsd
-  row_3: ' s '

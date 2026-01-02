@@ -293,9 +293,10 @@ emerald:
   - wand
   - spellbook
 diamond:
-  worth: 4.53
+  worth: 100
   discover_recipes:
-  - valquiria_compass
+  - wand
+  - spellbook
 dragonbodyblue:
   item: leather_horse_armor{18001}
   color:
@@ -1309,8 +1310,6 @@ farmland:
   worth: 0
 feather:
   worth: 4.53
-  discover_recipes:
-  - valquiria_compass
 fermented_spider_eye:
   worth: 6.87
 fern:
@@ -3564,162 +3563,4 @@ potion_healing_10:
       minecraft:potion_contents: '{custom_color:16711680,custom_effects:[{ambient:1b,amplifier:20b,duration:10,id:"minecraft:instant_health",show_icon:1b}]}'
       minecraft:custom_name: '{extra:["Mega Healing Potion"],text:""}'
       minecraft:tooltip_display: '{hidden_components:["minecraft:container","minecraft:potion_contents","minecraft:bees","minecraft:written_book_content","minecraft:block_state","minecraft:container_loot","minecraft:map_id","minecraft:banner_patterns","minecraft:pot_decorations","minecraft:firework_explosion","minecraft:instrument","minecraft:fireworks","minecraft:painting/variant","minecraft:tropical_fish/pattern","minecraft:bundle_contents","minecraft:charged_projectiles","minecraft:block_entity_data","minecraft:stored_enchantments"]}'
-    schema_version: 1
-venison:
-  item: mutton
-  name: '&rRaw venison'
-cooked_venison:
-  item: cooked_mutton
-  name: '&rCooked venison'
-trono_compass:
-  worth: 100
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:compass
-    count: 1
-    components:
-      minecraft:lodestone_tracker: '{target:{dimension:"minecraft:overworld",pos:[I;15000,128,15000]},tracked:0b}'
-      minecraft:custom_name: '{extra:["Bussola Magica"],text:""}'
-    schema_version: 1
-alma_obscura:
-  worth: 100
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:flint
-    count: 1
-    components:
-      minecraft:custom_name: '{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Alma
-        Obscura",underlined:0b}],text:""}'
-      minecraft:custom_model_data: '{floats:[18003.0f]}'
-    schema_version: 1
-alma_demoniaca:
-  worth: 100
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:flint
-    count: 1
-    components:
-      minecraft:custom_name: '{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Alma
-        Demoniaca",underlined:0b}],text:""}'
-      minecraft:custom_model_data: '{floats:[18003.0f]}'
-    schema_version: 1
-graveto_malvado:
-  worth: 1000
-  attributes:
-  - type: GENERIC_ATTACK_DAMAGE
-    amount: 1
-    name: Equipment Modifier
-    slot: HAND
-    uuid: be7c088e-291d-4497-b54d-5b1b15979cd1
-    operation: 0
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:stick
-    count: 1
-    components:
-      minecraft:tooltip_display: '{hidden_components:["minecraft:enchantments"]}'
-      minecraft:enchantments: '{"minecraft:knockback":3}'
-      minecraft:custom_name: '{extra:["Foice"],text:""}'
-    schema_version: 1
-valquiria_capacete:
-  worth: 400
-  attributes:
-  - type: GENERIC_ARMOR
-    amount: 20
-    name: Equipment Modifier
-    slot: HEAD
-    uuid: be7c088e-291d-4497-b54d-5b1b15979cd1
-    operation: 0
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:netherite_helmet
-    count: 1
-    components:
-      minecraft:custom_name: '{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Capacete
-        de Valquiria",underlined:0b}],text:""}'
-    schema_version: 1
-valquiria_compass:
-  worth: 100
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:compass
-    count: 1
-    components:
-      minecraft:lodestone_tracker: '{target:{dimension:"minecraft:overworld",pos:[I;-2552,86,-2444]},tracked:0b}'
-      minecraft:custom_name: '{extra:["Bussola para Valquiria"],text:""}'
-    schema_version: 1
-valquiria_peitoral:
-  worth: 400
-  attributes:
-  - type: GENERIC_ARMOR
-    amount: 20
-    name: Equipment Modifier
-    slot: CHEST
-    uuid: be7c088e-291d-4497-b54d-5b1b15979cd1
-    operation: 0
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:netherite_chestplate
-    count: 1
-    components:
-      minecraft:custom_name: '{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Peitoral
-        de Valquiria",underlined:0b}],text:""}'
-    schema_version: 1
-valquiria_calca:
-  worth: 400
-  attributes:
-  - type: GENERIC_ARMOR
-    amount: 20
-    name: Equipment Modifier
-    slot: LEGS
-    uuid: be7c088e-291d-4497-b54d-5b1b15979cd1
-    operation: 0
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:netherite_leggings
-    count: 1
-    components:
-      minecraft:custom_name: '{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Calça
-        de Valquiria",underlined:0b}],text:""}'
-    schema_version: 1
-valquiria_botas:
-  worth: 400
-  attributes:
-  - type: GENERIC_ARMOR
-    amount: 20
-    name: Equipment Modifier
-    slot: FEET
-    uuid: be7c088e-291d-4497-b54d-5b1b15979cd1
-    operation: 0
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:netherite_boots
-    count: 1
-    components:
-      minecraft:custom_name: '{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Botas
-        de Valquiria",underlined:0b}],text:""}'
-    schema_version: 1
-pena_de_valquiria:
-  discover_recipes:
-  - valquiria_capacete
-  - valquiria_peitoral
-  - valquiria_calca
-  - valquiria_botas
-  item:
-    ==: org.bukkit.inventory.ItemStack
-    DataVersion: 4440
-    id: minecraft:feather
-    count: 1
-    components:
-      minecraft:custom_name: '{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Pena
-        de Valquiria",underlined:0b}],text:""}'
     schema_version: 1

@@ -7,379 +7,17 @@
 # .
 # https://github.com/elBukkit/MagicPlugin/tree/master/Magic/src/main/resources/defaults/worlds
 
-em_nether:
-  world: world_nether
-  entity_spawn:
-    skeletons1:
-      target_type: skeleton
-      class: Replace
-      probability: 0.6
-      priority: 100
-      not_biomes:
-      - SOUL_SAND_VALLEY
-      replace_type:
-        skeleton_warrior: 60
-        necromancer: 5
-        ghost: 15
-    skeletons2:
-      target_type: skeleton
-      class: Replace
-      probability: 0.6
-      priority: 200
-      biomes:
-      - SOUL_SAND_VALLEY
-      replace_type:
-        skeleton_warrior: 40
-        skeleton_rider: 20
-        necromancer: 5
-        ghost: 60
-    king:
-      target_type: wither_skeleton
-      class: Replace
-      probability: 0.005
-      priority: 100
-      replace_type: king
-em_overworld:
-  world: world
-  entity_spawn:
-    penguin:
-      class: Replace
-      probability: 0.7
-      target_type: polar_bear
-      replace_type: penguin
-    crab:
-      class: Replace
-      priority: 200
-      probability: 0.5
-      target_types:
-      - turtle
-      - tropical_fish
-      biomes:
-      - BEACH
-      - WARM_OCEAN
-      - LUKEWARM_OCEAN
-      - DEEP_WARM_OCEAN
-      - DEEP_LUKEWARM_OCEAN
-      replace_type:
-        crab: 20
-        crab1: 1
-    shipwreck:
-      class: Replace
-      probability: 0.05
-      biomes:
-      - BEACH
-      - SNOWY_BEACH
-      - OCEAN
-      - COLD_OCEAN
-      - DEEP_COLD_OCEAN
-      - DEEP_LUKEWARM_OCEAN
-      - DEEP_OCEAN
-      - DEEP_WARM_OCEAN
-      - LUKEWARM_OCEAN
-      - WARM_OCEAN
-      - FROZEN_OCEAN
-      - DEEP_FROZEN_OCEAN
-      target_types:
-      - turtle
-      - tropical_fish
-      replace_type: pirate
-    shroom:
-      class: Replace
-      biomes:
-      - MUSHROOM_FIELD_SHORE
-      - MUSHROOM_FIELDS
-      probability: 0.3
-      priority: 500
-      target_type: mushroom_cow
-      replace_type: shroom
-    flower:
-      class: Replace
-      biomes:
-      - FLOWER_FOREST
-      probability: 1.0
-      priority: 500
-      target_types:
-      - cow
-      - pig
-      - chicken
-      - sheep
-      - horse
-      - donkey
-      replace_type:
-        bee: 5
-        bird: 50
-        bird1: 50
-        bird2: 50
-        bird3: 75
-        bird4: 80
-    forest:
-      class: Replace
-      biomes:
-      - BIRCH_FOREST
-      - BIRCH_FOREST_HILLS
-      - DARK_FOREST
-      - DARK_FOREST_HILLS
-      - FOREST
-      - TALL_BIRCH_FOREST
-      - TALL_BIRCH_HILLS
-      - WOODED_HILLS
-      - WOODED_MOUNTAINS
-      probability: 1.0
-      priority: 500
-      target_types:
-      - cow
-      - pig
-      - chicken
-      - sheep
-      - horse
-      - donkey
-      replace_type:
-        mouse: 40
-        deer: 80
-        moose: 70
-        hedgehog: 20
-        bird3: 100
-        bird4: 120
-    taiga:
-      class: Replace
-      biomes:
-      - SNOWY_BEACH
-      - SNOWY_MOUNTAINS
-      - SNOWY_TAIGA
-      - SNOWY_TAIGA_HILLS
-      - SNOWY_TAIGA_MOUNTAINS
-      - SNOWY_TUNDRA
-      - TAIGA
-      - TAIGA_HILLS
-      - TAIGA_MOUNTAINS
-      probability: 1.0
-      priority: 500
-      target_types:
-      - cow
-      - pig
-      - chicken
-      - sheep
-      - horse
-      - donkey
-      replace_type:
-        deer: 50
-        moose: 80
-        bird3: 130
-        bird4: 150
-    jungle:
-      class: Replace
-      biomes:
-      - BAMBOO_JUNGLE
-      - BAMBOO_JUNGLE_HILLS
-      - JUNGLE
-      - JUNGLE_EDGE
-      - JUNGLE_HILLS
-      - MODIFIED_JUNGLE
-      - MODIFIED_JUNGLE_EDGE
-      probability: 1.0
-      priority: 500
-      target_types:
-      - cow
-      - pig
-      - chicken
-      - sheep
-      - rabbit
-      - horse
-      - donkey
-      replace_type:
-        bird: 5
-        bird1: 5
-        bird2: 5
-    frog:
-      class: Replace
-      biomes:
-      - SWAMP
-      - SWAMP_HILLS
-      probability: 1.0
-      priority: 100
-      target_type: slime
-      replace_type: frog
-    spideregg:
-      target_type: spider
-      class: Replace
-      max_y: 100
-      priority: 100
-      probability: 0.4
-      replace_type: spideregg
-    spiderqueen:
-      target_type: spider
-      class: Replace
-      priority: 200
-      probability: 0.05
-      replace_type: spiderqueen
-    zombies:
-      target_type: zombie
-      class: Replace
-      min_y: 60
-      priority: 100
-      probability: 0.5
-      replace_type:
-        fast_zombie: 40
-        rotten_zombie: 15
-    miner:
-      target_type: zombie
-      class: Replace
-      max_y: 59
-      priority: 200
-      probability: 0.3
-      replace_type: zombie_miner
-    skeletons:
-      target_type: skeleton
-      class: Replace
-      min_y: 60
-      priority: 100
-      probability: 0.6
-      replace_type:
-        skeleton_warrior: 40
-        skeleton_rider: 5
-        necromancer: 5
-    skeletons_caves:
-      target_type: skeleton
-      class: Replace
-      max_y: 59
-      priority: 200
-      probability: 0.8
-      replace_type:
-        skeleton_warrior: 50
-        ghost: 10
-    mummies:
-      target_type: skeleton
-      class: Replace
-      priority: 300
-      biomes:
-      - DESERT
-      - DESERT_HILLS
-      - DESERT_LAKES
-      probability: 0.8
-      replace_type: mummy
-    pharaoh:
-      target_type: skeleton
-      class: Replace
-      priority: 500
-      biomes:
-      - DESERT
-      - DESERT_HILLS
-      - DESERT_LAKES
-      probability: 0.5
-      replace_type: pharaoh
-    creeper:
-      target_type: creeper
-      class: Replace
-      min_y: 60
-      priority: 100
-      probability: 0.15
-      replace_type: mcreeper
-    nocreepersindesert:
-      target_type: creeper
-      class: Replace
-      min_y: 60
-      priority: 200
-      biomes:
-      - DESERT
-      - DESERT_HILLS
-      - DESERT_LAKES
-      - ERODED_BADLANDS
-      - BADLANDS
-      - BADLANDS_PLATEAU
-      - MODIFIED_BADLANDS_PLATEAU
-      - MODIFIED_WOODED_BADLANDS_PLATEAU
-      - WOODED_BADLANDS_PLATEAU
-      probability: 1.0
-      replace_type:
-        spider: 95
-        spiderqueen: 5
-    vampire:
-      target_type: villager
-      class: Replace
-      priority: 100
-      probability: 0.05
-      replace_type: vampire
-    witch:
-      target_type: witch
-      class: Replace
-      priority: 100
-      probability: 1.0
-      replace_type: mwitch
-    golems:
-      target_type: iron_golem
-      probability: 1.0
-      class: Replace
-      priority: 200
-      replace_type:
-        clay: 45
-        stone: 50
-        iron: 35
-        diamond: 10
-    elementals:
-      priority: 100
-      class: Replace
-      probability: 0.5
-      min_y: 60
-      target_type: enderman
-      replace_type:
-        wind: 129
-        storm: 1
-    fire:
-      priority: 100
-      class: Replace
-      probability: 0.5
-      max_y: 60
-      target_type: enderman
-      replace_type: fire
-    water:
-      class: Replace
-      priority: 200
-      probability: 0.5
-      target_type: guardian
-      replace_type: water
-    exclude:
-      class: Replace
-      priority: 0
-      replace_type: stop
-      target_types:
-      - armor_stand
-      - bat
-      - cod
-      - salmon
-      - tropical_fish
-      - pufferfish
-      - squid
-      - dolphin
-      - drowned
-      - guardian
-      - elder_guardian
-      - wither
-      - iron_golem
-      - snow_golem
-      - silverfish
-      - endermite
-      - turtle
 overworld_mobs:
   world: world
   entity_spawn:
     replace_creepers:
       class: Replace
-      tags: vale_sombrio
       target_types:
       - creeper
-      - slime
-      probability: 100
-      replace_type: skeleton
-    replace_cats:
-      class: Replace
-      target_types:
-      - cat
-      - ocelot
       probability: 0.05
-      replace_type: scaredy
+      replace_type: philbert
     replace_flying:
       class: Replace
-      tags: vale_sombrio
       y_offset: 32
       highest_block: true
       target_types:
@@ -413,8 +51,7 @@ overworld_mobs:
       - creeper
       - skeleton
       - husk
-      probability: 20
-      tags: vale_sombrio
+      probability: 0.01
       replace_type:
         warlock: 10
         dark_wizard: 1
@@ -425,30 +62,49 @@ overworld_mobs:
         dark_spider: 20
         mega_spider: 1
         mutant_spider: 20
+        cube: 20
         werewolf: 10
         madscientist: 1
         archer: 5
-    replace_global:
-      class: Replace
-      target_types:
-      - enderman
-      - zombie
-      - spider
-      - creeper
-      - skeleton
-      - husk
-      probability: 30
-      tags: global
+        giant: 2
+        goblin: 50
+nether_mobs:
+  world: world_nether
+  entity_spawn:
+    replace_ghasts:
+      class: ReplaceRule
+      target_type: ghast
+      probability: 0.1
+      replace_type: polterghast
+    dragons:
+      class: ReplaceRule
+      target_type: ghast
+      probability: 0.05
+      cooldown: 300000
       replace_type:
-        warlock: 10
-        dark_wizard: 1
-        undead_overlord: 40
-        undead_minion: 100
-        mutant: 100
-        mutant_captain: 10
-        dark_spider: 20
-        mega_spider: 1
-        mutant_spider: 20
-        werewolf: 10
-        madscientist: 1
-        archer: 5
+        reddragon: 100
+        lightreddragon: 50
+        pinkdragon: 10
+        magentadragon: 5
+        browndragon: 50
+    replace_blazes:
+      class: ReplaceRule
+      target_type: blaze
+      probability: 0.1
+      replace_type: fire_elemental
+end_mobs:
+  world: world_the_end
+  entity_spawn:
+    replace_enderman:
+      class: ReplaceRule
+      target_type: enderman
+      probability: 0.05
+      cooldown: 300000
+      replace_type:
+        blackdragon: 10
+        purpledragon: 100
+      biomes:
+      - small_end_islands
+      - end_midlands
+      - end_highlands
+      - end_barrens

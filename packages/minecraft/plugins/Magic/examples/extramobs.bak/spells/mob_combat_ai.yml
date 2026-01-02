@@ -1,7 +1,0 @@
-mob_combat_ai:
-  actions:
-    cast:
-    - class: ApplyCooldown
-  parameters:
-    target: self
-    duration: 2000

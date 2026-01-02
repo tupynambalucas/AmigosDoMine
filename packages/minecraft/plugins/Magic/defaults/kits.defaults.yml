@@ -59,9 +59,3 @@ welcome:
   starter: true
   items:
   - wand
-comida:
-  cooldown: 30 minutes
-  requirements:
-  - permission: beta.comida
-  items:
-    bread: 64

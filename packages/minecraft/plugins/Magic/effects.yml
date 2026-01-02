@@ -15,30 +15,3 @@
 # https://github.com/elBukkit/MagicPlugin/wiki/Customization
 #
 #
-faceless_lair:
-- effectlib:
-    class: Equation
-    offset: 0,16,0
-    duration: forever
-    particle: fireworks_spark
-    x_equation: rand(-16,70)
-    y_equation: rand(-16,16)
-    z_equation: rand(-64,64)
-    particle_offset_x: 8
-    particle_offset_y: 16
-    particle_offset_z: 8
-    particle_count: 16
-
-spawn:
-- effectlib:
-    class: Equation
-    offset: 0,5,0
-    duration: forever
-    particle: spore_blossom_air
-    x_equation: rand(-16,16)
-    y_equation: rand(-16,16)
-    z_equation: rand(-16,16)
-    particle_offset_x: 8
-    particle_offset_y: 16
-    particle_offset_z: 8
-    particle_count: 600

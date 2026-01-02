@@ -5,9 +5,3 @@
 # For customization help see:
 # https://github.com/elBukkit/MagicPlugin/wiki/Customization
 #
-comida:
-  cooldown: 30 minutes
-  requirements:
-  - permission: beta.comida
-  items:
-    bread: 64
