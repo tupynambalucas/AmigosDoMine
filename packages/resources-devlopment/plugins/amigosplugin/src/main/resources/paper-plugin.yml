@@ -4,9 +4,16 @@ main: com.tupynambalucas.amigosdomine.AmigosPlugin
 api-version: '1.21'
 author: 'Tupynambá Lucas'
 description: 'The core logic for Amigos Do Mine ecosystem.'
-website: 'https://github.com/tupynambalucas/EloOrganico'
+website: 'https://github.com/tupynambalucas/AmigosDoMine'
+permissions:
+  amigos.admin.setspawn:
+    description: Allows setting the server spawn
+    default: op
+  amigos.spawn:
+    description: Allows teleporting to spawn
+    default: true
+  amigos.chat.color:
+    description: Allows using MiniMessage colors/formatting in chat
+    default: op
 
-commands:
-  amigos:
-    description: "Main command for Amigos Do Mine"
-    usage: /amigos
+

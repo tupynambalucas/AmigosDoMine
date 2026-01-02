@@ -34,10 +34,24 @@ src/
 ├── main/
 │   ├── kotlin/
 │   │   └── com/tupynambalucas/amigosdomine/
-│   │       └── AmigosPlugin.kt  # Main Entry Point
+│   │       ├── features/          # Feature modules (e.g., essentials, economy)
+│   │       │   └── essentials/    # Spawn, Warp, etc.
+│   │       ├── mechanics/         # Core mechanics (e.g., Chat Formatting)
+│   │       │   └── chat/
+│   │       ├── commands/          # General/Core commands
+│   │       └── AmigosPlugin.kt    # Main Entry Point
 │   └── resources/
-│       └── paper-plugin.yml     # Manifest
+│       └── paper-plugin.yml       # Manifest
 ```
+
+## 🎮 Commands & Permissions
+
+| Command | Permission | Description |
+| :--- | :--- | :--- |
+| `/amigos` | `N/A` | Simple test command to verify plugin is active. |
+| `/setspawn` | `amigos.admin.setspawn` | Sets the world spawn point at your location. |
+| `/spawn` | `amigos.spawn` | Teleports you to the defined spawn point. |
+| `N/A` | `amigos.chat.color` | Allows using MiniMessage (e.g. `<red>`, `<rainbow>`) in chat. |
 
 ## ⚠️ Notes
 *   **Vulnerability Fix:** We force `commons-lang3:3.20.0` to avoid CVE-2025-48924.

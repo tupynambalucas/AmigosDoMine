@@ -1,7 +1,11 @@
 package com.tupynambalucas.amigosdomine
 
 import com.tupynambalucas.amigosdomine.commands.AmigosCommand
+import com.tupynambalucas.amigosdomine.features.essentials.SetSpawnCommand
+import com.tupynambalucas.amigosdomine.features.essentials.SpawnCommand
 import com.tupynambalucas.amigosdomine.listeners.PlayerJoinListener
+import com.tupynambalucas.amigosdomine.mechanics.chat.ChatListener
+import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.plugin.java.JavaPlugin
@@ -9,11 +13,21 @@ import org.bukkit.plugin.java.JavaPlugin
 class AmigosPlugin : JavaPlugin() {
 
     override fun onEnable() {
+        // Save default config if not exists
+        saveDefaultConfig()
+
         // Register Listeners
         server.pluginManager.registerEvents(PlayerJoinListener(), this)
+        server.pluginManager.registerEvents(ChatListener(this), this)
 
-        // Register Commands
-        getCommand("amigos")?.setExecutor(AmigosCommand())
+        // Register Commands via LifecycleManager (Paper 1.21+)
+        val manager = this.lifecycleManager
+        manager.registerEventHandler(LifecycleEvents.COMMANDS) { event ->
+            val commands = event.registrar()
+            commands.register("amigos", AmigosCommand())
+            commands.register("setspawn", SetSpawnCommand(this))
+            commands.register("spawn", SpawnCommand(this))
+        }
 
         // Using Paper/Purpur Component API for logging
         componentLogger.info(

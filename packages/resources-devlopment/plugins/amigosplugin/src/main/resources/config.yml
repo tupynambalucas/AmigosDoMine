@@ -1,0 +1,7 @@
+# 🧠 Amigos Plugin Configuration
+
+mechanics:
+  chat:
+    # Allow players to use legacy color codes (e.g., &a, &l, &6)
+    # If false, only MiniMessage tags (e.g., <green>, <bold>) will work.
+    legacy-colors: true

@@ -53,6 +53,31 @@ For those interested in contributing to Purpur or building it from source:
 *   **Compiling:** Use `./gradlew build` to compile the API and server JARs. Compiled JARs will be located in `Purpur-API/build/libs` and `Purpur-Server/build/libs`.
 *   **Local Maven Install:** To install `purpur-api` and `purpur` to your local Maven repository, run `./gradlew publishToMavenLocal`.
 
-## 5. Purpur-Specific API Details and Events
+## 5. Purpur-Specific API & Modern Paper Features
 
-The main documentation page serves as an overview and does not delve into specific Purpur-exclusive API methods or events. To discover these, developers should thoroughly explore the [Purpur Javadoc](https://purpurmc.org/javadoc). This resource will detail any unique classes, methods, or events that Purpur adds on top of the standard Bukkit/Spigot/Paper APIs, which can be leveraged for advanced plugin functionalities.
+Purpur inherits all of Paper's modern API features.
+
+### 5.1. Modern Command Registration (1.21+)
+Since we use `paper-plugin.yml` (the new plugin loader), we **CANNOT** use the legacy `plugin.yml` `commands` section.
+Instead, we use the **LifecycleEventManager** and **BasicCommand** (Brigadier).
+
+**Example:**
+```kotlin
+// 1. Create a command class
+class MyCommand : BasicCommand {
+    override fun execute(stack: CommandSourceStack, args: Array<out String>) {
+        stack.sender.sendMessage(Component.text("Hello!"))
+    }
+}
+
+// 2. Register in onEnable
+override fun onEnable() {
+    val manager = this.lifecycleManager
+    manager.registerEventHandler(LifecycleEvents.COMMANDS) { event ->
+        event.registrar().register("mycommand", MyCommand())
+    }
+}
+```
+
+### 5.2. Purpur Events
+Purpur adds specific events on top of Paper. Check `org.purpurmc.purpur.event` in the Javadocs.
