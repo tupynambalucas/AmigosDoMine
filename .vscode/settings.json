@@ -9,6 +9,10 @@
     "jsonc": true,
     "scminput": false
   },
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    ".guide/": true
+  },
   // Use instructions from .github/copilot-instructions.md
   "github.copilot.chat.codeGeneration.useInstructionFiles": true,
   // Temperature controls randomness: 0 = deterministic (best for code), 1 = creative
@@ -31,9 +35,9 @@
   // ==================== Files & Search ====================
   "files.exclude": {
     "**/.git": true,
-    "**/.idea": true,
-    "**/.gradle": true,
-    "**/.mcreator": true,
+    "**/.idea": false,
+    "**/.gradle": false,
+    "**/.mcreator": false,
     "**packages/minecraft-resources/dev/**/build/**": true,
     "**/.eslintcache": true,
     "**/node_modules": true
@@ -87,7 +91,6 @@
   "typescript.suggest.autoImports": true,
   "typescript.suggest.includeCompletionsForImportStatements": false,
   "java.compile.nullAnalysis.mode": "disabled",
-  "chat.instructionsFilesLocations": {
-    ".github/instructions": true
-  }
+
+  "[ignore]": {}
 }

@@ -295,8 +295,8 @@
     "discoveryMaxDirs": 200,
     "loadMemoryFromIncludeDirectories": true,
     "fileFiltering": {
-      "respectGitIgnore": false,
-      "respectGeminiIgnore": true,
+      "respectGitIgnore": true,
+      "respectGeminiIgnore": false,
       "enableRecursiveFileSearch": true,
       "disableFuzzySearch": false
     }

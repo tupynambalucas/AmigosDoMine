@@ -24,7 +24,7 @@
         "-WorkingDirectory",
         "'${workspaceFolder}'",
         "-ArgumentList",
-        "'-NoExit -Command gemini --include-directories .'"
+        "'-Command $Host.UI.RawUI.WindowTitle = \"Gemini Agent\"; gemini --include-directories .'"
       ],
       "problemMatcher": [],
       "presentation": {
