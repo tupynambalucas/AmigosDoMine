@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "amigos:arrows/blink"
-  }
+    "parent" : "item/generated",
+    "textures": {
+        "layer0": "magic:arrows/blink"
+    }
 }

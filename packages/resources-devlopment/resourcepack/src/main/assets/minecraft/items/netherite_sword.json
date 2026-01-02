@@ -107,13 +107,6 @@
                     "type": "minecraft:model",
                     "model": "magic:wands/lavad"
                 }
-            },
-            {
-                "threshold": 18016,
-                "model": {
-                    "type": "minecraft:model",
-                    "model": "amigos:armas/pochita"
-                }
             }
         ],
         "fallback": {

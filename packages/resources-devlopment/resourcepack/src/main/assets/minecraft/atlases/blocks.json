@@ -12,11 +12,6 @@
     },
     {
       "type": "directory",
-      "source": "bending",
-      "prefix": "bending/"
-    },
-    {
-      "type": "directory",
       "source": "bows",
       "prefix": "bows/"
     },
@@ -52,18 +47,8 @@
     },
     {
       "type": "directory",
-      "source": "sabers",
-      "prefix": "sabers/"
-    },
-    {
-      "type": "directory",
       "source": "wands",
       "prefix": "wands/"
-    },
-    {
-      "type": "directory",
-      "source": "war",
-      "prefix": "war/"
     }
   ]
 }
