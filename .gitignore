@@ -55,6 +55,26 @@ Thumbs.db
 ehthumbs.db
 gha-creds-*.json
 
+# ---------------------------------------------------------------- #
+#  MINECRAFT SERVER & RESOURCES DEV GITIGNORE
+# ---------------------------------------------------------------- #
+
+# --- Minecraft Server ---
+packages/minecraft/*world*/
+packages/minecraft/libraries/
+packages/minecraft/versions/
+packages/minecraft/*.log
+packages/minecraft/*.log.gz
+packages/minecraft/cache/
+packages/minecraft/server.jar
+packages/minecraft/.console_history
+packages/minecraft/usercache.json
+packages/minecraft/version_history.json
+packages/minecraft/ops.json
+packages/minecraft/whitelist.json
+packages/minecraft/banned-players.json
+packages/minecraft/banned-ips.json
+packages/minecraft/plugins/
 
 # --- Minecraft Resource Dev ---
 packages/resources-devlopment/**/**gradle**/
