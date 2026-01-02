@@ -180,7 +180,5 @@
   "typescript.suggest.autoImports": true,
   "typescript.suggest.includeCompletionsForImportStatements": false,
   "java.compile.nullAnalysis.mode": "disabled",
-
-  "[ignore]": {},
-  "vscord.status.idle.timeout": 30
+  "[ignore]": {}
 }

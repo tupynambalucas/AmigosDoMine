@@ -3183,6 +3183,70 @@ spells:
     name: Rarify
     description: Cast on an ore block to rarify it into a pure block
     usage: Requires 3 players to cast at the same time!
+  playerstats:
+    name: Player Stats
+  attributeselector:
+    name: Player Attributes
+    title: Attributes ($balance&0)
+    selected_free: ''
+    selected: ''
+  classselector:
+    name: Class Selector
+    title: Select Class
+    selected_free: Became $name
+    confirm_title: Become $item?
+    at_limit: You have already chosen your class
+  raceselector:
+    name: Race Selector
+    title: Select Race
+    selected_free: Became $name
+    confirm_title: Become $item?
+    at_limit: You have already chosen your race
+  arrow_spell_light:
+    name: Light Arrow
+    description: Fire an arrow of pure light
+    cast_player_message: a:$player shot a $spell at you
+  arrow_spell_bomb:
+    name: Bomb Arrow
+    description: Fire an exploding arrow
+    cast_player_message: a:$player shot a $spell at you
+  arrow_spell_poison:
+    name: Poison Arrow
+    description: Fire a arrow that bursts into a poison cloud
+    cast_player_message: a:$player shot a $spell at you
+  arrow_spell_regular:
+    name: Normal Arrow
+    description: Fire a normal arrow
+    cast_player_message: a:$player shot a $spell at you
+  arrow_spell_blink:
+    name: Blink Arrow
+    description: Teleport to the location where your arrow lands
+    cast_player_message: a:$player shot a $spell at you
+  arrow_spell_fire:
+    name: Fire Arrow
+    description: Lights a fire where it lands
+    cast_player_message: a:$player shot a $spell at you
+  arrow_spell_ice:
+    name: Ice Arrow
+    description: Freeze the area where it lands
+    cast_player_message: a:$player shot an $spell at you
+  arrow_spell_shock:
+    name: Shock Arrow
+    description: Electrify the target
+    cast_player_message: a:$player shot a $spell at you
+  arrow_spell_grapple:
+    name: Grapple Arrow
+    description: Shoot an arrow which pulls you towards it
+    cast_player_message: a:$player shot a $spell at you
+  startgate:
+    name: Start Gate
+    description: Warps the player to "start" if they have chosen a class, race and
+      attributes
+    property_max: '&cYou must allocate all of your Attribute Points'
+    no_class: '&cYou must choose a class and race'
+  thousandpunches:
+    name: 1,000 Punches
+    description: Throw a furious volley of deadly punches
   automatashop:
     name: Automata Shop
     title: Sell Automata Hearts
@@ -3398,70 +3462,6 @@ spells:
     cast_player_message: a:$player ran you down
   steal_ferrari:
     cast_player_message: a:$player ran you down
-  playerstats:
-    name: Player Stats
-  attributeselector:
-    name: Player Attributes
-    title: Attributes ($balance&0)
-    selected_free: ''
-    selected: ''
-  classselector:
-    name: Class Selector
-    title: Select Class
-    selected_free: Became $name
-    confirm_title: Become $item?
-    at_limit: You have already chosen your class
-  raceselector:
-    name: Race Selector
-    title: Select Race
-    selected_free: Became $name
-    confirm_title: Become $item?
-    at_limit: You have already chosen your race
-  arrow_spell_light:
-    name: Light Arrow
-    description: Fire an arrow of pure light
-    cast_player_message: a:$player shot a $spell at you
-  arrow_spell_bomb:
-    name: Bomb Arrow
-    description: Fire an exploding arrow
-    cast_player_message: a:$player shot a $spell at you
-  arrow_spell_poison:
-    name: Poison Arrow
-    description: Fire a arrow that bursts into a poison cloud
-    cast_player_message: a:$player shot a $spell at you
-  arrow_spell_regular:
-    name: Normal Arrow
-    description: Fire a normal arrow
-    cast_player_message: a:$player shot a $spell at you
-  arrow_spell_blink:
-    name: Blink Arrow
-    description: Teleport to the location where your arrow lands
-    cast_player_message: a:$player shot a $spell at you
-  arrow_spell_fire:
-    name: Fire Arrow
-    description: Lights a fire where it lands
-    cast_player_message: a:$player shot a $spell at you
-  arrow_spell_ice:
-    name: Ice Arrow
-    description: Freeze the area where it lands
-    cast_player_message: a:$player shot an $spell at you
-  arrow_spell_shock:
-    name: Shock Arrow
-    description: Electrify the target
-    cast_player_message: a:$player shot a $spell at you
-  arrow_spell_grapple:
-    name: Grapple Arrow
-    description: Shoot an arrow which pulls you towards it
-    cast_player_message: a:$player shot a $spell at you
-  startgate:
-    name: Start Gate
-    description: Warps the player to "start" if they have chosen a class, race and
-      attributes
-    property_max: '&cYou must allocate all of your Attribute Points'
-    no_class: '&cYou must choose a class and race'
-  thousandpunches:
-    name: 1,000 Punches
-    description: Throw a furious volley of deadly punches
 stop:
 - i
 - me
@@ -4572,6 +4572,32 @@ wands:
   hookshot:
     name: Hookshot
     description: Zipline to your target location
+  wizardwand:
+    name: Wand
+  roguebow:
+    name: Bow
+  battlesword:
+    name: Sword
+  statsheet:
+    name: Stat Sheet
+    description: View your character stats
+  potion_mana10:
+    name: Minor Potion of Mana
+    description: Drink to gain 10 mana
+  potion_mana50:
+    name: Potion of Mana
+    description: Drink to gain 50 mana
+  potion_mana100:
+    name: Major Potion of Mana
+    description: Drink to gain 100 mana
+  potion_fillmana:
+    name: Potion of Full Mana
+    description: Drink to completely refill your mana
+  alchemybook:
+    name: Book of Alchemy
+    description: Contains ancient alchemical lore
+  inthelmet:
+    name: Helmet of Intelligence
   conway:
     name: Conway's Wand
     description: The Game of Life
@@ -4706,32 +4732,6 @@ wands:
     name: C4
   flashbang:
     name: Flash Bang
-  wizardwand:
-    name: Wand
-  roguebow:
-    name: Bow
-  battlesword:
-    name: Sword
-  statsheet:
-    name: Stat Sheet
-    description: View your character stats
-  potion_mana10:
-    name: Minor Potion of Mana
-    description: Drink to gain 10 mana
-  potion_mana50:
-    name: Potion of Mana
-    description: Drink to gain 50 mana
-  potion_mana100:
-    name: Major Potion of Mana
-    description: Drink to gain 100 mana
-  potion_fillmana:
-    name: Potion of Full Mana
-    description: Drink to completely refill your mana
-  alchemybook:
-    name: Book of Alchemy
-    description: Contains ancient alchemical lore
-  inthelmet:
-    name: Helmet of Intelligence
 automata:
   awaken: '&c&o$name &r&5has awakened'
   default_name: Automaton
@@ -4903,18 +4903,6 @@ classes:
   crown:
     name: Corvo
     description: You'll always be royal
-  jedi:
-    name: Jedi
-    description: Be one with the force
-  sith:
-    name: Sith
-    description: Surrender to the dark side
-  rebel:
-    name: Rebel
-    description: Fight for the cause
-  trooper:
-    name: Trooper
-    description: Hunt down the rebel scum
   wizard:
     name: Wizard
     description: Use wands to cast spells
@@ -4972,6 +4960,18 @@ classes:
   halfling:
     name: Halfling
     description: Sneaky and agile
+  jedi:
+    name: Jedi
+    description: Be one with the force
+  sith:
+    name: Sith
+    description: Surrender to the dark side
+  rebel:
+    name: Rebel
+    description: Fight for the cause
+  trooper:
+    name: Trooper
+    description: Hunt down the rebel scum
 examples:
   survival:
     instructions: |-
@@ -4982,6 +4982,33 @@ examples:
       `<li>``<command command="mgive wand" text="Get a survival wand">`
       `<p>`The survival wand is craftable, players will learn the recipe
       `<p>`when they find a &bdiamond&f, &aemerald&f or &damethyst shard&f.
+  rpg:
+    instructions: |-
+      `<title text="RPG Instructions">`
+      `<p>`&cPLEASE NOTE &r
+      `<p>`&eThese configs are not yet fully functional &r
+      `<p>`You will need to do a lot of work to make them useable &r
+      `<p>`Wait them to be completed &r
+      `<p>`Use &6/cast classselector &fto test classes &r
+      `<p>`Use &6/cast raceselector &fto test races &r
+  bosses:
+    instructions: |-
+      &8| &3&nEXTRA MOBS&r
+      &8|   &fCustom mobs will now spawn naturally all over the world! &r
+      &8|   &fSummon new &cBosses&f to fight them and obtain powerful &eartifacts&f! &r
+      &8|   &fIf your default world is not called &6world&f you will &r
+      &8|   &fneed to customize your configuration using &r
+      &8|   &7/mconfig configure world overworld world yourworld &r
+      &8|   &7/mconfig configure world nether world yournether &r
+  extramobs:
+    instructions: |-
+      &8| &3&nEXTRA MOBS&r
+      &8|   &fCustom mobs will now spawn naturally all over the world! &r
+      &8|   &fSummon new &cBosses&f to fight them and obtain powerful &eartifacts&f! &r
+      &8|   &fIf your default world is not called &6world&f you will &r
+      &8|   &fneed to customize your configuration using &r
+      &8|   &7/mconfig configure world overworld world yourworld &r
+      &8|   &7/mconfig configure world nether world yournether &r
   automata:
     instructions: |-
       `<title text="Automata Instructions">`
@@ -5012,15 +5039,6 @@ examples:
       `<title text="War Instructions">`
       `<p>`Use &6/mnpc add gunshop &fto buy guns &r
       `<p>`And &6/mnpc add carshop &ffor cars &r
-  rpg:
-    instructions: |-
-      `<title text="RPG Instructions">`
-      `<p>`&cPLEASE NOTE &r
-      `<p>`&eThese configs are not yet fully functional &r
-      `<p>`You will need to do a lot of work to make them useable &r
-      `<p>`Wait them to be completed &r
-      `<p>`Use &6/cast classselector &fto test classes &r
-      `<p>`Use &6/cast raceselector &fto test races &r
 items:
   emerald_sword:
     name: Emerald Sword

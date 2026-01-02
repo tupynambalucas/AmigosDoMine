@@ -1,0 +1,21 @@
+#
+# These are here because we used to automatically create magic blocks under
+# certain conditions to act as mob spawners
+#
+# However, I have decided this causes a lot of clutter, since magic blocks are not stored
+# with their chunks (would be nice if they were), and also causes
+# issues when adding and then later removing the example
+#
+# So now they will all get automatically removed on startup.
+#
+mummyspawner:
+  name: Mummy Spawner
+  remove: true
+
+pharaohspawner:
+  name: Pharaoh Spawner
+  remove: true
+
+piratespawner:
+  name: Pirate Spawner
+  remove: true

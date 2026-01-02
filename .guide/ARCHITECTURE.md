@@ -2,7 +2,7 @@
 
 Alright, let's pop the hood and see what's powering this beast. 🔧
 
-**Amigos Do Mine** is a monorepo, which means all our cool toys live in one big happy house. We use a **Single Source of Truth (SSOT)** strategy—basically, if a data type exists, it's defined in one place (`shared`) so the Backend and Frontend never get confused.
+**Amigos Do Mine** is a monorepo, which means all our cool toys live in one big happy house. We use a **Single Source of Truth (SSOT)** strategy and strictly follow **SOLID Principles** to keep our codebase modular, testable, and sane.
 
 ## 1. The Squad (Packages) 🧱
 

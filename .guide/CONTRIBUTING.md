@@ -45,6 +45,7 @@ If you need a new data type (like a `PlayerProfile`), **DO NOT** write it in the
 
 ## 3. Asset & Code Hygiene 🧹
 
+- **SOLID Principles**: Apply them. If your class does 10 things, split it up.
 - **Language**: Code and Commits in **English**. (We love Portuguese, but the code speaks English).
 - **Naming**:
   - TS Files: `camelCase.ts`

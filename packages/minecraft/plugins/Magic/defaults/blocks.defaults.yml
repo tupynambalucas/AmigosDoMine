@@ -87,6 +87,15 @@ werewolf_spawner:
     radius: 8
     vertical_radius: 2
     mobs: werewolf
+mummyspawner:
+  name: Mummy Spawner
+  remove: true
+pharaohspawner:
+  name: Pharaoh Spawner
+  remove: true
+piratespawner:
+  name: Pirate Spawner
+  remove: true
 vaca_spawner:
   name: Spawner de vaca
   interval: 5000

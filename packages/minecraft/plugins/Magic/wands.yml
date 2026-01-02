@@ -103,8 +103,8 @@ emoji:
   worn: true
   wearable: helmet
   lore:
-  - $description
-  - '&3O admin ficou maluco'
+    - $description
+    - '&3O admin ficou maluco'
   use_active_name: true
 
 talisman_do_vento:
@@ -127,8 +127,7 @@ talisman_do_vento:
     speed: 2
   active_spell: fling
   spells:
-  - fling
-
+    - fling
 zeus:
   name: Zeus
   mana: 300
@@ -147,16 +146,15 @@ zeus:
   potion_effects:
     speed: 1
   lore:
-  - '&8-----------------------------'
-  - '&aO poder dos raios em sua mão'
-  - '&8-----------------------------'
-  - '&b- &eSolta raios na direção que você estiver olhando'
-  - '&b- &eQuando em mãos garante velocidade 2'
-  - ''
+    - '&8-----------------------------'
+    - '&aO poder dos raios em sua mão'
+    - '&8-----------------------------'
+    - '&b- &eSolta raios na direção que você estiver olhando'
+    - '&b- &eQuando em mãos garante velocidade 2'
+    - ''
   spells:
-  - lightning|3
-  - fling
-
+    - lightning|3
+    - fling
 
 black_kokuto:
   name: Black Kokuto
@@ -180,12 +178,12 @@ black_kokuto:
     GENERIC_ATTACK_SPEED: 10
   right_click: cast
   lore:
-  - '&8-----------------------------'
-  - '&5Uma estranha espada amaldiçoada'
-  - '&8-----------------------------'
-  - '&5Torna quem usa ela durante muito tempo em um corrompido'
-  - '&cAtaque: &f20'
-  - '&1Velocidade de ataque: &f10'
+    - '&8-----------------------------'
+    - '&5Uma estranha espada amaldiçoada'
+    - '&8-----------------------------'
+    - '&5Torna quem usa ela durante muito tempo em um corrompido'
+    - '&cAtaque: &f20'
+    - '&1Velocidade de ataque: &f10'
 
 mascara_sombria:
   name: Máscara Sombria

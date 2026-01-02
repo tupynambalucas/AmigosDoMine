@@ -2233,481 +2233,6 @@ wizardleggings:
   item_attributes:
     generic_armor: 2
     generic_armor_toughness: 1
-hunterheart:
-  icon: skull:http://textures.minecraft.net/texture/744e11fddeff88dd749ae5ff8fe80f46b9f659817d43d673e4af3759d59ae0
-  indestructible: false
-virusheart:
-  icon: skull:http://textures.minecraft.net/texture/744e11fddeff88dd749ae5ff8fe80f46b9f659817d43d673e4af3759d59ae0
-  indestructible: false
-wormheart:
-  icon: skull:http://textures.minecraft.net/texture/744e11fddeff88dd749ae5ff8fe80f46b9f659817d43d673e4af3759d59ae0
-  indestructible: false
-defenderheart:
-  icon: skull:http://textures.minecraft.net/texture/744e11fddeff88dd749ae5ff8fe80f46b9f659817d43d673e4af3759d59ae0
-  indestructible: false
-golemheart:
-  icon: skull:http://textures.minecraft.net/texture/744e11fddeff88dd749ae5ff8fe80f46b9f659817d43d673e4af3759d59ae0
-  indestructible: false
-snakeheart:
-  icon: skull:http://textures.minecraft.net/texture/744e11fddeff88dd749ae5ff8fe80f46b9f659817d43d673e4af3759d59ae0
-  indestructible: false
-conway:
-  inherit: architect
-  effect_color: FFFFFF
-  mana_regeneration: 50
-  mana_max: 500
-  effect_particle: portal
-  effect_particle_count: 3
-  icon: sapling:2
-  spells:
-  - fly
-  - simulate
-  - glider
-  - pillar
-  - disintegrate
-  - fill
-  - emp
-  - blob
-  - superblob
-  - levitate
-  - undo
-  - commit
-  - simulate3
-  - animate
-  brushes:
-  - schematic:life
-  - schematic:glider
-  - schematic:flare_beacon
-  - quartz_block
-  - quartz_block:2
-  - quartz_block:3
-  - obsidian
-  - cobblestone
-  - redstone_block
-science:
-  inherit: base_wand
-  icon: wand_icon:6
-  active_spell: levitate|5
-  cost_reduction: 2
-  cooldown_reduction: 2
-  hotbar_count: 2
-  spells:
-  - levitate|5
-  - blink|6
-  - birth_hunter
-  - birth_snake
-  - birth_worm
-  - birth_virus
-  - birth_defender
-  - counterspell|2
-  - blast|4
-  - disintegrate
-  - phase
-base_lightsaber:
-  hidden: true
-  inherit: base_bound
-  mode: inventory
-  icon_inactive: stick{CustomModelData:18014}
-  legacy_icon_inactive: wand_icon:14
-  icon_inactive_delay: 500
-  drop: toggle
-  left_click: none
-  right_click: none
-  swap: cycle_hotbar
-  quick_cast: true
-  cast_location: 0,-0.6,0.5
-  protection:
-    physical: 0.5
-  block_reflect_chance: 0.5
-  block_chance: 1
-  block_fov: 0.5
-  block_mage_cooldown: 3000
-  block_cooldown: 5000
-  quiet: 1
-  effect_bubbles: false
-  active_effects: true
-  effect_sound: magic.saberhum,0.05
-  effect_sound_interval: 225
-  item_attributes:
-    GENERIC_ATTACK_DAMAGE: 10
-  effects:
-    open:
-    - class: EffectSingle
-      sound: magic.saberon
-      sound_volume: 1
-      location: origin
-      color_override: color
-      effectlib:
-        class: VortexEffect
-        iterations: 10
-        grow: 0.06
-        radius: 0.2
-        offset: 0,-0.8,0
-        pitch: -60
-        particle: redstone
-    close:
-    - class: EffectSingle
-      sound: magic.saberoff
-      sound_volume: 1
-      location: origin
-      color_override: color
-      effectlib:
-        class: VortexEffect
-        iterations: 10
-        grow: 0.06
-        radius: 0.2
-        offset: 0,0.5,0
-        pitch: 60
-        particle: redstone
-    swing:
-    - class: EffectSingle
-      sound: magic.saberswing
-      sound_volume: 1
-      location: origin
-      effectlib:
-        class: VortexEffect
-        iterations: 6
-        circles: 1
-        helixes: 2
-        grow: 0.1
-        radius: 0.1
-        offset: 0,0.5,0
-        pitch: 20
-        particle: fireworks_spark
-    hit_entity:
-    - class: EffectSingle
-      sound: magic.saberhit
-      sound_volume: 1
-      location: origin
-      color_override: color
-      effectlib:
-        class: HelixEffect
-        iterations: 1
-        radius: 0.3
-        particle: redstone
-    hit_block:
-    - class: EffectSingle
-      sound: magic.saberhit
-      sound_volume: 1
-      location: origin
-      color_override: color
-      effectlib:
-        class: HelixEffect
-        iterations: 1
-        radius: 0.3
-        particle: redstone
-    hit_blocked:
-    - class: EffectSingle
-      sound: magic.saberhit
-      sound_volume: 1
-      location: origin
-      color_override: color
-      effectlib:
-        class: HelixEffect
-        iterations: 1
-        radius: 0.3
-        particle: redstone
-    spell_blocked:
-    - class: EffectSingle
-      sound: magic.saberhit
-      sound_volume: 1
-      location: origin
-      color_override: color
-      effectlib:
-        class: HelixEffect
-        iterations: 1
-        radius: 0.3
-        particle: redstone
-    spell_reflected:
-    - class: EffectSingle
-      sound: magic.saberhit
-      sound_volume: 1
-      location: origin
-      color_override: color
-      effectlib:
-        class: HelixEffect
-        iterations: 1
-        radius: 0.3
-        particle: redstone
-blaster:
-  migrate_icon: monster_eggs:3
-  icon: wand_icon:12
-  path: blaster
-  mode: cast
-  hidden: true
-  quiet: 2
-  mana: 100
-  mana_max: 100
-  mana_regeneration: 10
-  active_spell: blaster
-  indestructible: true
-  effect_color: FF0000
-  spells:
-  - blaster
-  lore:
-  - Fire powerful bolts of energy
-  - '&7Reflects off of iron blocks'
-blaster_blue:
-  class: rebel,trooper
-  inherit: blaster
-  effect_color: 0000FF
-blaster_green:
-  class: rebel,trooper
-  inherit: blaster
-  effect_color: 00FF00
-blaster_red:
-  class: trooper,rebel
-  inherit: blaster
-  effect_color: FF0000
-detonator:
-  icon: tnt
-  uses: 1
-  mode: cast
-  right_click: cast
-  left_click: none
-  cost_reduction: 2
-  cooldown_reduction: 0.9
-  spells:
-  - detonator
-lightsaber_blue:
-  inherit: base_lightsaber
-  classes: jedi,sith
-  legacy_icon: shield_icon:3
-  icon: shield{CustomModelData:18003}
-  effect_color: 0000FF
-  migrate_legacy_icons:
-    shield_icon:3: shield{CustomModelData:18003}
-  migrate_icons:
-    shield{"CustomModelData":18003}: shield_icon:3
-lightsaber_green:
-  inherit: base_lightsaber
-  classes: jedi,sith
-  legacy_icon: shield_icon:2
-  icon: shield{CustomModelData:18002}
-  effect_color: 00FF00
-  migrate_legacy_icons:
-    shield_icon:2: shield{CustomModelData:18002}
-  migrate_icons:
-    shield{"CustomModelData":18002}: shield_icon:2
-lightsaber_orange:
-  inherit: base_lightsaber
-  classes: jedi,sith
-  legacy_icon: shield_icon:5
-  icon: shield{CustomModelData:18005}
-  effect_color: FF00FF
-  migrate_legacy_icons:
-    shield_icon:5: shield{CustomModelData:18005}
-  migrate_icons:
-    shield{"CustomModelData":18005}: shield_icon:5
-lightsaber_purple:
-  inherit: base_lightsaber
-  classes: jedi,sith
-  legacy_icon: shield_icon:6
-  icon: shield{CustomModelData:18006}
-  effect_color: FFFF00
-  migrate_legacy_icons:
-    shield_icon:6: shield{CustomModelData:18006}
-  migrate_icons:
-    shield{"CustomModelData":18006}: shield_icon:6
-lightsaber_red:
-  inherit: base_lightsaber
-  classes: sith,jedi
-  legacy_icon: shield_icon:4
-  icon: shield{CustomModelData:18004}
-  effect_color: FF0000
-  migrate_legacy_icons:
-    shield_icon:4: shield{CustomModelData:18004}
-  migrate_icons:
-    shield{"CustomModelData":18004}: shield_icon:4
-lightsaber_vader:
-  inherit: lightsaber_red
-  modifiers: vader
-ak47:
-  icon: diamond_pickaxe{18001}
-  inherit: base_gun
-  active_spell: ak47
-  alternate_spell: reload_ak47
-  mana: 30
-  mana_max: 30
-base_gun:
-  hidden: true
-  right_click: cast
-  left_click: alt_cast
-  indestructible: true
-  cast_location: 0.5,-0.4,0.5
-  class: soldier
-  boostable: false
-  item_attributes:
-    GENERIC_ATTACK_SPEED: 10
-c4:
-  icon: tnt
-  uses: 1
-  right_click: cast
-  active_spell: c4
-ferrari:
-  name: Ferrari California
-  icon: diamond_pickaxe{18011}
-  active_spell: spawn_car
-  right_click: cast
-  indestructible: true
-  overrides: type ferrari
-  uses: 1
-flashbang:
-  icon: diamond_pickaxe{18006}
-  indestructible: true
-  uses: 1
-  right_click: cast
-  active_spell: flash_bang
-hawk_shotgun:
-  icon: diamond_pickaxe{18018}
-  inherit: base_gun
-  active_spell: hawk_shotgun
-  alternate_spell: reload_hawk_shotgun
-  mana: 5
-  mana_max: 5
-incendiary:
-  icon: diamond_pickaxe{18008}
-  indestructible: true
-  uses: 1
-  right_click: cast
-  active_spell: incendiary
-jetpack:
-  icon: elytra
-  cast_spell: thruster
-  cast_interval: 10
-  cast_min_velocity: 4
-  worn: true
-  indestructible: true
-model3:
-  name: Model 3
-  icon: diamond_pickaxe{18010}
-  active_spell: spawn_car
-  right_click: cast
-  indestructible: true
-  overrides: type model3
-  uses: 1
-model3_black:
-  name: Model 3
-  icon: diamond_pickaxe{18015}
-  active_spell: spawn_car
-  right_click: cast
-  indestructible: true
-  overrides: type model3_black
-  uses: 1
-model3_red:
-  name: Model 3
-  icon: diamond_pickaxe{18016}
-  active_spell: spawn_car
-  right_click: cast
-  indestructible: true
-  overrides: type model3_red
-  uses: 1
-model3_silver:
-  name: Model 3
-  icon: diamond_pickaxe{18014}
-  active_spell: spawn_car
-  right_click: cast
-  indestructible: true
-  overrides: type model3_silver
-  uses: 1
-model3_white:
-  name: Model 3
-  icon: diamond_pickaxe{18013}
-  active_spell: spawn_car
-  right_click: cast
-  indestructible: true
-  overrides: type model3_white
-  uses: 1
-mp5:
-  icon: diamond_pickaxe{18021}
-  inherit: base_gun
-  active_spell: mp5
-  alternate_spell: reload_mp5
-  mana: 15
-  mana_max: 15
-pistol:
-  icon: diamond_pickaxe{18003}
-  inherit: base_gun
-  active_spell: pistol
-  alternate_spell: reload_pistol
-  mana: 20
-  mana_max: 20
-pkp:
-  icon: diamond_pickaxe{18019}
-  inherit: base_gun
-  active_spell: pkp
-  alternate_spell: reload_pkp
-  mana: 75
-  mana_max: 75
-  potion_effects:
-  - SLOW:2
-radar:
-  icon: compass
-  right_click: cast
-  active_spell: radar
-rifle:
-  icon: diamond_pickaxe{18017}
-  inherit: base_gun
-  active_spell: rifle
-  alternate_spell: reload_rifle
-  alternate_spell2: sniper_scope
-  swap: alt_cast2
-  mana: 10
-  mana_max: 30
-riotshield:
-  icon: shield{18001}
-  indestructible: true
-  block_chance: 1
-  block_fov: 0.5
-  effects:
-    spell_blocked:
-    - class: EffectSingle
-      sound: war.ricochet
-      sound_volume: 1
-      location: origin
-      effectlib:
-        class: HelixEffect
-        iterations: 1
-        radius: 0.3
-        particle: fireworks_spark
-rocketlauncher:
-  icon: diamond_pickaxe{18005}
-  inherit: base_gun
-  active_spell: rocketlauncher
-  alternate_spell: reload_rocketlauncher
-  mana: 1
-  mana_max: 1
-shotgun:
-  icon: diamond_pickaxe{18004}
-  inherit: base_gun
-  active_spell: shotgun
-  alternate_spell: reload_shotgun
-  mana: 6
-  mana_max: 6
-sniper:
-  icon: diamond_pickaxe{18002}
-  inherit: base_gun
-  active_spell: sniper
-  swap: alt_cast2
-  alternate_spell: reload_sniper
-  alternate_spell2: sniper_scope
-  mana: 3
-  mana_max: 3
-thompson:
-  icon: diamond_pickaxe{18020}
-  inherit: base_gun
-  active_spell: thompson
-  alternate_spell: reload_thompson
-  mana: 50
-  mana_max: 50
-train:
-  name: Steam Engine
-  icon: diamond_pickaxe{18012}
-  active_spell: spawn_car
-  right_click: cast
-  indestructible: true
-  overrides: type train
-  uses: 1
 inthelmet:
   icon: leather_helmet
   attributes:
@@ -2757,6 +2282,51 @@ wizardwand:
   effect_color: random
   active_spell: missile
   class: wizard
+vampire_amulet:
+  name: '&cVampire''s Amulet'
+  description: Heals the owner, when he deals magic damage
+  inherit: base_wand
+  icon: diamond{CustomModelData:18003}
+  stack: true
+  keep: true
+  bound: true
+  effect_bubbles: true
+  effect_color: 08a0303
+  mana_regeneration_boost: 0.1
+  mana_max_boost: 0.1
+  spells:
+  - vampire_magic
+kingskull:
+  effect_particle: ash
+  stack: true
+  effect_particle_offset: 0.1
+  bound: true
+  icon: player_head:http://textures.minecraft.net/texture/68c0165e9b2dbd78dac91277e97d9a02648f3059e126a5941a84d05429ce
+  effect_particle_radius: 0.9
+  protection:
+    poison: 0.3
+    wither: 0.3
+  spell_inventory:
+    kingofdead: 0
+  mode: cast
+  active_spell: kingofdead
+  weakness:
+    fire: 0.1
+  effect_particle_interval: 1000.0
+  effect_bubbles: true
+  effect_color: 0.0
+  effect_particle_count: 20.0
+  keep: true
+  name: '&6King''s Skull'
+  spells:
+  - deathcurse
+vampireblood:
+  icon: potion:8a0303
+  description: |-
+    Who knows, what's gonna happen?..
+    &lCan be used in crafting
+  name: '&cVampire''s Blood'
+  consume_spell: vampireblood
 emoji:
   name: Admin
   icon: lectern{CustomModelData:1404002}

@@ -105,49 +105,6 @@ tail:
   triggers:
     join:
       effects: tail
-force_user:
-  inherit: base
-  limit_spells_to_path: true
-jedi:
-  parent: force_user
-  locked: true
-  path: youngling
-  discover_recipes:
-  - lightsaber_blue
-  - lightaber_green
-  - lightaber_orange
-  - lightaber_hilt
-  - lightaber_purple
-  spells:
-  - forcepush
-  - forcepull
-rebel:
-  parent: stars_soldier
-  locked: false
-  discover_recipes:
-  - blaster_blue
-  - blaster_green
-sith:
-  parent: force_user
-  locked: true
-  path: acolyte
-  discover_recipes:
-  - lightsaber_red
-  spells:
-  - forcepush
-  - forceignite
-stars_soldier:
-  storage:
-    spell_levels: class
-trooper:
-  parent: stars_soldier
-  locked: false
-  discover_recipes:
-  - blaster_red
-soldier:
-  locked: false
-  storage:
-    spell_levels: class
 artificer:
   inherit: base
   locked: true

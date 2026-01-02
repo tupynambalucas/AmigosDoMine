@@ -473,91 +473,6 @@ zombie_leather:
   output_type: item
   cooking_time: 30 seconds
   experience: 5
-blaster_blue:
-  output: blaster_blue
-  output_type: wand
-  ingredients:
-    p: stick
-    i: iron_ingot
-    g: diamond
-  row_1: iig
-  row_2: 'ii '
-  row_3: 'p  '
-blaster_green:
-  output: blaster_green
-  output_type: wand
-  ingredients:
-    p: stick
-    i: iron_ingot
-    g: emerald
-  row_1: iig
-  row_2: 'ii '
-  row_3: 'p  '
-blaster_red:
-  output: blaster_blue
-  output_type: wand
-  ingredients:
-    p: stick
-    i: iron_ingot
-    g: redstone
-  row_1: iig
-  row_2: 'ii '
-  row_3: 'p  '
-lightsaber_blue:
-  output: lightsaber_blue
-  output_type: wand
-  ingredients:
-    i: lightsaber_hilt
-    x: light_blue_stained_glass
-  row_1: ''
-  row_2: ''
-  row_3: xix
-lightsaber_green:
-  output: lightsaber_green
-  output_type: wand
-  ingredients:
-    i: lightsaber_hilt
-    x: lime_stained_glass
-  row_1: ''
-  row_2: ''
-  row_3: xix
-lightsaber_hilt:
-  output: lightsaber_hilt
-  output_type: item
-  ingredients:
-    o: nether_star
-    i: iron_ingot
-    q: quartz
-  row_1: iqi
-  row_2: ioi
-  row_3: iii
-lightsaber_orange:
-  output: lightsaber_orange
-  output_type: wand
-  ingredients:
-    i: lightsaber_hilt
-    x: orange_stained_glass
-  row_1: ''
-  row_2: ''
-  row_3: xix
-lightsaber_purple:
-  output: lightsaber_purple
-  output_type: wand
-  ingredients:
-    i: lightsaber_hilt
-    x: purple_stained_glass
-  row_1: ''
-  row_2: ''
-  row_3: xix
-lightsaber_red:
-  output: lightsaber_red
-  output_type: wand
-  ingredients:
-    i: lightsaber_hilt
-    x: red_stained_glass
-  row_1: ''
-  row_2: ''
-  row_3: xix
 arrow_blink:
   locked: true
   output: arrow_blink
@@ -630,6 +545,34 @@ arrow_shock:
     i: arrow
   row_1: o
   row_2: i
+vampire_amulet:
+  locked: true
+  output: vampire_amulet
+  output_type: wand
+  materials:
+    o: magicheart
+    i: vampireblood
+  row_1: o
+  row_2: i
+venison:
+  type: furnace
+  auto_discover: true
+  output: cooked_venison
+  ingredient: venison
+  cooking_time: 25 seconds
+  experience: 5
+venison_campfire:
+  type: campfire
+  output: cooked_venison
+  ingredient: venison
+  cooking_time: 40 seconds
+venison_smoker:
+  type: smoking
+  auto_discover: true
+  output: cooked_venison
+  ingredient: venison
+  cooking_time: 15 seconds
+  experience: 5
 dwarven_battle_axe:
   enabled: true
   output: dwarven_battle_axe

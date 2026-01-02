@@ -35,4 +35,14 @@ This is your primary directive. When you are writing code for **Amigos Do Mine**
 *   **Soul**: The project name is **Amigos Do Mine** (Portuguese). That stays.
 *   **Vibe**: Professional code, fun product.
 
+## 6. SOLID Principles 🧱
+
+We build for the future. Spaghetti code is forbidden.
+
+*   **S**ingle Responsibility: One class, one job. Separate your `Command` logic from your `Service` logic.
+*   **O**pen/Closed: Extend functionality, don't rewrite it. Use events and interfaces.
+*   **L**iskov Substitution: Subtypes must behave like their parents. Don't break the contract.
+*   **I**nterface Segregation: Keep interfaces small and focused. No God-Interfaces.
+*   **D**ependency Inversion: Depend on abstractions, not concretions. Inject your dependencies!
+
 > *Now go forth and code responsibly!*
