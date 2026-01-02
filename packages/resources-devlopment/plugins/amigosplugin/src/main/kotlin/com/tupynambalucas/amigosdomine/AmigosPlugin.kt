@@ -1,8 +1,7 @@
 package com.tupynambalucas.amigosdomine
 
 import com.tupynambalucas.amigosdomine.commands.AmigosCommand
-import com.tupynambalucas.amigosdomine.features.essentials.SetSpawnCommand
-import com.tupynambalucas.amigosdomine.features.essentials.SpawnCommand
+import com.tupynambalucas.amigosdomine.features.essentials.EssentialsFeature
 import com.tupynambalucas.amigosdomine.listeners.PlayerJoinListener
 import com.tupynambalucas.amigosdomine.mechanics.chat.ChatListener
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents
@@ -25,8 +24,9 @@ class AmigosPlugin : JavaPlugin() {
         manager.registerEventHandler(LifecycleEvents.COMMANDS) { event ->
             val commands = event.registrar()
             commands.register("amigos", AmigosCommand())
-            commands.register("setspawn", SetSpawnCommand(this))
-            commands.register("spawn", SpawnCommand(this))
+            
+            // Register Features
+            EssentialsFeature.registerCommands(this, commands)
         }
 
         // Using Paper/Purpur Component API for logging

@@ -10,6 +10,21 @@ This is the custom Minecraft plugin for **Amigos Do Mine**. It handles all the s
 *   **Language:** Kotlin (JVM 21)
 *   **Build System:** Gradle (Kotlin DSL)
 
+## 📐 Architecture & Standards
+
+We strictly adhere to **SOLID Principles** to ensure the codebase remains maintainable, testable, and scalable.
+
+*   **S - Single Responsibility:** Each class and feature module should have one distinct purpose. (e.g., separate `SpawnCommand` logic from `SetSpawnCommand` logic).
+*   **O - Open/Closed:** Features should be open for extension but closed for modification. Use interfaces and events.
+*   **L - Liskov Substitution:** Implementations must fulfill the contracts of their interfaces without breaking behavior.
+*   **I - Interface Segregation:** Prefer small, specific interfaces over monolithic ones.
+*   **D - Dependency Inversion:** High-level modules should not depend on low-level modules. Both should depend on abstractions.
+
+### Feature Modules
+We organize code by **Feature** rather than by technical layer.
+*   ✅ `features/essentials/spawn/SpawnCommand.kt`
+*   ❌ `commands/SpawnCommand.kt`
+
 ## 🚀 Development Setup
 
 ### IntelliJ IDEA (Recommended)

@@ -30,6 +30,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "resourcepack-1.21.8",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.amigosdominerp"
   },
   "mcreatorVersion": 202500345720

@@ -1,0 +1,118 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "magic:gui/empty.png",
+      "ascent": 10,
+      "height": 16,
+      "chars": [
+        "\uE700"
+      ]
+    },
+    {
+      "file": "magic:gui/cooldown.png",
+      "ascent": 10,
+      "type": "bitmap",
+      "chars": [
+        "\uE710\uE70F\uE70E\uE70D\uE70C\uE70B\uE70A\uE709\uE708\uE707\uE706\uE705\uE704\uE703\uE702\uE701\uE711"
+      ],
+      "height": 16
+    },
+    {
+      "file": "magic:gui/hotbar_slot.png",
+      "ascent": 13,
+      "type": "bitmap",
+      "chars": [
+        "\uE741"
+      ],
+      "height": 22
+    },
+    {
+      "file": "magic:gui/hotbar_active_slot.png",
+      "ascent": 13,
+      "type": "bitmap",
+      "chars": [
+        "\uE742"
+      ],
+      "height": 22
+    },
+    {
+      "file": "magic:gui/actionbar.png",
+      "ascent": 0,
+      "type": "bitmap",
+      "chars": [
+        "\uE743"
+      ],
+      "height": 64
+    },
+    {
+      "file": "magic:gui/bossbar.png",
+      "ascent": 0,
+      "type": "bitmap",
+      "chars": [
+        "\uE744"
+      ],
+      "height": 64
+    },
+    {
+      "file": "magic:gui/nogui.png",
+      "ascent": 0,
+      "type": "bitmap",
+      "chars": [
+        "\uE745"
+      ],
+      "height": 64
+    },
+    {
+      "file": "magic:icons/other/nathanwolf.png",
+      "ascent": 10,
+      "type": "bitmap",
+      "chars": [
+        "\uE746"
+      ],
+      "height": 16
+    },
+    {
+      "file": "magic:gui/bar.png",
+      "ascent": -10,
+      "type": "bitmap",
+      "chars": [
+        "\uE750",
+        "\uE751",
+        "\uE752",
+        "\uE753",
+        "\uE754",
+        "\uE755",
+        "\uE756",
+        "\uE757",
+        "\uE758",
+        "\uE759",
+        "\uE75A",
+        "\uE75B",
+        "\uE75C",
+        "\uE75D",
+        "\uE75E",
+        "\uE75F",
+        "\uE760",
+        "\uE761",
+        "\uE762",
+        "\uE763",
+        "\uE764",
+        "\uE765",
+        "\uE766",
+        "\uE767",
+        "\uE768",
+        "\uE769",
+        "\uE76A",
+        "\uE76B",
+        "\uE76C",
+        "\uE76D",
+        "\uE76E",
+        "\uE76F",
+        "\uE770",
+        "\uE771"
+      ],
+      "height": 5
+    }
+  ]
+}

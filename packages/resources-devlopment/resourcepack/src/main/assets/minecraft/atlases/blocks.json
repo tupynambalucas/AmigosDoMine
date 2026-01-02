@@ -7,21 +7,6 @@
     },
     {
       "type": "directory",
-      "source": "armas",
-      "prefix": "armas/"
-    },
-    {
-      "type": "directory",
-      "source": "itens",
-      "prefix": "itens/"
-    },
-    {
-      "type": "directory",
-      "source": "chapeus",
-      "prefix": "chapeus/"
-    },
-    {
-      "type": "directory",
       "source": "arrows",
       "prefix": "arrows/"
     },
@@ -34,6 +19,11 @@
       "type": "directory",
       "source": "bows",
       "prefix": "bows/"
+    },
+    {
+      "type": "directory",
+      "source": "gui",
+      "prefix": "gui/"
     },
     {
       "type": "directory",

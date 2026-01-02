@@ -1,0 +1,32 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "entries": [
+            {
+                "threshold": 18001,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "magic:food/coffee"
+                }
+            },
+            {
+                "threshold": 18002,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "magic:food/tea"
+                }
+            }
+        ],
+        "fallback": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/potion",
+            "tints": [
+                {
+                    "type": "minecraft:potion",
+                    "default": -13083194
+                }
+            ]
+        }
+    }
+}

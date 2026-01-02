@@ -1,11 +1,11 @@
 tasks.register('build', Zip.class) {
     from 'src/main'
-    archiveFileName = 'resource-pack.zip'
-    destinationDirectory = file('../../build/resource-pack/')
+    archiveFileName = 'resourcepack.zip'
+    destinationDirectory = file('../build/resourcepack/')
 }
 
 tasks.register('syncDataPack', Copy) {
-    from("../dev/build/resource-pack/resource-pack.zip")
+    from("../dev/build/resourcepack/resourcepack.zip")
     into("run/resourcepacks/")
     dependsOn 'build'
 }
