@@ -1,0 +1,2 @@
+snowy:
+  z_equation: rand(-32,32)

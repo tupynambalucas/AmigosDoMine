@@ -1,0 +1,110 @@
+#
+# Modify this file to customize world generation and mob spawning
+#
+# For customization help see:
+# https://github.com/elBukkit/MagicPlugin/wiki/Customization
+#
+
+#
+# This is the World configuration file for the Magic plugin.
+#
+# Each main section represents one customization to a specific world or set of worlds.
+#
+# If a `world` and `worlds` propery is not provided, the section key is assumed to be the
+# target world name.
+#
+
+overworld_mobs:
+  world: world
+  entity_spawn:
+    replace_creepers:
+      class: Replace
+      tags: vale_sombrio
+      target_types:
+      - creeper
+      - slime
+      probability: 100
+      replace_type: skeleton
+    replace_cats:
+      class: Replace
+      target_types:
+      - cat
+      - ocelot
+      probability: 0.05
+      replace_type: scaredy
+    replace_flying:
+      class: Replace
+      tags: vale_sombrio
+      y_offset: 32
+      highest_block: true
+      target_types:
+      - enderman
+      - zombie
+      - spider
+      - creeper
+      - skeleton
+      - husk
+      - phantom
+      probability: 0.001
+      cooldown: 300000
+      replace_type:
+        bluedragon: 200
+        lightbluedragon: 100
+        cyandragon: 100
+        greendragon: 200
+        greydragon: 100
+        lightgreydragon: 50
+        orangedragon: 30
+        yellowdragon: 30
+        mega_phantom: 500
+        whitedragon: 50
+        rainbowdragon: 1
+    replace_mobs:
+      class: Replace
+      target_types:
+      - enderman
+      - zombie
+      - spider
+      - creeper
+      - skeleton
+      - husk
+      probability: 20
+      tags: vale_sombrio
+      replace_type:
+        warlock: 10
+        dark_wizard: 1
+        undead_overlord: 40
+        undead_minion: 100
+        mutant: 100
+        mutant_captain: 10
+        dark_spider: 20
+        mega_spider: 1
+        mutant_spider: 20
+        werewolf: 10
+        madscientist: 1
+        archer: 5
+    replace_global:
+      class: Replace
+      target_types:
+      - enderman
+      - zombie
+      - spider
+      - creeper
+      - skeleton
+      - husk
+      probability: 30
+      tags: global
+      replace_type:
+        warlock: 10
+        dark_wizard: 1
+        undead_overlord: 40
+        undead_minion: 100
+        mutant: 100
+        mutant_captain: 10
+        dark_spider: 20
+        mega_spider: 1
+        mutant_spider: 20
+        werewolf: 10
+        madscientist: 1
+        archer: 5
+    

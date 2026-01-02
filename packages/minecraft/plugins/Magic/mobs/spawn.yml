@@ -1,0 +1,47 @@
+mercador_npc:
+  inherit: base_npc
+  show_name: true
+  name: Ferreiro
+  type: wither_skeleton
+  brain:
+    goals:
+    - look_at_player
+  disguise:
+    type: player
+    name: 'Ferreiro'
+    skin: Mistery
+  item: pochita
+  offhand: zeus
+  interact_spell: mercadorshop
+  dialog:
+  - Com frequencia me perguntam, o que uma pessoa forte precisa?
+  - Depende do tipo de pessoa :P
+  - Você é agíl? Então para ti tenho velocidade fora do imaginavel!
+  - Você quer ser forte? Então posso te conceder o poder de dominar qualquer adversário!
+  - És sábio? Então aproxime-se e libertarei a astucia dentro de ti!
+
+raca_npc:
+  inherit: base_npc
+  show_name: true
+  name: Guia de Raça
+  type: wither_skeleton
+  disguise:
+    type: player
+    name: 'Guia de Raça'
+    skin: Race
+  interact_spell: raceselector
+  dialog:
+  - Clique em mim para escolher sua raça
+
+classe_npc:
+  inherit: base_npc
+  show_name: true
+  name: Guia de Classe
+  type: wither_skeleton
+  disguise:
+    type: player
+    name: 'Guia de Classe'
+    skin: Class
+  interact_spell: classselector
+  dialog:
+  - Clique em mim para escolher sua classe

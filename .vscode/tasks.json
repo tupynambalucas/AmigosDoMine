@@ -6,7 +6,7 @@
       "type": "shell",
       "command": "./gradlew shadowJar",
       "options": {
-        "cwd": "${workspaceFolder}/packages/resources-devlopment/masterplugin"
+        "cwd": "${workspaceFolder}/packages/resources-devlopment/plugins/amigosplugin"
       },
       "group": {
         "kind": "build",

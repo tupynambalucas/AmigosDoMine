@@ -12,12 +12,12 @@ We split the work into two dedicated development environments inside this folder
 
 | Folder | Purpose | Tooling | Output |
 | :--- | :--- | :--- | :--- |
-| **`masterplugin`** | 🧠 **Server Brain:** Custom mechanics, commands, and events. | **IntelliJ IDEA** (Kotlin/Gradle) | `build/masterplugin/` |
+| **`plugins/amigosplugin`** | 🧠 **Server Brain:** Custom mechanics, commands, and events. | **IntelliJ IDEA** (Kotlin/Gradle) | `build/plugins/` |
 | **`resourcepack`** | 🎭 **Server Face:** 3D models, textures, sounds, and UI. | **MCreator** | `build/resourcepack/` |
 
 ---
 
-## 🧠 1. The Master Plugin (`masterplugin`)
+## 🧠 1. The Amigos Plugin (`plugins/amigosplugin`)
 
 This is the custom logic that makes our server unique. It's built with **Kotlin** running on **Paper/Purpur API**.
 
@@ -27,15 +27,15 @@ This is the custom logic that makes our server unique. It's built with **Kotlin*
 *   **Shadowing:** We bundle our deps using `ShadowJar`.
 
 ### 🚀 How to Build
-Open `masterplugin` in IntelliJ IDEA.
+Open `plugins/amigosplugin` in IntelliJ IDEA.
 
 ```bash
-# From packages/resources-devlopment/masterplugin
+# From packages/resources-devlopment/plugins/amigosplugin
 ./gradlew build
 ```
 
 **The Magic:** The `build.gradle.kts` is configured to automatically output the compiled jar to:
-`../build/masterplugin/AmigosPlugin.jar`
+`../../build/plugins/AmigosPlugin.jar`
 
 ---
 
@@ -60,7 +60,7 @@ This is where we redefine the look of Minecraft. We use **MCreator** to empower 
 Once assets are built, they don't stay here. They are destined for the **Backend**.
 
 1.  **Build Phase:**
-    *   Plugin ➡️ `build/masterplugin/`
+    *   Plugin ➡️ `build/plugins/`
     *   Textures ➡️ `build/resourcepack/`
 2.  **Distribution Phase:**
     *   The **Backend** picks up these artifacts to host them for the game server (Resource Pack Hosting) or for deployment scripts.

@@ -1,0 +1,54 @@
+# .
+# !! IMPORTANT !!
+# .
+# If you wish to customize this plugin, edit the "attributes.yml" file instead.
+# .
+# DO NOT JUST COPY THIS WHOLE FILE INTO YOUR attributes.yml !!!!
+# If you do this, updating the plugin in the future may not work as expected.
+# .
+# This file is merged from the files in the following folder:
+# .
+# https://github.com/elBukkit/MagicPlugin/tree/master/Magic/src/main/resources/defaults/attributes
+# .
+# See RPG configs for an example:
+# .
+# https://github.com/elBukkit/MagicPlugin/blob/master/Magic/src/main/resources/examples/rpg/attributes.yml
+
+constitution:
+  icon: spell_icon:255
+  icon_disabled: spell_icon_disabled:255
+  default: 3
+  min: 3
+  max: 20
+dexterity:
+  icon: spell_icon:256
+  icon_disabled: spell_icon_disabled:256
+  default: 3
+  min: 3
+  max: 20
+influence:
+  icon: spell_icon:258
+  icon_disabled: spell_icon_disabled:258
+  default: 3
+  min: 3
+  max: 20
+intelligence:
+  icon: spell_icon:257
+  icon_disabled: spell_icon_disabled:257
+  default: 3
+  min: 3
+  max: 20
+jump_strength:
+  default: 0.1
+strength:
+  icon: spell_icon:259
+  icon_disabled: spell_icon_disabled:259
+  default: 3
+  min: 3
+  max: 20
+wisdom:
+  icon: spell_icon:260
+  icon_disabled: spell_icon_disabled:260
+  default: 3
+  min: 3
+  max: 20

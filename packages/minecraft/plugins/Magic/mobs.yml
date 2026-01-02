@@ -1,0 +1,135 @@
+#
+# Modify this file to change, add or disable custom mob types.
+#
+# You can also add individual files to the mobs/ folder
+#
+# To see the current default builtin configs, look in this folder:
+# https://github.com/elBukkit/MagicPlugin/tree/master/Magic/src/main/resources/examples/survival/mobs
+#
+# For customization help see:
+# https://github.com/elBukkit/MagicPlugin/wiki/Customization
+#
+#
+
+#
+# General format:
+#
+# <mobkey>:
+#       enabled: true/false
+#       type: <mob type enum/name>
+#       health: 100
+
+#
+# Examples:
+# Note that a "#" character means the line is commented out and has no effect.
+# Make sure to not comment out the lines you add, there should not be a space in front of the name, indentation is important.
+# Use http://www.yamllint.com if you have issues with your config, make sure not to use tabs!
+#
+
+# Add a disguised mob type (requires LibsDisguises plugin!)
+# cowlock:
+#   type: zombie
+#   name: Cowlock
+#   health: 200
+#   default_drops: false
+#   disguise:
+#     type: cow
+
+dark_king:
+  name: Dark King 
+  type: wither_skeleton
+  item: appearance_magicka
+  # chestplate: netherite_chestplate
+  # leggings: netherite_leggings
+  helmet: magichat
+  # boots: netherite_boots
+  health: 100
+  default_drops: false
+  interval: 1000
+  boss_bar:
+    bar_color: red
+    bar_flags:
+    - create_fog
+    - darken_sky
+    - play_boss_music
+  brain:
+    goals:
+    - type: trigger
+      trigger: attack
+      interval: 2000
+      priority: 1
+      goals:
+    - type: look_at_player
+      distance: 34
+    - type: random_stroll
+      priority: 2
+  triggers:
+    damage1:
+      type: damage
+      min_health: 20
+      cast:
+        push|4: 150
+        push|3: 100
+        none: 50
+    damage2:
+      type: damage
+      max_health: 20
+      cast:
+        missile|4: 150
+        railgun: 100
+        push|4: 70
+        shell: 20
+        none: 20
+    death:
+      cast:
+        neutron: 10
+        fury: 50
+    flee:
+      cast:
+        fling|3: 50
+        blink: 10
+        fury: 5
+        heal: 5
+    attack:
+      cast:
+        missile|4: 20
+        railgun: 10
+        poison: 30
+        pull: 100
+        push|4: 150
+        curse: 100
+        blob: 20
+        lava: 10
+        shell: 20
+        torture: 1
+        arrow: 50
+        arrowrain: 20
+        fury: 5
+        chainlightning: 2
+        blink: 10
+        fling: 50
+        blind: 10
+        disarm: 5
+        frost|2: 10
+        gatling: 5
+        homing: 10
+        petrify: 10
+        none: 20
+  drops:
+  - emerald: 15
+    gold_ingot@2: 5
+    gold_ingot: 1
+    amethyst_shard: 10
+  - sp:100
+  loot:
+    gold_nugget:
+      count: looting * 3 + 10
+    diamond:
+      probability: 0.5 + luck
+      count: 1 + looting / 3
+  potion_effects:
+  - type: speed
+    amplifier: 1
+
+
+

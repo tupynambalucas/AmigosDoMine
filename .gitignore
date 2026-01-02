@@ -3,14 +3,14 @@
 # ---------------------------------------------------------------- #
 
 # --- Dependências & Gerenciadores de Pacote ---
-node_modules/
+**node_modules**
+**build/
 .pnpm-store/
 # Nota: Em ambientes profissionais, o package-lock.json DEVE ser comitado
 # para garantir builds reprodutíveis. Removi a linha que o ignorava.
 
 # --- Builds e Compilação (Frontend, Backend & Shared) ---
 dist/
-build/
 out/
 coverage/
 *.tsbuildinfo
@@ -43,6 +43,7 @@ lerna-debug.log*
 
 # --- IDEs e Editores ---
 .idea/
+.kotlin/
 .mcreator/
 .gradle/
 .swp
@@ -74,8 +75,9 @@ packages/minecraft/ops.json
 packages/minecraft/whitelist.json
 packages/minecraft/banned-players.json
 packages/minecraft/banned-ips.json
-packages/minecraft/plugins/
-
+packages/minecraft/plugins/*
+!packages/minecraft/plugins/Magic/
+packages/minecraft/plugins/Magic/data/
 # --- Minecraft Resource Dev ---
 packages/resources-devlopment/**/**gradle**/
 packages/resources-devlopment/**/**packloader**/

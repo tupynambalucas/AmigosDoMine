@@ -1,0 +1,98 @@
+cerbero:
+  show_name: false
+  name: Cérbero
+  type: zombie
+  combustible: false
+  health: 2
+  disguise:
+    type: wolf
+  default_drops: false
+  ai: true
+  goals:
+  - type: melee_attack
+    priority: 0
+  protection:
+    fall: 1
+  entity_attributes:
+    generic_attack_damage: 2
+    generic_movement_speed: 0.5
+    generic_attack_speed: 10
+    generic_knockback_resistance: 0
+
+gravetoso:
+  name: Arquidemônio
+  show_name: false
+  type: enderman
+  persist: true
+  boss_bar:
+    bar_color: purple
+    bar_flags:
+    - create_fog
+    - darken_sky
+  combustible: true
+  mage:
+    effect_color: blue
+  health: 100
+  default_drops: false
+  ai: true
+  target: 3
+  aggro: false
+  brain:
+  goals:
+  - type: melee_attack
+    priority: 0
+  triggers:
+    damage:
+      cast:
+        push|2: 50
+        heal: 100
+        none: 30
+    death:
+      commands: 
+      - msg @damagers &eAgora você já pode reencarnar
+      - lp user @damagers parent add beta
+  protection:
+    fall: 1
+  entity_attributes:
+    generic_attack_damage: 10
+    generic_movement_speed: 0.3
+    generic_attack_speed: 10
+    generic_knockback_resistance: 0
+
+
+prisioneiro:
+  name: Prisioneiro
+  type: zombie
+  disguise:
+    show_name: false
+    type: player
+    skin: Chaos
+  persist: true
+  combustible: true
+  mage:
+    effect_color: blue
+  health: 50
+  default_drops: false
+  ai: true
+  target: 8
+  aggro: false
+  brain:
+  goals:
+  - type: melee_attack
+    priority: 0
+  triggers:
+    damage:
+      cast:
+        push|2: 50
+        none: 50
+    death:
+      commands: 
+      - say @damagers &5Você agora pode reviver
+      - lp user @damagers parent add beta
+  protection:
+    fall: 1
+  entity_attributes:
+    generic_attack_damage: 1
+    generic_movement_speed: 0.3
+    generic_attack_speed: 10
+    generic_knockback_resistance: 0

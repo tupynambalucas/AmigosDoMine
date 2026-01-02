@@ -1,0 +1,441 @@
+#
+# Modify this file to change the available spells.
+# New spells can be added, existing spells modified or removed (disabled)
+#
+# You can also add individual files to the spells/ folder
+#
+# To see the current default builtin configs, look in this folder:
+# https://github.com/elBukkit/MagicPlugin/tree/master/Magic/src/main/resources/examples/survival/spells
+#
+# For customization help see:
+# https://github.com/elBukkit/MagicPlugin/wiki/Customization
+#
+
+#
+# This is the Spell configuration file for the Magic plugin.
+#
+# Here you may alter default spell behavior, or add and remove spells.
+#
+# The name, description, and usage of a spell should be defined in messages.yml as
+#  messages.spells.<spellkey>.name
+#  messages.spells.<spellkey>.description
+#  messages.spells.<spellkey>.usage
+#  messages.spells.<spellkey>.cast
+#  ... etc.
+#
+# General format:
+#
+# <spellkey>:
+#       icon:  <material name>
+#       category: <anything>
+#       class: <Must be a class from the spells package.>
+#       costs:
+#           xp: <xp/mana amount>
+#           <material_name>: <reagent amount>#
+#       parameters:
+#           <specific spell parameters- TODO: list common ones>
+#
+
+#
+# Examples:
+# Note that a "#" character means the line is commented out and has no effect.
+# Make sure to not comment out the lines you add, there should not be a space in front of the name, indentation is important.
+# Use http://www.yamllint.com if you have issues with your config, make sure not to use tabs!
+#
+
+# Disable the kill spell completely
+# kill:
+#   enabled: false
+
+# Change the cooldown on the petrify spell to one minute (60 seconds, 60000 ms)
+# petrify:
+#   parameters:
+#      cooldown: 60000
+
+# Change casting cost of blind spell to 100 mana
+# blind:
+#   costs:
+#      mana: 100
+
+# Require kill spell to consume health
+# kill:
+#    costs:
+#       health: 10
+
+soulshop:
+  icon: stun
+  category: shop
+  hidden: true
+  actions:
+    cast:
+      - class: Selector
+  parameters:
+    cost_type: alma_obscura
+    options:
+      - item: mascara_sombria
+        confirm: true
+        cost: 100
+      - item: black_kokuto
+        confirm: true
+        cost: 100
+    confirm: true
+    auto_close: true
+    confirm_filler: stained_glass:3
+    quiet: false
+    loud: true
+    selected: You bought $item for $cost'
+
+mercadorshop:
+  icon: stun
+  category: shop
+  hidden: true
+  actions:
+    cast:
+      - class: Selector
+  parameters:
+    cost_type: alma_demoniaca
+    options:
+      - item: pochita
+        confirm: true
+        cost: 1
+      - item: zeus
+        confirm: true
+        cost: 1
+    confirm: true
+    auto_close: true
+    confirm_filler: stained_glass:3
+    quiet: false
+    loud: true
+    selected: You bought $item for $cost
+
+aura_rei:
+  name: Aura do Rei
+  icon: stun
+  icon_disabled: spell_icon_disabled:62
+  icon_url: http://textures.minecraft.net/texture/08f4793551132fad5bdb5d185269881a8de6fa4b86c6bde92c2bf467e097
+  category: specialty
+  actions:
+    cast:
+      - class: ChangeContext
+        target_offset: 0,0,0
+        actions:
+          - class: ModifyBlock
+  parameters:
+    destructible: all_air,light
+    target: self
+    undo: 500
+    brush: light
+    replace_same: true
+
+singularity:
+  icon: singularity
+  category: master
+  pvp_restricted: false
+  worth: 1000
+  earns: 15
+  upgrade_required_path: student
+  upgrade_required_casts: 50
+  actions:
+    cast:
+      - class: Sphere
+        actions:
+          - class: ModifyBlock
+            direction: 0,1,0
+      - class: AreaOfEffect
+        actions:
+          - class: Velocity
+      - class: Interval
+        interval: 200
+        actions:
+          - class: AreaOfEffect
+            actions:
+              - class: Velocity
+                speed: 0.25
+                item_speed: 0.25
+                entity_speed: 0.25
+      - class: AreaOfEffect
+        actions:
+          - class: Velocity
+            push: 3
+          - class: Damage
+  effects:
+    cast_finish:
+      - sound: entity_iron_golem_death
+        sound_pitch: 0.3
+        sound_volume: 0.2
+      - sound: block_conduit_deactivate
+        sound_pitch: 0.7
+        sound_volume: 0.5
+        effectlib:
+          class: Modified
+          iterations: 3
+          duration: 150
+          parameters:
+            radius: 1.5 + (t/i) * 5
+          effect:
+            class: Sphere
+            particle: redstone
+            color: '#000000'
+            particle_size: 0.6
+            radius: 0.6
+            particles: 150
+    cast:
+      - sound: entity_wither_shoot
+        sound_pitch: 0.4
+      - class: EffectSingle
+        sound: magic.bonk
+        sound_pitch: 0.2
+        sound_volume: 0.3
+        location: origin
+      - sound: block_conduit_deactivate
+        sound_pitch: 0.7
+        sound_volume: 0.5
+      - sound: entity_bee_loop
+        sound_pitch: 2
+        location: target
+      - sound: entity_wither_death
+        sound_pitch: 0.5
+        location: target
+        target_location: block_center
+        effectlib:
+          class: Sphere
+          duration: $duration
+          particle: redstone
+          color: '#000000'
+          particle_size: 1.5
+          radius: 1.5
+          particles: 120
+      - class: EffectSingle
+        location: target
+        target_location: block_center
+        effectlib:
+          class: Modified
+          duration: $duration
+          period: 3
+          parameters:
+            radius: 8(1-(t/i))
+            rotation: t/10
+          effect:
+            class: Helix
+            particle: redstone
+            color: '#000000'
+            particle_size: 0.6
+            particles: 70
+            curve: -2
+  parameters:
+    target_type: Entity
+    range: 12
+    target: block
+    allow_max_range: true
+    undo: 15000
+    duration: 7000
+    damage: 3
+    speed: 0.75
+    item_speed: 0.75
+    entity_speed: 0.75
+    brush: air
+    player_damage: 10
+    entity_damage: 15
+    target_self_timeout: 2000
+    target_self: true
+    push: -1
+    falling: true
+    radius: 4
+    y_radius: 4
+    cooldown: 5000
+  costs:
+    mana: 200
+singularity|2:
+  parameters:
+    radius: 6
+    y_radius: 6
+    player_damage: 15
+    entity_damage: 20
+    duration: 10000
+
+arrow_grapple:
+  icon: arrow_grapple
+  category: combat
+  worth: 300
+  toggle: cancel
+  earns: 2
+  actions:
+    cast:
+      - class: Projectile
+        speed: bowpull * 2
+        actions:
+          - class: ChangeContext
+            target_offset: 0,2.5,0
+            actions:
+              - class: Interval
+                actions:
+                  - class: AreaOfEffect
+                    radius: 2.0
+                    y_radius: 0
+                    actions:
+                      - class: CheckEntity
+                        only_caster: true
+                        actions:
+                          - class: Stop
+                  - class: ChangeContext
+                    swap_source_and_target: true
+                    actions:
+                      - class: CheckTrigger
+                        trigger: sneak
+                        actions:
+                          - class: Stop
+                      - class: FallProtection
+                        duration: 5000
+                        protection_count: 1
+                      - class: Velocity
+  effects:
+    cast:
+      - class: EffectSingle
+        sound: entity_arrow_shoot
+        sound_pitch: 0.2
+        sound_volume: 0.3
+        location: origin
+    projectile:
+      - effectlib:
+          class: Line
+          duration: 45000
+          period: 2
+          particles: 70
+          particle: crit
+  parameters:
+    target: none
+    target_self: true
+    target_type: Player
+    projectile: TippedArrow
+    spread: 1 - bowpull
+    arrow_damage: bowpull
+    tick_increase: 0
+    push: -1
+    additive: true
+    living_entity_speed: 0.125
+    duration: 45000
+    total_duration: 45000
+    projectile_effects_use_target: true
+
+drive:
+  icon_url: http://textures.minecraft.net/texture/4a23ccd51565d2e246675c86aef11b5412662c15ecc2e9f3ef425adc91d1
+  icon: diamond_axe:226
+  icon_disabled: diamond_hoe:226
+  category: utility
+  worth: 200
+  show_undoable: false
+  quick_cast: true
+  cancel_effects: true
+  actions:
+    cast:
+      - class: MountArmorStand
+  effects:
+    cast:
+      - class: EffectSingle
+        sound: entity_ender_dragon_flap
+    deactivate:
+      - class: EffectSingle
+        sound: entity_ender_dragon_flap
+    crash_entity_armor_stand:
+      - class: EffectSingle
+        location: target
+        particle: fireworks_spark
+        particle_count: 15
+        particle_offset_y: 0.5
+        particle_offset_x: 0.5
+        particle_offset_z: 0.5
+        sound_volume: 0.3
+        particle_data: 0.4
+      - class: EffectSingle
+        sound: entity_generic_explode
+        sound_pitch: 0.8
+        location: target
+        effectlib:
+          class: AnimatedBallEffect
+          particles: 30
+          particlesPerIteration: 8
+          iterations: 15
+          particle: block_crack
+          particle_count: 20
+          material: iron_block
+          size: 0.4
+          y_offset: 0
+    crash_entity:
+      - class: EffectSingle
+        location: target
+        particle: fireworks_spark
+        particle_count: 15
+        particle_offset_y: 0.5
+        particle_offset_x: 0.5
+        particle_offset_z: 0.5
+        sound_volume: 0.3
+        particle_data: 0.4
+      - class: EffectSingle
+        sound: entity_slime_attack
+        sound_pitch: 0.8
+        location: target
+        effectlib:
+          class: AnimatedBallEffect
+          particles: 30
+          particlesPerIteration: 8
+          iterations: 15
+          particle: block_crack
+          particle_count: 20
+          material: redstone_block
+          size: 0.4
+          y_offset: 0
+    crash:
+      - sound: entity_generic_explode
+        sound_volume: 1
+        sound_pitch: 0.6
+      - class: EffectSingle
+        location: origin
+        entity_effect: hurt
+        particle: explosion_large
+      - class: EffectSingle
+        location: origin
+        effectlib:
+          class: SmokeEffect
+          iterations: 12
+  parameters:
+    target_armor_stand: true
+    start_speed: 0
+    max_speed: 1
+    min_speed: -0.2
+    max_acceleration: 0.01
+    max_deceleration: 0.02
+    braking: 0.005
+    steer_speed: 0.1
+    max_height_above_ground: 0
+    max_ascend: 4
+    mount_target: true
+    controllable: true
+    pitch_controllable: false
+    sound: war.engine
+    sound_interval: 100
+    sound_max_volume: 1
+    sound_min_volume: 0.01
+    sound_max_pitch: 2
+    sound_min_pitch: 0.5
+    mount_untargetable: false
+    crash_speed: 0.1
+    crash_damage: 10
+    crash_vehicle_damage: 8
+    crash_braking: 0.1
+    crash_entity_fov: 0.5
+    crash_entity_damage: 30
+    crash_entity_vehicle_damage: 1
+    crash_velocity_y_offset: 0.2
+    crash_velocity: 2.0
+    crash_entity_distance: 2.5
+    crash_distance: 1
+    crash_into: LivingEntity
+    crash_dismount_speed: 0.75
+    armor_stand_pitch: 0.2
+    steer_controllable: 10
+    gravity: 9.8
+    terminal_velocity: 50
+    air_controllable: false
+    height_check_radius: 4
+    crash_effects:
+      confusion: 120,3

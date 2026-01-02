@@ -12,7 +12,7 @@ We manage everything with NPM Workspaces. Here's the lineup:
 2.  **`@amigos-do-mine/frontend`**: The Face. A **React 19** SPA that looks pretty and lets you control the chaos.
 3.  **`@amigos-do-mine/shared`**: The Law. **Zod** schemas and Types that everyone must obey.
 4.  **`packages/minecraft`**: The Playground. A dockerized **Purpur 1.21+** server.
-5.  **`packages/resources-devlopment`**: The Studio. Where we cook up custom plugins (Kotlin) and assets (MCreator).
+5.  **`packages/resources-devlopment`**: The Studio. Where we cook up custom plugins (`plugins/amigosplugin`) and assets (MCreator).
 
 ## 2. How It Connects (Topology) 🕸️
 
@@ -23,7 +23,7 @@ We manage everything with NPM Workspaces. Here's the lineup:
 
 ### 2.2. The Game Server (`minecraft`)
 *   **Tech**: Java 21 (Eclipse Temurin) running Purpur.
-*   **Integration**: It runs our custom "Master Plugin". This plugin talks to the backend to say "Hey, is this player allowed in?" or "Here is the latest resource pack URL."
+*   **Integration**: It runs our custom "Amigos Plugin". This plugin talks to the backend to say "Hey, is this player allowed in?" or "Here is the latest resource pack URL."
 *   **Hardware Access**: We map `eudev-libs` in the container so we can monitor hardware stats (OSHI) directly from the game console.
 
 ### 2.3. The Data Flow (SSOT)

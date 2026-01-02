@@ -1,0 +1,21 @@
+graveto_malvado:
+  worth: 1000
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1
+      name: Equipment Modifier
+      slot: HAND
+      uuid: be7c088e-291d-4497-b54d-5b1b15979cd1
+      operation: 0
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3218
+    type: STICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"text":"Foice"}],"text":""}'
+      enchants:
+        KNOCKBACK: 3
+      ItemFlags:
+        - HIDE_ENCHANTS

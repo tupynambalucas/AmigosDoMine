@@ -1,0 +1,16 @@
+aura_do_rei:
+  name: Aura
+  cast_spell: aura_rei
+  cast_interval: 200
+  icon: lectern{CustomModelData:18021}
+  legacy_icon: wand_icon:17
+  indestructible: true
+  keep: true
+  mana_max_boost: 0.15
+  mana_regeneration_boost: 0.25
+  wearable: helmet
+  potion_effects:
+  - SATURATION
+  - REGENERATION:1
+  - SPEED:1
+  - JUMP:4

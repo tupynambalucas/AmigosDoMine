@@ -7,7 +7,8 @@
     "debugKeystrokeLogging": false,
     "sessionRetention": {
       "enabled": false
-    }
+    },
+    "preferredEditor": "vscode"
   },
   "output": {
     "format": "text"
@@ -280,7 +281,10 @@
   "mcpServers": {
     "github": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github@latest"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github@latest"
+      ]
     }
   },
   "context": {

@@ -1,0 +1,4 @@
+name: AmigosPlugin
+version: '1.0-SNAPSHOT'
+main: com.tupynambalucas.amigosdomine.AmigosPlugin
+api-version: '1.21'

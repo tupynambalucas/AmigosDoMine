@@ -1,0 +1,8 @@
+example: survival
+examples:
+- automata
+- stars
+- spawnmobs
+- war
+- rpg
+add_examples: []

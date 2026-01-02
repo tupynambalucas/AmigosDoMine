@@ -1,0 +1,7 @@
+selector:
+  title: Escolha com sabedoria
+  cost_lore: '&6Custa: &e$cost'
+  required_cost_lore: '&6Custa: &ex$cost'
+  property_requirement: '&r&cRequer: &6$property &cof $4$value'
+requirements:
+  property_requirement: '&r&cRequer: &6$property &cof $4$value'
