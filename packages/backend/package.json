@@ -5,10 +5,10 @@
   "private": true,
   "author": "Tupynambá Lucas Varela Rodrigues <tupynambalucas.dev>",
   "license": "CC-BY-NC-4.0",
-  "homepage": "https://github.com/tupynambalucas/EloOrganico/tree/main/packages/backend#readme",
+  "homepage": "https://github.com/tupynambalucas/AmigosDoMine/tree/main/packages/backend#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tupynambalucas/EloOrganico.git",
+    "url": "git+https://github.com/tupynambalucas/AmigosDoMine.git",
     "directory": "packages/backend"
   },
   "main": "dist/index.js",

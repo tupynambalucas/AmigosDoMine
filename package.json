@@ -9,7 +9,7 @@
   "homepage": "https://tupynambalucas.dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tupynambalucas/EloOrganico.git"
+    "url": "git+https://github.com/tupynambalucas/AmigosDoMine.git"
   },
   "workspaces": [
     "packages/*"

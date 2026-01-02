@@ -13,6 +13,8 @@ repositories {
 
 dependencies {
     compileOnly("org.purpurmc.purpur", "purpur-api", "1.21.8-R0.1-SNAPSHOT")
+    compileOnly("org.apache.commons:commons-lang3:3.20.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 }
 
 

@@ -1,8 +1,16 @@
 {
   "name": "@amigos-do-mine/shared",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
+  "private": true,
+  "author": "Tupynambá Lucas Varela Rodrigues <tupynambalucas.dev>",
+  "license": "CC-BY-NC-4.0",
+  "homepage": "https://github.com/tupynambalucas/AmigosDoMine/tree/main/packages/shared#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tupynambalucas/AmigosDoMine.git",
+    "directory": "packages/shared"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

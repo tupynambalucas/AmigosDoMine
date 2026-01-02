@@ -5,10 +5,10 @@
   "description": "Amigos Do Mine - Creative Studio (Plugin & Resource Pack)",
   "author": "Tupynambá Lucas Varela Rodrigues <tupynambalucas.dev>",
   "license": "CC-BY-NC-4.0",
-  "homepage": "https://tupynambalucas.dev",
+  "homepage": "https://github.com/tupynambalucas/AmigosDoMine/tree/main/packages/resources-devlopment#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tupynambalucas/EloOrganico.git",
+    "url": "git+https://github.com/tupynambalucas/AmigosDoMine.git",
     "directory": "packages/resources-devlopment"
   }
 }

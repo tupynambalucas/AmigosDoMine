@@ -2,3 +2,11 @@ name: AmigosPlugin
 version: '1.0-SNAPSHOT'
 main: com.tupynambalucas.amigosdomine.AmigosPlugin
 api-version: '1.21'
+author: 'Tupynambá Lucas'
+description: 'The core logic for Amigos Do Mine ecosystem.'
+website: 'https://github.com/tupynambalucas/EloOrganico'
+
+commands:
+  amigos:
+    description: "Main command for Amigos Do Mine"
+    usage: /amigos
