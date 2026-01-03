@@ -2,6 +2,11 @@
   "sources": [
     {
       "type": "directory",
+      "source": "custom",
+      "prefix": "custom/"
+    },
+    {
+      "type": "directory",
       "source": "arrows",
       "prefix": "arrows/"
     },
@@ -44,16 +49,16 @@
       "type": "directory",
       "source": "wands",
       "prefix": "wands/"
-    }
-    {
-      "type": "directory",
-      "source": "weapons",
-      "prefix": "weapons/"
     },
     {
       "type": "directory",
       "source": "hats",
       "prefix": "hats/"
+    },
+    {
+      "type": "directory",
+      "source": "weapons",
+      "prefix": "weapons/"
     }
   ]
 }

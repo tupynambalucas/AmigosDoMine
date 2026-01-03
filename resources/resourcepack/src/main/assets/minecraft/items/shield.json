@@ -19,6 +19,81 @@
                 }
             },
             {
+                "threshold": 18002,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_green"
+                    },
+                    "on_true": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_green_blocking"
+                    }
+                }
+            },
+            {
+                "threshold": 18003,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_blue"
+                    },
+                    "on_true": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_blue_blocking"
+                    }
+                }
+            },
+            {
+                "threshold": 18004,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_red"
+                    },
+                    "on_true": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_red_blocking"
+                    }
+                }
+            },
+            {
+                "threshold": 18005,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_orange"
+                    },
+                    "on_true": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_orange_blocking"
+                    }
+                }
+            },
+            {
+                "threshold": 18006,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_purple"
+                    },
+                    "on_true": {
+                        "type": "minecraft:model",
+                        "model": "amigos:sabers/lightsaber_purple_blocking"
+                    }
+                }
+            },
+            {
                 "threshold": 18010,
                 "model": {
                     "type": "minecraft:model",

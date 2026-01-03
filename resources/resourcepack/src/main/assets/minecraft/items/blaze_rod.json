@@ -88,6 +88,20 @@
                 }
             },
             {
+                "threshold": 18013,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:sabers/lightsaber_hilt"
+                }
+            },
+            {
+                "threshold": 18014,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:sabers/lightsaber_hilt"
+                }
+            },
+            {
                 "threshold": 18015,
                 "model": {
                     "type": "minecraft:model",
@@ -113,6 +127,41 @@
                 "model": {
                     "type": "minecraft:model",
                     "model": "amigos:other/ocarina"
+                }
+            },
+            {
+                "threshold": 18019,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:bending/airbending"
+                }
+            },
+            {
+                "threshold": 18020,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:bending/waterbending"
+                }
+            },
+            {
+                "threshold": 18021,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:bending/earthbending"
+                }
+            },
+            {
+                "threshold": 18022,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:bending/firebending"
+                }
+            },
+            {
+                "threshold": 18023,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:bending/avatar"
                 }
             },
             {
@@ -176,6 +225,20 @@
                 "model": {
                     "type": "minecraft:model",
                     "model": "amigos:other/extinguisher"
+                }
+            },
+            {
+                "threshold": 18033,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:bending/air_glider"
+                }
+            },
+            {
+                "threshold": 18034,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:bending/air_staff"
                 }
             },
             {
