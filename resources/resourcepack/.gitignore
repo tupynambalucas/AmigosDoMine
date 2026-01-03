@@ -1,4 +1,5 @@
 packloader/
 run/
-src/**/*.ogg
-src/**/*.png
+**/assets/**/*.ogg
+**/assets/**/*.png
+**/assets/**/*.png.mcmeta

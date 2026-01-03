@@ -1,0 +1,16 @@
+{
+  "name": "@amigos-do-mine/resourcepack",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Tupynambá Lucas Varela Rodrigues <tupynambalucas.dev>",
+  "license": "CC-BY-NC-4.0",
+  "homepage": "https://github.com/tupynambalucas/AmigosDoMine/tree/main/resources/resourcepack#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tupynambalucas/AmigosDoMine.git",
+    "directory": "resources/resourcepack"
+  },
+  "scripts": {
+    "fix:prefixes": "node ./fix_magic_prefix.js"
+  }
+}
