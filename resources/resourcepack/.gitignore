@@ -1,3 +1,4 @@
 packloader/
 run/
-.ogg*
+src/**/*.ogg
+src/**/*.png

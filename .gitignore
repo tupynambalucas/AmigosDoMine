@@ -4,7 +4,6 @@
 
 # --- Dependências & Gerenciadores de Pacote ---
 **node_modules**
-**build/
 .pnpm-store/
 # Nota: Em ambientes profissionais, o package-lock.json DEVE ser comitado
 # para garantir builds reprodutíveis. Removi a linha que o ignorava.
@@ -12,6 +11,7 @@
 # --- Builds e Compilação (Frontend, Backend & Shared) ---
 dist/
 out/
+build/
 coverage/
 *.tsbuildinfo
 .eslintcache
