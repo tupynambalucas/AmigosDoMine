@@ -110,6 +110,26 @@ services:
       timeout: 10s
       retries: 3
 
+  stabledf:
+    build:
+      context: ./resources/stabledf
+      dockerfile: Dockerfile
+    container_name: stable-diffusion-amd
+    volumes:
+      - ./resources/stabledf:/dockerx/stable-diffusion-webui
+    devices:
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
+    group_add:
+      - video
+    ipc: host
+    network_mode: host
+    privileged: true
+    security_opt:
+      - seccomp:unconfined
+    command: >
+      bash -c "python3 launch.py --precision full --no-half --use-cpu all --listen"
+
 volumes:
   mongo_data:
   backend_logs:
