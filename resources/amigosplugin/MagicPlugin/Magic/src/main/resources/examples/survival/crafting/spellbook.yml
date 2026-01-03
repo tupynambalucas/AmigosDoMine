@@ -1,0 +1,14 @@
+spellbook:
+  output: spellbook
+  output_type: wand
+  group: "Wands"
+
+  ingredients:
+    o: amethyst_shard
+    d: diamond
+    e: emerald
+    i: book
+
+  row_1: " o "
+  row_2: "die"
+  row_3:

@@ -1,0 +1,73 @@
+shutdown:
+  name: Shutdown Server
+  description: Gives a 5-minute warning for server shutdown
+  icon: stick
+  actions:
+    cast:
+    - class: ModifyVariable
+      variable: started
+      value: epoch
+    - class: Asynchronous
+      actions:
+      - class: Interval
+        interval: 1000
+        duration: 300000
+        actions:
+          - class: AllEntities
+            actions:
+              - class: UpdateParameters
+                actions:
+                  - class: BossBar
+                    bar_title: "&cServer Shutting Down!"
+                    bar_progress: (300000 - (epoch - started)) / 300000
+    - class: AllEntities
+      actions:
+        - class: Message
+          message: "&e5 Minute warning, &fthe server will be &c&lshutting down!"
+    - class: Delay
+      delay: 240000
+    - class: AllEntities
+      actions:
+        - class: Message
+          message: "&e1 Minute warning, &fthe server will be &c&lshutting down!"
+    - class: Delay
+      delay: 50000
+    - class: AllEntities
+      actions:
+        - class: Message
+          message: "&fThe server will be &c&lshutting down &ein 10 seconds!"
+    - class: ModifyVariable
+      variable: countdown
+      value: 10
+    - class: Repeat
+      repeat: 9
+      actions:
+         - class: Delay
+           delay: 1000
+         - class: ModifyVariable
+           variable: countdown
+           value: countdown - 1
+         - class: AllEntities
+           actions:
+             - class: Message
+               message: "&fThe server will be &c&lshutting down &ein @countdown seconds!"
+    - class: AllEntities
+      actions:
+        - class: Message
+          message: "&c&lTHE SERVER IS SHUTTING DOWN NOW!!!"
+    - class: Delay
+      delay: 5000
+    - class: Command
+      console: true
+      commands:
+      - stop
+  parameters:
+    target_game_modes: all
+    target_type: Player
+    show_target: true
+    message_target: true
+    target_self: true
+    bypass_protection: true
+    target_all_worlds: true
+    cooldown: 600000
+    bypass_pvp: true

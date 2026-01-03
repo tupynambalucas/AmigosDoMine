@@ -1,0 +1,12 @@
+flashboots:
+  enabled: false
+  output: flashboots
+  output_type: wand
+  ingredients:
+    o: fire_charge
+    i: wool
+    f: feather
+  row_1: i i
+  row_2: o o
+  row_3: f f
+

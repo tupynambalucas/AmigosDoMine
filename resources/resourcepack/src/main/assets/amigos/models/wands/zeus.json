@@ -5,8 +5,8 @@
         64
     ],
     "textures": {
-        "0": "amigos:armas/zeus",
-        "particle": "amigos:armas/zeus"
+        "0": "amigos:wands/zeus",
+        "particle": "amigos:wands/zeus"
     },
     "elements": [
         {

@@ -1,0 +1,25 @@
+earth:
+- all_stone
+- short_grass
+- grass_block
+- dirts
+- cobblestone
+- mossy_cobblestone
+- clay
+- stained_clays
+- sand
+- gravel
+- netherrack
+- ender_stone
+- mycel
+- soul_sand
+- sandstone
+- gold_ore
+- iron_ore
+- coal_ore
+- lapis_ore
+- diamond_ore
+- redstone_ore
+- glowing_redstone_ore
+- emerald_ore
+- quartz_ore

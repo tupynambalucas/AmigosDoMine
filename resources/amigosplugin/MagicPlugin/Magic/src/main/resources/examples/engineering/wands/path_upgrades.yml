@@ -1,0 +1,28 @@
+engineer_upgrade:
+    icon: blaze_rod{CustomModelData:18005}
+    legacy_icon: wand_icon:5
+    upgrade: true
+    hidden: true
+    indestructible: false
+    spells:
+    - brushselect
+    - place
+    brushes:
+    - dirt
+    - cobblestone
+
+architect_upgrade:
+    icon: blaze_rod{CustomModelData:18039}
+    legacy_icon: wand_icon:5
+    upgrade: true
+    hidden: true
+    indestructible: false
+    spells:
+    - absorb
+
+conduit_upgrade:
+    icon: blaze_rod{CustomModelData:18006}
+    legacy_icon: wand_icon:6
+    upgrade: true
+    hidden: true
+    indestructible: false

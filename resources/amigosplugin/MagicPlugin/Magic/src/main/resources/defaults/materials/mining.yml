@@ -1,0 +1,10 @@
+mining:
+- ores
+- nether_ores
+- coal_block
+- gold_block
+- lapis_block
+- diamond_block
+- redstone_block
+- emerald_block
+- netherite_block

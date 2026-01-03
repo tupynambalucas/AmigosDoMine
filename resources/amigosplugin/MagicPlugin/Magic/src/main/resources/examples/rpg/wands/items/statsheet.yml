@@ -1,0 +1,7 @@
+statsheet:
+  active_spell: playerstats
+  icon: written_book
+  undroppable: true
+  keep: true
+  indestructible: false
+  mode: cast

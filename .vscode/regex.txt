@@ -1,3 +1,0 @@
-^.*java.*$
-
-│ x  Shell {"description":"Setting up GitHub Actions to triage issues and review PRs with Gemini.","command":"(echo \"Successfully downloaded 5 workflows , 4 commands and updated .gitignore. Follow the steps in https://github.com/google-github-actions/run-gemini-cli/blob/v0.1.18/README.md#quick-start (skipping the /setup-github step) to complete setup.\" && start \"https://github.com/google-github-actions/run-gemini-cli/blob/v0.1.18/README.md#quick-start\" && start \"https://github.com/tupynambalucas/AmigosDoMine/settings/secrets/actions\")"}  

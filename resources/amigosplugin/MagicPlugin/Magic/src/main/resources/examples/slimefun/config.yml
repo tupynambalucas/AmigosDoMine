@@ -1,0 +1,6 @@
+resource_pack: slimefun
+add_resource_pack: slimefun
+
+alternate_resource_packs:
+  slimefun:
+    url: "http://rp.elmakers.com/Magic-slimefun-RP-1.19.zip"

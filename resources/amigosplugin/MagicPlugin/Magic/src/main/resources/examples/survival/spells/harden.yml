@@ -1,0 +1,80 @@
+harden:
+    # This refers to an icon defined in the icons folder/config
+    icon: harden
+    category: utility
+    worth: 150
+    earns: 4
+    upgrade_required_path: apprentice
+    upgrade_required_casts: 50
+    actions:
+        cast:
+        - class: Recurse
+          actions:
+          - class: ModifyBlock
+    effects:
+        cast:
+        - sound: block_beacon_deactivate
+          sound_pitch: 1.9
+          sound_volume: 0.2
+        - sound: entity_evoker_cast_spell
+          sound_pitch: 1.75
+          sound_volume: 0.8
+        - sound: block_smithing_table_use
+          sound_pitch: 1.7
+          sound_volume: 0.3
+        - sound: magic.shimmer
+        - class: EffectTrail
+          particle: block_crack
+          particle_count: 20
+          particle_offset_x: 0.2
+          particle_offset_y: 0.2
+          particle_offset_z: 0.2
+        - location: target
+          effectlib:
+             class: Helix
+             particle: block_crack
+             particle_count: 8
+             particle_offset_x: 0.2
+             particle_offset_y: 0.5
+             particle_offset_z: 0.2
+             iterations: 1
+             radius: $size
+             strands: 4
+             particles: 20
+    parameters:
+        allow_max_range: false
+        range: 16
+        size: 2
+        destructible_override: true
+        destructible: destructible,hardenable
+        brush: stone
+        transparent: transparent_to_construction
+        undo: 4000
+        cooldown: 1500
+        bypass_backfire: true
+        select_self: false
+        replace: true
+    costs:
+        mana: 30
+
+harden|2:
+    parameters:
+        undo: 5000
+        brush: stone_bricks
+
+harden|3:
+    parameters:
+        undo: 6000
+        brush: smooth_stone
+
+harden|4:
+    parameters:
+        size: 3
+        undo: 7000
+        brush: polished_blackstone
+
+harden|5:
+    parameters:
+        undo: 8000
+        brush: obsidian
+

@@ -1,0 +1,42 @@
+webbing:
+    # This refers to an icon defined in the icons folder/config
+    icon: webbing
+    hidden: true
+    category: combat
+    actions:
+      cast:
+      - class: CustomProjectile
+        actions:
+        - class: Sphere
+          actions:
+          - class: ModifyBlock
+        tick:
+        - class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           custom_sound: magic.whip
+           location: origin
+        hit:
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: SmokeEffect
+             iterations: 30
+        tick:
+             particle: fireworks_spark
+    costs:
+        mana: 100
+    parameters:
+        allow_max_range: false
+        start: 1
+        velocity: 12
+        range: 8
+        radius: 1.5
+        brush: web
+        destructible: web,air
+        transparent: web,air
+        undo: 6000
+        breakable: 2
+        target_breakables: 0
+        cooldown: 5000

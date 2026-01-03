@@ -1,0 +1,444 @@
+camoarmor:
+  name: Camouflage
+  hidden: true
+  variables:
+    - variable: target_r
+      scope: spell
+      value: 1
+    - variable: target_g
+      scope: spell
+      value: 1
+    - variable: target_b
+      scope: spell
+      value: 1
+    - variable: current_r
+      scope: spell
+      value: 1
+    - variable: current_g
+      scope: spell
+      value: 1
+    - variable: current_b
+      scope: spell
+      value: 1
+  actions:
+    cast:
+    - class: CheckBlock
+      ignore_result: true
+
+      # Map biomes to sets of actions to run
+      biome_actions:
+        jungle: green
+        jungle_edge: green
+        jungle_hills: green
+        bamboo_jungle: green
+        bamboo_jungle_hills: green
+        modified_jungle_edge: green
+        sparse_jungle: green
+
+        forest: lightgreen
+        wooded_hills: lightgreen
+        windswept_forest: lightgreen
+
+        dark_forest: darkgreen
+        dark_forest_hills: darkgreen
+
+        swamp: swampy
+        swamp_hills: swampy
+
+        river: bluegreen
+
+        desert: sand
+        desert_hills: sand
+        desert_lakes: sand
+        beach: sand
+
+        lukewarm_ocean: blue
+        deep_lukewarm_ocean: blue
+        ocean: blue
+        cold_ocean: blue
+        deep_cold_ocean: blue
+
+        warm_ocean: darkblue
+        deep_warm_ocean: darkblue
+
+        frozen_ocean: frozenblue
+        deep_frozen_ocean: frozenblue
+        ice_spikes: frozenblue
+        frozen_river: frozenblue
+        frozen_peaks: frozenblue
+
+        plains: plains
+
+        birch_forest: birch_green
+        birch_forest_hills: birch_green
+        tall_birch_forest: birch_green
+        old_growth_birch_forest: birch_green
+
+        savanna: savanna
+
+        windswept_hills: mountains
+        mountains: mountains
+        mountain_edge: mountains
+        gravelly_mountains: mountains
+        modified_gravelly_mountains: mountains
+        windswept_gravelly_hills: mountains
+        stone_shore: mountains
+        stony_shore: mountains
+        stony_peaks: mountains
+        jagged_peaks: mountains
+
+        lush_caves: caves
+        dripstone_caves: caves
+
+        mushroom_fields: mushroom
+
+        sunflower_plains: sunflowers
+
+        flower_forest: flower_forest
+        meadow: flower_forest
+        grove: flower_forest
+
+        snowy_tundra: snowy
+        snowy_plains: snowy
+        snowy_beach: snowy
+        snowy_mountains: snowy
+        snowy_taiga: snowy
+        snowy_taiga_hills: snowy
+        snowy_taiga_mountains: snowy
+        snowy_slopes: snowy
+
+        badlands: badlands
+        eroded_badlands: badlands
+        wooded_badlands: badlands
+        wooded_badlands_plateau: badlands
+        badlands_plateau: badlands
+
+        taiga: taiga
+        wooded_mountains: taiga
+        taiga_hills: taiga
+        taiga_mountains: taiga
+        giant_spruce_taiga: taiga
+        giant_spruce_taiga_hills: taiga
+        giant_tree_taiga: taiga
+        giant_tree_taiga_hills: taiga
+        old_growth_pine_taiga: taiga
+        old_growth_spruce_taiga: taiga
+
+        nether_wastes: nether
+        warped_forest: nether
+        crimson_forest: nether
+        basalt_deltas: nether
+        soul_sand_valley: nether
+
+        the_end: the_end
+        the_void: the_end
+        small_end_islands: the_end
+        end_barrens: the_end
+        end_midlands: the_end
+        end_highlands: the_end
+
+      # Actions handlers called by the biome_actions map
+      green:
+        # color: "#2CA80A"
+        - class: ModifyVariable
+          variable: target_r
+          value: 44
+        - class: ModifyVariable
+          variable: target_g
+          value: 168
+        - class: ModifyVariable
+          variable: target_b
+          value: 10
+
+      lightgreen:
+        # color: "#4B872D"
+        - class: ModifyVariable
+          variable: target_r
+          value: 75
+        - class: ModifyVariable
+          variable: target_g
+          value: 135
+        - class: ModifyVariable
+          variable: target_b
+          value: 45
+
+      darkgreen:
+        # "#4C3A22"
+        - class: ModifyVariable
+          variable: target_r
+          value: 76
+        - class: ModifyVariable
+          variable: target_g
+          value: 58
+        - class: ModifyVariable
+          variable: target_b
+          value: 34
+
+      swampy:
+        # "#475B2E"
+        - class: ModifyVariable
+          variable: target_r
+          value: 71
+        - class: ModifyVariable
+          variable: target_g
+          value: 91
+        - class: ModifyVariable
+          variable: target_b
+          value: 46
+
+      bluegreen:
+        # "#3E61C9"
+        - class: ModifyVariable
+          variable: target_r
+          value: 62
+        - class: ModifyVariable
+          variable: target_g
+          value: 97
+        - class: ModifyVariable
+          variable: target_b
+          value: 201
+
+      sand:
+        # "#E0D4A8"
+        - class: ModifyVariable
+          variable: target_r
+          value: 224
+        - class: ModifyVariable
+          variable: target_g
+          value: 212
+        - class: ModifyVariable
+          variable: target_b
+          value: 168
+
+      blue:
+        # "#3B5991"
+        - class: ModifyVariable
+          variable: target_r
+          value: 59
+        - class: ModifyVariable
+          variable: target_g
+          value: 89
+        - class: ModifyVariable
+          variable: target_b
+          value: 145
+
+      darkblue:
+        # color: "#36857F"
+        - class: ModifyVariable
+          variable: target_r
+          value: 54
+        - class: ModifyVariable
+          variable: target_g
+          value: 133
+        - class: ModifyVariable
+          variable: target_b
+          value: 127
+
+      frozenblue:
+        # "90B6FA"
+        - class: ModifyVariable
+          variable: target_r
+          value: 144
+        - class: ModifyVariable
+          variable: target_g
+          value: 182
+        - class: ModifyVariable
+          variable: target_b
+          value: 250
+
+      plains:
+        # "#749648"
+        - class: ModifyVariable
+          variable: target_r
+          value: 116
+        - class: ModifyVariable
+          variable: target_g
+          value: 150
+        - class: ModifyVariable
+          variable: target_b
+          value: 72
+
+      birch_green:
+        # color: "#6D8752"
+        - class: ModifyVariable
+          variable: target_r
+          value: 109
+        - class: ModifyVariable
+          variable: target_g
+          value: 135
+        - class: ModifyVariable
+          variable: target_b
+          value: 82
+
+      savanna:
+        # color: "#968B40"
+        - class: ModifyVariable
+          variable: target_r
+          value: 150
+        - class: ModifyVariable
+          variable: target_g
+          value: 139
+        - class: ModifyVariable
+          variable: target_b
+          value: 64
+
+      mountains:
+        # color: "#727272"
+        - class: ModifyVariable
+          variable: target_r
+          value: 114
+        - class: ModifyVariable
+          variable: target_g
+          value: 114
+        - class: ModifyVariable
+          variable: target_b
+          value: 114
+
+      caves:
+        - class: ModifyVariable
+          variable: target_r
+          value: 70
+        - class: ModifyVariable
+          variable: target_g
+          value: 70
+        - class: ModifyVariable
+          variable: target_b
+          value: 70
+
+      mushroom:
+        # "#705E64"
+        - class: ModifyVariable
+          variable: target_r
+          value: 112
+        - class: ModifyVariable
+          variable: target_g
+          value: 94
+        - class: ModifyVariable
+          variable: target_b
+          value: 106
+
+      sunflowers:
+        # color: "#FBE84E"
+        - class: ModifyVariable
+          variable: target_r
+          value: 251
+        - class: ModifyVariable
+          variable: target_g
+          value: 232
+        - class: ModifyVariable
+          variable: target_b
+          value: 78
+
+      flower_forest:
+        # color: "#CFA3F2"
+        - class: ModifyVariable
+          variable: target_r
+          value: 207
+        - class: ModifyVariable
+          variable: target_g
+          value: 163
+        - class: ModifyVariable
+          variable: target_b
+          value: 242
+
+      snowy:
+        # color: "#ffffff"
+        - class: ModifyVariable
+          variable: target_r
+          value: 255
+        - class: ModifyVariable
+          variable: target_g
+          value: 255
+        - class: ModifyVariable
+          variable: target_b
+          value: 255
+
+      badlands:
+        # "#C66A23"
+        - class: ModifyVariable
+          variable: target_r
+          value: 198
+        - class: ModifyVariable
+          variable: target_g
+          value: 106
+        - class: ModifyVariable
+          variable: target_b
+          value: 35
+
+      taiga:
+        # "#567054"
+        - class: ModifyVariable
+          variable: target_r
+          value: 86
+        - class: ModifyVariable
+          variable: target_g
+          value: 112
+        - class: ModifyVariable
+          variable: target_b
+          value: 84
+
+      nether:
+        # "#703131"
+        - class: ModifyVariable
+          variable: target_r
+          value: 112
+        - class: ModifyVariable
+          variable: target_g
+          value: 49
+        - class: ModifyVariable
+          variable: target_b
+          value: 49
+
+      the_end:
+        # "#1C1528"
+        - class: ModifyVariable
+          variable: target_r
+          value: 28
+        - class: ModifyVariable
+          variable: target_g
+          value: 21
+        - class: ModifyVariable
+          variable: target_b
+          value: 40
+
+    # Now move our current color toward the target color
+    - class: ModifyVariable
+      variable: current_r
+      value: "(target_r + current_r * 3) / 4"
+    - class: ModifyVariable
+      variable: current_g
+      value: "(target_g + current_g * 3) / 4"
+    - class: ModifyVariable
+      variable: current_b
+      value: "(target_b + current_b * 3) / 4"
+
+    # Enable for debugging
+    # - class: Message
+    #  message: "Target: @target_r,@target_g,@target_b, Current: @current_r,@current_g,@current_b"
+
+    # Finally set our equipment to this color
+    - class: ColorItem
+      color:
+        r: current_r
+        g: current_g
+        b: current_b
+  parameters:
+    target: self
+    color_wand: true
+    bypass_undo: true
+
+camochestplate:
+  inherit: camoarmor
+  icon: "leather_chestplate:#random"
+
+camoleggings:
+  inherit: camoarmor
+  icon: "leather_leggings:#random"
+
+camoboots:
+  inherit: camoarmor
+  icon: "leather_boots:#random"
+
+camohelmet:
+  inherit: camoarmor
+  icon: "leather_helmet:#random"

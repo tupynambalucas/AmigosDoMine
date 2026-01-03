@@ -1,0 +1,9 @@
+divinghelmet:
+  output: divinghelmet
+  output_type: wand
+  ingredients:
+    o: conduit
+    i: light_blue_stained_glass
+  row_1: iii
+  row_2: ioi
+  row_3: i i

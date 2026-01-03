@@ -1,0 +1,11 @@
+youngling:
+    inherit: default
+    upgrade: padawan
+    override_properties:
+      mana_max: 50
+      mana_regeneration: 5
+    spells:
+      - forceleap
+      - forcepush
+      - forcepull
+

@@ -1,0 +1,3 @@
+world_flat:
+  autoload: true
+  type: flat

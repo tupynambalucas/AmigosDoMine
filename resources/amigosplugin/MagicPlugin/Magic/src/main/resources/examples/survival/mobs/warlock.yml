@@ -1,0 +1,57 @@
+warlock:
+  type: zombie
+  item: warlock_wand
+  cast_requires_item: warlock_wand
+  chestplate: warlock_chestplate
+  leggings: warlock_leggings
+  helmet: chainmail_helmet
+  boots: warlock_boots
+  health: 50
+  default_drops: false
+  transformable: false
+  protection:
+    fall: 1
+  interval: 1000
+  targeting:
+    radius: 32
+  brain:
+    goals:
+      - type: trigger
+        trigger: flee
+        goals:
+          - type: avoid_entity
+            distance: 4
+            speed: 1.5
+      - type: trigger
+        trigger: attack
+        priority: 1
+        goals:
+          - type: look_at_player
+            distance: 34
+      - type: random_stroll
+        priority: 2
+  triggers:
+    flee:
+      cast:
+        fling: 10
+        blink: 1
+    attack:
+      cast:
+        missile: 20
+        poison: 30
+        pull: 100
+        curse: 100
+        blob: 20
+        lava: 10
+        shell: 20
+        none: 300
+  drops:
+  - diamond: 10
+    emerald: 15
+    warlock_wand: 5
+    amethyst_shard: 10
+    none: 100
+  - sp:16
+  loot:
+    gold_nugget:
+      count: looting * 2 + 4

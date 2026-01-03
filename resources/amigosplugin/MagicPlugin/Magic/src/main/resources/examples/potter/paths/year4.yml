@@ -1,0 +1,21 @@
+year4:
+    follows: student
+    upgrade: year5
+    upgrade_item: year5
+    inherit: year3
+    override_properties:
+      mana_max: 130
+      mana_regeneration: 20
+    spells:
+      - protego
+      - rennervate
+      - episkey
+      - obscuro
+      - accio
+      - locomotomortus
+      - orchideous
+      - bubblehead
+      - aguamenti
+    required_spells:
+      - ascendio
+

@@ -1,0 +1,3 @@
+# Which materials are acceptable as building materials. This
+# affects what can be absorbed and added to a wand.
+building: "!all_air,indestructible,beds,doors,attachable_double,pistons,double_plant,cactus,flowers,saplings"

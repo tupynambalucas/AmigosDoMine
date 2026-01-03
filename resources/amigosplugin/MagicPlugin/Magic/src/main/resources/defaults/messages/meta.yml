@@ -1,0 +1,25 @@
+meta:
+  action_template: |-
+    `<title text="$class Action">`
+    `<p>`A spell action, used in a spell action handler with &7- class: $class
+    `<p>`$description
+    `<p>`&a`<link url="https://reference.elmakers.com/#actions.$key" text="See this action and all of its parameters in the reference guide">`
+  effect_template: |-
+    `<title text="$class EffectLib Class">`
+    `<p>`An EffectLib class, used in the &7effectlib:&f section of an &7effects:&f list with &7- class: $class
+    `<p>`$description
+    `<p>``<link url="https://reference.elmakers.com/#effectlib.$key" text="See this effect and all of its parameters in the reference guide">`
+  description_template: |-
+    `<p>`$description
+  parameters_template: |-
+    `<p>`&bParameters:
+    $parameters
+  parameter_template: |-
+    `<li>`&6$parameter&8: &7$description
+  parameter_extra_line: |-
+    `<p>`   &7$description
+  examples_template: |-
+    `<p>`&6Used in spells: &b$examples
+  example_template: '&b`<link url="https://github.com/elBukkit/MagicPlugin/tree/master/Magic/src/main/resources/examples/survival/spells/$example.yml" text="$example">`&f'
+  default_parameter_description: "&8?"
+  default_description: "&7(No description yet)"

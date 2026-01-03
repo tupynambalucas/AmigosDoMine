@@ -1,0 +1,12 @@
+map:
+    # This refers to an icon defined in the icons folder/config
+    icon: map
+    hidden: true
+    worth: 50
+    category: utility
+    class: MapSpell
+    parameters:
+        cooldown: 5000
+    costs:
+        mana: 15
+

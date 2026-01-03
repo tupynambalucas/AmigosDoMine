@@ -1,0 +1,9 @@
+padawan:
+    inherit: youngling
+    upgrade: jedi_knight
+    override_properties:
+        mana_max: 75
+        mana_regeneration: 7
+    spells:
+      - forcespeed
+

@@ -1,0 +1,739 @@
+attributes:
+  bowpull:
+    name: Band de l'arc
+    description: Distance avec laquelle un joueur a bandé son arc, s'applique uniquement aux sorts d'arc
+  health:
+    name: Vie
+    description: Vie d'un joueur ou d'une créature (coeurs x 2)
+  health_max:
+    name: Vie maximale
+    description: Limite maximale de la vie d'un joueur ou d'une créature
+  time:
+    name: Heure
+    description: L'heure actuelle dans le monde, en ticks de 0 à 23999
+  moon:
+    name: Phase de la lune
+    description: 0 = Pleine lune, 1 = Lune décroissante, 4 = Nouvelle lune, 7 = Lune croissante
+  location_x:
+    name: Coordonnées X
+    description: Les coordonnées x d'un joueur ou d'une créature dans le monde
+  location_y:
+    name: Coordonnées Y
+    description: La hauteur d'un joueur ou d'une créature dans le monde
+  location_z:
+    name: Coordonnées Z
+    description: Les coordonnées z d'un joueur ou d'une créature dans le monde
+  level:
+    name: Niveau d'expérience
+    description: Le niveau d'expérience d'un joueur
+  xp:
+    name: Experience
+    description: Le total de points d'expérience d'un joueur
+  mana:
+    name: Mana
+    description: Le nombre de mana actuel d'un joueur
+  mana_max:
+    name: Mana maximal
+    description: La limite maximale de mana d'un joueur
+commands:
+    no_permission: "&cTu n'es pas autorisé à utiliser cette commande."
+    in_game: "&cCette commande peut uniquement être utilisée en jeu."
+    unknown_command: "&cCommande inconnue: &f$command"
+    mconfig:
+      write_failed: "&cEcriture sur le fichier $file impossible."
+      example:
+        usage: "&cUsage: /mconfig example [$actions]"
+        list:
+          base: "&bExemples de base: &3$example"
+          header: "&bExemples:"
+          item: "  &f- &3$example"
+        fetch:
+          usage: "&cUsage: /mconfig example fetch <example name> <url>"
+          unknown: "&cExemple inconnu: &e$example, &cutilise une url pour le récupérer en premier.&r\n&cUsage: /mconfig example fetch <example name> <url>"
+          fail: "&cRécupération de l'url &e$url impossible"
+          error: "&cQuelque chose s'est mal passé, regarde les logs pour plus d'infos"
+          wait: "&bPatience, téléchargement en cours &b$url..."
+          success: "&bExemple &2$example téléchargé&f\n&rUtilise &6/mconfig example add $example&f pour l'ajouter à la configuration actuelle\n&rUse &6/mconfig example set $example&f pour l'utiliser comme configuration générale"
+          backup: "&eExemple existant, &3sauvegarde dans &f$backup"
+          overwrite_backup: "&eExemple et sauvegarde existants, &créécriture &f$backup"
+          url_write: "&bTu peux mettre à jour cet exemple avec &6/mconfig example fetch $example&r"
+          url_write_failed: "&cL'écriture du fichier à partir de l'url s'est mal passée, regarde les logs pour plus d'infos"
+          url_exists: "&eL'exemple a un fichier d'url intégré, réécriture impossible.\n&r&fUne nouvelle version de cet exemple est peut-être disponible,\n&6/mconfig example fetch $example &bpour le mettre à jour"
+        add:
+          usage: "&cUsage: /mconfig example add <example>"
+          duplicate: "&cLes exemples &2$examples &csont déjà chargés"
+          success: "&bLes exemples &2$examples ont été ajoutés avec succès"
+        remove:
+          usage: "&cUsage: /mconfig example remove <example>"
+          missing: "&cL'exemple &2$example &cn'est pas chargé"
+          all: "&bSuppression de tous les exemples, dont l'exemple de base.\n&6/mconfig example set survival none&b si tu ne veux pas supprimer l'exemple de base de survie.\n&r&bSinon &6/magic load&b pour appliquer les changements"
+          success: "&bSuppression de l'exemple &2$example avec succès"
+        set:
+          success: "&bExemple de base utilisé : &2$example"
+          multiple: "&bExemple de base utilisé : &2$example&f\n&r&bAjout des exemples &2$examples"
+          clear_added: "&bExemple de base utilisé : &2$example&f\n&r&bSuppression des exemples ajoutés"
+          clear: "&bExemple de base supprimé.&f\n&g/mconfig example remove all&b s'il y a d'autres exemples à supprimer"
+      disable:
+        usage: "&cUsage: /mconfig disable [$options] [key]"
+        nokey: "&cType $type invalide, options: $options"
+        success: "&bDésactivation de &3$type.$key&b avec succès, &f/magic load &bpour appliquer les changements"
+      enable:
+        usage: "&cUsage: /mconfig enable [$options] [key]"
+        nokey: "&cType $type invalide, options: $options"
+        success: "&bActivation de &3$type.$key&b avec succès, &f/magic load &bpour appliquer les changements"
+      configure:
+        usage: "&cUsage: /mconfig configure [$options] [key] [property] [value]"
+        nokey: "&cType $type invalide, options: $options"
+        success: "&bChangement de &3$type.$key&b avec succès, &f/magic load &bpour appliquer les changements"
+      reset:
+        usage: "&cUsage: /mconfig reset [$options] [key] "
+        nokey: "&cType $type invalide, options: $options"
+        missing: "&cLe fichier &f$file &cn'existe pas, reset impossible"
+        nothing: "&cLe fichier &f$file &cn'existe pas, et &f$key &cn'existe pas dans le fichier customization"
+        none: "&cIl n'y a pas de fichiers customizations trouvé, reset impossible"
+        removed: "&bSuppression de &3$key &bdu fichier customizations avec succès"
+        success: "&bSuppression du fichier &3$file avec succès"
+        backup: "&7Sauvegarde du fichier dans le dossier &f$backup"
+        load_prompt: "&f/magic load &7pour appliquer les changements"
+      apply:
+        usage: "&cUsage: /mconfig apply [session id]"
+        wait: "&bRécupération de la configuration..."
+        error: "&cQuelque chose s'est mal passé, regarde les logs pour plus d'infos"
+        error_saving: "&cEcriture sur le fichier $file impossible"
+        overwrote: "&eFichier &a$file &eécrasé"
+        created: "&bFichier &a$file &bcréé"
+        missing: "&cLe champ $field est manquant sur le serveur"
+        load_prompt: "&f/magic load &7pour charger les changements"
+        invalid: "&cLe fichier a donné des erreurs, réessaye après les avoir fixées"
+      load:
+        usage: "&cUsage: /mconfig load [session id]"
+        wait: "&bRécupération de la configuration..."
+        error: "&cQuelque chose s'est mal passé, regarde les logs pour plus d'infos"
+        missing: "&cLe champ $field est manquant sur le serveur"
+        error_saving: "&cEcriture sur le fichier $file impossible"
+        overwrote: "&eFichier &a$file &eécrasé"
+        created: "&bFichier &a$file &bcréé"
+        invalid: "&cLe fichier a donné des erreurs, réessaye après les avoir fixées"
+      editor:
+        usage: "&cUsage: /mconfig editor [$options]"
+        error: "&cQuelque chose s'est mal passé, regarde les logs pour plus d'infos"
+        wait: "&bPatience, création d'une nouvelle session..."
+        server_error: "&cQuelque chose s'est mal passé, le serveur dit: &e$message"
+        new_session: "&3Va sur &f$url &3dans ton navigateur"
+        new_item: "&3Création de &2$type.&b$item"
+        edit_item: "&3Edition de &2$type.&b$item"
+    modifier:
+      usage: "/mage modifier <add|remove> <modifier> [duration]"
+      add:
+        success: "Ajout du modificateur &3$name &fà &6$player"
+        success_duration: "Ajout du modificateur &3$name &fà &6$player pour $duration"
+        fail: "&cLe modificateur &3$name n'a pas pu être ajouté &fà &6$player, &fil l'a probablement déjà"
+        invalid: "&cDurée invalide: &4$input"
+      remove:
+        success: "Suppression du modificateur &3$name &fpour &6$player"
+        fail: "&cLe modificateur &3$name n'a pas pu être supprimé &fde &6$player, &fil ne l'a probablement pas"
+    getrp:
+      auto: "Tu vas recevoir le resource pack automatiquement à la connexion"
+      manual: "Préférences pour le resource pack supprimées, une demande sera envoyée à la prochaine connexion"
+      turnoff: "You will no longer receive the resource pack automatically at login nor be prompted.\n&rUse &6/getrp&f if you want to get it.\n&rIf you'd prefer to download the RP, you can use &6/getrp url&f to get the URL"
+      sending: "&6/getrp auto&f pour recevoir le resource pack automatiquement \n&rou &6/getrp off&f pour désactiver la demande à la connexion"
+      preference: "Préférences pour le resource pack mises à &3$pack&f\n&6/getrp default&f pour le remettre par défaut"
+      noauto: "&6/getrp auto &fpour avoir le resource pack automatiquement à la connexion"
+      default: "Préférences du resource pack remises par défaut"
+currency:
+  defaults:
+    item_name: "&e$amount &6$type"
+    description: Clic droit pour déposer
+    limit: "a:&eLa limite de &6$type &eest de &c$amount"
+    deposited: "a:&aDépôt de &2$amount &6$type&a, montant: &2$balance"
+  sp:
+    name: "&6Points de Sort"
+    description: Clic droit pour récupérer les Points de Sort
+    limit: "a:&eLa limite pour les &6Points de Sort &eest de &c$amount"
+    deposited: "a:&aDépôt de &2$amount &6Points de Sort&a, montant: &2$balance"
+    name_short: PS
+  xp:
+    name: Experience
+    name_short: XP
+  levels:
+    name: Niveaux
+  mana:
+    name: Mana
+  hunger:
+    name: Energie
+  health:
+    name: Vie
+  heroes_mana:
+    name: Mana
+  currency:
+    name: Dollars
+    name_singular: Dollar
+    amount: "$$amount"
+  item:
+    name_singular: Emerald
+    name: Emeralds
+item:
+    duplicated: Ton objet a été dupliqué
+    destroyed: Ton objet a été détruit
+    cleaned: Ton objet a été de toutes les données de Magic
+    no_item: Tu dois avoir un objet en main!
+    renamed: Ton objet a été renommé
+    rename_clear: Le nom de ton objet a été supprimé
+    flag_added: "Le flag $flag a été ajouté à ton objet"
+    flag_removed: "Le flag $flag a été supprimé de ton objet"
+    no_flags: Cet objet n'a pas de flag
+    no_flag: "Cet objet n'a pas le flag $flag"
+    lore_added: "Ajout de la description: $lore"
+    lore_removed: "Suppression de la description: $lore"
+    no_lore: Cet objet n'a pas de description
+    not_unbreakable: Cet objet n'est pas incassable
+    already_unbreakable: Cet objet est déjà incassable
+    add_unbreakable: Cet objet est maintenant incassable
+    remove_unbreakable: Cet objet n'est plus incassable
+    not_unplaceable: Cet objet n'est pas irremplaçable
+    already_unplaceable: Cet objet est déjà irremplaçable
+    add_unplaceable: Cet objet est maintenant irremplaçable
+    remove_unplaceable: Cet objet n'est plus irremplaçable
+    no_enchants: Cet objet n'a pas d'enchantements
+    no_enchant: "Cet objet n'a pas l'enchantement $enchant"
+    enchant_removed: "Suppression de l'enchantement $enchant de ton objet"
+    enchant_added: "Ajout de l'enchantement $enchant à ton objet"
+    enchant_not_added: "L'enchantement $enchant n'a pas été ajouté à ton objet"
+    enchant_unsafe: "Tu n'as pas la permission d'ajouter d'enchantement dangereux"
+    no_attribute: "Cet objet n'a pas l'attribut $attribute"
+    attribute_removed: "Suppression de l'attribut $attribute de ton objet"
+    attribute_added: "Ajout de l'attribut $attribute à ton objet à la valeur $value pour $slot ($operation)"
+    attribute_not_added: "L'attribut $attribute n'a pas pu être ajouté à ton objet"
+    skull: Ton livre a été transformé en tête
+    skull_no_book: Tu dois tenir un livre écrit avec une valeur de tête dedans
+    skull_invalid_book: "Ce livre n'a pas de valeur de tête écrit dedans! Copie le texte 'Textures.Value' à l'intérieur, c'est une longue suite de charactère aléatoire généralement finissant par =="
+mage:
+    removed_property: Suppression de la propriété $name
+    no_property: Le mage n'a pas la propriété $name
+    player_reconfigured: Les données du mage $name ont été reconfigurées
+    player_not_reconfigured: Les données du mage $name n'ont pas été reconfigurées
+    player_spells_levelled: "Niveau supérieur $count pour les sorts de $name"
+    player_spells_not_levelled: "Aucun niveau supérieur pour les sorts de $name"
+    spells_levelled: "Niveau supérieur $count pour tes sorts"
+    spells_not_levelled: "Aucun de tes sorts n'ont de niveaux supérieurs"
+    reconfigured: Le mage a été reconfiguré
+    not_reconfigured: Le mage n'a pas été reconfiguré
+    no_class: "Tu n'as pas été entraîné à utiliser $name"
+    no_spell: "Tu n'as pas été entraîné à utiliser $name"
+    player_spell_upgraded: "Le sort &r&6$name de $players &d&oa été amélioré au niveau &3$level"
+    spell_upgraded: "Ton sort &r&6$name &d&oa été amélioré au niveau &3$level"
+    spell_added: "Tu as appris le sort &r&6$name"
+    brush_added: "Tu as acquis la brosse &r&7$name"
+general:
+    locked_chest: Ce coffre est fermé, tu ne peux pas le casser
+    spawn_egg_title: "Oeuf de $entity"
+books:
+    default:
+        author: NathanWolf
+        title: $category Livre de sort
+    all:
+        title: Livre de sort du Maître
+material:
+    wildcard: " (Conservation des données du bloc)"
+economy:
+    missing: "&cMon magasin est fermé, désolé!"
+    insufficient: "Prix: &6$cost"
+    deducted: "Retiré: &6$cost"
+    requires: "Tu dois avoir au moins $cost"
+worlds:
+    world:
+        name: L'Overworld
+    world_nether:
+        name: Le Nether
+    world_the_end:
+        name: L'End
+cooldown:
+    description: "&eCooldown: &6$time"
+    mage_description: "&cFatigue: &6$time"
+warmup:
+    description: "&7Préparation: &6$time"
+duration:
+    lasts_seconds: Dure $seconds secondes
+    lasts_minutes: Dure $minutes minutes
+    lasts_hours: Dure $hours heures
+    lasts_second: Dure $seconds seconde
+    lasts_minute: Dure $minutes minute
+    lasts_hour: Dure $hours heure
+skills:
+    inventory_title: "Compétences"
+    inventory_title_heroes: "Compétences de $class ($page/$pages)"
+    inventory_title_heroes_secondary: "Compétences de $class-$class2 ($page/$pages)"
+    item_name: "$skill"
+    item_name_unavailable: "&c$skill"
+    item_description: "$description"
+    passive_description: "&1PASSIF"
+    none: "Tu n'as aucune compétence!"
+    none_on_page: "Il n'y a pas de compétence sur la page $page"
+resource_pack:
+    # This will be sent to players on join if resource_pack_prompt is set to true in config.yml.
+    prompt: "Utilise /getrp pour télécharger le resource pack"
+    off_prompt: "a:&eUtilise &4/getrp &epour télécharger le resource pack"
+    sending: "t:&3Patience\n&benvoi du resource pack"
+controls:
+  drop: Lacher (Q)
+  right_click: Clic droit
+  left_click: Clic gauche
+  swap: Changer (F)
+skillapi:
+  required_skill: "&cCompétence requise: &4$skill"
+  required_class: "&cClasse requise: &4$class"
+damage_types:
+  explosion: "Explosion"
+  fall: "Chute"
+  fire: "Feu"
+  physical: "Physique"
+  projectile: "Projectile"
+npc:
+  # Valid placeholders: $speaker, $line, $target
+  # These (except $line) can also be used in the dialog text itself
+  dialog: "&7[$speaker&7]&8: &f$line"
+  insufficient: "&cPrix : $cost"
+  deducted: "&cRetiré : $cost"
+  no_permission: "&r&4Tu ne peux pas intéragir avec moi!"
+path:
+  level_up: "t:&r&b*** &r&5$path &b***\n&5Avancé"
+requirements:
+  unknown: "&cNon autorisé"
+  property_requirement: "&r&cRequis: &6$property &cde &4$value"
+  property_max: "&r&cLa propriété &6$property &cest déjà au max"
+  property_min: "&r&cLa propriété &6$property &cdoit être supérieure à &4$value"
+  no_wand: "&cTu dois tenir une baguette"
+  no_template: "&cTu ne peux pas l'apprendre avec la baguette $wand&c"
+  no_path: "&cTu ne peux pas l'apprendre"
+  no_class: "&cTu dois avoir la classe $class"
+  no_required_path: "&cTu dois être au moins $path&r!"
+  no_path_exact: "&cTu dois être $path&r!"
+  no_path_end: "&cTu dois pouvoir avancer de $path&r!"
+  no_weather: "Le temps actuel ne te le permet pas"
+  light: "Niveau de luminosité"
+  time: "Heure"
+  height: "Hauteur"
+  currency: "Devise"
+  no_cast: "&cTu dois lancer le sort $spell en premier"
+shops:
+  no_wand: "&cTu dois tenir une baguette en main!"
+  no_template: "&cTu ne peux pas l'apprendre avec la baguette $wand&"
+  no_path: "&cTu ne peux pas l'apprendre"
+  no_class: "&cTu dois avoir la classe $class"
+  no_required_path: "&cTu dois être au moins $path&r!"
+  no_path_exact: "&cTu dois être $path&r!"
+  no_path_end: "&cTu dois pouvoir avancer de $path&r!"
+  insufficient: "&cPrix : $cost"
+  confirm_title: "Acheter $item"
+  unlock_confirm_title: "Débloquer $item"
+  deducted: "&d&oTu as acheté &r&6$item &r&d&ocontre &r&a$cost"
+  selected: "&d&oTu as acheté &r&6$item &r&d&ocontre &r&a$cost"
+  sold: "&d&oTu as vendu &r&6$item &r&d&ocontre &r&a$earn"
+  unlocked: "&d&oTu as débloqué &r&6$item &r&d&ocontre &r&a$cost"
+  selected_free: "&d&oTu as choisi &r&6$item"
+  not_applicable: "Tu possèdes déjà $item"
+  cast_fail: "&cDésolé, merci de réessayer!"
+  no_items: "Tu n'as rien à acheter ici"
+  title: "Magasin ($balance&0)"
+  sell_title: "Vente ($balance&0)"
+  sell_icon_name: "&6Vendre des objets"
+  buy_icon_name: "&aAcheter des objets"
+  extra_spell: "&aNon requis"
+  no_upgrade: "Tu n'as rien à apprendre ici"
+  upgrade_name_change: "&r&4Améliorations: &r$name"
+  level_requirement: "&r&cRequis: &6$path"
+  tags_requirement: "&r&cRequis: &6$tags"
+  cast_requirement: "&r&cLancers: &6$current&f/&e$required"
+  prerequisite_spell_level: "&6$name"
+  prerequisite_spell_progress_level: " (Progrès $level/$max_level)"
+  required_spells: "&r&cRequis: $spells"
+  cast_spell: "$spell"
+  unlock_class: "$class"
+  nothing: "Rien"
+  cost_lore: "&6Prix: &e$cost"
+  earn_lore: "&6Gains: &e$earn"
+  earn_heading: ""
+  cost_heading: ""
+  #cost_heading: "&6Click to purchase"
+  unlock_cost_lore: "&6Prix pour débloquer: &e$cost"
+  locked: "&cBloqué, &eDébloquer dans le magasin des donations"
+  required_cost_lore: "&cPrix: &4$cost"
+  required_unlock_cost_lore: "&cPrix pour débloquer: &4$cost"
+  has_class: "Tu possèdes déjà la classe $class"
+  at_limit: "Tu as atteint ta limite de $limit"
+  unlocked_lore: "&aDébloqué"
+  property_requirement: "&r&cRequis: &6$property : $4$value"
+  property_max: "&r&cTu as atteint le maximum de &6$property"
+  property_min: "&r&cTu dois posséder plus de $4$value &6$property"
+  item_amount: "$name x$amount"
+  attribute: "&6$attribute &f(&b$amount&f)"
+  increase_attribute: "Augmentation de $attribute de $amount"
+  decrease_attribute: "Diminution de $attribute de $amount"
+  attribute_max: "Tu ne peux pas augmenter l'attribut $attribute"
+  attribute_min: "Tu ne peux pas diminuer l'attribut $attribute"
+  full: "Ton inventaire est plein!"
+spell:
+    category: ""
+    # category: "&7&o$category"
+    brush: Utilisation des brosses
+    undoable: ""
+    not_undoable: "&4Ne peut pas être annulé"
+    available_path: "Disponible au niveau $path"
+    required_path: "Requis pour compléter le niveau $path"
+    levels_available: "Niveau max: &r&5$levels"
+    required_spell: "Tu dois apprendre &r&4$spell &d&opour avancer &b$path"
+    prerequisite_spell_level: "&cTu dois connaitre le &6niveau $level $name"
+    prerequisite_spell_progress_level: " &6(Progrès $level/$max_level)"
+    level_description: Niveau $level
+    progress_description: "&6Progrès: &b$level&6/&3$max_level"
+    quick_cast: "&2Lancement rapide"
+    earns: "&2Gagne jusqu'à &6$earns"
+    description_lore: "&b$description"
+    level_lore: "&6$level"
+    toggle: "&aLancer pour basculer sur activer / désactiver"
+    upgrade_description_prefix: "&r&bamélioration; &6"
+    passive: "&2Passif"
+    disabled: "&eDésactivé"
+    # This can be used to show who created a spell in spell lore
+    # creator: "&1Created by: &9$name"
+    creator: ""
+spells:
+    default:
+        fizzle: Ton sort a fait des étincelles!
+        backfire: Ton sort a pétaradé!
+        fail: Quelque chose s'est mal passé!
+        insufficient_permission: Tu n'as pas la permission d'utiliser ça ici.
+        cast_player_message: "a:&d&o$player &r&5a lancé &3&o$spell &r&5sur toi!"
+        indirect_player_message: "a:&d&o$player &r&5a lancé &3&o$spell &r&5sur toi!"
+        insufficient_resources: "a:Pas assez de $cost"
+        insufficient: "&cNécessite &4$cost"
+        cooldown: Tu dois attendre $time.
+        cancelled: Ton sort a été annulé!
+        cancel: "a:&cLe sort &6$spell a été annulé"
+        entity_required: Une entité est nécessaire.
+        living_entity_required: Une entité vivante est nécessaire.
+        player_required: Un joueur est nécessaire.
+        location_required: Une localisation est nécessaire.
+        world_required: Un monde est nécessaire.
+        invalid_world: Le monde n'est pas valide.
+        cast_finish: ""
+time:
+    wait_seconds: encore $seconds secondes
+    wait_minutes: encore $minutes minutes
+    wait_hours: encore $hours heures
+    wait_moment: encore un instant
+    wait_second: une seconde
+    wait_minute: une minute
+    wait_hour: encore une heure
+    description_hour: Une heure
+    description_hours: $hours heures
+    description_minute: Une minute
+    description_minutes: $minutes minutes
+    description_second: Une seconde
+    description_seconds: $seconds secondes
+    description_moment: Un instant
+    # description_moment: "$seconds seconds"
+    description: "&eCooldown: &6$time"
+    mage_description: "&cFatigue: &6$time"
+wand:
+    default_name: Baguette
+    upgrade_default_description: Améliore ta baguette.
+    upgrade_item_description: "&eLacher sur une baguette pour l'améliorer"
+    #spell_item_description: "&eDrop on a wand to learn"
+    spell_item_description: ""
+    #brush_item_description: "&eDrop on a wand to learn"
+    brush_item_description: ""
+    copy_material_name: Copier
+    copy_material_description: Remplit avec le bloc ciblé
+    erase_material_name: Efface
+    erase_material_description: Remplit avec de l'air
+    clone_material_name: Cloner
+    clone_material_description: Copie les blocs de la cible
+    replicate_material_name: Reproduire
+    replicate_material_description: Reproduit le modèle de clonage cible
+    clone_material_activated: "a:Modèle de clonage sélectionné"
+    replicate_material_activated: "a:Modèle à reproduire sélectionné"
+    erase_modifier_activated: "a:Effacement actif"
+    map_material_name: "Carte $id"
+    map_material_name_scaled: "Carte $id ($sizex$size)"
+    map_material_description: Créé un pixel art depuis la dernier carte tenue
+    schematic_material_description: Utilisation de $schematic pour la construction.
+    building_material_description: Construit avec $material
+    upgrade_uses: "&aAjout de $count utilisations"
+    upgrade_uses_singular: "&aAjout de $count utilisation"
+    uses_remaining_brief: "&c$count utilisations"
+    uses_remaining_singular: "&c$count utilisation"
+    uses_remaining: $count utilisations restantes
+    enchantment_level_1: I
+    enchantment_level_2: II
+    enchantment_level_3: III
+    enchantment_level_4: IV
+    enchantment_level_5: V
+    enchantment_level_max: X
+    spell_count: $count sorts appris
+    material_count: $count blocs
+    upgrade_spell_count: Ajout de $count sorts
+    upgrade_material_count: Ajout de $count blocs
+    mana_max: "&eMana: $amount"
+    mana_amount: "&eMana: $amount"
+    mana_amount_boosted: "&eMana: $amount &f(&b$mana&f)"
+    mana_regeneration: "&eRégénération du Mana: $amount/s"
+    mana_per_damage: "&eRage de Mana: $amount/HP"
+    mana_regeneration_boosted: "&eMana Regeneration: $amount &f(&b$mana&f)&d/s"
+    mana_boost: "&eBoost de Mana: $percent%"
+    mana_regeneration_boost: "&eBoost de régénération de Mana: $percent%"
+    earn_multiplier: "&6Boost de $type : $percent%"
+    block_chance: "&bBlocage $roman"
+    reflect_chance: "&bRéflexion $roman"
+    cost_reduction: "&6Réduction du coût $roman"
+    consume_reduction: "&6Manifestation"
+    cooldown_reduction: "&6Réduction du cooldown $roman"
+    power: "&6Puissance $roman"
+    attributes: "&d$attribute $value"
+    property_stack: "+$property"
+    property_stack_negative: "&c$property"
+    property_value: "$property"
+    property_value_negative: "&c$property"
+    upgrade_slot: "&6Va dans le slot&7: &3$slot"
+    slots_header: "&6Améliorations&7:"
+    empty_slot: " &8- &7(&2slot &6$slot vide&7)"
+    slotted: " &8- &7$slotted"
+    item_attributes:
+      GENERIC_ATTACK_DAMAGE: "Dégât d'attaque"
+    prefixes:
+      protection: "&2"
+      strength: "&2"
+      weakness: "&2"
+      enchantment: "&7"
+    protection:
+      overall: "Protection $roman"
+      physical: "Protection physique $roman"
+      projectile: "Protection contre les projectiles $roman"
+      fall: "Protection de chute $roman"
+      fire: "Protection de feu $roman"
+      explosion: "Protection contre les explosions $roman"
+      magic: "Protection magique $roman"
+      unknown: "Protection contre $type $roman"
+    strength:
+      overall: "Dégâts $roman"
+      physical: "Dégâts physiques $roman"
+      projectile: "Dégâts de projectile $roman"
+      fall: "Dégâts de chute $roman"
+      fire: "Dégâts de feu $roman"
+      explosion: "Dégâts d'explosion $roman"
+      magic: "Dégâts magiques $roman"
+      unknown: "Dégâts $type $roman"
+    weakness:
+      overall: "Faiblesse $roman"
+      physical: "Faiblesse physique $roman"
+      projectile: "Faiblesse contre les projectiles $roman"
+      fall: "Faiblesse contre les chutes $roman"
+      fire: "Faiblesse contre le feu $roman"
+      explosion: "Faiblesse contre les explosions $roman"
+      magic: "Faiblesse contre la magique $roman"
+      unknown: "Faiblesse contre $type $roman"
+    enchantment:
+      arrow_damage: "Puissance $roman"
+      power: "Puissance $roman"
+      arrow_fire: "Flamme"
+      flame: "Flamme"
+      arrow_infinite: "Infinité"
+      infinity: "Infinité"
+      arrow_knockback: "Recul $roman"
+      punch: "Recul $roman"
+      binding_curse: "Malédiction du lien éternel"
+      channeling: "Canalisation"
+      damage_all: Tranchant $roman
+      sharpness: Tranchant $roman
+      damage_arthropods: Fléau des arthropodes $roman
+      bane_of_arthropods: Fléau des arthropodes $roman
+      damage_undead: Châtiment $roman
+      smite: Châtiment $roman
+      depth_strider: Agilité aquatique $roman
+      dig_speed: Efficacité $roman
+      efficiency: Efficacité $roman
+      durability: Solidité $roman
+      unbreaking: Solidité $roman
+      fire_aspect: Aura de feu
+      frost_walker: Semelles givrantes $roman
+      impaling: Empalement
+      knockback: Recul $roman
+      loot_bonus_blocks: Fortune $roman
+      fortune: Fortune $roman
+      loot_bonus_mobs: Butin $roman
+      looting: Butin $roman
+      loyalty: Loyauté
+      luck: Chance $roman
+      luck_of_the_sea: Chance $roman
+      lure: Appât $roman
+      mending: Raccommodage
+      multishot: Tir multiple
+      oxygen: Respiration $roman
+      respiration: Respiration $roman
+      protection_environmental: Protection $roman
+      protection: Protection $roman
+      protection_explosions: Protection contre les explosions $roman
+      blast_protection: Protection contre les explosions $roman
+      protection_fall: Protection contre les chutes $roman
+      feather_falling: Protection contre les chutes $roman
+      protection_fire: Protection contre le feu $roman
+      fire_protection: Protection contre le feu $roman
+      protection_projectile: Protection contre les projectiles $roman
+      projectile_protection: Protection contre les projectiles $roman
+      riptide: Impulsion
+      silk_touch: Toucher de soie
+      sweeping_edge: Affilage $roman
+      sweeping: Affilage $roman
+      thorns: Épines $roman
+      vanishing_curse: Malédiction de disparition
+      water_worker: Travailleur de l'eau
+      aqua_affinity: Travailleur de l'eau
+    potion_effect: "&b$effect $roman"
+    super_powered: "&3Superpuissant"
+    super_protected: "&3Invulnérable"
+    spell_aura: "&bAura: &6$spell"
+    costs_description: "Coût : $description"
+    active_costs_description: "Coût : $description par seconde"
+    range_description: "&9Portée: &6$range &9mètres"
+    owner_description: "&2&oBaguette de $name"
+    bound_description: "&3&oLié à $name"
+    unmodifiable: Cette baguette ne peut pas être modifiée
+    player_unmodifiable: La baguette de $name ne peut pas être modifiée
+    bound_to_other: Cette baguette ne t'est pas liée
+    bound: Cette baguette est liée à $name
+    spell_added: "Tu as appris le sort &r&6$name"
+    brush_added: "Tu as appris la brosse &r&7$name"
+    player_spell_upgraded: "Le sort &r&6$name de $players et été amélioré au niveau &3$level"
+    spell_upgraded: "Le sort &r&6$name &d&oa été amélioré au niveau &3$level"
+    spell_override_upgraded: "Le sort &r&6$name &d&oa été amélioré"
+    upgraded_property: "&r&dTu as été promu à &r&b$name"
+    spell_progression: "Le sort &r&6$name &d&oa progressé à &3$level&d&o/&3$max_level"
+    mana_added: "&r&dTu as maintenant $value mana"
+    hotbar_count: "$amount barre de raccourcis"
+    player_upgraded: Amélioration de la baguette de $name
+    player_not_upgraded: Amélioration de la baguette de $name impossible
+    player_spells_levelled: "Amélioration au niveau $count du sort $name"
+    player_spells_not_levelled: "Aucune amélioration pour le sort $name"
+    spells_levelled: "Amélioration au niveau $count des sorts"
+    spells_not_levelled: "Aucune amélioration des sorts"
+    no_wand: Tu dois tenir une baguette
+    player_no_wand: $name n'a pas de baguette en main
+    no_item: Tu dois tenir un objet
+    player_no_item: $name n'a pas d'objet en main
+    reorganized: "$wand &bréorganisée"
+    player_reorganized: La baguette de $name a été réorganisée
+    alphabetized: "La baguette $wand &b est maintenant triée par ordre alphabétique"
+    player_alphabetized: La baguette de $name &b est maintenant triée par ordre alphabétique
+    already_enchanted: L'objet $item est déjà une baguette
+    enchanted: L'objet $item a été transformé en baguette
+    player_enchanted: L'objet $item de $name a été transformé en baguette
+    unenchanted: Ta baguette est devenue un objet normal
+    player_unenchanted: La baguette de $name est devenue un objet normal
+    no_path: "&r&4Ta baguette $wand &4ne peut pas être enchantée"
+    max_enchanted: "&r&4Ta baguette  $wand &4ne peut pas recevoir plus d'enchantements"
+    duplicated: Ta baguette a été dupliquée
+    player_duplicated: La baguette de $name a été dupliquée
+    restored: Ta baguette a été restaurée
+    player_restored: La baguette de $name a été restaurée
+    not_restored: Aucune baguette manquante
+    player_not_restored: $name n'a aucune baguette manquante
+    setbound: Ta baguette est maintenant liée
+    player_setbound: La baguette de $name est maintenant liée
+    unbound: Ta baguette n'est plus liée
+    player_unbound: La baguette de $name n'est plus liée
+    unboundall: L'intégralité de tes baguettes ne sont plus liées
+    player_unboundall: L'intégralité des baguettes de $name ne sont plus liées (mais sont toujours dans son inventaire)
+    notunbound: La baguette $wand n'est pas liée
+    player_notunbound: La baguette $wand du joueur $name n'est pas liée
+    unlocked: Ta baguette a été débloquée
+    player_unlocked: La baguette de $name a été débloquée
+    unknown_template: Le nom $name ne correspond à aucune baguette
+    reconfigured: La baguette a été reconfigurée
+    not_reconfigured: La baguette n'a pas été reconfigurée
+    removed_property: Suppression de la propriété $name
+    no_property: La baguette n'a pas la propriété $name
+    player_reconfigured: La baguette de $name a été reconfigurée
+    player_not_reconfigured: La baguette de $name n'a pas été reconfigurée
+    filled: "&bTa baguette $wand &bcontient maintenant tous tes sorts"
+    player_filled: La baguette de $name a été remplie
+    renamed: Ta baguette a été renommée
+    player_renamed: La baguette de $name a été renommée
+    self_destruct: L'ancien artéfact s'effrite entre tes mains
+    no_permission: "&r&4Tu ne peux pas utiliser la baguette $wand &r&4ici"
+    single_spell: Baguette de $spell
+    fully_enchanted: "&cTu ne peux pas apporter d'amélioration &4(pour le moment)"
+    need_more_levels: "Tu dois avoir au moins &r&4$levels &d&oniveaux pour l'enchanter"
+    require_more_levels: "Tu dois avoir des niveaux supplémentaire pour l'enchanter"
+    randomized_lore: Quel type de baguette obtiendras-tu?
+    randomized_name: Boîte à baguette
+    upgrade_name: "Amélioration : $name"
+    randomized_description: "&o&2$description"
+    description_lore: "&o&a$description"
+    path_lore: ""
+    #path_lore: "&o$path"
+    wand_instructions_header: |-
+      &8 ----------------------------------------------------
+      &8|
+      &8|   &b&lWAND INSTRUCTIONS
+      &8|
+    wand_instructions_footer: |-
+      &8|
+      &8 ----------------------------------------------------
+    sp_earn_instructions: |-
+      &8| &7> &fTu as gagné des &6Points de Sort!
+      &8| &7> &fTes &6PS &fsont affichés sous ta barre de Mana
+      &8| &7> &6Les PS &fpeuvent être utilisés dans une table d'enchantement pour apprendre de nouveaux sorts
+      &8| &7> &fLancer plusieurs fois le même sort te donnera moins de &6PS&f
+      &8| &7> &fIl vaut mieux &dalterner les sorts &florsque tu en connais plusieurs!
+    earn_instructions: |-
+      &8| &7> &fTu as gagné des &6$currency!
+      &8| &7> &fLe montant de &6$currency &fest affiché sous ta barre de Mana
+      &8| &7> &6Les $currency &fpeuvent être utilisés dans une table d'enchantement pour apprendre de nouveaux sorts
+      &8| &7> &fLancer plusieurs fois le même sort te donnera moins de &6PS&f
+      &8| &7> &fIl vaut mieux &dalterner les sorts &florsque tu en connais plusieurs!
+    bound_instructions: |-
+      &8| &7> &fLa baguette &a$wand &fest &9liée &fà toi et tu ne peux pas t'en séparer
+    spell_instructions: |-
+      &8| &7> &6Agite &fla baguette &a$wand &fpour lancer &d$spell
+    mana_instructions: |-
+      &8| &7> &fLes sorts nécessitent du &6mana &fpour être lancés, affiché dans &5la barre d'XP
+    enchant_instructions: |-
+      &8| &7> &fGagne &6des Points de Sort &fen lancçant des sorts
+      &8| &7> &fApprend de nouveaux sorts en utilisant les &6PS &fdans une &etable d'enchantement
+    page_instructions: |-
+      &8| &7> &eLa baguette &a$wand&8 &fa plus d'une page de sorts
+      &8| &7> &6Clique &fen dehors de l'inventaire pour changer de page
+    hotbar_count_usage: |-
+      &8| &7> &eTu as gagné une autre barre de raccourcis
+      &8| &7> &6$cycle_hotbar &fpour changer entre tes barres de raccourcis
+    inventory_instructions: |-
+      &8| &7> &6$toggle &fpour ouvrir / fermer &el'inventaire de sorts
+      &8| &7> &6Ouvre ton inventaire (E) &fpour gérer le raccourcis des sorts
+      &8| &7> &fUtilises &6le numéro du slot &fpour sélectionner le sort
+    chest_instructions: |-
+      &8| &7> &6$toggle &fpour ouvrir / fermer &el'inventaire de sorts
+      &8| &7> &6Clique &fsur un sort pour l'activer
+    skills_instructions: |-
+      &8| &7> &6$toggle &fpour ouvrir / fermer &el'inventaire de sorts
+      &8| &7> &6Glisse &fun sort dans la barre de raccourcis pour l'activer
+      &8| &7> &fUtilises &6le numéro du slot &fpour lancer le sort
+    cycle_instructions: |-
+      &8| &7> &6$cycle &fpour changer de sort actif
+    brush_instructions: |-
+      &8| &7> &6La brosse &fa été ajouté à &a$wand
+      &8| &7> &6Shift+$toggle &fpour sélectionner une brosse
+    hotbar_changed: ""
+    spell_activated: "$spell"
+    upgrade_prefix: "&6"
+    single_use_prefix: "&4"
+    bound_prefix: "&3"
+    unbound_prefix: "&b"
+    has_path_prefix: "&d"
+    unmodifiable_prefix: "&6"
+    spell_prefix: "&6"
+    brush_prefix: "&7"
+    chest_inventory_title: '$wand'
+wands:
+  testwand:
+    name: Baguette de test
+    description: Une baguette vide à utiliser pour tester les sorts

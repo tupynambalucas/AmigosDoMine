@@ -1,0 +1,6 @@
+boomer:
+  type: magma_cube
+  size: 3
+  triggers:
+    spawn:
+      cast: "blast pdy -1 pdx 0 pdz 0 radius 4"

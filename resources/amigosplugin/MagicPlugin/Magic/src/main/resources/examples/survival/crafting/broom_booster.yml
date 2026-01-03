@@ -1,0 +1,11 @@
+broom_booster:
+  output: broom_booster
+  output_type: wand
+  group: "Broomsticks"
+  ingredients:
+    s: slime_ball
+    h: fire_charge
+    r: gunpowder
+  row_1: "  r"
+  row_2: "shr"
+  row_3: "  r"

@@ -1,0 +1,67 @@
+bannershop:
+  icon: gold_ingot
+  hidden: true
+  inherit: buyshop
+  parameters:
+    confirm: true
+    auto_close: true
+    items:
+      - none
+      - banner_bird
+      - banner_cat
+      - banner_dragon
+      - banner_fox
+      - banner_jellyfish
+      - banner_wolf
+      - banner_enderman
+      - none
+
+      - none
+      - none
+      - none
+      - none
+      - banner_herobrine
+      - none
+      - none
+      - none
+      - none
+
+      - none
+      - none
+      - none
+      - banner_mushroom
+      - banner_taco
+      - hylian_banner
+      - none
+      - none
+      - none
+
+      - none
+      - none
+      - banner_saber_blue
+      - banner_saber_purple
+      - banner_saber_green
+      - banner_saber_red
+      - banner_saber_double_red
+      - none
+      - none
+
+      - black_banner
+      - blue_banner
+      - brown_banner
+      - cyan_banner
+      - gray_banner
+      - green_banner
+      - light_blue_banner
+      - light_gray_banner
+
+      - none
+      - lime_banner
+      - magenta_banner
+      - orange_banner
+      - pink_banner
+      - purple_banner
+      - red_banner
+      - white_banner
+      - yellow_banner
+      - none

@@ -1,0 +1,51 @@
+decoy:
+  # This refers to an icon defined in the icons folder/config
+  icon: testdummy
+  toggle: undo_if_active
+  disable_mana_regeneration: true
+  quick_cast: true
+  worth: 300
+  requires: LibsDisguises
+  actions:
+    cast:
+    - class: Vanish
+    - class: PotionEffect
+      duration: 3600000
+    - class: ChangeContext
+      target_entity: true
+      actions:
+      - class: SpawnEntity
+        set_target: true
+        spawn:
+        - class: AreaOfEffect
+          actions:
+            - class: Aggro
+        actions:
+        - class: ChangeContext
+          target_caster: true
+          actions:
+          - class: Undo
+  effects:
+    cast:
+      - sound: magic.vanish
+        sound_pitch: 1.5
+        sound_volume: 0.5
+      - sound: block_fire_extinguish
+        sound_pitch: 0.2
+        sound_volume: 0.6
+  parameters:
+    target: self
+    cooldown: 30000
+    cancel_on_damage: 0.5
+    cancel_on_cast_other: true
+    effect_invisibility: 5
+    type: husk
+    silent: true
+    disguise_target: self
+    max_health: 20
+    radius: 32
+    on_block: false
+    target_source: false
+  costs:
+    mana: 100
+

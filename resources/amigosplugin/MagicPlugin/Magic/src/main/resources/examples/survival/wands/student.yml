@@ -1,0 +1,85 @@
+#
+# A sampling of "pre-levelled up" wands
+#
+student:
+    inherit: beginner
+    legacy_icon: wand_icon:2
+    icon: stick{CustomModelData:18002}
+    migrate_icon: wand_icon
+    effect_color: '00FF00'
+    hotbar_count: 2
+    mana_regeneration: 15
+    mana_max: 100
+    mana: 100
+    level_spells_to_path: student
+    spells:
+      # Hotbar 1
+      - missile
+      - push
+      - arrow
+      - blast
+      - frost
+      - bubble
+      - fireball
+      - blind
+
+      # Hotbar 2
+
+      - fling
+      - blink
+      - arrowrain
+      - stream
+      - wither
+      - blob
+      - whip
+      - grenade
+
+      # Beginner
+      - peek
+      - torch
+      - recall
+      - boon
+      - cloak
+      - collapse
+      - cure
+      - pull
+      - reflect
+      - poison
+      - fire
+
+      # Student
+      - newpage
+
+      - boom
+      - lightning
+      - lava
+      - flamethrower
+      - mine
+      - chop
+      - shell
+      - entangle
+      - curse
+      - vengeance
+      - heal
+
+      # Extra spells
+      - newpage
+
+      - flare
+      - stun
+      - workbench
+      - aqualung
+      - sparkle
+
+      - none
+
+      - familiar
+      - monster
+      - tracking
+      - rocket
+      - secure
+      - admission
+      - tag
+      - phase
+      - grow
+

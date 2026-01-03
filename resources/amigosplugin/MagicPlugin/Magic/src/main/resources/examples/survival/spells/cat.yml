@@ -1,0 +1,34 @@
+cat:
+    # This refers to an icon defined in the icons folder/config
+    icon: cat
+    category: elemental
+    worth: 150
+    earns: 2
+    actions:
+      cast:
+        - class: SpawnEntity
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_cat_purreow
+           effectlib:
+             class: DnaEffect
+             particle_helix: drip_lava
+             iterations: 24
+             particle_base1: drip_water
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: AtomEffect
+             iterations: 32
+             particle_nucleus: drip_water
+    parameters:
+        target_type: LivingEntity
+        allow_max_range: false
+        range: 32
+        cooldown: 60000
+        type: cat
+        tamed: true
+    costs:
+        mana: 30
+

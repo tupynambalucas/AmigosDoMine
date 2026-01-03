@@ -1,0 +1,45 @@
+backup:
+    # This refers to an icon defined in the icons folder/config
+    icon: backup
+    category: engineering
+    tags: noduel
+    class: ConstructSpell
+    worth: 9999
+    effects:
+        cast:
+        - class: EffectSingle
+          sound: block_piston_contract
+          sound_volume: 0.2
+          sound_pitch: 0.5
+        - sound: entity_illusioner_cast_spell
+          sound_pitch: 1.8
+        - class: EffectRing
+          location: target
+          effect: ender_signal
+          radius: 3
+          size: 12
+          target_offset: 0,2,0
+        - class: EffectTrail
+          particle: falling_obsidian_tear
+          particle_count: 4
+          particle_offset: 0.2
+    parameters:
+        allow_max_range: true
+        range: 32
+        max_dimension: 32
+        target: block
+        radius: 5
+        type: cuboid
+        transparent: transparent_to_construction
+        brush: clone
+        check_destructible: false
+        brushmod: erase
+        otworld: ~_backup
+        obworld: ~-_backup
+        brushtarget: true
+        bypass_undo: true
+        cooldown: 10000
+        ignore_region_overrides: true
+    costs:
+        mana: 100
+

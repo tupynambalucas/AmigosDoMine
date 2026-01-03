@@ -1,0 +1,9 @@
+# This is a modifier on the default survival configs
+require: survival
+
+# This resource pack is identical to survival except is also includes the flat skull model
+resource_pack: skulls
+add_resource_pack: skulls
+
+# Turn back on skull-based icons
+url_icons_enabled: true

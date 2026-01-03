@@ -1,0 +1,125 @@
+monster:
+    # This refers to an icon defined in the icons folder/config
+    icon: monster
+    category: dark
+    pvp_restricted: true
+    worth: 150
+    upgrade_required_casts: 50
+    upgrade_required_path: student
+    actions:
+      cast:
+      # We are going to force the spawned mob to target the entity we originally targeted
+      # This is done by making the current target the source, since the Aggro action makes the target
+      # target the source.
+      - class: ChangeContext
+        source_is_target: true
+        actions:
+        - class: SpawnEntity
+          set_target: true
+        - class: Aggro
+    effects:
+        cast:
+        -  sound: block_beacon_power_select
+           sound_pitch: 0.3
+           sound_volume: 0.3
+        -  class: EffectSingle
+           sound: entity_zombie_ambient
+           location: target
+           sound_pitch: 1.7
+           effectlib:
+             class: Modified
+             iterations: 40
+             parameters:
+               radius: "(t / i) * 3 + 0.1"
+             effect:
+               class: DnaEffect
+               grow: 0.1
+               particles_helix: 5
+               length: 50
+               particle_helix: drip_lava
+               particle_base1: drip_lava
+               particle_base2: drip_lava
+        -  class: EffectSingle
+           location: target
+           effectlib:
+              class: Modified
+              iterations: 32
+              parameters:
+                radius: "(t / i) * 4 + 1"
+              effect:
+               class: AtomEffect
+               particle_nucleus: drip_lava
+               particle_orbital: drip_lava
+        undo_entity:
+        - location: target
+          sound: block_fire_extinguish
+          sound_volume: 1.7
+          sound_pitch: 0.2
+          effectlib:
+            class: Smoke
+            duration: 1000
+            particle_count: 20
+            particle_offset_x: 0.5
+            particle_offset_y: 0.5
+            particle_offset_z: 0.5
+    parameters:
+        allow_replacement: false
+        target_type: LivingEntity
+        allow_max_range: false
+        cooldown: 30000
+        range: 32
+        undo: 10000
+        entity_parameters:
+          brain:
+            goals:
+              - type: melee_attack
+                priority: 1
+              - type: follow_owner
+                priority: 2
+              - type: look_at_player
+                priority: 3
+            targets:
+              - owner_hurt_target
+              - owner_hurt_by_target
+        entity_types:
+            zombie: 100
+            skeleton: 100
+            spider: 110
+            zombified_piglin: 50
+            zombie_villager: 80
+            husk: 30
+            stray: 30
+    costs:
+        mana: 40
+
+monster|2:
+  parameters:
+        undo: 15000
+        entity_types:
+            zombie: 40
+            skeleton: 60
+            spider: 45
+            zombified_piglin: 50
+            zombie_villager: 30
+            husk: 60
+            stray: 40
+            creeper: 40
+            cave_spider: 30
+
+monster|3:
+  parameters:
+        undo: 20000
+        entity_types:
+            zombie: 20
+            skeleton: 30
+            spider: 20
+            zombified_piglin: 30
+            zombie_villager: 20
+            husk: 40
+            stray: 45
+            creeper: 50
+            enderman: 20
+            cave_spider: 25
+            blaze: 25
+            ghast: 10
+            zoglin: 10

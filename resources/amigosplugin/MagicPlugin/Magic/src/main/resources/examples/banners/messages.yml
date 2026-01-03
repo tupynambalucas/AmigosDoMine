@@ -1,0 +1,16 @@
+examples:
+  banners:
+    instructions: |-
+      `<title text="Banners Example Instructions">`
+      `<p>`Use &6/mnpc add bannershop &fto allow &r
+      `<p>`players to buy custom banners &r
+
+spells:
+  bannershop:
+    name: Banners!
+    title: "Banners ($balance&r)"
+
+help:
+  examples:
+    main: |-
+      `<li>``<help topic="instructions.example.banners" text="Banners">`

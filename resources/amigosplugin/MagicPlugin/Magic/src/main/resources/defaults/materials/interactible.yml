@@ -1,0 +1,31 @@
+interactible:
+- containers
+- ender_chest
+- anvil
+- enchanting_table
+- lever
+- daylight_detector
+- trap_doors
+- doors
+- commands
+- beds
+- signs
+- gates
+- buttons
+- crafting_table
+- grindstone
+- loom
+- composter
+- cartography_table
+- fletching_table
+- smithing_table
+- stonecutter
+- bell
+- campfire
+- soul_campfire
+- lodestone
+- respawn_anchor
+- lectern
+- bee_nest
+- beehive
+

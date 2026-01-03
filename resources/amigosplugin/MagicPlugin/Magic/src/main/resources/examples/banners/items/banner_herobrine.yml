@@ -1,0 +1,11 @@
+banner_herobrine:
+  worth: 100.0
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4325
+    id: minecraft:white_banner
+    count: 1
+    components:
+      minecraft:banner_patterns: '[{color:"black",pattern:"minecraft:stripe_top"},{color:"black",pattern:"minecraft:stripe_bottom"},{color:"black",pattern:"minecraft:stripe_left"},{color:"black",pattern:"minecraft:stripe_right"},{color:"black",pattern:"minecraft:circle"},{color:"black",pattern:"minecraft:triangle_bottom"}]'
+      minecraft:custom_name: '{extra:["Herobrine"],text:""}'
+    schema_version: 1

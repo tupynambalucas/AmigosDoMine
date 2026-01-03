@@ -1,0 +1,10 @@
+blaster_red:
+  output: blaster_blue
+  output_type: wand
+  ingredients:
+    p: stick
+    i: iron_ingot
+    g: redstone
+  row_1: "iig"
+  row_2: "ii "
+  row_3: "p  "

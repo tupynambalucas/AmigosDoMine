@@ -1,0 +1,95 @@
+smite:
+    # This refers to an icon defined in the icons folder/config
+    icon: smite
+    category: elemental
+    worth: 500
+    upgrade_required_path: apprentice
+    upgrade_required_casts: 50
+    actions:
+        cast:
+        - class: Lightning
+          ignore_result: true
+        - class: AreaOfEffect
+          actions:
+          - class: Damage
+          - class: Ignite
+        -  class: Sphere
+           ignore_result: true
+           actions:
+           -  class: BreakBlock
+    effects:
+      cast:
+      - sound: block_conduit_activate
+        sound_pitch: 2
+        sound_volume: 2
+      - class: EffectSingle
+        sound: entity_firework_large_blast
+        location: target
+      - class: EffectTrail
+        particle: end_rod
+        particle_count: 30
+        particle_offset_x: 0.3
+        particle_offset_y: 0.3
+        particle_offset_z: 0.3
+      - class: EffectSingle
+        location: target
+        effectlib:
+          class: HelixEffect
+          particle: smoke_large
+          iterations: 1
+          particles: 10
+          particle_count: 4
+          particle_offset_x: 1
+          particle_offset_y: 0.1
+          particle_offset_z: 1
+          offset: 0,2,0
+      - class: EffectSingle
+        location: target
+        effectlib:
+           class: HelixEffect
+           particle: end_rod
+           iterations: 1
+           particles: 30
+           particle_count: 10
+           particle_offset_x: 1
+           particle_offset_y: 0.1
+           particle_offset_z: 1
+           offset: 0,2,0
+    parameters:
+        target_type: Damageable
+        allow_max_range: true
+        range: 32
+        radius: 1.5
+        damage_max_distance: 4
+        cooldown: 20000
+        effect_only: true
+        damage: 3
+        duration: 5000
+        speed: 0.9
+        falling: true
+        undo: 10000
+        oty: -2
+        undo_speed: 0.5
+
+        durability_max_distance: 4
+        destructible: solid
+        destructible_override: true
+        destructible_durability: 200
+        break_durability: 50
+    costs:
+        mana: 100
+
+smite|2:
+  upgrade_required_path: master
+  parameters:
+    destructible_durability: 500
+    break_durability: 100
+    radius: 2.5
+    damage: 4
+
+smite|3:
+  parameters:
+    break_durability: 1000
+    destructible_durability: 5000
+    radius: 3.5
+    damage: 5

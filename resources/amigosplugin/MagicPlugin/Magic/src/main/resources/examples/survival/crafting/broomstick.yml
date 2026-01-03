@@ -1,0 +1,13 @@
+broomstick:
+  output: broomstick
+  output_type: wand
+  group: "Broomsticks"
+  ingredients:
+    i: stick
+    o: phantom_membrane
+    w: wheat
+    h: amethyst_shard
+  row_1: " i "
+  row_2: " h "
+  row_3: "wow"
+

@@ -1,0 +1,7 @@
+recall_death:
+  inherit: recall
+  # This refers to an icon defined in the icons folder/config
+  icon: superkill
+  parameters:
+    type: death
+    warmup: 0

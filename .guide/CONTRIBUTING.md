@@ -47,10 +47,10 @@ If you need a new data type (like a `PlayerProfile`), **DO NOT** write it in the
 
 - **SOLID Principles**: Apply them. If your class does 10 things, split it up.
 - **Language**: Code and Commits in **English**. (We love Portuguese, but the code speaks English).
-- **Naming**:
+-   **Naming**:
   - TS Files: `camelCase.ts`
   - Textures: `snake_case.png` (Minecraft hates capital letters in files).
-- **Assets**: Don't manually dump files in `backend/public`. Use the `resources-devlopment` pipeline. It's there for a reason!
+-   **Assets**: Don't manually dump files in `backend/public`. Use the `resources` pipeline. It's there for a reason!
 
 ## 4. Submitting Your Art 🎨
 

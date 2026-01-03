@@ -1,0 +1,16 @@
+rainbowdragon:
+    hidden: true
+    actions:
+        cast:
+        - class: ColorItem
+    parameters:
+        target: self
+        bypass_undo: true
+        slots:
+        - helmet
+        - main_hand
+        - off_hand
+        color:
+          h: "((epoch/100) % 255.0) / 255.0"
+          s: 1
+          v: 1

@@ -1,0 +1,49 @@
+wands:
+    mage:
+        name: Mage Wand
+        description: Battle mage spells
+    demolitions:
+        name: Demolitions Wand
+        description: Explosive spells
+    healer:
+        name: Healer Wand Wand
+        description: White mage spells
+    rogue:
+        name: Rogue Wand
+        description: Rogue abilities
+    warrior:
+        name: Magic Sword
+        description: A magic warrior's sword
+    jedi:
+        name: Lightsaber
+        description: The chosen weapon of the Jedi
+    sith:
+        name: Lightsaber
+        description: The chosen weapon of the Sith
+    bender:
+        name: Bending
+        description: The power of the Avatar
+    mage2:
+        name: Mage Wand Lv2
+        description: Battle mage spells
+    demolitions2:
+        name: Demolitions Wand Lv2
+        description: Explosive spells
+    healer2:
+        name: Healer Wand Wand Lv2
+        description: White mage spells
+    rogue2:
+        name: Rogue Wand Lv2
+        description: Rogue abilities
+    warrior2:
+        name: Magic Sword Lv2
+        description: A magic warrior's sword
+    jedi2:
+        name: Lightsaber Lv2
+        description: The chosen weapon of the Jedi
+    sith2:
+        name: Lightsaber Lv2
+        description: The chosen weapon of the Sith
+    bender2:
+        name: Bending Lv2
+        description: The power of the Avatar

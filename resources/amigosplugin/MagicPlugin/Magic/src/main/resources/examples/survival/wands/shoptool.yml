@@ -1,0 +1,9 @@
+shoptool:
+    hidden: true
+    inherit: base_bound
+    icon: nether_star{"CustomModelData":18001}
+    mode: cast
+    left_click: cast
+    right_click: right
+    active_spell: manageshop
+    interactible: "anvil"

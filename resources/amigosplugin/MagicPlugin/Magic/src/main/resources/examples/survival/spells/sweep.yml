@@ -1,0 +1,40 @@
+sweep:
+    # This refers to an icon defined in the icons folder/config
+    icon: sweep
+    category: combat
+    worth: 100
+    earns: 8
+    actions:
+        cast:
+        - class: Repeat
+          actions:
+          - class: ConeOfEffect
+            actions:
+            - class: Damage
+          - class: ChangeContext
+            target_caster: true
+            actions:
+            - class: Orient
+          - class: Delay
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.shimmer_crack
+           sound_volume: 1
+           particle: sweep_attack
+    parameters:
+        allow_max_range: true
+        target: none
+        target_type: Damageable
+        range: 3
+        fov: 0.4
+        damage: 2
+        target_breakables: 1
+        cooldown: 5000
+        magic_damage: false
+        instant_block_effects: true
+        yaw_offset: 20
+        repeat: 9
+        delay: 5
+    costs:
+        mana: 50

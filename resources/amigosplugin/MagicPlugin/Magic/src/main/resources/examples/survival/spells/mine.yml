@@ -1,0 +1,87 @@
+mine:
+    # This refers to an icon defined in the icons folder/config
+    icon: mine
+    category: engineering
+    tags: noduel,nojail
+    worth: 500
+    earns: 10
+    upgrade_required_path: apprentice
+    upgrade_required_casts: 50
+    actions:
+        cast:
+        # This delay is here so the brush can sample the block material for visual FX
+        # before we turn it to air.
+        - class: Delay
+        - class: Recurse
+          actions:
+          - class: PlayEffects
+            effects: drop
+          - class: Delay
+          - class: Drop
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.vanish
+           sound_volume: 0.5
+           sound_pitch: 0.8
+        -  class: EffectSingle
+           sound: entity_item_break
+           sound_pitch: 0.2
+           sound_volume: 0.9
+           effectlib:
+              class: LineEffect
+              particle: block_crack
+              iterations: 2
+              particles: 10
+              period: 1
+              particle_count: 2
+              particle_offset_x: 0.1
+              particle_offset_y: 0.1
+              particle_offset_z: 0.1
+        drop:
+        -  sound: block_stone_break
+           sound_pitch: 0.7
+           sound_volume: 0.3
+           particle: block_crack
+           particle_count: 30
+           particle_offset_x: 0.8
+           particle_offset_y: 0.8
+           particle_offset_z: 0.8
+           location: target
+    parameters:
+        faces: all
+        allow_max_range: false
+        range: 32
+        limit: 8
+        depth: 2
+        destructible: ores
+        cooldown: 10000
+        bypass_undo: true
+        delay: 100
+    costs:
+        mana: 10
+
+mine|2:
+    parameters:
+        limit: 16
+        depth: 3
+
+mine|3:
+    upgrade_required_path: master
+    parameters:
+        limit: 32
+        depth: 5
+
+mine|4:
+    parameters:
+        limit: 48
+        depth: 8
+
+mine|5:
+  parameters:
+    tool: loot3_pickaxe
+
+mine|6:
+  parameters:
+    tool: loot5_pickaxe
+

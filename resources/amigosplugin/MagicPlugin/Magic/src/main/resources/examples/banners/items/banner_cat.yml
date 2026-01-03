@@ -1,0 +1,11 @@
+banner_cat:
+  worth: 100.0
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4325
+    id: minecraft:black_banner
+    count: 1
+    components:
+      minecraft:banner_patterns: '[{color:"light_blue",pattern:"minecraft:curly_border"},{color:"light_blue",pattern:"minecraft:triangles_top"},{color:"light_blue",pattern:"minecraft:square_bottom_left"},{color:"light_blue",pattern:"minecraft:stripe_bottom"},{color:"black",pattern:"minecraft:mojang"},{color:"light_blue",pattern:"minecraft:square_top_left"}]'
+      minecraft:custom_name: '{extra:["Cat"],text:""}'
+    schema_version: 1

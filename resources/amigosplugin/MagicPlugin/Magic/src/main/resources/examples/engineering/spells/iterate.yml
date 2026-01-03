@@ -1,0 +1,37 @@
+iterate:
+    # This refers to an icon defined in the icons folder/config
+    icon: iterate
+    category: engineering
+    tags: noduel
+    worth: 3000
+    earns: 13
+    actions:
+        cast:
+        -  class: Line
+           actions:
+           -  class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: block_grass_step
+        iterate:
+        -  class: EffectSingle
+           particle: block_crack
+           particle_count: 21
+           particle_offset_x: 0.5
+           particle_offset_y: 0.5
+           particle_offset_z: 0.5
+           location: target
+    parameters:
+        transparent: transparent_to_construction
+        allow_max_range: false
+        range: 16
+        size: 8
+        increment_data: false
+        destructible: destructible_replace
+        consume: true
+        ignore_region_overrides: true
+        cancel_on_deactivate: false
+    costs:
+        mana: 50
+

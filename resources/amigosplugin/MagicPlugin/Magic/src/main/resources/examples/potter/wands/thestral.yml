@@ -1,0 +1,11 @@
+thestral:
+    mode: cast
+    active_spell: thestralride
+    icon: bone
+    indestructible: false
+    effect_color: '880088'
+    uses: 1
+    quiet: 2
+    spells:
+        - thestralride
+

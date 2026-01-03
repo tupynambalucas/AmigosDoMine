@@ -1,0 +1,31 @@
+progressmenu:
+  # This refers to an icon defined in the icons folder/config
+  icon: buyshop
+  category: npc
+  hidden: true
+  actions:
+      cast:
+      -  class: Selector
+  parameters:
+    show_unavailable: true
+    options:
+    - cast_spell: spellshop
+    - cast_spell: upgrades
+    - placeholder: true
+    - cast_spell: wandinstructions
+    - placeholder: true
+    - cast_spell: appearanceshop
+      requirements:
+      - wand_tags: transformable
+      cast_for_tags:
+        transformablebow: bowappearanceshop
+        transformablesword: swordappearanceshop
+    - cast_spell: colorshop
+      requirements:
+      - holding_wand: true
+    - cast_spell: effectshop
+      requirements:
+      - wand_tags: effectable
+    - cast_spell: controlsmenu
+      requirements:
+      - holding_wand: true

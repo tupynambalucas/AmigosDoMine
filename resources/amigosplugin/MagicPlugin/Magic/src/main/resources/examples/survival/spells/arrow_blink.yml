@@ -1,0 +1,78 @@
+arrow_blink:
+    # This refers to an icon defined in the icons folder/config
+    icon: arrow_blink
+    category: combat
+    worth: 1000
+    earns: 8
+    actions:
+        cast:
+        - class: Projectile
+          actions:
+          - class: Teleport
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_arrow_shoot
+           sound_pitch: 0.2
+           sound_volume: 0.3
+           location: origin
+        projectile:
+        - location: origin
+          effectlib:
+             class: Sphere
+             iterations: 10
+             period: 2
+             particles: 5
+             particle_count: 20
+             particle_offset_x: 0.2
+             particle_offset_y: 0.2
+             particle_offset_z: 0.2
+             particle: portal
+             disappear_with_origin_entity: true
+        - location: origin
+          effectlib:
+             class: Sphere
+             iterations: 10
+             period: 2
+             particles: 10
+             particle: redstone
+             color: "FF00FF"
+             disappear_with_origin_entity: true
+        hit:
+        -  class: EffectSingle
+           target_offset: 0,0.5,0
+           location: target
+           color: FACC2E
+           firework: burst
+        teleport:
+        - class: EffectSingle
+          sound: magic.teleport
+          location: target
+          particle_override: particle_nucleus
+          color_override: colorOrbital
+          source_location: eyes
+          effectlib:
+             class: AtomEffect
+             particle_nucleus: fireworks_spark
+             particle_orbital: redstone
+             iterations: 16
+             offset: 0,-1,0
+        - class: EffectSingle
+          location: target
+          source_location: body
+          color_override: colorNucleus
+          effectlib:
+             class: AtomEffect
+             particle_nucleus: redstone
+             particle_orbital: fireworks_spark
+             iterations: 8
+    parameters:
+      target: none
+      projectile: TippedArrow
+      speed: "bowpull * 3"
+      spread: "1 - bowpull"
+      vertical_range: 8
+      ledge_range: 4
+      arrow_damage: 0
+    costs:
+      arrow: 1

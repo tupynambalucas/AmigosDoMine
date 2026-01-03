@@ -1,0 +1,11 @@
+pistol_item:
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4325
+    id: minecraft:diamond_pickaxe
+    count: 1
+    components:
+      minecraft:custom_model_data: '{floats:[18003.0f]}'
+      minecraft:unbreakable: '{}'
+      minecraft:custom_name: '"§aPistol"'
+    schema_version: 1

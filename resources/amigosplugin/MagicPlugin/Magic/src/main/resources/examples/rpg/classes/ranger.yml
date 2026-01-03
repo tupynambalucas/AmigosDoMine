@@ -1,0 +1,31 @@
+ranger:
+  icon: spell_icon:263
+  icon_disabled: spell_icon_disabled:263
+  inherit: base
+  locked: true
+  entity_attributes:
+    generic_max_health:
+      value: "constitution"
+      operation: base
+  craftable:
+    - arrow_blink
+    - arrow_fire
+    - arrow_bomb
+    - arrow_grapple
+    - arrow_ice
+    - arrow_light
+    - arrow_poison
+    - arrow_shock
+  useable:
+    - arrow_blink
+    - arrow_fire
+    - arrow_bomb
+    - arrow_grapple
+    - arrow_ice
+    - arrow_light
+    - arrow_poison
+    - arrow_shock
+  class_items:
+    - bow
+    - arrow@32
+    - recipes:ranger

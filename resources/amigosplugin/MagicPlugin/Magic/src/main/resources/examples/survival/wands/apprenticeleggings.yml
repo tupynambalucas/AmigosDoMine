@@ -1,0 +1,6 @@
+apprenticeleggings:
+    icon: "leather_leggings:#00AAFF"
+    indestructible: false
+    keep: true
+    mana_max_boost: 0.05
+

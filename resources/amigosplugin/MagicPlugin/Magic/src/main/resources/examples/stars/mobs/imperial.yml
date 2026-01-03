@@ -1,0 +1,18 @@
+imperial:
+  type: husk
+  name: "Imperial"
+  disguise:
+    type: player
+    skin: Empire
+    name: Imperial
+  health: 100
+  silent: true
+  default_drops: false
+  permissions: magic.team.imperial
+  interval: 5000
+  targeting:
+    radius: 32
+    # Imperials will attack anything other than another imperial
+    # This can be used to make them *only* target rebels
+    # required_permissions: magic.team.rebel
+    denied_permissions: magic.team.imperial

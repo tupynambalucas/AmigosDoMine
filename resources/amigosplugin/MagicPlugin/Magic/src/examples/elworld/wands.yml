@@ -1,0 +1,327 @@
+#
+# Modify this file to change the available default wands.
+# New wands can be added, existing wands modified or removed (disabled)
+#
+
+#
+# This is the Wand configuration file for the Magic plugin.
+#
+# This defines all of the wand "templates" that can be created with the
+# /wand and /wandp commands.
+#
+# To see the default wands and configurations, look in defaults/wands.defaults.yml
+#
+# See https://github.com/elBukkit/MagicPlugin/blob/master/WANDS.md for more information.
+#
+# Once a wand is created, it is its own unique item. It may be modified after that,
+# and may bear no direct relationship back to the template that created it.
+# 
+# The name and description, of a wand should be defined in messages.yml as
+#  messages.wands.<wandkey>.name
+#  messages.wands.<wandkey>.description
+#
+# Note that wands can also be renamed on an anvil.
+#
+# There are two special entries in here:
+# - The "default" wand is used as a template when creating a new and with /wand.
+# - The "random" wand has a different and specific configuration format.
+#
+# General format:
+#
+# <wandkey>:
+#
+#       # If true, this wand can not be enchanted, combined or otherwise modified
+#
+#       modifiable: true
+#
+#       # Set to false to disable a preset wand
+#       enabled: <true|false>
+#
+#       # Casting cost and cooldown reduction
+#
+#       cost_reduction: (0.0-1.0)
+#       cooldown_reduction: (0.0-1.0)
+#
+#       # Overall and specific protection
+#
+#       protection: (0.0-1.0)
+#       protection_physical: (0.0-1.0)
+#       protection_fire: (0.0-1.0)
+#       protection_falling: (0.0-1.0)
+#       protection_blast: (0.0-1.0)
+#
+#       # Regeneration values are added every second
+#
+#       health_regeneration: (0-20)
+#       hunger_regeneration: (0-20)
+#
+#       # If non-zero, this wand will use the Mana system instead of XP
+#
+#       xp_regeneration: (0-200)
+#       xp_max: (0-?)
+#
+#       # This provides bonus damage and effects to some spells
+#       # and increases the overall range of all targeted spells
+#
+#       power: (0.0-1.0)
+#
+#       # Increases player walk/fly speed- is limited by Bukkit
+#
+#       haste: (0.0 - 0.4-ish)
+#
+#       # Applies a potioneffect to the player while holding the wand
+#       # also used by many spells that have visual effects when cast with this wand
+#
+#       effect_color: <hex color, eg 'FF0000')
+#       spells:
+#           - <spellname>
+#       materials:
+#           - <materialname>
+#
+
+spraycan:
+  hidden: true
+  name: Spray Can
+  description: Color the World!
+  icon: 'skull_item:http://textures.minecraft.net/texture/719e9875ffb35adfbd135c416e51dcf80dec38bf3d0dca2f94eb6595b90c0b5'
+  keep: true
+  bound: true
+  undroppable: true
+  indestructible: true
+  active_spell: spraypaint
+  active_material: wool:2
+  brush_mode: inventory
+  hotbar_count: 3
+  materials:
+    - wool:15@0
+    - wool@1
+    - wool:1@2
+    - wool:2@3
+    - wool:3@4
+    - wool:4@5
+    - wool:5@6
+    - wool:6@7
+    - wool:7@8
+    - wool:8@9
+    - wool:9@10
+    - wool:10@11
+    - wool:11@12
+    - wool:12@13
+    - wool:13@14
+    - wool:14@15
+    - stone
+    - wood
+    - glass
+    - dirt
+    - glowstone
+    - sand
+    - cobblestone
+    - stained_glass
+    - thin_glass
+    - stained_glass_pane
+    - stained_clay
+    - quartz_block
+    - quartz_block:1
+    - quartz_block:2
+    - lapis_block
+    - iron_block
+    - diamond_block
+    - gold_block
+    - emerald_block
+    - redstone_block
+    - obsidian
+
+quaffle:
+  icon: wood_hoe:18
+  indestructible: true
+  uses: 1
+  name: Quaffle
+  left_click: cast
+  right_click: none
+  drop: cast
+  swap: none
+  mode: cast
+  spells:
+  - quafflepower
+
+customlore:
+  inherit: wand
+  lore:
+  - This wand has
+  - completely
+  - custom
+  - lore
+  - $owner
+  - You can add variables like so
+  - $description
+  - $spells
+  - $brushes
+  - $mana_regeneration
+  - $path
+  - $mana_max
+  
+testing:
+  inherit: base_wand
+  class: testing
+  mana_max: 50
+  mana: 50
+  mana_regeneration: 5
+
+testclasses:
+  inherit: base_wand
+  icon: blaze_rod
+  classes: akr,test2
+
+testbad:
+  name: Bad Config
+  description: $path Bad Wand
+  inherit: base_wand
+  class: testbad
+  mana_max: 20
+  mana_regeneration: 2
+  path: student
+  hotbar_count: 1
+  spells:
+  - fury
+
+butterfly:
+  name: Butterfly Wand
+  effects:
+    activate: butterfly
+
+customname:
+  inherit: base_wand
+  name: Custom
+  path: beginner
+  spells: missile, blink, fling, arrow
+  display_name: "&3$name &5$path .. &4$spell"
+
+acwand:
+  inherit: base_wand
+  name: Earn AC
+  path: beginner
+  spells: earnac
+  currency_display: ac
+  mana: 200
+  mana_max: 200
+  mana_regeneration: 20
+
+attributewand:
+  inherit: base_wand
+  name: Test Wand
+  path: beginner
+  spells: missile
+  mana: 0
+  mana_max: intelligence*10
+  mana_regeneration: wisdom*2
+
+healthsword:
+  name: Health Sword
+  icon: netherite_sword
+  item_attribute_slot: mainhand
+  item_attributes:
+    generic_attack_damage: 1 + health
+  item_flags: []
+
+cyclewand:
+  inherit: wand
+  name: Cycle Wand
+  mode: cycle
+  right_click: cycle
+  drop: cycle_reverse
+
+badicon:
+  inherit: wand
+  icon: bad_icon:2
+
+hardhat:
+  name: Hard Hat
+  icon: diamond_chestplate{CustomModelData:1}
+  stack: true
+  passive: true
+  wearable:
+    - helmet
+  attributes:
+    constitution: 2
+
+randompower:
+  inherit: base_wand
+  path: randompower
+  mana_regeneration: 50
+  mana_max: 100
+  spells: missile
+
+enhancer:
+  upgrade: true
+  craftable: true
+  glow: true
+  slot: Enhancer
+  icon: cauldron
+  name: Base Enhancer
+  description: '&b• &fDefault Enhancer'
+
+enhancer_speed:
+  inherit: enhancer
+  name: "Quicker than the Wind"
+  description: ""
+  force: true
+  potion_effects:
+    speed: 0
+
+basic_runestone:
+  name: Basic Runestone
+  description: '&b• &8Freshly Hewn'
+  inherit: base_keep
+  icon: emerald
+  # Mana
+  mana_max: 150
+  mana: 150
+  mana_regeneration: 5
+  max_spells: 35
+  effect_color: "#ffffff"
+  # Controls
+  left_click: cast
+  drop: toggle
+  mode: inventory
+  right_click: cycle
+  #Properties
+  locked: false
+  unique: true
+  enchantable: false
+  cast_location: 0.2,0,0.35
+  item_attribute_slot: mainhand, off_hand
+  tags:
+    - tweakable
+  slots:
+    - Attunement
+    - Capacitor
+    - Enhancer
+    - Cosmetic
+  spells:
+    - manabolt
+    - wandcontrolsmenu
+
+teleporter:
+  lore:
+    - $description
+  keep: true
+  immortal: false
+  track: false
+  unstashable: false
+  invulnerable: false
+  bound: false
+  undroppable: true
+  drop: destroy
+  icon: nether_star{CustomModelData:18001}
+  migrate_icons:
+    gunpowder: nether_star{CustomModelData:18001}
+  mode: cast
+  active_spell: teleportermenu
+  effect_color: 'FF00FF'
+  spells:
+    - teleportermenu
+
+cheesewand:
+  icon: cheese_overlay
+  cast_spell: healing
+  cast_interval: 2000

@@ -1,0 +1,10 @@
+sith_apprentice:
+    inherit: acolyte
+    upgrade: sith
+    override_properties:
+      mana_max: 75
+      mana_regeneration: 7
+    spells:
+      - forceblast
+      - forceexplode
+

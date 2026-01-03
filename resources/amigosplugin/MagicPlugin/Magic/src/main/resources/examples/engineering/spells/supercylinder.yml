@@ -1,0 +1,86 @@
+supercylinder:
+    # This refers to an icon defined in the icons folder/config
+    icon: supercylinder
+    category: engineering
+    tags: noduel
+    class: ConstructSpell
+    worth: 3000
+    upgrade_required_casts: 50
+    effects:
+        no_target:
+          - sound: block_note_block_didgeridoo
+            sound_pitch: 1.75
+            sound_volume: 0.15
+          - location: both
+          - class: EffectTrail
+            particle: spell_mob
+          - class: EffectTrail
+            particle: redstone
+            color: "#880000"
+            particle_count: 8
+            particle_offset_x: 0.05
+            particle_offset_y: 0.05
+            particle_offset_z: 0.05
+        cast:
+        - sound: entity_illusioner_cast_spell
+          sound_pitch: 0.3
+        - class: EffectTrail
+          location: origin_to_selection
+          particle: block_crack
+          particle_count: 6
+          particle_offset_x: 0.01
+          particle_offset_y: 0.01
+          particle_offset_z: 0.01
+        - location: selection_to_target
+          radius_override: radius
+          effectlib:
+            class: Circle
+            particle: end_rod
+            particle_count: 3
+            particle_offset: 0.2
+            angular_velocity_x: 0
+            angular_velocity_y: 0
+            angular_velocity_z: 0
+            particles: 30
+            whole_circle: true
+            duration: 500
+        - location: selection_to_target
+          radius_override: variable_a
+          effectlib:
+            class: Modified
+            duration: 1500
+            yEquation: "(t/i) * 10"
+            parameters:
+              radius: "a"
+            effect:
+              class: Circle
+              particle: block_crack
+              particle_count: 3
+              particle_offset: 0.2
+              angular_velocity_x: 0
+              angular_velocity_y: 0
+              angular_velocity_z: 0
+              particles: 20
+              whole_circle: true
+    parameters:
+        allow_max_range: true
+        range: 32
+        max_dimension: 16
+        target: select
+        thickness: 1
+        type: cylinder
+        transparent: transparent_to_construction
+        destructible: destructible_replace
+        consume: true
+        ignore_region_overrides: true
+        cancel_on_deactivate: false
+    costs:
+        mana: 400
+
+supercylinder|2:
+  parameters:
+    max_dimension: 24
+
+supercylinder|3:
+  parameters:
+    max_dimension: 32

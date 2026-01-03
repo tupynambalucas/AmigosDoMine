@@ -1,0 +1,23 @@
+wandshop:
+    # This refers to an icon defined in the icons folder/config
+    icon: wand
+    category: npc
+    hidden: true
+    inherit: buyshop
+    parameters:
+        confirm: true
+        auto_close: true
+        items:
+        - item: wand|default
+          cost: 3000
+        - item: wand|spellbook
+          cost: 3000
+        - item: wand|talisman
+          cost: 5000
+        - item: wand|mastersword
+          cost: 8000
+        - item: wand|magicsword
+          cost: 9000
+        - item: wand|magicbow
+          cost: 2500
+

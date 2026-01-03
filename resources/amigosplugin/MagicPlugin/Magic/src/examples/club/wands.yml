@@ -1,0 +1,16 @@
+tool:
+  migrate_to: teleporter
+
+teleporter:
+  lore:
+    - $description
+  keep: false
+  unstashable: false
+  icon: nether_star{CustomModelData:18001}
+  migrate_icons:
+    gunpowder: nether_star{CustomModelData:18001}
+  mode: cast
+  active_spell: teleportermenu
+  effect_color: 'FF00FF'
+  spells:
+      - teleportermenu

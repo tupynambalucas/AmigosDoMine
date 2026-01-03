@@ -1,0 +1,13 @@
+wear:
+    # This refers to an icon defined in the icons folder/config
+    icon: wear
+    hidden: true
+    category: utility
+    worth: 150
+    actions:
+        cast:
+        - class: Wear
+    parameters:
+        target: self
+        use_item: true
+

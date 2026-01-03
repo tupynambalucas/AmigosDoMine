@@ -1,0 +1,80 @@
+help:
+  main: |-
+    `<li>``<help topic="examples.survival.wands" text="Help getting and using wands">`
+  commands: |-
+    `<li>``<command command="mgive wand" text="Get the default survival wand">`
+  resourcepack: |-
+    `<li>``<command command="mexample add robes" text="Enable the robes textures and recipes">`
+  links: |-
+    `<li>`Survival wands and spells: &6https://survival.elmakers.com/
+  examples:
+    main: |-
+      `<li>``<help topic="examples.survival.main" text="Survival (the default example)">`
+    survival:
+      main: |-
+        `<title text="Survival">`
+        `<li>``<help topic="instructions.example.survival" text="Show basic survival instructions">`
+        `<li>``<help topic="examples.survival.wands" text="Help getting and using wands">`
+        `<li>``<help topic="examples.survival.broomstick" text="My broomsticks do not work!">`
+        `<li>``<help topic="examples.survival.mobs" text="Help with mobs, including dragons">`
+        `<li>``<help topic="examples.survival.recipes" text="Help with crafting">`
+        `<li>``<help topic="progression" text="Help with progression">`
+      mobs: |-
+        `<title text="Survival Mobs">`
+        `<p>`The &6survival&f example comes with a variety of magic mobs preconfigured
+        `<p>`You can use the `<help topic="examples.all" text="spawnmobs examples">` to have them naturally spawn
+        `<p>`Use the `<command command="mmob spawn warlock" text="mmob spawn">` command to spawn a magic mob
+        `<p>`There are also some `<help topic="examples.survival.dragons" text="dragon mobs">` that have certain prerequisites
+      dragons: |-
+        `<title text="Survival Dragon Mobs">`
+        `<p>`The &6survival&f example includes a variety of colored dragon mobs you can spawn
+        `<p>`These will spawn naturally using the `<help topic="examples.all" text="spawnmobs examples">`
+        `<p>`Dragons require the `<link url="https://www.spigotmc.org/resources/libs-disguises-free.81/" text="LibsDisguises">` plugin
+        `<p>`which itself requires the `<link url="https://www.spigotmc.org/resources/packetevents-api.80279/" text="PacketEvents">` plugin.
+        `<p>`Finally, players will need the `<help topic="resourcepack" text="resoure pack">` to see the dragons properly.
+        `<p>`If the dragons are invisible, you are missing LibsDisguises or it is not working.
+        `<p>`If the dragons look like a strange collection of leather horse armor, you are missing the resource pack.
+        `<li>``<command command="mmob spawn reddragon" text="Summon a red dragon">`
+      wands: |-
+        `<title text="Survival Wands">`
+        `<li>``<help topic="instructions.wand" text="Help with the wand I'm holding">`
+        `<li>``<help topic="examples.survival.customizing" text="Help with customizing survival wands">`
+        `<li>``<command command="mgive wand" text="Get the default survival wand">`
+        `<li>``<command command="mgive master" text="Get a maxed-out survival wand">`
+        `<li>``<command command="mgive uberwand" text="Get an OP testing wand">`
+        `<li>``<command command="wand add recall" text="Add a spell to a testing wand">`
+        `<li>``<command command="mage add blink" text="Learn a spell, adding it to your survival wand">`
+      customizing: |-
+        `<title text="Customizing Survival">`
+        `<li>``<command command="cast controlsmenu" text="Use the controls menu to tweak your own wand">`
+        `<p>`&eThis is available to all players in the &benchantment table&4 menu
+        `<li>``<command command="mconfig config wand_slots.gui.default_slotted gui_bossbar" text="Change wand default to use the boss bar GUI instead of the action bar">`
+        `<li>``<command command="mconfig config wand_slots.controls.default_slotted controls_inventory" text="Set default controls to right-click to open spell inventory">`
+        `<li>``<help topic="wandgui" text="Help or issues with the wand GUI">`
+        `<li>``<command command="meditor spell progressmenu" text="Edit the enchant table menu">`
+        `<li>``<command command="mconfig config enchant_click" text="Disable the enchant table menu">`
+      broomstick: |-
+        `<title text="Broomsticks">`
+        `<li>`Broomsticks work by moving invisible armor stands around. If you have anything on your server that might prevent moving armor stands, they will not work.
+        `<li>`In particular, if you use &6Paper&f make sure you have &barmor-stands-tick&f set to &btrue&f in &bpaper.yml&f
+        `<li>`Broomsticks improve with use, player's &6broom skill&f will level up and handling will improve
+        `<li>` &6`<command command="mgive broom_booster" text="Broom booster">` &fand &6`<command command="mgive broom_glider" text="Glider">`&f upgrades can be crafted and applied to a broom
+        `<li>`Each broom can only have &eone &fupgrade at a time.
+        `<li>`While in your inventory, click to pick up a broom upgrade and then click it on your broomstick to add it.
+        `<li>``<command command="mgive broomstick" text="Get a broomstick">`
+      recipes: |-
+        `<title text="Survival Recipes">`
+        `<li>``<help topic="examples.survival.wand_crafting" text="Wand crafting instructions">`
+        `<li>``<command command="mgive recipe:*" text="Learn all recipes">`
+        `<li>`Survival recipes: &6https://survival.elmakers.com/#crafting
+      wand_crafting: |-
+        `<title text="Wand Crafting">`
+        `<p>`&6Wands &fcan be crafted using an &d`<command command="mgive amethyst_shard" text="Amethyst Shard">`&f, a &e`<command command="mgive stick" text="stick">`&f and &b`<command command="mgive diamond 2" text="2 diamonds">`&f.
+        `<p>`The recipe will appear in your in-game &bknowledge book once you have acquired an &damethyst shard&f.
+        `<p>`If you prefer, you can have the recipe &b`<command text="auto-discover on login" command="mconfig recipe wand auto_discover true">`
+        `<li>`On an older version of Minecraft? The recipes on the wiki use amethyst shards. If you don't have amethyst in your server version, replace them with emeralds.
+        `<li>`Missing the &6magic hearts&f? You can &b`<command text="bring back the old recipes" command="mexample add magicheart">` &fif you want.
+        `<li>`Don't want crafting? You can `<command text="Disable all magic crafting" command="mconfig config enable_crafting false">`
+        `<li>`Or `<command text="Disable an individual recipe" command="mconfig disable recipe wand">`
+        `<li>``<link text="See all recipes in the reference guide" url="https://magic.elmakers.com/#crafting">`
+

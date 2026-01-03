@@ -1,0 +1,9 @@
+polterghast:
+  type: ghast
+  health: 50
+  drops:
+  - gold_nugget@10
+  - sp:5
+  potion_effects:
+  - type: speed
+    amplifier: 2

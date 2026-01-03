@@ -1,0 +1,36 @@
+light:
+    # This refers to an icon defined in the icons folder/config
+    icon: light
+    category: engineering
+    worth: 500
+    earns: 2
+    actions:
+        cast:
+          - class: ChangeContext
+            target_attachment: true
+            actions:
+            - class: ModifyBlock
+    effects:
+        cast:
+        - sound: block_beacon_activate
+          sound_pitch: 1.8
+        - sound: item_firecharge_use
+          sound_pitch: 1.7
+        - class: EffectTrail
+          particle: smoke_normal
+          particle_count: 10
+          particle_offset_x: 0.2
+          particle_offset_y: 0.2
+          particle_offset_z: 0.2
+    parameters:
+        target: block
+        allow_max_range: true
+        range: 32
+        cooldown: 10000
+        async: false
+        ignore_region_overrides: true
+        brush: light
+        destructible: all_air
+        transparent: transparent_to_construction
+    costs:
+        mana: 200

@@ -1,0 +1,60 @@
+## Deprecated configuration options
+
+# These hacks should not be required in 1.8 and up
+# This enables the item drag event interceptor
+enable_custom_item_hacks: false
+
+# Wands will switch to chest mode when the player is in creative mode
+wand_creative_chest_switch: false
+
+# Used as a work-around for enchanting since the main item may not be enchantable (client-side).
+# wand_item_enchantable: wood_sword
+wand_item_enchantable:
+
+# If set to non-zero, represents a time (in milliseconds) after which all spells will be reversed.
+auto_undo: 0
+
+# Throttle TNT explosions
+# This is built-in to Spigot, so generally not needed here.
+max_tnt_per_chunk: 0
+
+# The default enchanting path.
+# Paths should be defined per-wand, though this could be used to "update" old wands with no
+# path to some specific path.
+default_wand_path:
+
+# Set this to false to not write default configs out to the defaults folder.
+save_default_configs: true
+
+# Whether wands can be upgraded on an enchanting table
+# This does not affect spellshop-based progression, but rather wands progressing via vanilla
+# enchantment mechanics, something that no longer works.
+# This does note effect the "enchanting" property of wands, which lets them be enchanted
+# just like a vanilla item.
+enable_enchanting: false
+
+# Whether wands can be combined on an anvil
+enable_combining: false
+
+# Wands will bind to the player when put in an anvil
+enable_anvil_binding: false
+
+# Whether renaming on an anvil will also clear the description
+# In the future, it may be possible to change the description on
+# an anvil.
+anvil_rename_clears_description: false
+
+# Whether or not using a wand on an anvil will organize its inventory
+enable_organizing: false
+
+# Players keep their wands when they die
+# This is better confrolled via the "keep" property on wand configs.
+keep_wands_on_death: false
+
+# Set this to true to restore the old behavior of the wand "locked" property.
+# This may interfere with builtin configs
+old_wand_locked_behavior: false
+
+# This has been replaced by worldguard.enabled
+# This option, when set to false, will override the above for backwards-compatibility
+region_manager_enabled: true

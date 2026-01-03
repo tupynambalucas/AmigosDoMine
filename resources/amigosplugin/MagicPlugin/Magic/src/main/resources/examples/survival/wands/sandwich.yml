@@ -1,0 +1,6 @@
+sandwich:
+  icon: bread{CustomModelData:18001}
+  consume_spell: eat_food
+  overrides:
+    feed: 16
+    saturation: 4

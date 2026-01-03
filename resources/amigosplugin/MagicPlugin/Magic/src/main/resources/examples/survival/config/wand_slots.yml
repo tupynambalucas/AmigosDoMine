@@ -1,0 +1,19 @@
+wand_slots:
+  broom_upgrade:
+    swappable: true
+  controls:
+    hidden: true
+    replaceable: true
+    default_slotted: controls_cycle
+  gui:
+    hidden: true
+    replaceable: true
+    default_slotted: gui_actionbar
+  spellmode:
+    hidden: true
+    replaceable: true
+    default_slotted: spellmode_inventory
+  swappable:
+    hidden: true
+    replaceable: true
+    default_slotted: swappable_false

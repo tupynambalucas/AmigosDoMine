@@ -1,0 +1,8 @@
+#
+# A spellcasting crossbow
+#
+magiccrossbow:
+  enabled: false
+  inherit: base_bow
+  class: archer_mage
+  icon: crossbow

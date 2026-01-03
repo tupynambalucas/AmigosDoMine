@@ -1,0 +1,53 @@
+stun:
+    # This refers to an icon defined in the icons folder/config
+    icon: stun
+    upgrade_required_path: student
+    upgrade_required_casts: 50
+    category: combat
+    worth: 80
+    earns: 10
+    actions:
+        cast:
+          - class: ConeOfEffect
+            actions:
+            - class: Damage
+            - class: PotionEffect
+            - class: Deactivate
+    effects:
+        cast:
+        - sound: magic.shimmer_quiet
+          sound_pitch: 0.1
+          sound_volume: 0.5
+          location: origin
+          color_override: color
+          effectlib:
+             class: Cone
+             iterations: 16
+             particle: redstone
+    parameters:
+        target_type: Damageable
+        radius: 4
+        damage: 1
+        target_breakables: 0
+        bypass_backfire: false
+        effect_confusion: 5
+        effect_slow: 1
+        duration: 8000
+        cooldown: 5000
+    costs:
+        mana: 50
+
+stun|2:
+    upgrade_required_path: apprentice
+    upgrade_required_casts: 50
+    parameters:
+        damage: 1.5
+        duration: 10000
+        target_breakables: 1
+
+stun|3:
+    parameters:
+        damage: 2
+        duration: 12000
+        target_breakables: 2
+

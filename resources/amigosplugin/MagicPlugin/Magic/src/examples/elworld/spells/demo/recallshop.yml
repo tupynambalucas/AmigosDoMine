@@ -1,0 +1,22 @@
+recallshop:
+  inherit: buyshop
+  parameters:
+    title: "Learn Recall"
+    selected_free: "t:&r&6$item\n&d&oLearned"
+    free: true
+    spells:
+      - placeholder: true
+      - placeholder: true
+      - placeholder: true
+      - placeholder: true
+      - recall
+      - placeholder: true
+      - placeholder: true
+      - placeholder: true
+      - placeholder: true
+    confirm: false
+    placeholder_icon: icon_placeholder
+    auto_close: true
+    apply_to_caster: true
+
+

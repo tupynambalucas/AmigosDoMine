@@ -1,0 +1,13 @@
+camera:
+  enabled: false
+  output: camera
+  output_type: wand
+  ingredients:
+    o: amethyst_shard
+    i: dispenser
+    d: daylight_detector
+    e: glass
+  row_1: ""
+  row_2: "doe"
+  row_3: "i  "
+

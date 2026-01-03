@@ -1,0 +1,8 @@
+# Which materials spells that build blocks will replace
+destructible_replace:
+- all_air
+- fire
+- snow
+- plants
+- all_water
+

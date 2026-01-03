@@ -1,0 +1,25 @@
+arrow_regular:
+    # This refers to an icon defined in the icons folder/config
+    icon: arrow_regular
+    legacy_icon: arrow_regular
+    category: combat
+    worth: 100
+    earns: 2
+    actions:
+        cast:
+        - class: Projectile
+    effects:
+      cast:
+        -  class: EffectSingle
+           sound: entity_arrow_shoot
+           location: origin
+    parameters:
+      target: none
+      projectile: TippedArrow
+      speed: "bowpull * 3"
+      spread: "1 - bowpull"
+      arrow_damage: "2 * bowpull"
+      tick_increase: 0
+      pickup: disallowed
+    costs:
+      arrow: 1

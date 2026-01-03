@@ -1,0 +1,62 @@
+flatten:
+  # This refers to an icon defined in the icons folder/config
+  icon: flatten
+  category: engineering
+  tags: noduel
+  worth: 1000
+  earns: 10
+  upgrade_required_casts: 30
+  actions:
+    cast:
+    - class: Disc
+      actions:
+      - class: Cover
+        actions:
+        - class: LowerBlock
+        - class: PlayEffects
+          effects: lower
+  effects:
+    cast:
+    - sound: entity_illusioner_cast_spell
+      sound_pitch: 0.5
+    - sound: block_stone_break
+      location: both
+    - class: EffectTrail
+      reverse: true
+      particle: block_crack
+      particle_count: 4
+      material: dirt
+    lower:
+    - location: target
+      particle: block_crack
+      particle_count: 10
+      particle_offset_x: 0.5
+      particle_offset_y: 5
+      particle_offset_z: 0.5
+  parameters:
+    range: 32
+    radius: 8
+    vertical_range: 8
+    volume_type: reverse_spiral
+    ignore_region_overrides: true
+    cancel_on_deactivate: false
+    faces:
+    - down
+    - north
+    - north_east
+    - east
+    - south_east
+    - south
+    - south_west
+    - west
+    - north_west
+  costs:
+    mana: 50
+
+flatten|2:
+  parameters:
+    radius: 12
+
+flatten|3:
+  parameters:
+    radius: 16

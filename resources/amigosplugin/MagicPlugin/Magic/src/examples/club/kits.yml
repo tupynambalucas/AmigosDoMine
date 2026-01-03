@@ -1,0 +1,38 @@
+creative:
+  enabled: true
+  keep: true
+  worlds: world_water
+  items:
+    - teleporter
+
+students:
+  enabled: false
+  keep: true
+  worlds: "*"
+  items:
+    - teleporter
+
+admins:
+  enabled: false
+  keep: true
+  requirements:
+    - permission: orla.mod
+  items:
+    - admintool
+
+newstudents:
+  starter: true
+  items:
+    - teleporter
+    - wooden_sword
+    - wooden_pickaxe
+    - wooden_shovel
+    - wooden_axe
+    - item: torch@32
+      slot: 7
+    - item: bread@32
+      slot: 8
+    - item: white_bed
+      slot: 16
+    - item: oak_planks@64
+      slot: 15

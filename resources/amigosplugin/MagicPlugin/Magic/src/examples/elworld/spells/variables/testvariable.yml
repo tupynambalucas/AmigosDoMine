@@ -1,0 +1,42 @@
+testvariable:
+  icon: feather
+  parameters:
+    target: self
+  actions:
+    cast:
+      - class: ModifyVariable
+        variable: manaamount
+        scope: spell
+        value: '%magic_mana%'
+      - class: Message
+        message: Your mana is @manaamount@MP
+      - class: Repeat
+        repeat: 3
+        actions:
+          - class: ModifyVariable
+            variable: count
+            scope: spell
+            default: 10
+            value: count + 1
+          - class: Message
+            message: Variable count = $count
+      - class: CheckRequirements
+        requirements:
+          - variables:
+              - variable: count
+                min: 10
+        actions:
+          - class: Message
+            message: STAHP IT'S TOO MUCH
+          - class: Damage
+            damage: count / 4
+      - class: CheckRequirements
+        requirements:
+          - variables:
+              - variable: count
+                min: 20
+        actions:
+          - class: Message
+            message: OK FOR REAL THOUGH
+          - class: Command
+            command: give @p rotten_flesh @count

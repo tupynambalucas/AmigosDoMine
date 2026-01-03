@@ -1,0 +1,644 @@
+help:
+  main: |-
+    `<title text="General Help">`
+    `<li>``<help topic="commands" text="Help with commands">`
+    `<li>``<help topic="examples.main" text="Help with examples">` &7(inluding survival)
+    `<li>``<help topic="resourcepack" text="Help with the resource pack">`
+    `<li>``<help topic="faq" text="Common Problems and Solutions">`
+    `<li>``<help topic="customization" text="Customization, localization and languages">`
+    `<li>``<help topic="features" text="Other Magic features">`
+    `<li>``<help topic="links" text="Links to web help and support">`
+  features: |-
+    `<title text="Other Features">`
+    `<li>``<help topic="npc" text="Help with NPCs">`
+    `<li>``<help topic="warp" text="Help with warps">`
+    `<li>``<help topic="arena" text="Help with arenas">`
+    `<li>``<help topic="mobs" text="Help with Magic mobs">`
+    `<li>``<help topic="shops" text="Working with Magic shops">`
+    `<li>``<help topic="maps" text="Putting images on to maps">`
+    `<li>``<help topic="magicblocks" text="Setting up mob spawners or other automated blocks">`
+    `<li>``<help topic="kits" text="Setting up kits, including starter kits">`
+  kits: |-
+    `<title text="Kits">`
+    `<p>`&dMagic&f has a simple &bkit&f system you can use for starter kits, kit shops, server navigation items, daily rewards and more.
+    `<li>``<command command="mnpc add dailykit" text="Add a daily rewards NPC">`
+    `<li>``<command command="meditor kit newkit" text="Create a new kit using the editor">`
+    `<li>``<command command="mconfig enable kit welcome" text="Enable a basic starter kit">`
+    `<li>``<command command="mkit starter" text="Give yourself the starter kit">`
+    `<li>``<command command="mconfig enable welcome" text="Give players a wand on join">`
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/tree/master/Magic/src/main/resources/examples/survival/kits" text="Look at the survival kits for other examples">`
+  magicblocks: |-
+    `<title text="Magic Blocks">`
+    `<p>`&6Magic Blocks&f can be used to set up automated mob spawning or spell casting.
+    `<li>``<command command="mblock add spawner spawn.mobs warlock" text="Set up a Warlock spawner">`
+    `<li>``<command command="mblock list" text="List all magic blocks, nearby ones first">`
+    `<li>``<command command="mblock select" text="Select the closest magic block for editing">`
+    `<li>``<command command="mblock remove" text="Remove the selected magic block">`
+    `<li>``<command command="mblock add fountain" text="Add a fountain particle effect">`
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/wiki/Magic-Blocks" text="See the Magic Blocks wiki for more information">`
+  maps: |-
+    `<title text="Magic Maps">`
+    `<li>``<command command="mmap load https://i.imgur.com/C9zLu1v.png Marigold" text="Load an image from imgur into a map">`
+    `<li>``<command command="mmap load https://magic.elmakers.com/mario.gif Mario" text="Load an animated gif into a map">`
+    `<li>``<command command="mmap slice https://i.imgur.com/ijyvZDJ.png Mint 2 3" text="Slice a large map into 2x3 (6 total) maps">`
+    `<li>``<command command="mmap list Mint" text="List maps, or find maps by name">`
+    `<li>``<command command="mmap give 1" text="Give a specific map by id">`
+    `<li>``<command command="mgive invisible_item_frame 6" text="Give yourself invisible item frames for map hanging">`
+  faq: |-
+    `<title text="FAQ: Common Problems and Solutions">`
+    `<li>``<command command="wandp @p restore" text="Restore a player's lost wands">`
+    `<li>``<help topic="mana" text="About the mana system">`
+    `<li>``<help topic="players" text="Managing Magic player data">`
+    `<li>``<help topic="missing_spells" text="My spells have gone missing from my wand inventory">`
+    `<li>``<help topic="integration" text="Integration with other plugins">`
+    `<li>``<help topic="nottrained" text="Some of my items are telling me I am not trained to use them">`
+    `<li>``<help topic="noflying" text="I get a 'flying is not enabled' error when using some spells">`
+    `<li>``<help topic="default_configs" text="Where are the default spells and other configs?">`
+    `<li>``<help topic="right_click" text="Right clicking is not working">`
+    `<li>``<help topic="updating" text="My custom wands or other configs broke when I updated the plugin">`
+    `<li>``<command command="wand fill" text="Add ALL spells to my wand">`
+  updating: |-
+    `<title text="Updating the Plugin">`
+    `<p>`Updating &dMagic &f should generally be as simple as replacing the plugin jar
+    `<p>`Backwards-compatibility of your custom configs is always a top priority!
+    `<p>`However, some major updates have changed things around. Always check the `<link url="https://github.com/elBukkit/MagicPlugin/blob/master/Magic/MIGRATION.md" text="migration log">` on major updates.
+    `<p>`Updating to Magic 10 had a few specific gotchas:
+    `<p>`Changed the meaning of the `locked` tag on wands, to match the behavior of items, classes and recipes
+    `<p>`Use "modifiable: false" for the same behavior as "locked: true" used to have
+    `<p>`If this is a big issue to update, use `<command command="mconfig config old_wand_locked_behavior true" text="this command">` to revert to the old behavior.
+  right_click: |-
+    `<title text="Right Clicks and Offhand Items">`
+    `<p>`Wands use right-click for spell cycling by default, these `<help topic="wandcontrols" text="controls">` are customizable.
+    `<p>`If you have certain items in your offhand, wands will ignore right-clicks.
+    `<p>`This is to allow vanilla offhand item behavior without wands getting in the way.
+    `<p>`You can `<command command="meditor materials offhand" text="edit the list of offhand items">` if you want to change this behavior.
+    `<p>`Right-clicking an enchantment table with a wand will bring up the `<command command="cast progressmenu" text="progress menu">`
+    `<p>`If the enchant table is not working but right-clicks are working otherwise, check your configs to make sure you don't have &7enchant_click&f set to an empty string.
+  wandcontrols: |-
+    `<title text="Wand Controls">`
+    `<p>`Wand controls are completely customizable.
+    `<p>`Players can use the `<command command="cast controlsmenu" text="controls menu">` to change their controls.
+    `<p>`Players can also change their `<help topic="wandgui" text="GUI">` (second hotbar and mana bar) in that same menu.
+    `<p>`You may also change the default controls
+    `<p>`The simplest way is to `<command command="meditor config wand_slots" text="edit the wand_slots config">`, changing the &7default_slotted&f property.
+    `<p>`Available builtin control schemes: &7controls_cycle&f, &7controls_hotbarswap&f, &7controls_inventory
+  wandgui: |-
+    `<title text="Wand GUI">`
+    `<p>`The &6wand&f second hotbar and mana &bGUI&f uses custom font glyphs from the resource pack
+    `<p>`This means that the resource pack is &brequired&f, and this only works on &6Minecraft 1.16&f and above.
+    `<p>`You will need to be using the official &aMagic&f resource pack, or you can `<link url="https://merge.elmakers.com" text="merge your own RP with the Magic RP">`
+    `<p>`If you see squares instead of the hotbar glyphs, you have the &bwrong resource pack&f.
+    `<li>``<command command="mconfig config wand_slots.gui.default_slotted gui_bossbar" text="Change wand default to use the boss bar GUI instead of the action bar">`
+    `<li>``<command command="mconfig config wand_slots.gui.default_slotted gui_none" text="Turn off the wand GUI hotbar by default">`
+  decorating: |-
+    `<title text="Decorating with Magic Items">`
+    `<p>`&6Wand&f items can not be put into containers by default.
+    `<p>`This includes item frames!
+    `<p>`If you want to decorate with a wand item, you must turn it into a regular item first.
+    `<li>`Use the `<command command="wand destroy" text="wand destroy">` command to make a wand a normal item.
+    `<li>`Use `<command command="wand restore" text="wand restore">` to get a bound wand back if you accidentally destroy it.
+  default_configs: |-
+    `<title text="Default Configs">`
+    `<p>`&dMagic &f will output the effective configs it is using to the &7plugins/Magic/defaults&f folder.
+    `<p>`This includes the default configs, any loaded examples (such as &bsurvival&f) and all of your customizations.
+    `<p>`These files can be useful to see how things work or what you can edit.
+    `<p>`However, please be aware they can not be edited directly. Magic will overwrite them every restart.
+    `<p>`This is a confusing point for most people looking to customize this plugin.
+    `<p>`Please see the `<help topic="general_customization" text="customization guide">` for more information!
+  noflying: |-
+    `<title text="Flying is not Enabled on This Server">`
+    `<p>`Survival players are usually not allowed to fly on a server by default.
+    `<p>`If you are getting this error from spells like Fly and Levitate, you may need to change your server settings.
+    `<p>`Set &7allow-flight: true&f in your &7server.properties&f file.
+    `<p>`This will require a server restart to take effect.
+  nottrained: |-
+    `<title text="You Are Not Trained to Use This">`
+    `<p>`If you are getting this message from wands that worked prior to Magic 10, please check your wand configuration.
+    `<p>`If you have &7locked: true&f, you need to remove it.
+    `<p>`If you are concerned about the wand being modified, you can replace with &7modifiable: false
+    `<p>`Alternately if this is all a big problem, you can `<command command="mconfig configure config old_wand_locked_behavior true" text="switch back to the old locked behavior">`
+    `<p>`Keep in mind changing the behavior back this way may have an impact on builtin wands.
+  missing_spells: |-
+    `<title text="Missing Spells">`
+    `<p>`It is usually &overy rare&f that &6spells&f actually go missing!
+    `<p>`There are a few common events that make it hard to find your spells:
+    `<li>` &6More than 8 spells&f: Once you have more than 8 spells, you need to &bopen the spell inventory&f &7(&b`{"keybind":"key.drop"}`&7) &fto see all of your spells.
+    `<li>` &6New hotbar&f: At the &bStudent&f rank you get a second hotbar. Use the swap key &7(&b`{"keybind":"key.swapOffhand"}`&7) &fto switch to your new hotbar.
+    `<li>` &6Second page of spells&f: Once you have more than 30 (or so) spells, you need to &bopen the spell inventory&f and then &bclick on your wand&f to change pages.
+  shops: |-
+    `<title text="Magic Shops">`
+    `<p>`&dMagic &fshops use a shared economy configuration for item pricing. Prices can be customized in &bitems&f configuration, or in-game.
+    `<li>``<command command="mgive diamond" text="Give yourself a diamond">`
+    `<li>``<command command="mitem save diamond 1000" text="Save the item in your hand as a diamond with a value of 1000">`
+    `<li>``<command command="cast lootshop" text="Test the mob loot sell shop">`
+    `<li>``<command command="mnpc add lootshop" text="Add a loot shop NPC">`
+    `<li>``<command command="meditor spell glassshop" text="Edit a shop, prices can be set directly in the shop config">`
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/blob/master/Magic/src/main/resources/examples/survival/items/economy.yml" text="See all default item prices">` (you can copy this file to your items folder if you wish to edit them all in one place)
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/wiki/Shops" text="More shop information on the wiki">`
+    `<li>``<help topic="playershops" text="About player shops">`
+  playershops: |-
+    `<title text="Player Shops">`
+    `<p>`&dMagic &fincludes a basic system for &bNPC-based player shops&f.
+    `<p>`Players use a &6`<command command="mgive shoptoken" text="Shop Token">` to create a &bShopkeeper&f NPC.
+    `<p>`Players select a chest to use as their shop inventory. and place items in that chest.
+    `<p>`It is recomended to protect this chest with a `<help topic="protection" text="protection">` plugin, or the &6Secure&f spell.
+    `<p>`The &bShopkeeper&f will sell items from the player's chest, and the players will earn money from the sales.
+    `<p>`Use the `<command command="mnpc select" text="mnpc select">` and `<command command="mnpc remove" text="mnpc remove">` commands if you need to remove an NPC.
+  players: |-
+    `<title text="Magic Player Data">`
+    `<li>``<command command="mage reset NathanWolf" text="Completely reset a player's progress">`
+    `<li>``<command command="mage reset NathanWolf survival" text="Reset a player's caster class (survival) progress">`
+  npc: |-
+    `<title text="NPCs">`
+    `<p>`&dMagic &fintegrates with &bCitizens&f, and also has a &6builtin&f NPC system.
+    `<li>``<help topic="citizens" text="Help with Citizens NPCs">`
+    `<li>``<command command="mnpc add spellshop" text="Add a spell shop NPC">`
+    `<li>``<command command="mnpc remove" text="Remove the selected Magic NPC">`
+    `<li>``<command command="mnpc list" text="List Magic NPCs">`
+    `<li>``<command command="mnpc cast heal" text="Change NPC to a healer">`
+    `<li>``<command command="mnpc add testdummy" text="Add a practice dummy NPC">`
+  citizens: |-
+    `<title text="Citizens Integration">`
+    `<li>``<command command="trait magic" text="Add the Magic trait to your selected Citizens NPC">`
+    `<li>``<command command="mtrait spell spellshop" text="Make your selected Citizens NPC a spellshop">`
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/wiki/Citizens" text="More help on the wiki">`
+  warp: |-
+    `<title text="Warps">`
+    `<p>`&dMagic &fintegrates with &bEssentials&f and &bCommandBook&f for warps, and also has a &6builtin&f warp system.
+    `<li>``<help topic="recall" text="Add warps to Recall">`
+    `<li>``<command command="mwarp add testing" text="Create a new Magic warp">`
+    `<li>``<command command="mwarp configure testing marker_icon tree" text="Add Magic warp to Dynmap">`
+    `<li>``<command command="mwarp remove testing" text="Remove a Magic warp">`
+    `<li>``<command command="mwarp go testing" text="Go to a Magic warp">`
+  recall: |-
+    `<title text="The Recall Spell">`
+    `<p>`The &bRecall&f action, used by the &bRecall&f spell in the &bsurvival&f example, can warp players to various locations.
+    `<p>`&dMagic &fWarps can be added to Recall simply by giving them an &bicon&f.
+    `<li>``<command command="mwarp add testing" text="Create a new Magic warp">`
+    `<li>``<command command="mwarp configure testing icon diamond" text="Add Magic warp to Recall with a diamond icon">`
+    `<li>``<command command="mwarp remove testing" text="Remove a Magic warp">`
+    `<li>``<command command="mwarp go testing" text="Go to a Magic warp">`
+    `<li>``<command command="mwarp configure testing locked true" text="Make a warp locked, so it must be unlocked">`
+    `<li>``<command command="cast warpunlock unlock testing" text="Unlock a locked warp">`
+    See `<link url="https://github.com/elBukkit/MagicPlugin/wiki/Recall" text="the wiki">` for information on setting up &bEssentials&f and &bCommandBook&f warps, as well as setting up &bregion-unlocked&f warps.
+  arena: |-
+    `<title text="Arenas">`
+    `<li>``<command command="marena add testing" text="Create a new arena">`, 2 player PvP by default
+    `<li>``<command command="marena configure testing max 4" text="Allow up to 4 players in this arena">`
+    `<li>``<command command="marena configure testing add spawn" text="Add a new player spawn location">`
+    `<li>``<command command="marena configure testing lobby" text="Set the lobby location, where players wait before joining">`
+    `<li>``<command command="marena configure testing exit" text="Set the exit location">`
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/wiki/Arenas" text="Detailed isntructions, including a mob arena tutorial, on the wiki">`
+  links: |-
+    `<title text="Links">`
+    `<li>`Configuration reference: &6https://reference.elmakers.com/
+    `<li>`FAQ: &6https://github.com/elBukkit/MagicPlugin/wiki/FAQ
+    `<li>`Support: &6https://github.com/elBukkit/MagicPlugin/wiki/Support
+  support: |-
+    `<title text="Support">`
+    `<li>``<link text="Join the Magic Discord for live help and support" url="https://discord.elmakers.com">`
+    `<li>``<link text="Use github issues for bugs and feature requests" url="https://github.com/elBukkit/MagicPlugin/issues">`
+    `<li>``<link text="More support links on wiki" url="https://github.com/elBukkit/MagicPlugin/wiki/Support">`
+  customization: |-
+    `<title text="Customization">`
+    `<li>``<help text="Customize any of the in-game messages and text" topic="messages">`
+    `<li>``<help text="Change mana" topic="mana_customization">`
+    `<li>``<help text="Creating new spells, wands and other configs" topic="creating_configs">`
+    `<li>``<help text="Customize or create crafting recipes" topic="crafting">`
+    `<li>``<command command="mconfig reset spell missile" text="Reset a spell to its default configuration">`
+    `<li>``<help topic="common_customizations" text="Other common customizations">`
+    `<li>``<help topic="general_customization" text="General Customization Questions">`&8(&7"Where are all the configs to edit?"&7)
+  messages: |-
+    `<title text="Messages">`
+    `<p>`All of the in-game text in &eMagic&f is completely customizeable.
+    `<p>`You can edit
+    `<li>``<command command="meditor messages" text="Edit all messages">`
+    `<li>``<help text="Change language or localize text" topic="localization">`
+    `<li>``<help text="Customize individual messages" topic="message_customization">`
+  message_customization: |-
+    `<title text="Message Customization">`
+    `<p>`To edit an individual piece of in-game text, Look in plugins/Magic/defaults/messages.defaults.yml
+    `<p>`Find the key you want to change, and use it in a "mconfig configure message" command
+    `<p>`Or you can use the "meditor" command to edit all messages in one big file
+    `<li>``<command command="mconfig configure message wand.appearance_magicka Mega Wand" text="Change wand appearance name">`
+    `<li>``<command command="meditor messages" text="Edit all messages at once">`
+  general_customization: |-
+    `<title text="General Customization Guide">`
+    `<p>`&dMagic &fcan be very confusing to configure at first.
+    `<p>`People often go to edit &7plugins/Magic/config.yml&f or &7spells.yml&f and wonder where everything is.
+    `<p>`Because &dMagic&f is so configuration-driven, it is very important that configs can be updated every time the plugin updates.
+    `<p>`This would be difficult if everyone got a copy of &oall&f of the configs to edit every time they installed the plugin.
+    `<p>`While I understand this can be confusing and difficult to work with, it is not going to change any time soon!
+    `<p>`If you are intent on having configs to edit, you can &b`<command command="meditor config" text="use the editor to build them for you">`
+    `<p>`Or, look in &7plugins/Magic/defaults&f and copy what you want to &7plugins/Magic&f
+    `<li>``<link text="Read more about how customization works on the wiki" url="https://github.com/elBukkit/MagicPlugin/wiki/Customization">`
+  creating_configs: |-
+    `<title text="Creating New Configs">`
+    `<p>`&dMagic&f is a completely customizable framework that you can make your own. You will need to be comfortable &blearning by example&f!
+    `<p>`You can also always seek support through the available &b`<help topic="support" text="available support channels">`
+    `<li>``<help topic="creating_spells" text="How to create new spells">`
+    `<li>``<command command="meditor spell mynewwand" text="Create a new wand using the editor">`
+    `<li>``<command command="meditor recipe newrecipe" text="Create a new crafting recipe">`
+  creating_spells: |-
+    `<title text="Creating New Spells">`
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/wiki/Passive-and-Triggered-Spells" text="How to create passive and triggered spells">`
+    `<li>``<command command="meditor spell mynewspell" text="Create a new spell using the editor">`
+    `<li>``<command command="meditor spell missile" text="See the config of the Magic Missile spell">`
+    `<li>``<command command="meditor spell singularity" text="See the Singularly spell, a more complex example">`
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/tree/master/Magic/src/main/resources/examples/survival" text="See all survival spell configs">`
+    `<li>``<help topic="actions" text="How to use spell actions to change the behavior of a spell">`
+    `<li>``<help topic="spell_parameters" text="How spell parameters work">`
+    `<li>``<help topic="effects" text="How to customize the effects of a spell">`
+    `<li>``<help topic="sandbox" text="Using the sandbox editor">`
+    `<li>``<help topic="spelllevels" text="Working with spell levels">`
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/wiki/Custom-Spells" text="Spell creation guide on wiki">`
+  sandbox: |-
+    `<title text="The Magic Sandbox Editor">`
+    `<p>`&dMagic&f hosts a public &bsandbox&f server where you can try out making your own spells.
+    `<p>`First, go to &bhttps://sandbox.elmakers.com&f in your web browser.
+    `<p>`Then log in to &7sandbox.elmakers.com&f in Minecraft.
+    `<p>`Using the same web editor as the &7/meditor&f command uses, you can make your own spells.
+    `<p>`Saving a spell in the editor forces configs to reload on the server.
+    `<p>`Your &6Sandbox Wand&f will contain all of the spells that you've made in the sandbox editor.
+  common_customizations: |-
+    `<title text="Common Customizations">`
+    `<li>``<command command="mconfig spell default parameters.target_npc true" text="Allow all spells to target NPCs">`
+    `<li>``<command command="mconfig spell default earns_cooldown 2 minutes" text="Reduce SP cooldown to 2 minutes">`
+    `<li>``<command command="mconfig spell override parameters.undo 0" text="Turn off auto-undo, all spell effects made permanent">`
+    `<li>``<command command="mconfig config enable_crafting false" text="Disable all Magic crafting recipes">`
+    `<li>``<command command="mconfig disable spell blink" text="Disable a specific spell">`
+    `<li>``<command command="mconfig config sound_volume 0.1" text="Lower all sound volume to 10%">` &7Note that the survival example is already at 50%
+    `<li>``<help topic="donator_shops" text="How to set up a donator shop">`
+    `<li>``<help topic="customize_damage" text="How to customize spell damage">`
+  customize_damage: |-
+    `<title text="Customizing Spell Damage">`
+    `<p>`Customizing spell damage can be tricky, most spells that deal damage &blevel up&f to deal more damage.
+    `<p>`In addition, the &7Damage&f action supports separate damage for mobs versus players.
+    `<p>``<command command="meditor spell missile" text="Use the editor to edit a spell">`
+    `<p>`Then look in the &bparameters&f section for damage-related properties.
+    `<p>`Scroll down to find the levelled up version of the spell, and change damage parameters there too.
+    `<p>`Note that some spells, like &7Fireball&f, &7Boom&f, or &7Fire&f deal indirect damage and as such require special handling to change damage.
+    `<p>`For explosions, the &7size&f parameter deals more damage, but take care as a bigger explosion also means more blocks broken.
+    `<p>`You can also `<command command="mconfig material indestructible *" text="make all block types indestructible">` to prevent spells from damaging blocks.
+  donator_shops: |-
+    `<title text="Donator Shops">`
+    `<p>`&dMagic &fcan be used to set up &bdonator shops&f with a variety of EULA-compliant vanity items.
+    `<p>`Wand appearances, effect colors, `<help topic="trails" text="trails">` and hats are all possibilities.
+    `<p>`&dMagic shops&f can handle the unlocking directly in-game, using a custom magic currency, or TokenManager integration.
+    `<p>`Commands can also be used to perform unlocks directly if you'd prefer a web-based storefront to do the unlocking.
+    `<p>`Once unlocked a player can use a &dMagic shop&f menu to select their vanity items at any time.
+    `<li>``<link text="See Vanity Items on the wiki for more information" url="https://github.com/elBukkit/MagicPlugin/wiki/Vanity-Items">`
+  trails: |-
+    `<title text="Trails">`
+    `<p>`Players can purchase (using Spell Points) trails that will show while they are holding their wand.
+    `<p>`These include builtin trails like the crown, demon tail and butterfly wings.
+    `<p>`This is done in the `<command command="cast effectshop" text="Effect Shop">`
+    `<p>`Which is accessible in the `<command command="cast progressmenu" text="enchantment table menu">`
+    `<p>`There is also an optional `<command command="cast trailshop" text="Trail Shop">` you can allow via an NPC or other means.
+    `<p>`Note that the trail shop must be used to remove its trails, they are separate from the wand and will always show on the player.
+    `<p>`Non-wand trails are implemented as `<help topic="classes" text="magic classes">`
+    `<p>`And so you can use the `<command command="mage deactivate crown" text="mage deactivate">`command to turnt hem off.
+  mana_customization: |-
+    `<title text="Mana Customization">`
+    `<p>`Stand-alone (demo) wands can have their mana set directly:
+    `<li>``<command command="wand configure mana_max 1000" text="Configure max mana on a demo wand">`
+    `<li>``<command command="wand configure mana_regeneration 100" text="Configure mana regeneration per second on a demo wand">`
+    `<p>`Class-based wands (such as the &bsurvival&f and other builtin examples' wands) have their mana controlled by &bprogression&f and can not be directly changed.
+    `<p>`Mana for these classes and wands is controlled by the &bpath&f config, players mana max and regeneration changes as they &brank up&f.
+    `<p>`Use &b`<command command="meditor path beginner" text="the editor">` &fto change the &7override_properties&f section.
+    `<p>`You will need to repeat this for each path &7(&6student,apprentice,master&7) &fto fully change the mana progression for all players.
+    `<p>`You can use the &b`<command command="mgive uberwand" text="Uberwand">` &ffor testing if you want unlimited mana.
+    `<p>`If you prefer, you can `<command command="mconfig wand wand allow_path_overrides false" text="disable path overrides">` on the wand to set mana directly instead.
+  mana: |-
+    `<title text="Mana">`
+    `<p>`&dMagic &fuses a &bmana&f system in many of its configs, including survival, stars bending and even war (as ammo).
+    `<p>`Mana is a shared resource pool across all spells in a class (e.g. survival mana is separate from bending energy)
+    `<p>`Mana regenerates over time, up to a max value. &bWands&f show mana in custom mana bars, the XP display or other places as configured.
+    `<p>`&bSpells&f each require a different amount of mana to cast.
+    `<p>`Some special items, such as the &b`<command command="mgive talisman" text="Mana Talisman">`&f and &b`<command command="mgive wizardhelmet" text="Wizard armor">`&f can increase your mana stats.
+    `<li>``<help topic="mana_customization" text="Customizing mana and progressions">`
+  localization: |-
+    `<title text="Localization">`
+    `<p>`&dMagic&f has been translated into several languages. You can also add translations yourself!
+    `<li>``<command command="mconfig language RU" text="Изменить на русский">` &7(Russian)
+    `<li>``<command command="mconfig language FR" text="Changer en français">` &7(French)
+    `<li>``<command command="mconfig language ES" text="Cambiar a español">` &7(Spanish)
+    `<li>``<command command="mconfig language CN" text="更改为中文">` &7(Chinese)
+    `<li>``<command command="mconfig language JP" text="日本語に変更">` &7(Japanese)
+    `<li>``<command command="meditor messages" text="Edit all in-game text">`
+    `<li>``<link text="Localization wiki" url="https://github.com/elBukkit/MagicPlugin/wiki/Messages">`
+  commands: |-
+    `<title text="Commands">`
+    `<li>``<command command="help magic" text="See full command help">`
+    `<li>``<command command="mage promote" text="Rank yourself up">`
+    `<li>``<command command="getrp url" text="Get a download URL for the resource pack">`
+    `<li>``<command command="mgive @p sp 1000" text="Give yourself some Spell Points">`
+    `<li>``<command command="mage reset @p caster" text="Reset your survival progress">`
+    `<li>``<command command="mage reset @p" text="Completely reset your magic player data">`
+    `<li>``<help topic="permissions" text="Help with permissions">`
+    `<li>`Commands on wiki: &6https://github.com/elBukkit/MagicPlugin/wiki/Commands
+  permissions: |-
+    `<title text="Permissions">`
+    `<p>`Players &edo not &fneed &oany &fpermissions to use wands or cast spells
+    `<p>`Give mods &6magic.commands.* &fto allow them to use any Magic command
+    `<p>`&bCommand&f permissions all follow the same format, e.g. &6magic.commands.mgive
+    `<p>`&bSpell&f casting permissions can be set to false to deny specific spells, e.g. &6magic.cast.blink
+    `<p>`&bWand&f permissions can be set to false to deny using specific wands, e.g. &6magic.wand.use.wolf
+    `<li>``<help topic="no_permission" text="But my wand is saying I have no permission!">`
+  no_permission: |-
+    `<title text="You Can't do That Right Now">`
+    `<p>`Spells follow &bPvP&f and &bbuild&f permission rules.
+    `<p>`If some of your spells are saying you can't use them or have no permission, this may be due to a protection plugin.
+    `<p>`&dMagic&f integrates with many `<help topic="protection" text="protection">` plugins such as &bWorldGuard&f, &bFactions&f, &bRedProtect&f and many others.
+    `<p>`If you can not PvP in an area, you may not be able to cast some spells their either.
+    `<p>`Any spells that require changing blocks can not be cast if you can't change blocks there by hand.
+    `<li>`Use `<command command="mage check" text="mage check">` to see why a spell may not be castable.
+  integration: |-
+    `<title text="Integration">`
+    `<li>`&dMagic integrates with several `<help topic="protection" text="protection plugins">` to keep spells from griefing and trolling
+    `<li>`&dMagic integrates with &bEssentials&f and &bCommandBook&f for `<help topic="warps" text="warps">`
+    `<li>`&dMagic integrates with &b`<link url="https://www.spigotmc.org/resources/libs-disguises-free.81/" text="LibsDisguises">`&f for mob and spell `<help topic="disguises" text="disguises">`
+    `<li>`&dMagic integrates with &bMythicMobs&f for mythic mob spawning
+    `<li>`&dMagic integrates with &b<`help topic="aureliumskills" text="AureliumSkills">`&f for skills, stats and (optionally) mana
+    `<li>`&dMagic integrates with &b`<help topic="dynmap" text="dynmap">`&f to show warps, spell casts and lost wands on maps
+    `<li>`You can use `<help topic="skript" text="Skript">` to react to spell casts, SP earn or other events.
+    `<li>`You can use &6`<help topic="placeholders" text="placeholders">` via &b`<link url="https://www.spigotmc.org/resources/placeholderapi.6245/" text="PlaceholderAPI">`&f to show magic properties in various places
+    `<li>``<help topic="compatibility" text="Compatibility or issues with other plugins">`
+  aureliumskills: |-
+    `<title text="Aurelium Skills">`
+    `<p>`&dMagic integrates with `<link url="https://www.spigotmc.org/resources/aurelium-skills-advanced-skills-stats-abilities-and-more.81069/" text="Aurelium Skills">`
+    `<p>`Aurelium Skills stat and skill points can be used as variables in Magic configs.
+    `<p>`Simply use the name of the skill or stat, make sure to uppercase it such as SORCERY.
+    `<p>`Magic will not use Aurelium Skills mana by default, but you can `<command command="mconfig config aurelium_skills.use_mana true" text="turn it on">` if you want.
+    `<p>`Note that you may have progression issues since Aurelium mana will not increase in lockstep with Magic path progression.
+    `<p>`So, some additional customization may be required if using AS mana.
+  disguises: |-
+    `<title text="Disgusies">`
+    `<p>`&dMagic integrates with &b`<link url="https://www.spigotmc.org/resources/libs-disguises-free.81/" text="LibsDisguises">`&f for mob and spell disguises.
+    `<p>`Mobs can use disguises, and the Disguise action can be used to disguise mobs or players.
+    `<p>`In both cases, a disguise parameter is used to configure the disguise.
+    `<p>`Player disguises can be used, see the `<link url="https://github.com/elBukkit/MagicPlugin/blob/master/Magic/src/main/resources/examples/survival/mobs/madscientist.yml" text="Mad Scientist">` mob for example.
+    `<p>`A specific skin/profile can also be used, see `<link url="https://github.com/elBukkit/MagicPlugin/blob/master/Magic/src/main/resources/examples/survival/mobs/ironman.yml" text="Iron Man">` mob for example.
+    `<p>`You need a full profile, though, just a URL will not work. You can set a skin as your own and capture your profile using the `<command command="mage skin" text="mage skin">` command.
+    `<p>`See `<link url="https://github.com/elBukkit/MagicPlugin/wiki/Disguises" text="the wiki">` for more information.
+  dynmap: |-
+    `<title text="Dynmap">`
+    `<p>`&dMagic integrates with &b`<link url="https://www.spigotmc.org/resources/dynmap.274/" text="dynmap">`
+    `<p>`By default, lost wands and spell casts will show on the map
+    `<p>`Magic `<help topic="warps" text="warps">` can also be shown on the map.
+    `<li>``<command command="mconfig config dynmap_show_wands false" text="Don't show wands on the map">`
+    `<li>``<command command="mconfig config dynmap_show_spells false" text="Don't show any spell casts on the map">`
+    `<li>``<command command="mconfig config dynmap_only_player_spells true" text="Don't show non-player spell casts on the map">`
+    `<li>``<link url="https://map.elmakers.com" text="See the elMakers demo map">`
+  skript: |-
+    `<title text="Skript">`
+    `<p>`The `<link url="https://github.com/SkriptLang/Skript/releases" text="Skript">` plugin can be used with &dMagic&f.
+    `<p>`There are several Magic-related events and expressions you can use.
+    `<li>`See more information `<link url="https://github.com/elBukkit/MagicPlugin/wiki/Skript" text="on the wiki">`
+  placeholders: |-
+    `<title text="Placeholders">`
+    `<p>`&dMagic&f provides a variety of placeholders that can be used in messages sent with the &bMessage&f action
+    `<p>`or commands issued with the &bCommand&f action.
+    `<p>`For example &b$path&f, &b@mana_max&f or &sp&f. Any variable or attribute can be used as a placeholder.
+    `<p>`In general the &b$&f prefix shows the full value of a numeric `<help topic="attributes" text="attribute">`, while &b@&f will round.
+    `<p>`The &b`<link url="https://www.spigotmc.org/resources/placeholderapi.6245/" text="PlaceholderAPI">`&f plugin can be used alongside compatible chat or other plugins to show &dMagic placeholders in other places.
+    `<p>`Use a &bmagic_&f prefix in PlaceholderAPI configs, such as &b%magic_path%&f.
+    `<p>`Example `<link url="https://www.spigotmc.org/resources/chatformat.74890/" text="ChatFormat">` chat prefix: &7'(%magic_path%) {PLAYER_NAME} > {SUFFIX}{MESSAGE}'&f
+    `<p>`See `<link url="https://github.com/elBukkit/MagicPlugin/wiki/Placeholders" text="the wiki">` for a list of available placeholders.
+  attributes: |-
+    `<title text="Attributes">`
+    `<p>`&dMagic&f has a set of builtin attributes and a system for adding custom attributes.
+    `<p>`These attributes can be used in any spell, wand, class or other config property.
+    `<p>`Equations can be formed using one or more attributes (or variables) for complex spell behaviors.
+    `<p>`Custom attributes can be modified for each player buy spells, wands or classes.
+    `<p>`Magic will print a list of all available attributes, builtin and custom, on startup. Check your logs!
+    `<li`>See the `<link url="https://github.com/elBukkit/MagicPlugin/tree/master/Magic/src/main/resources/examples/rpg/attributes" text="RPG configs">` for examples of custom attributes as well as using them with an attribute selector.
+    `<li>`Use `<command command="meditor attribute custom" text="the editor">` to create and edit custom attributes.
+  compatibility: |-
+    `<title text="Compatibility">`
+    `<li>`&dMagic&f can use a &4Slimefun&f-compatible resource pack using the &b`<command command="mexample add slimefun" text="slimefun">` &fexample
+    `<li>`&dMagic&f can work with &4ItemsAdder&f, use &7`<command command="getrp url" text="/getrp url">` &fto download the correct Magic RP, then unzip it into IA's &7resourcepacks&f folder
+    `<li>`&dMagic&f will disable its resource pack functionality if ItemsAdder is present. &7`<command command="mconfig configure config override_resource_pack_plugins true" text="Click here">` to allow &dMagic&f to override.
+    `<li>`Other resource pack compatiblity issues can possibily be resolved using the `<link url="https://merge.elmakers.com" text="RP merge tool">`
+    `<li>`Note if merging an ItemsAdder resource pack, you need to turn off the &7protect-file-from-unzip&f setting in ItemsAdder's config, or the merge tool can't read it
+    `<li>`&dMagic&f has a &b`<help topic="quests" text="Quests">` module for requirements, objectives and rewards
+    `<li>`See information on using &dMagic&f with &b`<help topic="mythicmobs" text="Mythic Mobs">`
+  quests: |-
+    `<title text="Quests">`
+    `<p>`&dMagic&f has a custom module for the `<link url="https://www.spigotmc.org/resources/quests.3711/" text="Quests">` plugin
+    `<p>`This will add special requirements, objectives and rewards.
+    `<li>``<link url="https://github.com/elBukkit/MagicQuests/releases" text="Download the MagicQuests module">`
+    `<p>`Make sure to put this in &7plugins/Quests/modules&f, NOT the plugins folder! It is not a stand-alone plugin.
+  mythicmobs: |-
+    `<title text="Mythic Mobs">`
+    `<li>`MythicMobs can cast &dMagic&f spells using the command skill: `<link url="https://github.com/elBukkit/MagicPlugin/blob/master/Magic/src/examples/MythicMobs-2.0/Skills/MagicSkills.yml" text="Example">`
+    `<li>`Magic mobs can use a MythicMob as a base with &7mythic_mob: <name>&f in a config
+    `<li>`Mythic mob names can be used in place of a &dMagic&f mob key in mmob commands and spell configs
+    `<li>``<command command="mitem save myitem" text="Save a the item in your hand">` to turn a Mythic item into a &dMagic&f item.
+    `<li>`Mythic mobs can drop magic items using a command skill and the `<command command="mitem spawn sp:100 0 64 0 world" text="mitem spawn">` command.
+  protection: |-
+    `<title text="Protection">`
+    `<li>` &dMagic will respect PvP and build/break permissions from: WorldGuard, PreciousStones, RedProtect, Factions, GriefPrevention, PvPManager, Multiverse, Citadel and others
+    `<li>` &dMagic adds `<help topic="worldguard" text="custom WorldGuard flags">` to control spell casting in specific regions
+    `<li>`If your favorite protection plugin isn't listed, you can try `<command command="meditor config generic_protection" text="adding it to the generic_protection list">`
+  worldguard: |-
+    `<title text="WorldGuard">`
+    `<li>`You can `<command command="region flag someregion blocked-spells fling,blink" text="block a few spells in a region">`
+    `<li>`You can `<command command="region flag someregion blocked-spells *" text="block all spells in a region">`
+    `<li>`You can `<command command="region flag someregion allowed-spells *" text="allow all spells in a region to break blocks">`
+  resourcepack: |-
+    `<title text="Resource Pack">`
+    `<li>``<command command="getrp url" text="Get a download URL for the resource pack">`
+    `<li>``<command command="getrp auto" text="Automatically recieve the resource pack on join">`
+    `<li>``<link text="Resource pack issues guide" url="https://github.com/elBukkit/MagicPlugin/wiki/ResourcePack#loading-issues">`
+    `<li>``<command command="mconfig config enable_resource_pack false" text="Disable the resource pack, turn if off completely for the whole server">`
+    `<li>``<command command="mconfig config assume_resource_pack_downloaded true" text="Make Magic assume players have the RP">` this allows using the `<help topic="wandgui" text="Wand GUI">` with a downloaded RP, similar to `<command command="getrp download" text="getrp download">`
+    `<li>``<command command="getrp hires" text="Get the hi-res (less blocky) resource pack">`
+    `<li>``<command command="mconfig config resource_pack hires" text="Set the hi-res resource pack your server default">`
+    `<li>``<help topic="bedrock" text="Questions about Bedrock players">`
+    `<li>``<help topic="compatibility" text="Compatibility issues with other plugin resource packs">`
+    `<li>``<help topic="resourcepacks" text="See all builtin resource packs">`
+  bedrock: |-
+    `<title text="Playing on Bedrock via Geyser">`
+    `<p>`&dMagic &fcan work for &bBedrock&f players, using the &b`<link url="https://geysermc.org" text="Geyser">`&f plugin.
+    `<p>`Since it can be hard to swing an item in Bedrock, it is recommended that these players use a &6Spellbook&f for spell casting.
+    `<p>`Unfortunately at this time there is &4no way&f to get the resource pack to work for Bedrock players.
+  resourcepacks: |-
+    `<title text="Resource Packs">`
+    `<li>` &6`<command command="getrp default" text="default">`&f: The blocky, Minecrafty less-resource intensive pack, used by Magic 9 and up
+    `<li>` &6`<command command="getrp borders" text="borders">`&f: A different set of spell icons with borders on them
+    `<li>` &6`<command command="getrp painterly" text="painterly">`&f: A more &oartistic&f set of spell icons
+    `<li>` &6`<command command="getrp lowres" text="lowres">`&f: The low-resolution spell icons used in Magic 5 and below, same as the skull textures
+    `<li>` &6`<command command="getrp skulls" text="skulls">`&f: No wand or other item icons, only flat skulls for spell icons
+    `<li>` &6`<command command="getrp vanilla" text="vanilla">`&f: Uses item-based spell icons, like before version 10.9
+    `<li>` &6`<command command="getrp all" text="all">`&f: Combines the httyd, survival, war and robes RPs into one
+  classes: |-
+    `<title text="Classes">`
+    `<p>`Classes in Magic are a way to associate a group of properties with a player.
+    `<p>`A player can have multiple classes.
+    `<p>`Wands can be assigned to classes, which means they can cast spells
+    `<p>`that a player has learned, rather than the spells being attached to a wand item.
+    `<p>`Classes can also add vanilla attributes, mana, protection, or other magic properties.
+    `<li>``<link url="https://reference.elmakers.com/#classes" text="See class properties in the reference guide">`
+  spell_properties: |-
+    `<title text="Spell Properties">`
+    `<p>`Spells have some top-level properties, such as their icon or casting costs.
+    `<p>`These properties can not be overridden by &7/cast&f parameters or &bwand overrides&f.
+    `<li>``<link url="https://reference.elmakers.com/#spellProperties" text="See spell properties in the reference guide">`
+  spell_parameters: |-
+    `<title text="Spell Parameters">`
+    `<p>`Spell parameters go in the &7parameters&f section of a spell.
+    `<p>`These parameters can be overridden by &7/cast&f parameters or &bwand overrides&f:
+    `<li>``<command command="cast missile block_hit_count 20" text="Cast a more powerful Magic Missile">`
+    `<li>``<command command="cast blob undo 1000" text="Cast a very short-lived Blob">`
+    `<p>`They can also be modified by a wand with overrides on it, such as:
+    `<li>``<command command="wand override missile.damage_multiplier 20" text="Make your wand cast a super-deadly Magic Missile">`
+    `<p>`Wand overrides can also be made to apply to all spells cast by that wand:
+    `<li>``<command command="wand override undo 0" text="Make all spells cast by your wand do permanent block damagee">`
+    `<p>`This can simplify spell testing, or allow you to make wands that cast spells in different ways.
+    `<p>``<help topic="actions" text="Spell actions">` read their parameters from the main parameters section, unless they are defined alongside the action.
+    `<p>`Spells also have several common base parameters that are not used by actions, such as &7target&f and &7cooldown&f.
+    `<li>``<link url="https://reference.elmakers.com/#spellParameters" text="See common spell parameters in the reference guide">`
+  actions: |-
+    `<title text="Spell Actions">`
+    `<p>`Actions are the building blocks of a spell's logic.
+    `<p>`Without actions, a spell does nothing except create particle effects or sounds.
+    `<p>`Action parameters can go in the "parameters" section of a spell's configuration, alongside `<help topic="spell_parameters" text="base spell parameters">`.
+    `<p>`Action parameters in the "parameters" section can be overridden as normal by /cast commands or wand
+    `<p>`overrides, but actions placed directly in the actions list can not.
+    `<p>`In general it is good practice to put all parameters in the "parameters" section for easy reading, but there
+    `<p>`are cases where it is necessary to put them in the actions list. Generally this would be because you have
+    `<p>`two of the same actions in the logic that you want to use different parameters.
+    `<p>`They can also go directly underneath the corresponding action in the "actions" list.
+    `<li>``<link url="https://reference.elmakers.com/#effects" text="See all actions in the reference guide">`
+  effects: |-
+    `<title text="Sound and Particle Effects">`
+    `<p>`Effects are what make spells look and feel awesome.
+    `<p>`These are generally a combination of particle effects and sounds,
+    `<p>`though fireworks and basic Minecraft effects (like &7hurt&f) can also be used.
+    `<p>`Effects can also use `<help topic="effectlib" text="EffectLib effects">` for complex particle effects.
+    `<li>``<link url="https://reference.elmakers.com/#actions" text="See effect options in the reference guide">`
+  effectlib: |-
+    `<title text="EffectLib Effects">`
+    `<p>`EffectLib is integrated into Magic for complex special effects.
+    `<p>`Simply add an &7effectlib&f section to any effect to create an EffectLib effect.
+    `<p>`The only required parameter is &7class&f, which will determine which effect is used.
+    `<p>`Most affects have tweakable parameters, however, which will give your effects an extra customized look.
+    `<li>`<command command="cast fxdemo" text="View a demo of all effects">`
+    `<li>``<link url="https://reference.elmakers.com/#effectlib" text="See all EffectLib effects in the reference guide">`
+  wands: |-
+    `<title text="Wands">`
+    `<p>`Wands in &dMagic&f are special items that can be used for casting spells, and may also grant the holder special effects or buffs.
+    `<p>`Wands don't necessarily need to look or act like wands, they can take the form of armor, bows, swords or any other item.
+    `<p>`The &7wand configure&f command can be used in-game to quickly change and test wand properties.
+    `<li>``<command command="wand configure icon diamond" text="Change your wand to look like a diamond">`
+    `<li>``<command command="meditor spell mynewwand" text="Create a new wand using the editor">`
+    `<li>``<command command="mgive basic_wand" text="Give yourself a basic wand">`
+    `<li>``<command command="wand configure cost_reduction 2" text="Make a wand cost-free">` so it will not require or use mana
+    `<li>``<command command="wand configure cooldown_reduction 2" text="Make a wand ccooldown-free">`
+    `<li>``<link url="https://reference.elmakers.com/#wands" text="See all wand properties in the reference guide">`
+  modifiers: |-
+    `<title text="Modifiers">`
+    `<p>`Modifiers in Magic are like a temporary (or not) add-on class.
+    `<p>`They can be applied to a player from a wand or a spell using the &bModifier&f action.
+    `<p>`Modifiers can change player attributes, add temporary passive effects
+    `<p>`or do anything else a `<help topic="classes" text="class">` could do.
+    `<li>``<command command="mage modifier add hidden" text="Make yourself hidden from mobs">`
+    `<li>``<command command="mage modifier remove hidden" text="Remove the hidden modifier">`
+    `<li>``<link url="https://reference.elmakers.com/#modifiers" text="See all modifier properties in the reference guide">`
+  mobs: |-
+    `<title text="Magic Mobs">`
+    `<p>`&dMagic&f has a custom mob system for creating mobs that can cast spells or have other magical properties.
+    `<p>`This includes custom `<help topic="loot" text="loot drops">`
+    `<p>`Magic mobs can also be used as an `<help topic="npc" text="NPC">` template.
+    `<li>``<command command="mmob spawn warlock" text="Spawn a spellcasting warlock">`
+    `<li>``<command command="mmob remove warlock" text="Remove all spawned warlocks">`
+    `<li>``<command command="meditor mob warlock" text="Edit the warlock mob config">`
+    `<li>``<command command="meditor mob" text="Create a new mob">`
+    `<li>``<link url="https://reference.elmakers.com/#mobs" text="See all mob properties in the reference guide">`
+  loot: |-
+    `<title text="Mob Loot">`
+    `<p>`&dMagic&f mobs can drop custom loot, including &6Spell Points&f, wands, spells and other magic items.
+    `<p>`Some of the builtin mobs drop custom items, such as the &3warlock wand&f
+    `<p>`These items can be sold in the `<command command="mnpc add lootshop" text="loot shop">` when using the `<command command="mexample add spawnmobs" text="spawnmobs">` example.
+    `<p>`The items are otherwise useless.
+    `<p>`Use `<command command="meditor mob warlock" text="the editor">` to change mob loot drops.
+  crafting: |-
+    `<title text="Custom Crafting">`
+    `<p>`&dMagic&f has a completely customizable crafting system.
+    `<p>`Workbench, furnace, campfire and other recipe types are supported.
+    `<p>`Custom, vanilla and magic `<help topic="wands" text="wands">` can be crafted and used as ingredients.
+    `<p>`Note that the in-game &aKnowledge Book&f will not work very well with custom item ingredients,
+    `<p>`though custom item outputs are fine.
+    `<li>``<command command="meditor recipe wand" text="Edit the wand recipe">`
+    `<li>``<command command="meditor recipe" text="Create a new wand recipe">`
+    `<li>``<command command="mconfig disable recipe broomstick" text="Remove a specific crafting recipe">`
+    `<li>``<link url="https://reference.elmakers.com/#crafting" text="See all recipe properties in the reference guide">`
+  spell_levels: |-
+    `<title text="Spell Levels">`
+    `<p>`Some spells, particularly most of the &6survival&f example spells, can level up.
+    `<p>`Spells level up automatically by use. Some levels are gated by &bpath progression&f.
+    `<p>`Players can check on their spell progress using the `<command command="cast upgrades" text="Upgrades section">` of the enchant table menu.
+    `<p>`In configs, spell levels are separate spells using a &6spell&f|&blevel&f naming convention.
+    `<p>`To add new levels, simply add another spell following that name format.
+    `<li>``<command command="mage levelspells" text="Max out all your spells">`
+    `<li>``<command command="wand configure level_spells true" text="Configure a wand to max out its spells">`
+    `<li>``<command command="mage add missile|5" text="Give yourself a specific level of a specific spell">`
+    `<li>``<command command="meditor spell missile" text="Edit the Magic Missile spell and all of its levels">`
+  progression: |-
+    `<title text="Progression and Ranking Up">`
+    `<p>`Players rank up by collecting all spells on their current path.
+    `<p>`Spells can be learned by right-clicking an &6enchantment table&f while holding a wand.
+    `<li>``<help topic="spell_points" text="About spell points">`
+    `<li>``<help topic="paths" text="About progression paths">`
+    `<li>``<help topic="spell_levels" text="About spell levels">`
+  spell_points: |-
+    `<title text="SP: Spell Points">`
+    `<p>`&6Spell points&f &7(&bSP&7)&f are earned whenever a player &osuccessfully&f casts a spell. For most spells, &bsuccess&f is determined by hitting a valid mob or player target.
+    `<p>`&6Spell points&f have a &ecooldown &ffor earning. This cooldown is specific to each spell, and defaults to &e15 minutes&f.
+    `<p>`This means that once you have more than one spell, using each one frequently is the fastest way to earn SP!
+    `<p>`The &6Magic Missile&f spell is a special case, it allows for faster SP earning at the start to get palyers going.
+    `<p>`Once players have more than one spell they can earn SP much faster by using all of their spells frequently.
+    `<li>``<command command="mgive @p sp 1000" text="Give yourself some SP">`
+    `<li>``<command command="mconfig spell default earns_cooldown 30 seconds" text="Reduce SP cooldown to 30 seconds">`
+    `<li>``<link url="https://github.com/elBukkit/MagicPlugin/wiki/SpellPoints#balancing-sp" text="See the wiki for more info">
+  paths: |-
+    `<title text="Progression Paths">`
+    `<p>`Players progress through survival ranks as they collect spells.
+    `<p>`Survival Progression: &6Beginner&f, &6Student&f, &6Apprentice&f, &6Wizard &7(&fAKA &6Master&7)
+    `<p>`Players must &bcollect every spell&f at their current rank to progress to the next
+    `<p>`There are some spells, sorted to the end of the &bspellshop&f list, that are not required and are labelled as such.
+    `<li>``<command command="mage promote" text="Promote yourself to the next rank">`
+  not_loading: |-
+    `<title text="The Plugin Won't Load">`
+    `<p>`You may have the wrong version for your server?
+    `<p>`Current versions of Magic are compatible with the following Spigot and Paper versions:
+    `<p>`1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17
+    `<p>`For older versions of Minecraft you will need Magic 8.x
+    `<p>`It's pretty hard to tell from here, you will need to check your servers logs for errors.
+  examples:
+    main: |-
+      `<title text="Examples">`
+      `<li>``<help topic="instructions.example" text="Show all loaded examples">`
+      `<li>``<help topic="instructions.examples.all" text="Show all available examples">`
+      `<li>``<command command="mexample list" text="Show all active examples">`
+      `<li>``<command command="mexample set survival none" text="Reset to default survival example">`
+      `<li>``<link url="https://github.com/elBukkit/MagicPlugin/wiki/Examples" text="Examples wiki">`
+    all: |-
+      `<title text="Available Examples">`
+      `<li>` &6`<command command="mexample add survival" text="survival">`&f: The default example with craftable wands and items
+      `<li>` &6`<command command="mexample add magicheart" text="magicheart">`&f: Bring back the &6Magic Heart&f crafting recipes
+      `<li>` &6`<command command="mexample add engineering" text="engineering">`&f: A survival add-on with 3 more ranks for magical building
+      `<li>` &6`<command command="mexample add potter" text="potter">`&f: A Harry Potter themed example
+      `<li>` &6`<command command="mexample add war" text="war">`&f: A GTA or Counter-Strike themed example with guns and vehicles
+      `<li>` &6`<command command="mexample add stars" text="stars">`&f: A Star Wars themed example with functional light sabers and force powers
+      `<li>` &6`<command command="mexample add bending" text="bending">`&f: A very minimal Avatar/Bending example
+      `<li>` &b`<command command="mexample add spawnmobs" text="spawnmobs">`&f: Enable natural &aMagic Mob&f spawning
+      `<li>` &b`<command command="mexample add safe" text="safe">`&f: Turn off all block-breaking
+      `<li>` &b`<command command="mexample add automata" text="automata">`&f: Add spawnable cellular automaton block monsters
+      `<li>` &b`<command command="mexample add otherside" text="otherside">`&f: Add an alternate dimension full of dangerous mobs and automata
+      `<li>` &b`<command command="mexample add netherside" text="netherside">`&f: Add an alternate nethery dimension
+      `<li>` &b`<command command="mexample add slimefun" text="slimefun">`&f: Enable a merged &aSlimefun&f resource pack
+      `<li>` &a`<command command="mexample fetch extramobs" text="extramobs">`&f: Add a variety of naturally spawning animals and bosses
+      `<li>` &a`<command command="mexample fetch httyd" text="httyd">`&f: A How To Train Your Dragon inspired example
+      `<li>` &a`<command command="mexample fetch potterplus" text="potterplus">`&f: A more complete and advanced Harry Potter example

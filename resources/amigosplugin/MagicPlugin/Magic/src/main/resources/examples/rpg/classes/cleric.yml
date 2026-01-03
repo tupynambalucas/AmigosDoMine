@@ -1,0 +1,15 @@
+cleric:
+  icon: spell_icon:261
+  icon_disabled: spell_icon_disabled:261
+  inherit: base
+  locked: true
+  entity_attributes:
+    generic_max_health:
+      value: "constitution"
+      operation: base
+  mana_max: 200
+  mana: 100
+  spells:
+   - missile
+   - blast
+

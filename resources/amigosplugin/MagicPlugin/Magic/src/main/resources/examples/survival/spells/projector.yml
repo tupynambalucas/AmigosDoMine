@@ -1,0 +1,129 @@
+projector:
+  # This refers to an icon defined in the icons folder/config
+  icon: projector
+  category: engineering
+  worth: 300
+  earns: 5
+  effects:
+      cast:
+      -  class: EffectTrail
+         particle: fireworks_spark
+         particle_count: 10
+         particle_offset_x: 1.2
+         particle_offset_y: 1.2
+         particle_offset_z: 1.2
+  actions:
+    cast:
+    - class: Parallel
+      actions:
+      - class: Repeat
+        actions:
+        - class: Brush
+          actions:
+          - class: Plane
+            actions:
+            - class: ModifyBlock
+      - class: ChangeContext
+        target_caster: true
+        actions:
+        - class: Delay
+          delay: 2000
+
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 0.793701 # 8
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1.781797 # 22
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1 # 12
+
+        - class: Delay
+          delay: 200 # 1 redstone tick = 2 ticks = 100 ms
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 0.793701 # 8
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1.781797 # 22
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1 # 12
+
+        - class: Delay
+          delay: 400
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 0.793701 # 8
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1.781797 # 22
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1 # 12
+
+        - class: Delay
+          delay: 400
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 0.793701 # 8
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1.414214 # 18
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1 # 12
+
+        - class: Delay
+          delay: 100
+        - class: Delay
+          delay: 100
+
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 0.793701 # 8
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1.781797 # 22
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1 # 12
+
+        - class: Delay
+          delay: 300
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1.334840 # 17
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1.059463 # 13
+
+        - class: Delay
+          delay: 400
+        - class: Delay
+          delay: 400
+
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 0.529732 # 1
+        - class: PlaySound
+          sound: block_note_block_bit
+          pitch: 1.059463 # 13
+
+  parameters:
+    target: block
+    range: 32
+    radius: 32
+    cooldown: 60000
+    undo: 100
+    delay: 1000
+    repeat: 30
+    axis: z
+    reorient: false
+    orient: true
+    orient_snap: 90
+    destructible: all_air,concretes
+    allow_max_range: true
+    brushmod: concrete
+    brush: "map:64:https://magic.elmakers.com/mario.gif"

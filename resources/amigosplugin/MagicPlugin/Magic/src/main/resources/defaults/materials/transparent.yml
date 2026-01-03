@@ -1,0 +1,5 @@
+# What materials can be targeted through by default
+transparent:
+- all_water
+- transparent_no_water
+

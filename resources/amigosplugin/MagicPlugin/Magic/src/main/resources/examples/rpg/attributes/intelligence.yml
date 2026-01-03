@@ -1,0 +1,7 @@
+intelligence:
+  icon: spell_icon:257
+  icon_disabled: spell_icon_disabled:257
+  default: 3
+  min: 3
+  max: 20
+

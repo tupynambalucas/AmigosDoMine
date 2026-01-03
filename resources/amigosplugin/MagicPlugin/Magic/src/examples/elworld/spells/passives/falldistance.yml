@@ -1,0 +1,7 @@
+falldistance:
+  passive: true
+  triggers: land
+  actions:
+    cast:
+      - class: Message
+        message: "Fell $fall_distance blocks"

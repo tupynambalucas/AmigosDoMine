@@ -1,0 +1,39 @@
+mutant:
+  type: zombified_piglin
+  item: iron_sword
+  chestplate: iron_chestplate
+  leggings: iron_leggings
+  helmet: iron_helmet
+  boots: iron_boots
+  health: 20
+  default_drops: false
+  transformable: false
+  brain:
+    goals:
+      # Follow the mutant captain if one is around
+      # If not, be prone to panicing!
+      - type: requirement
+        requirement:
+          owned: true
+        goals:
+          - type: check_owner
+          - type: melee_attack
+          - type: follow_owner
+            teleport: false
+      - type: requirement
+        requirement:
+          owned: false
+        goals:
+          - type: panic
+            panic: 20 seconds
+            calm: 15 seconds
+            interruptable: false
+          - type: find_owner
+            entity_class: piglin_brute
+          - type: melee_attack
+      - type: random_stroll
+      - type: look_at_player
+      - type: random_look_around
+  loot:
+    gold_nugget:
+      count: looting + 4

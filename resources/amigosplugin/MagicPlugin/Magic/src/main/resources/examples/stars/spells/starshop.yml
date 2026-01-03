@@ -1,0 +1,45 @@
+#
+# Shops for obtaining sabers and other items
+#
+
+starshop:
+  icon: gunpowder
+  category: shop
+  hidden: true
+  actions:
+      cast:
+      -  class: Selector
+  parameters:
+    options:
+    - unlock_class: jedi
+      selected: "You became $name for $cost"
+      items:
+      - lightsaber_hilt
+      - light_blue_stained_glass@2
+      - orange_stained_glass@2
+      - purple_stained_glass@2
+      - lime_stained_glass@2
+      cost: 5000
+      limit: 1
+    - unlock_class: sith
+      selected: "You gave in to the dark side as a $name for $cost"
+      items:
+      - lightsaber_hilt
+      - red_stained_glass@2
+      cost: 5000
+      limit: 1
+    - item: blaster_blue
+      cost: 1000
+    - item: blaster_green
+      cost: 1000
+    - item: blaster_red
+      cost: 1000
+    - item: detonator
+      cost: 100
+    confirm: true
+    auto_close: true
+    confirm_filler: light_blue_stained_glass
+    quiet: false
+    loud: true
+    selected: "You bought $item for $cost"
+

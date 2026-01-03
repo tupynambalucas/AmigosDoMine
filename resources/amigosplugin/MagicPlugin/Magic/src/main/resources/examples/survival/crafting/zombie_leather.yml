@@ -1,0 +1,11 @@
+# Some off-by-default crafting options
+# for animal lovers <3
+zombie_leather:
+  enabled: false
+  auto_discover: true
+  type: furnace
+  output: leather
+  ingredient: rotten_flesh
+  output_type: item
+  cooking_time: 30 seconds
+  experience: 5

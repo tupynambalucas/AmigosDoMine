@@ -1,0 +1,10 @@
+magicheart:
+  output: magicheart
+  output_type: wand
+  auto_discover: true
+  ingredients:
+    o: emerald
+    O: diamond
+  row_1: " o "
+  row_2: "oOo"
+  row_3: " o "

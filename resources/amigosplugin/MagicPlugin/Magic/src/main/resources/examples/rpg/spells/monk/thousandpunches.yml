@@ -1,0 +1,48 @@
+thousandpunches:
+  # This has been added automatically so that anything you remove here does not get inherited back in from the default configs
+  inherit: false
+  actions:
+    cast:
+      # The first punch under Interval will skip its effects, so we do the first one here
+      - class: PlayEffects
+        effects: punch
+      - class: Interval
+        actions:
+          - class: ConeOfEffect
+            actions:
+              - class: Damage
+          - class: Skip
+            until: 0.75 seconds
+            actions:
+              - class: PlayEffects
+                effects: punch
+          - class: Random
+            actions:
+              - class: EntityAnimation
+                animation: swing_main_hand
+              - class: PlayEffects
+                effects: punch_main_hand
+              - class: EntityAnimation
+                animation: swing_off_hand
+              - class: PlayEffects
+                effects: punch_off+hand
+  effects:
+    punch:
+      - sound: entity_player_attack_sweep
+        sound_pitch: rand(0.5,1.5)
+    punch_off_hand:
+      - particle: sweep_attack
+        relative_offset: -1,0,0
+    punch_main_hand:
+      - particle: sweep_attack
+        relative_offset: 1,0,0
+  parameters:
+    target: self
+    duration: (constitution / 4) *  seconds
+    delay: ((20 - dexterity) * 0.01 + 0.1) * seconds
+    cooldown: ((20 - constitution) / 5 + 4) seconds
+    range: 2
+    fov: 45
+    damage: 0.1 * strength / 5
+    no_damage_ticks: 0
+    knockback_resistance: 1000

@@ -1,0 +1,12 @@
+upgrades:
+    # This refers to an icon defined in the icons folder/config
+    icon: upgrades
+    category: npc
+    hidden: true
+    quick_cast: true
+    parameters:
+      quiet: true
+    actions:
+        cast:
+        -  class: SpellProgress
+

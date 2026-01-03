@@ -1,0 +1,90 @@
+testing:
+  storage:
+    mana: class
+    mana_max: class
+    mana_regeneration: class
+    mana_timestamp: class
+    spell_levels: class
+    spells: class
+    brushes: class
+    path: subclass
+    hotbar_count: subclass
+  mana_max: 1000
+  mana_regeneration: 100
+
+testbad:
+  inherit: base
+  mana_max: 200
+  mana_regeneration: 20
+  path: beginner
+  hotbar_count: 2
+  spells:
+  - missile
+  - blink
+  - fling
+
+akr:
+  mana_max: 1000
+  mana_regeneration: 100
+  skills:
+    quick_cast: false
+    skill_limit: 2
+    undroppable: true
+    keep: true
+  clean_on_lock: true
+  spells:
+  - missile|4
+  - blink|2
+  - fling|3
+  - blast
+  - boom
+  - railgun
+  - fury
+  - nuke
+  - boon
+  - invincible
+  - levitate
+
+test2:
+  mana_max: 1000
+  mana_regeneration: 100
+  skills:
+    quick_cast: false
+    skill_limit: 2
+    undroppable: true
+    keep: true
+  clean_on_lock: true
+  spells:
+  - kill
+
+healthy:
+  inherit: base
+  entity_attributes:
+    generic_max_health: 10
+  health_scale: 20
+
+constituted:
+  inherit: base
+  entity_attributes:
+    generic_max_health: "constitution * 2"
+
+vampire:
+  passive: true
+  spells:
+    - lifedrain
+
+fairy:
+  passive: true
+  spells:
+    - fairy
+
+tree:
+  inherit: base
+  path: tree
+  spells:
+    - missile
+
+armorhealth:
+  inherit: base
+  entity_attributes:
+    generic_max_health: "5 + %armor_amount_helmet% * 2"

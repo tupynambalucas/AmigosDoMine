@@ -1,0 +1,7 @@
+# This is meant to be a combination of luck and charisma
+influence:
+  icon: spell_icon:258
+  icon_disabled: spell_icon_disabled:258
+  default: 3
+  min: 3
+  max: 20

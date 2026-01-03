@@ -1,0 +1,113 @@
+pollinate:
+    # This refers to an icon defined in the icons folder/config
+    icon: pollinate
+    category: engineering
+    tags: noduel
+    worth: 1200
+    earns: 3
+    actions:
+        cast:
+        - class: Parallel
+          actions:
+          - class: Brush
+            actions:
+            - class: ThrowItem
+              hit_effects: splash
+              actions:
+              - class: Disc
+                actions:
+                - class: Cover
+                  actions:
+                  - class: Flower
+          -  class: Multiply
+             multiply: 8
+             ignore_result: true
+             actions:
+             -  class: Brush
+                actions:
+                -  class: Spread
+                   actions:
+                   -  class: ThrowItem
+    effects:
+        cast:
+        - sound: entity_witch_throw
+          sound_pitch: 1.4
+          sound_volume: 2
+        - sound: magic.shimmer
+        splash:
+        -  class: EffectSingle
+           sound: entity_generic_splash
+           sound_volume: 0.9
+           sound_pitch: 1.2
+           location: source
+           effectlib:
+              class: AtomEffect
+              particle_nucleus: redstone
+              particle_orbital: drip_water
+              colorNucleus: "0000FF"
+              iterations: 16
+              radius: 4
+        projectile:
+        - location: origin
+          effectlib:
+            class: Sphere
+            particle: item_crack
+            particles: 10
+            iterations: 60
+    parameters:
+        target: none
+        radius: 3
+        center_probability: 0.9
+        outer_probability: 0.5
+        vertical_range: 8
+        cooldown: 20000
+        age_items: 5940
+        item_speed_min: 0.75
+        item_speed_max: 1.1
+        yaw_max: 30
+        pitch_max: 4
+        uses_brush: false
+        ignore_region_overrides: true
+        brushes:
+        - dandelion
+        - poppy
+        - oxeye_daisy
+        - blue_orchid
+        - dandelion
+        - orange_tulip
+        - pink_tulip
+        - poppy
+        - red_tulip
+        - white_tulip
+        - allium
+        - azure_bluet
+        - cornflower
+        - lily_of_the_valley
+        - wither_rose
+        - sunflower
+        - peony
+        - rose_bush
+        - lilac
+        flowers:
+        - dandelion
+        - poppy
+        - oxeye_daisy
+        - blue_orchid
+        - dandelion
+        - orange_tulip
+        - pink_tulip
+        - poppy
+        - red_tulip
+        - white_tulip
+        - allium
+        - azure_bluet
+        - cornflower
+        - lily_of_the_valley
+        - wither_rose
+        tall_flowers:
+        - sunflower
+        - peony
+        - rose_bush
+        - lilac
+    costs:
+        mana: 100

@@ -1,0 +1,9 @@
+talisman:
+  output: talisman
+  output_type: wand
+  ingredients:
+    o: amethyst_shard
+    i: quartz
+  row_1: " i "
+  row_2: "ioi"
+  row_3: " i "

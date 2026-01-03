@@ -1,0 +1,6 @@
+extraspellshop:
+  inherit: base_npc
+  interact_spell: extraspellshop
+  villager_profession: librarian
+  dialog:
+    - I've got some more spells for you!

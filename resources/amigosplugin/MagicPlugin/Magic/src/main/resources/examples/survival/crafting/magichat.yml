@@ -1,0 +1,10 @@
+magichat:
+  output: magichat
+  output_type: wand
+  ingredients:
+    o: amethyst_shard
+    i: blue_wool
+    e: end_rod
+  row_1: ioi
+  row_2: i i
+  row_3: e e

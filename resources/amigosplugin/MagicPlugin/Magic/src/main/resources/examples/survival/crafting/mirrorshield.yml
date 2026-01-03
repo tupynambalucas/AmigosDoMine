@@ -1,0 +1,11 @@
+mirrorshield:
+  output: mirrorshield
+  output_type: wand
+
+  ingredients:
+    o: amethyst_shard
+    i: shield
+
+  row_1: " o"
+  row_2: "io"
+  row_3: " o"

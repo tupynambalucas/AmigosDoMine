@@ -1,0 +1,8 @@
+freezeable:
+- all_air
+- fire
+- all_water
+- all_lava
+- plants
+- snow
+- ice

@@ -1,0 +1,100 @@
+### Economy Helpers
+
+# These values are used to help create a balanced economy if you plan on selling wands, spells, or upgrades.
+# Currently they are only visible on the Magic website, though I plan to incorporate them into the plugin in the near future.
+# This will probably appear in the form of a "/magic sell <item>" command. This would work just like "/magic give <item>"
+# except it would also give you the "worth" of the item as defined by your economy.
+
+# This may be a simple chat message for balance-based economies (e.g. MSRP: $1,000), or it may
+# give you physical items for an item-based economy. See the "worth_items" section below.
+
+# The following modifiers affect wand pricing.
+# A wand's price is calculated using the sum of the prices of all of its spells as a base.
+# Wand properties  (mana, protection, etc) may also add value.
+# Each of these values is multiplied by the wand property. Keep in mind that most properties naturally scale
+# from 0-1, with some exceptions like mana regeneration and limits. Refer to the maximums set above (e.g. max_mana)
+# for a good idea of how those values are going to scale.
+
+# These numbers may look a little screwy,
+# I was going for a base-2 kind of thing to hopefully make
+# costs fall along even item stack limits. (64)
+
+worth_use_multiplier: 0.125
+worth_mana: 1
+worth_mana_max: 100
+worth_mana_regeneration: 800
+worth_damage_reduction: 10000
+worth_damage_reduction_explosions: 7000
+worth_damage_reduction_falling: 3000
+worth_damage_reduction_fire: 5000
+worth_damage_reduction_physical: 5000
+worth_damage_reduction_projectiles: 6000
+worth_cost_reduction: 100000
+worth_cooldown_reduction: 100000
+
+# This can be used to change how selling items works, by default you get 50% of the item's worth for selling.
+default_earn_scale: 0.5
+
+# A wand may have additional value for each brush it contains
+# Brushes are currently not able to have specific values, though this may be a future addition.
+# Some brushes, like copy and clone, are tremendously more powerful than others, like dirt, and hence
+# should be more valuable.
+worth_brush: 32
+
+# The following are added in if the wand has the specific property at all, they do not scale.
+worth_effect_color: 2
+worth_effect_particle: 4
+worth_effect_sound: 8
+
+# This will be used as a base multiplier for all values. Once spells and wand properties are balanced relative
+# to each other (which will hopefully be the default...) you can use this to scale the overall worth of Magic
+# items relative to the rest of your economy.
+#
+# If you have a default Gringott's install, you may want to change this to "0.01" to make the emeralds
+# match up.
+worth_base: 1
+
+# Here you can define custom currencies
+# These can be named in the "currency" section of messages.yml, see the potter example configs for details.
+custom_currency: {}
+
+# Here you can override the default values for builtin currencies like spell points and mana
+builtin_currency:
+  sp:
+    default: 0
+    max: 9999
+    min: 0
+    icon: skull:http://textures.minecraft.net/texture/ce6ed0a5f7e23bc3d34d73baa0b9c3f838e85014d2ff290801dc7486dd4da6
+    worth: 10
+    format: "#,###"
+  xp:
+    worth: 10
+    icon: skull:http://textures.minecraft.net/texture/ce6ed0a5f7e23bc3d34d73baa0b9c3f838e85014d2ff290801dc7486dd4da6
+  item:
+    icon: emerald
+    item: emerald
+    worth: 50
+  currency:
+    icon: skull:http://textures.minecraft.net/texture/de89b3131c1e346f44ae4779188984625486eea1c0ba8b69513aa92625557
+    worth: 1
+    has_decimals: true
+    custom_formatting: false
+  levels:
+    icon: skull:http://textures.minecraft.net/texture/ce6ed0a5f7e23bc3d34d73baa0b9c3f838e85014d2ff290801dc7486dd4da6
+    worth: 100
+  health:
+    icon: skull:http://textures.minecraft.net/texture/6b7da98ef45cf45185d21d61f5fa3d5966a3ee52273620a6e4dfd54cf99dbc
+    worth: 1
+  hunger:
+    icon: skull:http://textures.minecraft.net/texture/1364e3f9597a295108d202d20c2f02539d5ad8377fef53ef622603a7f45b52f
+    worth: 1
+  mana:
+    icon: skull:http://textures.minecraft.net/texture/ff78194bb5fe3f374ca6a1727c04247b7bac331cff248bf642acc8e73647e
+    worth: 1
+
+# This allows engineering spells to work with a custom currency instead
+# of requiring the blocks to build.
+# This only affects spells that use `consume: true`
+# See the engineering configs for an example of use.
+block_exchange:
+  enabled: false

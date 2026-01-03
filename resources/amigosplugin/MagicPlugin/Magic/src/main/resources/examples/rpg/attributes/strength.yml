@@ -1,0 +1,7 @@
+strength:
+  icon: spell_icon:259
+  icon_disabled: spell_icon_disabled:259
+  default: 3
+  min: 3
+  max: 20
+

@@ -1,0 +1,29 @@
+stash:
+    # This refers to an icon defined in the icons folder/config
+    icon: stash
+    category: utility
+    worth: 2000
+    earns: 1
+    show_undoable: false
+    quick_cast: true
+    actions:
+        cast:
+        - class: Inventory
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_enderman_hurt
+           effectlib:
+            class: WarpEffect
+            particle: block_crack
+            material: obsidian
+            duration: 1000
+            particle_count: 10
+            particle_offset_x: 1
+            particle_offset_z: 1
+            particle_offset_y: 1
+    parameters:
+        target: self
+        type: ender_chest
+        cooldown: 2000
+

@@ -1,0 +1,21 @@
+conduitshop:
+    icon: golden_axe
+    category: npc
+    hidden: true
+    actions:
+        cast:
+        - class: Shop
+        - class: UpgradePath
+    parameters:
+        requirements:
+        - path_end: architect
+        apply_to_caster: true
+        confirm_filler: cyan_stained_glass_pane
+        confirm: true
+        spells:
+        - none
+        - none
+        - none
+        - none
+        - backup
+

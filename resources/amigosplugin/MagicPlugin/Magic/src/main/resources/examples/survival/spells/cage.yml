@@ -1,0 +1,30 @@
+cage:
+    # This refers to an icon defined in the icons folder/config
+    icon: cage
+    category: master
+    class: ConstructSpell
+    worth: 600
+    earns: 5
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: block_chain_place
+           sound_pitch: 0.2
+           sound_volume: 2
+        -  class: EffectTrail
+           particle: block_crack
+    parameters:
+        target_type: LivingEntity
+        allow_max_range: false
+        check_destructible: true
+        destructible: destructible_replace,destructible
+        range: 16
+        radius: 8
+        type: sphere
+        cooldown: 30000
+        undo: 10000
+        brush: schematic|cage
+        transparent: transparent_to_construction
+    costs:
+        mana: 50
+

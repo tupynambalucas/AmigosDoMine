@@ -1,0 +1,68 @@
+raise:
+  # This refers to an icon defined in the icons folder/config
+  icon: raise
+  example_thumbnail: https://thumbs.gfycat.com/ClassicUnhappyElephantbeetle-size_restricted.gif
+  example_link: https://gfycat.com/gifs/detail/ClassicUnhappyElephantbeetle
+  category: engineering
+  tags: noduel
+  worth: 1000
+  earns: 10
+  upgrade_required_casts: 30
+  actions:
+    cast:
+    - class: Disc
+      actions:
+      - class: Cover
+        actions:
+        - class: RaiseBlock
+        - class: PlayEffects
+          effects: raise
+  effects:
+    cast:
+    - sound: entity_illusioner_cast_spell
+      sound_pitch: 0.5
+    - sound: block_stone_break
+      location: both
+    - class: EffectTrail
+      particle: block_crack
+      particle_count: 4
+      material: dirt
+    raise:
+    - location: target
+      particle: block_crack
+      particle_count: 10
+      particle_offset_x: 0.5
+      particle_offset_y: 5
+      particle_offset_z: 0.5
+  parameters:
+    range: 64
+    radius: 8
+    vertical_range: 32
+    consume: true
+    destructible: "!earth"
+    transparent: "!earth"
+    cancel_on_deactivate: false
+    slopes:
+      1: 100
+      2: 50
+      3: 5
+    faces:
+    - down
+    - north
+    - north_east
+    - east
+    - south_east
+    - south
+    - south_west
+    - west
+    - north_west
+  costs:
+    mana: 50
+
+raise|2:
+  parameters:
+    radius: 12
+
+raise|3:
+  parameters:
+    radius: 16

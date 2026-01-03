@@ -1,0 +1,50 @@
+# This is an example of a passive spell, that is automatically triggered on damage
+savior:
+  name: Savior
+  description: Push everyone away when you get hurt
+  icon: spell_icon:160
+  icon_disabled: spell_icon_disabled:160
+  # This spell won't be directly selectable or castable, but will show up in the spell inventory
+  # It can be right-clicked to toggle it on and off
+  # If you don't want to let players toggle it on and off, set:
+  # toggleable: false
+  passive: true
+  triggers:
+    # This triggers when the player is damaged
+    - trigger: damage
+      # Other trigger possibilities: death, join, interval, launch (firing an arrow)
+      # You can also use custom triggers which can be activated by other spells using the Trigger action
+
+      # This will only trigger once the player is below half health
+      max_health: 10
+      # Other filters:
+      # interval: 5000 (for the interval trigger, 5 seconds)
+      # min_health: 5 (only activate if player has more than 5 health)
+      # min/max_damage: (for the damage trigger, must have dealt X damage)
+      # min/max_bowpull: (for the launch trigger, how far back the player or mob pulled the bow from 0 to 1)
+  actions:
+    cast:
+      - class: AreaOfEffect
+        actions:
+          - class: Velocity
+  effects:
+     cast:
+       - sound: block_beacon_activate
+         sound_pitch: 1.75
+       - class: EffectRing
+         source_location: eyes
+         offset: 0,0.5,0
+         particle: end_rod
+         iterations: 20
+         period: 4
+         radius: 0.4
+         particle_offset_x: 0
+         particle_offset_y: 0
+         particle_offset_z: 0
+  parameters:
+    target: self
+    push: 1
+    radius: 8
+    speed: 5
+    # It's recommended to put a cooldown on these since they may get cast a lot
+    cooldown: 2000

@@ -1,0 +1,9 @@
+skillbook:
+    mode: cast
+    active_spell: skills
+    icon: book{CustomModelData:18001}
+    legacy_icon: book
+    indestructible: false
+    spells:
+    - skills
+

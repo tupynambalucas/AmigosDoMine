@@ -1,0 +1,23 @@
+#
+# Set up for a Star Wars themed server
+#
+
+# This is a modifier on the default survival configs
+inherit: survival
+
+# Include only survival spells, but disable them so we can inherit without them being available
+include_inherited:
+ - spells
+ - icons
+ - messages
+disable_inherited:
+ - spells
+
+# Disable crafting
+enable_crafting: true
+
+# Force power FX come from the hands
+wand_location_offset_vertical: -0.5
+
+# Default class
+default_mage_class: force_user

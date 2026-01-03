@@ -1,0 +1,34 @@
+paste:
+    # This refers to an icon defined in the icons folder/config
+    icon: paste
+    category: engineering
+    tags: noduel
+    class: ConstructSpell
+    worth: 850
+    effects:
+        cast:
+        - sound: entity_illusioner_cast_spell
+          sound_pitch: 0.3
+          sound_volume: 1.2
+        - sound: block_beacon_activate
+          sound_pitch: 0.4
+          sound_volume: 0.8
+        - class: EffectTrail
+          particle: end_rod
+          particle_count: 3
+          particle_offset: 0.1
+          iterations: 16
+    parameters:
+        allow_max_range: true
+        check_destructible: false
+        use_brush_size: true
+        max_dimension: 256
+        target: block
+        type: cuboid
+        transparent: transparent_to_construction
+        ignore_region_overrides: true
+        cancel_on_deactivate: false
+        consume: true
+    casts:
+        mana: 300
+

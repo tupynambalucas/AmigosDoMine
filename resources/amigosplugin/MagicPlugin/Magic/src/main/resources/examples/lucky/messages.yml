@@ -1,0 +1,9 @@
+examples:
+  lucky:
+    instructions: |-
+      `<title text="Lucky Blocks Instructions">`
+      `<p>`Work-in-progress &r
+      `<p>`Breaking certain blocks will now have random results &r
+      `<p>`Cobblestone, dirt, end stone and netherrack are all luckified &r
+      `<p>`If your default world is not called &6world&f you will &r
+      `<p>`need to customize your configuration &r

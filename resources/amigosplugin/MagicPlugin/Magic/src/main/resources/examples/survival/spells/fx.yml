@@ -1,0 +1,35 @@
+fx:
+  # This refers to an icon defined in the icons folder/config
+  icon: fxdemo
+  category: staff
+  hidden: true
+  actions:
+    cast:
+    - class: PlayEffects
+      effects: particle
+  effects:
+    particle:
+    - location: target
+      effectlib:
+        class: Modified
+        period: 1
+        duration: 10000
+        parameters:
+          particle_count: "max(0, (t/i)*100 - 50)"
+          particle_offset_x: "max(0, (t/i)*3 - 1)"
+          particle_offset_y: "max(0, (t/i)*3 - 1)"
+          particle_offset_z: "max(0, (t/i)*3 - 1)"
+        effect:
+          class: Icon
+          y_offset: 0
+          particle: $particle
+          color: $color
+  parameters:
+    particle: redstone
+    color: FFFFFF
+    range: 3
+    allow_max_range: true
+    target: block
+    oty: 2
+    loud: true
+    cooldown: 1000

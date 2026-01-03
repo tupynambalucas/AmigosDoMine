@@ -1,0 +1,11 @@
+banner_saber_double_red:
+  worth: 100.0
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4325
+    id: minecraft:black_banner
+    count: 1
+    components:
+      minecraft:banner_patterns: '[{color:"white",pattern:"minecraft:stripe_center"},{color:"red",pattern:"minecraft:small_stripes"},{color:"gray",pattern:"minecraft:rhombus"},{color:"light_gray",pattern:"minecraft:flower"},{color:"black",pattern:"minecraft:stripe_left"},{color:"black",pattern:"minecraft:stripe_right"}]'
+      minecraft:custom_name: '{extra:["Double Red Saber"],text:""}'
+    schema_version: 1

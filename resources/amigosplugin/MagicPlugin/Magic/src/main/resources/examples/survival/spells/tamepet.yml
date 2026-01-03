@@ -1,0 +1,112 @@
+tamepet:
+  actions:
+    cast:
+      - class: CheckEntity
+        owned: true
+        # If this is owned, see if we are the owner
+        actions:
+          - class: CheckEntity
+            owner: true
+            # If we are the owner, check if we're holding the food item
+            actions:
+              - class: CheckInventory
+                target_caster: true
+                slot: main_hand
+                ignore_result: true
+                actions:
+                  # See if we can heal our friend
+                  - class: CheckHealth
+                    full_health: true
+                    invert: true
+                    actions:
+                      - class: TakeCosts
+                        item_cost: true
+                      - class: Heal
+                      - class: PlayEffects
+                        effects: healed
+                fail:
+                  - class: CheckEntity
+                    stay: true
+                    actions:
+                      - class: ModifyEntity
+                        stay: false
+                        sitting: false
+                        # Don't give them the item from parameters
+                        item: ""
+                      - class: PlayEffects
+                        effects: go
+                    fail:
+                      - class: ModifyEntity
+                        stay: true
+                        sitting: true
+                        # Don't give them the item from parameters
+                        item: ""
+                      - class: PlayEffects
+                        effects: stay
+        # This is not owned, try to own it
+        fail:
+          - class: CheckInventory
+            target_caster: true
+            slot: main_hand
+            ignore_result: true
+            actions:
+              - class: TakeCosts
+                item_cost: true
+              - class: Probability
+                actions:
+                  - class: Tame
+                  - class: PlayEffects
+                    effects: tamed
+                fail:
+                  - class: PlayEffects
+                    effects: tamefail
+  effects:
+    tamed:
+      - location: target
+        sound: entity_cat_purr
+        sound_pitch: 1.4
+        sound_volume: 2
+        effectlib:
+          class: LoveEffect
+          duration: 3 seconds
+    tamefail:
+      - location: target
+        sound: entity_creeper_primed
+        sound_pitch: 1.5
+        sound_volume: 0.75
+        particle: smoke_normal
+        particle_count: 8
+        particle_offset: 0.2
+    healed:
+      - location: target
+        sound: entity_cat_purreow
+        sound_pitch: 1.2
+        sound_volume: 2
+        effectlib:
+          class: LoveEffect
+          duration: 2 seconds
+    stay:
+      - location: target
+        sound: entity_fox_screech
+        sound_pitch: 0.8
+        sound_volume: 0.8
+        particle: water_splash
+        particle_count: 8
+        particle_offset: 0.2
+    go:
+      - location: target
+        sound: entity_cat_beg_for_food
+        sound_pitch: 1.2
+        sound_volume: 2
+        effectlib:
+          class: LoveEffect
+          duration: 1 seconds
+    no_target: []
+    no_action: no_target
+  parameters:
+    target: none
+    item: wheat
+    probability: 0.2
+    # For healing
+    amount: 2
+

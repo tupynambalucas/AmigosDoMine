@@ -1,0 +1,20 @@
+#
+# A spellcasting sword
+#
+magicsword:
+    inherit: base_sword
+    class: battle_mage
+    icon: netherite_sword{CustomModelData:18009}
+    legacy_icon: sword_icon:8
+    effect_color: '11FF11'
+    active_spell: missile
+    limit_spells_to_path: true
+    limit_brushes_to_path: true
+    item_attribute_slot: mainhand
+    item_attributes:
+      GENERIC_ATTACK_DAMAGE: 6
+    tags:
+    - buffable
+    - sharpenable
+    - transformablesword
+    - effectable

@@ -1,0 +1,308 @@
+### Plugin Integration
+
+# Add Magic NPC trait (/trait magic) to Citizens
+enable_citizens: true
+
+# Allow wands to be purchased on Essentials' signs, if present.
+enable_essentials_signs: true
+
+# Allow integration with LibsDisguises, spells can be restricted if disguised
+enable_libsdisguises: true
+
+# Update dynmap when constructing, if dynmap is present.
+dynmap_update: true
+
+# Show wands as dynmap markers, if dynmap is present
+dynmap_show_wands: true
+
+# Show spell casts as dynmap polylines, if dynmap is present
+dynmap_show_spells: true
+
+# Only show spell casts from players
+dynmap_only_player_spells: false
+
+# Enable Factions protection against construction spells
+factions_enabled: true
+
+# Enable PvPManager integration for PVP spells
+pvp_manager_enabled: true
+
+# Enable Towny integration for Build checks
+towny_enabled: true
+
+# All spells are allowed in the wilderness
+towny_wilderness_bypass: true
+
+# Enable GriefPrevention integration for Build checks
+grief_prevention_enabled: true
+
+# Enable PreciousStones integration for Build and PVP checks
+precious_stones_enabled: true
+# Players who can build in a field can cast ANY spell in that field,
+# regardless of other region perms
+precious_stones_override: true
+
+# Enable NCP integration- set to false to disable Magic adding
+# exemptions to players when casting spells. (e.g. survival_fly on brooms)
+ncp_enabled: true
+
+# Enable Lockette integration for Build checks
+lockette_enabled: true
+
+# Enable MVCore integration for PVP checks
+multiverse_enabled: true
+
+# Disable all build-related checks
+bypass_build: false
+
+# Disable all block-breaking checks
+bypass_break: false
+
+# Disable all pvp-related checks
+bypass_pvp: false
+
+# Set to "true" to ignore pvp_restricted on any spells
+allow_pvp_restricted: false
+
+# Will consider all spells as pvp spells
+pvp_restricted: false
+
+# Use scoreboard teams for friendly fire
+# This will prevent players on the same scoreboard team from
+# targeting each other with spells.
+use_scoreboard_teams: false
+
+# Use permissions to group players into teams for friendly fire
+# If two players share a permission in a group, they are considered to be on a team.
+# This can be a simple list of permissions, like
+#
+# permission_teams:
+# - teams.team1
+# - teams.team2
+#
+# or a more complicated grouping of factions, such as
+# permission_teams:
+# - - teams.jedi
+#   - teams.rebels
+# - - teams.sith
+#   - teams.empire
+
+# If not using scoreboard teams or Heroes parties, should players be "friends" by default?
+# This will affect being able to cast healing or other perk type spells on other players.
+# This does not affect targeting with normal (damaging, etc) spells.
+default_friendly: true
+
+# Show all Magic spells the player has permission to cast in the /mskills menu
+# This might make opening the skills menu lag if you have a lot of spells.
+skills_use_permissions: false
+
+# Battle Arena
+
+# Spells that don't bypass friendly fire will check BattleArena teams
+use_battlearena_teams: true
+
+### SkillAPI configuration
+skillapi_enabled: true
+
+# Spells that don't bypass friendly fire will check SkillAPI allies
+use_skillapi_allies: true
+
+# Use Skill API mana, if Skill API is present
+use_skillapi_mana: false
+
+# The classes to map to SkillAPI mana
+skillapi_mana_classes:
+  - mage
+  - battle
+
+# Allow magic placeholders in PlacerHolder API
+placeholder_api_enabled: true
+
+# Enable the Light action using Light API
+light_api_enabled: true
+
+# Set spawner data from spawner item in hand when placing
+# This requires the Magic.spawners permission, which only ops have by default
+# Turn this off if having issues with placing spawners. This is forced off if SilkSpawners is detected
+apply_spawner_data: true
+
+# MobArena integration
+mobarena:
+  # Use this to disable all MobArena integration
+  enabled: true
+  # Set this to true for magic build/break permissions to respect protected arenas
+  protect: false
+  # This can be used to protect specific arenas by name
+  # protected:
+  # - arena1
+  # - arena2
+
+# Skript integration will add cast events and effect
+skript_enabled: true
+
+# Engineering magic will be logged via LogBlock
+logblock_enabled: true
+
+# Residence integration
+residence:
+  # Set to false to disable Residence integration
+  enabled: true
+
+# Lands integration
+lands:
+  # Set to false to disable Lands integration
+  enabled: true
+
+# RedProtect integration
+redprotect:
+  # Set to false to disable RedProtect integration
+  enabled: true
+  # Set these to allow non-players (command blocks, automata) to build/break in an RP region
+  allow_non_player_build: false
+  allow_non_player_break: false
+
+# Citadel integration
+citadel:
+  # Set to false to disable Citadel integration
+  enabled: true
+
+  # Non-player reinforcements will be indestructible to spells
+  reinforcements_indestructible: false
+
+  # Player reinforcements will be indestructible to spells
+  player_reinforcements_indestructible: false
+
+  # Reinforcements will be taken into account in the BreakBlock action
+  # Spells that use ModifyBlock to directly erase blocks will still be able to destroy
+  # reinforced blocks, unless the above flags are set.
+  reinforcement_durability: true
+
+# Vault integration
+vault:
+  # Set to false to turn off Vault integration
+  enabled: true
+
+# ajParkour integration
+ajparkour:
+  # Set this to false to ignore parkour join events
+  # This may cause item loss if using inventory mode wands
+  enabled: true
+
+# WildStacker integration
+wildstacker:
+  # This will cancel stack events for any custom mob spawns, which prevents magic mobs from stacking
+  enabled: true
+
+# Heroes integration
+
+# Show Heroes skills in the /mskills menu, if Heroes is present
+skills_use_heroes: true
+
+# Use Heroes mana, if Heroes is present
+use_heroes_mana: true
+
+# The classes to map to Heroes mana
+heroes_mana_classes:
+  - mage
+  - battle
+
+# Spells that don't bypass friendly fire will check Heroes' parties
+use_heroes_parties: true
+
+# Use this to prefix skills added via the Magic skill pack
+# This can be used to avoid conflicts with public or other skills
+heroes_skill_prefix: ""
+
+# TokenManager integration
+token_manager:
+  # Set this to false if you don't want to register tokens as a magic currency
+  enabled: true
+
+# TradeSystem integration
+trade_system:
+  # Set this to false if you don't want to prevent trading bound wands
+  enabled: true
+
+# zAcutionHouse integration
+action_house:
+  # Set this to false if you don't want to prevent auctioning bound wands
+  enabled: true
+
+# AuraSkills integration
+aurelium_skills:
+  enabled: true
+  # Set this to true to switch Magic to use AS mana.
+  # Since mana in AS is much lower you will need to make some adjustments to really make this work.
+  use_mana: false
+  # This will scale the casting costs of all spells down to 25% of what they would normally be
+  # (a 75% reduction)
+  # This will make spell costs more in line with how Aura mana progresses, though there may still
+  # be some tweaking required
+  mana_cost_reduction: 0.75
+  # Register AS XP as Magic currencies, so they can be used in casting costs and give commands
+  use_xp_currencies: true
+
+  # The class to map AS mana to, caster covers wands and magic swords
+  mana_classes:
+    - mage
+    - battle
+
+  # This allows you to earn AS xp of certain types any time a player earns SP from casting spells
+  # The default config means you earn 1/2 as much SORCERY as sp
+  xp_earn_from_sp:
+    SORCERY: 0.5
+
+  # Set this to false to turn off attribute registration
+  use_attributes: true
+
+  # This can be used to scale up mana, but it really shouldn't be used anymore,
+  # see mana_cost_reduction instead which will let Magic and AuraSkills show the same
+  # mana amounts while still bringing spell casting costs in range
+  mana_scale: 1
+
+# Vivecraft integration, for spells that come from your hand locations
+vivecraft:
+  enabled: true
+
+# MythicMobs integration, allows using mythicmobs in magic commands and configs
+mythicmobs:
+  enabled: true
+
+# WorldGuard integration
+# Spells respect build and PvP restrictions
+# Custom flag integration
+worldguard:
+  enabled: true
+
+  # Cache region lookups for performance
+  # Set this to a larger duration (in milliseconds) to perform region checks less frequently
+  # Set this to 0 to disable caching
+  region_update_cache: 100
+
+# UltimateClans integration
+ultimate_clans:
+  enabled: true
+
+  # Lands add-on
+  lands:
+    enabled: true
+
+# ModelEngine integration
+model_engine:
+  enabled: false
+
+# Geyser integration
+geyser:
+  enabled: true
+
+# Indirect integration with other protection plugins.
+# Add a plugin here to have Magic send it fake Block/Break events to check for permission.
+# This may have strange behavior, use with caution.
+generic_protection: []
+
+# The folder and file path to use for loading schematics. This will be relative to
+# The server's /plugins folder.
+# You can use WorldEdit's schematics folder for easy access to saved schematics.
+# You can use this folder to override the built-in schematics, such as replacing the schematics
+# used for Tent or Cage.
+schematic_files: WorldEdit/schematics/

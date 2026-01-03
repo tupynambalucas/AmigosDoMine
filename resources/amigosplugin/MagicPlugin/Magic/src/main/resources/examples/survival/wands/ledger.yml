@@ -1,0 +1,10 @@
+ledger:
+  active_spell: ledger
+  migrate_icon: paper
+  icon: written_book
+  undroppable: true
+  keep: true
+  indestructible: false
+  mode: cast
+  spells:
+  - ledger

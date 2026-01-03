@@ -1,0 +1,8 @@
+welcome:
+  enabled: false
+
+  # This kit replaces the old welcome_wand feature
+  welcome_wand: true
+  starter: true
+  items:
+    - wand

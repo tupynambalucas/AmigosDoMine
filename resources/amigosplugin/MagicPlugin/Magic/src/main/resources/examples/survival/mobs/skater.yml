@@ -1,0 +1,6 @@
+skater:
+  inherit: base_npc
+  interact_spell: wearskates
+  villager_profession: librarian
+  dialog:
+    - Let's go ice skating!

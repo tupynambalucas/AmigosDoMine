@@ -6,14 +6,15 @@ Welcome to the creative heart of the ecosystem. This workspace is unique because
 
 Whether you are compiling Kotlin or painting pixels, this is your home.
 
-## 📂 The Dual Structure
+## 📂 The Triple Structure
 
-We split the work into two dedicated development environments inside this folder:
+We split the work into three dedicated development environments inside this folder:
 
 | Folder | Purpose | Tooling | Output |
 | :--- | :--- | :--- | :--- |
-| **`plugins/amigosplugin`** | 🧠 **Server Brain:** Custom mechanics, commands, events, and features like Essentials. | **IntelliJ IDEA** (Kotlin/Gradle) | `build/plugins/` |
-| **`resourcepack`** | 🎭 **Server Face:** 3D models, textures, sounds, and UI. | **MCreator** | `build/resourcepack/` |
+| **`plugins/amigosplugin`** | 🧠 **Server Brain:** Custom mechanics, commands, events, and features like Essentials. | **IntelliJ IDEA** (Kotlin/Gradle) | `out/plugins/` |
+| **`resourcepack`** | 🎭 **Server Face:** 3D models, textures, sounds, and UI. | **MCreator** | `out/resourcepack/` |
+| **`stabledf`** | 🤖 **AI Studio:** Stable Diffusion for generating textures, concepts, and assets. | **Automatic1111** | `out/ai/` (manual) |
 
 ---
 
@@ -30,12 +31,12 @@ This is the custom logic that makes our server unique. It's built with **Kotlin*
 Open `plugins/amigosplugin` in IntelliJ IDEA.
 
 ```bash
-# From packages/resources-devlopment/plugins/amigosplugin
+# From resources/plugins/amigosplugin
 ./gradlew build
 ```
 
 **The Magic:** The `build.gradle.kts` is configured to automatically output the compiled jar to:
-`../../build/plugins/AmigosPlugin.jar`
+`../../out/plugins/AmigosPlugin.jar`
 
 ---
 
@@ -51,7 +52,7 @@ This is where we redefine the look of Minecraft. We use **MCreator** to empower 
 1.  Open your workspace in **MCreator**.
 2.  Design your custom blocks, items, and GUIs.
 3.  **Export to Folder:** Select the export option that generates the raw files.
-4.  **Target:** Ensure the output goes to `packages/resources-devlopment/build/resourcepack/`.
+4.  **Target:** Ensure the output goes to `resources/out/resourcepack/`.
 
 ---
 
@@ -60,8 +61,8 @@ This is where we redefine the look of Minecraft. We use **MCreator** to empower 
 Once assets are built, they don't stay here. They are destined for the **Backend**.
 
 1.  **Build Phase:**
-    *   Plugin ➡️ `build/plugins/`
-    *   Textures ➡️ `build/resourcepack/`
+    *   Plugin ➡️ `out/plugins/`
+    *   Textures ➡️ `out/resourcepack/`
 2.  **Distribution Phase:**
     *   The **Backend** picks up these artifacts to host them for the game server (Resource Pack Hosting) or for deployment scripts.
 

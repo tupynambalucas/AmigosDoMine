@@ -1,0 +1,55 @@
+#
+# Set up for a Harry Potter server.
+#
+# Crafting is not allowed, it is assumed each player has one wand
+# they will keep throughout their play experience.
+#
+
+# Note: welcome_wand is no longer used, see the "ticket" kit
+
+default_wand: potterwand
+
+# This uses spells from survival
+inherit: survival
+
+# Include only survival spells, but disable them so we can inherit without them being available
+include_inherited:
+ - spells
+ - icons
+ - messages
+disable_inherited:
+ - spells
+
+# Don't allow crafting
+enable_crafting: false
+
+builtin_currency:
+  # Start players off with some Spell Points
+  sp:
+   default: 100
+  # Custom physical economy
+  item:
+    worth: 1
+    name: Galleon
+    name_plural: Galleons
+
+# Use the potter RP
+resource_pack: potter
+
+# Default class
+default_mage_class: wizard
+
+# Set up some custom currency
+custom_currency:
+ tc:
+  max: 9999
+  default: 0
+  icon: skull:http://textures.minecraft.net/texture/b11206551e723c356c23b32383abd19e6d7e9e5988f191e7866ae89ed6cb24
+ ac:
+  max: 9999
+  default: 0
+  icon: skull:http://textures.minecraft.net/texture/82d8ccac4d982bf3199761c1c74b9aa18e312ff5ca0a6e51b77a87abad610b
+
+alternate_resource_packs:
+  potter:
+    url: "http://rp.elmakers.com/Magic-potter-RP-1.19.zip"

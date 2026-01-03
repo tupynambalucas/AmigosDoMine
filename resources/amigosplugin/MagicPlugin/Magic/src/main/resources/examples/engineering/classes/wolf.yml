@@ -1,0 +1,13 @@
+wolf:
+  path: staff
+  storage:
+    path: class
+    spells: wand
+    brushes: wand
+    active_brush: class
+    active_spell: class
+    hotbar: class
+    hotbar_count: wand
+
+  active_brush: erase
+  active_spell: fling

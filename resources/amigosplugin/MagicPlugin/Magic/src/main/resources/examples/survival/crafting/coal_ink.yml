@@ -1,0 +1,12 @@
+coal_ink:
+  enabled: false
+  output: black_dye
+  output_type: item
+  auto_discover: true
+  group: ""
+  ingredients:
+    o: coal
+    d: white_dye
+  row_1: " o "
+  row_2: "odo"
+  row_3: " o "

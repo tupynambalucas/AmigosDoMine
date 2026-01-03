@@ -1,0 +1,9 @@
+spellshop:
+  inherit: base_npc
+  interact_spell: spellshop
+  villager_profession: librarian
+  disguise:
+    type: player
+    skin: NathanWolf
+  dialog:
+    - Want to learn some new spells?

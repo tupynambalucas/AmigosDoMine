@@ -1,0 +1,4 @@
+soldier:
+  locked: false
+  storage:
+    spell_levels: class

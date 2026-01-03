@@ -1,0 +1,7 @@
+dexterity:
+  icon: spell_icon:256
+  icon_disabled: spell_icon_disabled:256
+  default: 3
+  min: 3
+  max: 20
+

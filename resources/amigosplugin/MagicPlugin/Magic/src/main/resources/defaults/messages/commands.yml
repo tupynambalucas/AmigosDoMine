@@ -1,0 +1,174 @@
+commands:
+    no_permission: "&cYou are not allowed to use that command."
+    in_game: "&cThis command may only be used in-game."
+    unknown_command: "&cUnknown command: &f$command"
+    mtrigger:
+      invalid_parameters: "This is an invalid trigger link"
+      invalid_target: "This is an invalid trigger target"
+      no_mage: "This link is no longer valid"
+    magic:
+      help: |-
+        &fUse &7/mhelp&f for help
+        &fSearch help topics with &7/mhelp broom not working&f
+    mage:
+      reward:
+        received: "&eYou have been awarded &6$item"
+        gave: "&eGave &3$player &6$item"
+        replacement: "&eGave &3$player &6$replacement&e, already had &6$item"
+    mkit:
+      usage: "Usage: mkit [player] <kit>"
+      console_usage: "Console usage: mkit <player> <kit>"
+      unknown_kit: "&cUnknown kit: &f$kit"
+      unknown_player: "&cNo targets matched: &f$player"
+      cooldown: "You must wait $time."
+      no_requirements: "You are not allowed to use that kit"
+    mhelp:
+      unknown: "&cI couldn't find any matches for: &f$topic"
+      found_single: "&fI found a good match:"
+      found: "&fI found &b$count &fmatches:"
+      found_limit: "&fI found &b$count &fmatches &7(Showing top &f$limit&7)&f:"
+      match: '`<li>` &6`<help topic="$topic" text="$title">`&7: &f$summary'
+      debug_tooltip: '`{"text":"$text","hoverEvent":{"action":"show_text","contents":"$debug"}}`'
+      prompt: |-
+        &8
+        &f`<icon key="counterspell">`        &bWelcome to &dMagic&f!        &f`<icon key="counterspell">`
+        &8
+        &fUse &7/mhelp &ffor help, and to disable this message.
+        &dOnly &eops &dor &eadmins &dwith the &7magic.notify&d permission see this.
+      unavailable: |-
+          &8| &7> &4Your server version does not fully support the interactive help system
+          &8| &7> &fPlease type the &7/mhelp&f commands as shown to navigate help
+          &8| &7> &fSee help for Magic commands with &6/help magic
+          &8| &7> &fFAQ: &6https://github.com/elBukkit/MagicPlugin/wiki/FAQ
+          &8| &7> &fHelp: &6https://github.com/elBukkit/MagicPlugin/wiki/Support
+      separator: "&8---------------------------"
+      no_wand: "&4You must be holding a wand!"
+      header: |-
+        &8                                .
+        &f      `<icon key="nathanwolf">`   &b&lMAGIC HELP  &f`<icon key="missile">`
+        &8                                .
+      player_header: |-
+        &a  `<rawmessage text="Click" message="{\\\"text\\\":\\\"Yahaha you found me!\\\",\\\"color\\\":\\\"green\\\"}">` &7to navigate through help
+      console_header: |-
+        &e  &fPlease type the &7/mhelp&f commands as shown to navigate help
+        &e  Works better in-game!
+    mconfig:
+      write_failed: "&cCould not write to file $file"
+      example:
+        usage: "&cUsage: /mconfig example [$actions]"
+        list:
+          base: "&bBase example: &3$example"
+          header: "&bExamples:"
+          item: "  &f- &3$example"
+        unfetch:
+          usage: "&cUsage: /mconfig example unfetch <example name>"
+          success: "&bMoved example &2$example&b to &2$backup"
+          fail: "&cExample &2$example&c not found"
+        fetch:
+          usage: "&cUsage: /mconfig example fetch <example name> <url>"
+          unknown: "&cUnknown example: &e$example, &cuse a url to fetch it first.&r\n&cUsage: /mconfig example fetch <example name> <url>"
+          fail: "&cCould not retrieve url &e$url"
+          error: "&cSomething went wrong, please check logs"
+          wait_all: "&bPlease wait while $count example(s) are updated"
+          skip: "&6Skipping &e$example&6 because it is not loaded, you may want to use &f/mconfig example unfetch $example&6 to remove it completely if you no longer want it"
+          success_all: "&bFinished updating all examples"
+          wait: "&bPlease wait, downloading &b$url..."
+          success_quiet:  "&bDownloaded example &2$example&f, took &9$time &fto download &9$size MB"
+          success: |-
+            &bDownloaded example &2$example&f
+            &rUse &6`<command command="mconfig example add $example" text="mconfig example add $example">`&f to mix this in with your current configs
+            &rUse &6`<command command="mconfig example set $example" text="mconfig example set $example">`&f to set this as your base configuration
+          backup: "&eExample exists, &3backing up to &f$backup"
+          overwrite_backup: "&eExample and backup exist, &coverwriting &f$backup"
+          url_write: "&bYou can update this example in the future with &6/mconfig example fetch $example&r"
+          url_write_failed: "&cSomething went wrong writing the url file, please check logs"
+          url_exists: "&eExample has a builtin URL file, not overwriting.\n&r&fThis may be a redirect to an updated version.\n&r&&bfYou might want to try &6/mconfig example fetch $example &bto update it"
+          outdated: "&eExample $example requires Magic version &6$version&e, not updating example files. Please update the plugin!"
+        add:
+          usage: "&cUsage: /mconfig example add <example>"
+          duplicate: "&cThe examples &2$examples &care already loaded"
+          success: "&bAdded examples &2$examples"
+        remove:
+          usage: "&cUsage: /mconfig example remove <example>"
+          missing: "&cThe example &2$example &cis not loaded"
+          all: "&bRemoved all examples, including the base example.\n&r&bUse &6/mconfig example set survival none&b if you did not mean to remove the base survival configs.\n&r&bOtherwise use &6/magic load&b to apply the changes"
+          success: "&bRemoved example &2$example"
+        set:
+          success: "&bSet base example to &2$example"
+          multiple: "&bSet base example to &2$example&f\n&r&bSet added examples to &2$examples"
+          clear_added: "&bSet base example to &2$example&f\n&r&bCleared added examples"
+          clear: "&bCleared base example.&f\n&r&bUse &7/mconfig example remove all&b if you have added examples you want to remove"
+      disable:
+        usage: "&cUsage: /mconfig disable [$options] [key]"
+        nokey: "&cInvalid type: $type, options: $options"
+        success: "&bDisabled &3$type.$key&b, use &f/magic load &bto apply pending changes"
+      enable:
+        usage: "&cUsage: /mconfig enable [$options] [key]"
+        nokey: "&cInvalid type: $type, options: $options"
+        success: "&bEnabled &3$type.$key&b, use &f/magic load &bto apply pending changes"
+      configure:
+        usage: "&cUsage: /mconfig configure [$options] [key] [property] [value]"
+        nokey: "&cInvalid type: $type, options: $options"
+        success: "&bChanged &3$type.$key&b, use &f/magic load &bto apply pending changes"
+      reset:
+        usage: "&cUsage: /mconfig reset [$options] [key] "
+        nokey: "&cInvalid type: $type, options: $options"
+        missing: "&cFile &f$file &cdoes not exist, not resetting"
+        nothing: "&cFile &f$file &cdoes not exist, and &f$key &cwas not found in the customization file"
+        none: "&cNo customizations were found to reset"
+        removed: "&bRemoved &3$key &bfrom customizations file"
+        success: "&bDeleted &3$file"
+        backup: "&7Backup file saved to &f$backup &7in case you want to undo this change"
+        load_prompt: "&7Use &f/magic load &7to apply pending changes"
+      apply:
+        usage: "&cUsage: /mconfig apply [session id]"
+        wait: "&bFetching configuration..."
+        error: "&cSomething went wrong, please check logs"
+        error_saving: "&cCould not write to file $file"
+        overwrote: "&eOverwrote &bfile &a$file"
+        created: "&bCreated file &a$file"
+        missing: "&cThe $field field was missing from the server response"
+        load_prompt: "&7Use &f/magic load &7to load your changes"
+        invalid: "&cYour file has parse errors. Please fix them and try again."
+      load:
+        usage: "&cUsage: /mconfig load [session id]"
+        wait: "&bFetching configuration..."
+        error: "&cSomething went wrong, please check logs"
+        missing: "&cThe $field field was missing from the server response"
+        error_saving: "&cCould not write to file $file"
+        overwrote: "&eOverwrote &bfile &a$file"
+        created: "&bCreated file &a$file"
+        invalid: "&cYour file has parse errors. Please fix them and try again."
+      editor:
+        usage: "&cUsage: /mconfig editor [$options]"
+        error: "&cSomething went wrong, please check logs"
+        wait: "&bPlease wait, starting new session..."
+        server_error: "&cSomething went wrong, server says: &e$message"
+        new_session: "&3Go to &f$url &3in your web browser"
+        new_item: "&3Creating new &2$type.&b$item"
+        edit_item: "&3Editing &2$type.&b$item"
+    modifier:
+      usage: "Use: /mage modifier <add|remove> <modifier> [duration]"
+      add:
+        success: "Added modifier &3$name &fto &6$player"
+        success_duration: "Added modifier &3$name &fto &6$player &ffor $duration"
+        fail: "&cCould not add modifier &3$name &fto &6$player, &fmay already have it"
+        invalid: "&cInvalid duration: &4$input"
+      remove:
+        success: "Removed modifier &3$name &ffrom &6$player"
+        fail: "&cCould not remove modifier &3$name &ffrom &6$player, &fmay not have it"
+    getrp:
+      auto: "You will now receive the resource pack automatically at login"
+      manual: "RP turned off, but you will be prompted login."
+      download_disabled: "There is no resource pack configured to download, but it will now be assumed that you have the resource pack."
+      download: "Click the link to &bdownload the RP&f and add it to your Minecraft &bresourcepacks&f folder.\n&7It will now be assumed that you have the resource pack.\n&f&n$url"
+      turnoff: "You will no longer receive the resource pack automatically at login nor be prompted.\n&rUse &6/getrp&f if you want to get it.\n&rIf you'd prefer to download the RP, you can use &6/getrp url&f to get the URL"
+      sending: "Use &6/getrp auto&f to get the resource pack automatically.\n&rOr use &6/getrp off&f to turn off the login prompt."
+      preference: "RP reference set to &3$pack&f\nUse &6/getrp default&f to change back."
+      noauto: "Use &6/getrp auto &fto get this pack automatically at login"
+      default: "RP preference set back to default"
+      disabled_server: "This command has been disabled because this server has a resource pack configured in server.properties"
+      disabled_plugins: |-
+        This command has been disabled because this server is using the following plugins which control resource packs: $plugins
+        Admins can use &7`<help topic="compatibility" text="mhelp">` for more info.
+      disabled: "This command has been disabled because Magic's resource pack feature has been disabled"

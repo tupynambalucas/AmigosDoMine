@@ -1,0 +1,10 @@
+dummy:
+  type: husk
+  health: 100
+  protection:
+    fire: 2
+  weakness:
+    water: 1
+  potion_effects:
+  - type: slow
+    amplifier: 10

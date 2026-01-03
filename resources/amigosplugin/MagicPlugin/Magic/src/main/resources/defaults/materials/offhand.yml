@@ -1,0 +1,11 @@
+# These items, when held in the offhand, will prevent wands for using right-click actions in the main hand
+offhand:
+  - shield
+  - torch
+  - spyglass
+  - bow
+  - crossbow
+  - firework_rocket
+
+  # Legacy
+  - firework

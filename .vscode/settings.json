@@ -180,5 +180,6 @@
   "typescript.suggest.autoImports": true,
   "typescript.suggest.includeCompletionsForImportStatements": false,
   "java.compile.nullAnalysis.mode": "disabled",
-  "[ignore]": {}
+  "[ignore]": {},
+  "gemini-cli.debug.logging.enabled": true
 }

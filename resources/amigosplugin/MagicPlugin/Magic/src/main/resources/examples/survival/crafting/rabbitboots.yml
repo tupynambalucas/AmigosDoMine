@@ -1,0 +1,12 @@
+rabbitboots:
+  enabled: false
+  output: rabbitboots
+  output_type: wand
+  ingredients:
+    i: rabbit_hide
+    r: rabbit_foot
+    o: amethyst_shard
+  row_1: o o
+  row_2: i i
+  row_3: r r
+

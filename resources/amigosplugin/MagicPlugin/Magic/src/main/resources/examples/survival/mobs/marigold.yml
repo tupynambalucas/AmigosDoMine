@@ -1,0 +1,67 @@
+marigold:
+  requires: ModelEngine
+  name: Marigold
+  type: axolotl
+  axolotl_type: wild
+  transformable: false
+  default_drops: false
+  model:
+    id: bearded_dragon
+    invisible: true
+  interval: 500
+  interval_requires_target: false
+  triggers:
+    colorchange:
+      type: interval
+      cast: lizardskin
+    look:
+      cast:
+        "model_state model_state sit": 500
+        "model_state model_state lookup": 600
+        none: 100
+    random:
+      cast:
+        "model_state model_state smell": 300
+        "model_state model_state dance": 200
+        "model_state model_state sit": 500
+        "model_state model_state lookup": 600
+        none: 500
+
+  # Tameable
+  ownable: true
+  interact_spell: tamepet
+  interact_spell_source: player
+  interact_spell_target: mob
+  interact_spell_parameters:
+    item: glow_berries
+  brain:
+    goals:
+      - type: trigger
+        priority: 1
+        trigger: look
+        interval: 3000
+        goals: follow_owner
+        speed: 0.5
+      - type: trigger
+        priority: 2
+        trigger: look
+        interval: 3000
+        goals:
+         - type: tempt
+           item: glow_berries
+           speed: 0.5
+      - type: trigger
+        priority: 3
+        trigger: look
+        interval: 3000
+        goals: look_at_player
+      - type: panic
+        priority: 0
+      - type: requirement
+        priority: 4
+        requirement:
+          stay: false
+        goals:
+          - type: trigger
+            trigger: random
+            goal: random_stroll

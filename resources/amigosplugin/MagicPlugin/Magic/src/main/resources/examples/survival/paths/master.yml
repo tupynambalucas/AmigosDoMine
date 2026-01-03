@@ -1,0 +1,44 @@
+master:
+    icon: stick{CustomModelData:18004}
+    legacy_icon: wooden_hoe:4
+    legacy_migrate_icon: golden_axe
+    inherit: apprentice
+    override_properties:
+      mana_regeneration: 35
+      mana_max: 200
+      hotbar_count: 3
+    extra_spells:
+      - mount
+      - cage
+      - silence
+      - tent
+      - tame
+      - holylight
+    spells:
+      - fury
+      - blessing
+      - cluster
+      - bomb
+      - invincible
+      - earthquake
+      - icbm
+      - nuke
+      - meteor
+      - pollinate
+      - kill
+      - torture
+      - petrify
+      - singularity
+      - tornado
+      - tendril
+      - stash
+      - railgun
+      - levitate
+      - shrink
+      - dragonball
+      - neutron
+      - mob
+      - sunstrike
+      - force
+
+

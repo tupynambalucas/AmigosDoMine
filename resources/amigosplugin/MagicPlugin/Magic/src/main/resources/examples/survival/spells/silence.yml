@@ -1,0 +1,81 @@
+silence:
+    # This refers to an icon defined in the icons folder/config
+    icon: silence
+    category: dark
+    worth: 750
+    earns: 10
+    upgrade_required_casts: 50
+    upgrade_required_path: master
+    actions:
+        cast:
+        - class: CustomProjectile
+          actions:
+          - class: ApplyCooldown
+          - class: Deactivate
+    effects:
+        cast:
+        -  sound: item_trident_throw
+           sound_pitch: 0.2
+        -  sound: block_fire_extinguish
+           sound_pitch: 0.3
+        -  class: EffectSingle
+           sound: magic.shimmer_big
+           effectlib:
+             class: ConeEffect
+             iterations: 15
+             particle: redstone
+             color: 210B61
+             lengthGrow: 0.01
+        tick:
+        - location: target
+          particle: villager_angry
+        hit:
+        -  sound: block_conduit_deactivate
+           sound_pitch: 1.6
+           sound_volume: 1.2
+        -  class: EffectSingle
+           location: target
+           color: 380B61
+           firework: star
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: SmokeEffect
+             iterations: 16
+             particle: spell_mob
+             color: 210B61
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: SphereEffect
+             iterations: 45
+             period: .1
+             particle: spell_mob
+             color: 210B61
+             radius: 1
+             particles: 20
+    costs:
+        mana: 140
+    parameters:
+        range: 16
+        cooldown: 20000
+        duration: 6000
+        target_type: LivingEntity
+        target_breakables: 1
+        target: other
+        hitbox: true
+
+silence|2:
+    costs:
+        mana: 120
+    parameters:
+        cooldown: 18000
+        duration: 8000
+
+silence|3:
+    costs:
+        mana: 100
+    parameters:
+        cooldown: 16000
+        duration: 10000
+

@@ -1,0 +1,162 @@
+master:
+    inherit: apprentice
+    legacy_icon: wand_icon:4
+    icon: stick{CustomModelData:18004}
+    migrate_icon: golden_axe
+    mana_regeneration: 35
+    mana_max: 200
+    mana: 200
+    hotbar_count: 3
+    level_spells_to_path: master
+
+    spells:
+      # Hotbar 1
+      - missile
+      - push
+      - arrow
+      - blast
+      - frost
+      - bubble
+      - fireball
+      - blind
+
+      # Hotbar 2
+
+      - fling
+      - blink
+      - arrowrain
+      - stream
+      - wither
+      - blob
+      - whip
+      - grenade
+
+      # Hotbar 3
+
+      - levitate
+      - petrify
+      - railgun
+      - cloak
+      - collapse
+      - reflect
+      - meteor
+      - kill
+
+      # Beginner
+      - peek
+      - torch
+      - recall
+      - boon
+      - cure
+      - pull
+      - poison
+      - fire
+
+      # Student
+      - newpage
+
+      - boom
+      - grenade
+      - lightning
+      - lava
+      - flamethrower
+      - mine
+      - chop
+      - shell
+      - entangle
+      - curse
+      - vengeance
+      - heal
+
+      # Apprentice
+      - newpage
+
+      - breach
+      - disintegrate
+      - hat
+      - sandblast
+      - counterspell
+      - platform
+      - rubberize
+      - wound
+      - harden
+      - sponge
+      - flashbang
+      - gatling
+      - walls
+      - smite
+      - shuriken
+      - sticky
+      - homing
+      - lift
+      - laser
+      - wave
+      - chainlightning
+      - airscooter
+      - growth
+      - gather
+
+      # Master
+      - fury
+      - stash
+      - shrink
+
+      - blessing
+      - cluster
+      - bomb
+      - invincible
+      - earthquake
+      - icbm
+      - nuke
+      - pollinate
+      - torture
+      - singularity
+      - tornado
+      - tendril
+      - dragonball
+      - neutron
+      - mob
+      - sunstrike
+      - force
+
+      # Extra spells
+      - newpage
+
+      - flare
+      - stun
+      - workbench
+      - aqualung
+      - sparkle
+
+      - none
+
+      - familiar
+      - monster
+      - tracking
+      - rocket
+      - secure
+      - admission
+      - tag
+      - phase
+      - grow
+
+      - none
+
+      - emp
+      - music
+      - disarm
+      - ghast
+      - glide
+      - horse
+      - critical
+      - decoy
+      - soulburn
+
+      - none
+
+      - mount
+      - cage
+      - silence
+      - tent
+      - tame
+      - holylight

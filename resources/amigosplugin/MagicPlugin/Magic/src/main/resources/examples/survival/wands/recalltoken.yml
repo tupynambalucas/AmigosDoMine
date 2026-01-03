@@ -1,0 +1,14 @@
+recalltoken:
+    mode: cast
+    active_spell: recall
+    icon: compass
+    indestructible: false
+    uses: 5
+    keep: true
+    modifiable: false
+    effect_color: 'FF0000'
+    overrides:
+        allow_death: true
+    spells:
+        - recall
+

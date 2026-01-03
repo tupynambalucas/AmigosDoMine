@@ -1,0 +1,78 @@
+shuriken:
+    # This refers to an icon defined in the icons folder/config
+    icon: shuriken
+    category: combat
+    upgrade_required_path: master
+    upgrade_required_casts: 50
+    worth: 200
+    earns: 12
+    actions:
+        cast:
+        -  class: CustomProjectile
+           tick_size: 0.1
+           tick:
+           -  class: AreaOfEffect
+              actions:
+              -  class: Damage
+    effects:
+        tick:
+        -  particle: block_crack
+           material: iron_block
+           particle_count: 1
+           particle_offset_x: 0.01
+           particle_offset_y: 0.01
+           particle_offset_z: 0.01
+           location: target
+        cast:
+        -  sound: magic.shimmer_quiet
+        -  sound: item.trident.throw
+           sound_pitch: 1.3
+        reflect:
+          - sound: item.trident.throw
+            sound_pitch: 1.8
+            sound_volume: 0.8
+            location: target
+          - class: EffectSingle
+            location: target
+            particle: fireworks_spark
+            particle_count: 3
+            particle_offset_x: 0.1
+            particle_offset_y: 0.1
+            particle_offset_z: 0.1
+            sound: magic.bonk
+            sound_volume: 0.2
+        hit_entity:
+        -  sound: entity_player_hurt_sweet_berry_bush
+           sound_pitch: 1.6
+    parameters:
+        target: block
+        target_self: true
+        target_self_timeout: 1500
+        range: 32
+        radius: 0.6
+        y_radius: 1.5
+        target_type: LivingEntity
+        reflective: solid
+        transparent: transparent
+        cooldown: 10000
+        velocity: 20
+        damage: 3
+        lifetime: 5000
+    costs:
+        mana: 120
+
+shuriken|2:
+    upgrade_required_path: master
+    upgrade_required_casts: 50
+    parameters:
+        lifetime: 10000
+    costs:
+        mana: 100
+
+shuriken|3:
+    parameters:
+        lifetime: 15000
+    costs:
+        mana: 80
+
+

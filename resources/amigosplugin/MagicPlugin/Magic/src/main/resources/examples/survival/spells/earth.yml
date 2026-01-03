@@ -1,0 +1,35 @@
+earth:
+    # This refers to an icon defined in the icons folder/config
+    icon: earth
+    category: combat
+    pvp_restricted: true
+    worth: 150
+    actions:
+        cast:
+        -  class: Line
+           actions:
+           -  class: ModifyBlock
+        -  class: Damage
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: block_grass_step
+        iterate:
+        -  class: EffectSingle
+           particle: block_crack
+           location: target
+    parameters:
+        target_type: Damageable
+        transparent: transparent_to_construction
+        allow_max_range: true
+        range: 16
+        size: 16
+        increment_data: false
+        undo: 2000
+        brush: dirt
+        player_damage: 4
+        entity_damage: 6
+        destructible: destructible_replace
+    costs:
+        mana: 20
+

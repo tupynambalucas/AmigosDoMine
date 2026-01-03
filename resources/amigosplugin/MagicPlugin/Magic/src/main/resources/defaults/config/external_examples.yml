@@ -1,0 +1,16 @@
+
+#
+# These are examples that can be fetched via the `/mconfig fetch` command
+#
+external_examples:
+  potterplus: "https://github.com/PotterPlus/PotterPlus/archive/master.zip"
+  superheroes: "https://github.com/elBukkit/Magic-Superheroes/archive/main.zip"
+  extramobs: "https://github.com/elBukkit/Magic-ExtraMobs/archive/main.zip"
+  mars: "https://github.com/elBukkit/Magic-Mars/archive/main.zip"
+  pride: "https://github.com/elBukkit/Magic-Pride/archive/main.zip"
+  httyd: "https://github.com/elBukkit/Magic-HTTYD/archive/main.zip"
+  brawl: "https://github.com/elBukkit/Magic-Brawl/archive/main.zip"
+  creative: "https://github.com/elBukkit/Magic-Creative/archive/main.zip"
+  disasters: "https://github.com/PhvntxmX/Disasters/archive/main.zip"
+  halloween: "https://github.com/TheDarthFather/Magic-Halloween/archive/main.zip"
+  supernaturals: "https://github.com/NightScythe1/Magic-Supernaturals/archive/main.zip"

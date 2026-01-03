@@ -1,0 +1,27 @@
+box:
+    # This refers to an icon defined in the icons folder/config
+    icon: box
+    category: engineering
+    tags: noduel
+    class: ConstructSpell
+    worth: 300
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_player_levelup
+        -  class: EffectTrail
+           particle: block_crack
+    parameters:
+        target_type: LivingEntity
+        allow_max_range: false
+        range: 32
+        thickness: 1
+        radius: 3
+        type: cuboid
+        transparent: transparent_to_construction
+        y_offset: 4
+        destructible: destructible_replace
+        ignore_region_overrides: true
+    costs:
+        mana: 60
+

@@ -1,0 +1,17 @@
+log_verbosity: 20
+
+auto_rollback_duration: 10000
+auto_rollback_speed: 0.5
+auto_rollback_explosions:
+- creeper
+- fireball
+- small_fireball
+
+examples:
+- automata
+- engineering
+- robes
+- mars
+
+resource_pack: "http://rp.elmakers.com/Magic-modelengine-RP-1.17.zip"
+add_resource_pack: "http://rp.elmakers.com/Magic-modelengine-RP-1.17.zip"

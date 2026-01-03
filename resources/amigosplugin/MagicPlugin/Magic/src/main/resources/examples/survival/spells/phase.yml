@@ -1,0 +1,85 @@
+phase:
+    # This refers to an icon defined in the icons folder/config
+    icon: phase
+    category: master
+    tags: noduel,nojail
+    worth: 400
+    earns: 2
+    quick_cast: true
+    actions:
+        cast:
+        - class: Delay
+        - class: PotionEffect
+        - class: PlayEffects
+          effects: phase
+        - class: ChangeWorld
+    effects:
+        cast:
+        -  sound: block_portal_travel
+           sound_volume: 0.2
+           sound_pitch: 0.4
+           location: source
+           source_location: eyes
+           effectlib:
+             class: Cuboid
+             particle: end_rod
+             duration: 2000
+             x_length: 1
+             z_length: 1
+             y_length: 2.5
+             offset: -0.5, -1.5, -0.5
+             update_locations: false
+        -  location: source
+           source_location: eyes
+           effectlib:
+             class: Cuboid
+             particle: portal
+             duration: 2000
+             x_length: 1
+             z_length: 1
+             y_length: 1
+             offset: -0.5, -0.75, -0.5
+             update_locations: false
+        phase:
+        - source_location: eyes
+          sound: magic.teleport
+          location: source
+          sound_volume: 0.8
+          sound_pitch: 0.8
+        teleport:
+        - class: EffectSingle
+          sound: magic.teleport
+          sound_volume: 0.8
+          sound_pitch: 0.8
+          location: target
+          effectlib:
+            class: Cuboid
+            particle: end_rod
+            duration: 2000
+            x_length: 1
+            z_length: 1
+            y_length: 2.5
+            offset: -0.5, 1.5, -0.5
+            update_locations: false
+        - location: target
+          effectlib:
+             class: Cuboid
+             particle: portal
+             duration: 2000
+             x_length: 1
+             z_length: 1
+             y_length: 1
+             offset: -0.5, 1.5, -0.5
+             update_locations: false
+    parameters:
+        add_potion_effects:
+          slow: 5
+        duration: 2000
+        warmup: 2000
+        cancel_on_damage: 1
+        cooldown: 15000
+        target: self
+        vertical_range: 255
+    costs:
+        mana: 50
+

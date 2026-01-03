@@ -1,0 +1,16 @@
+wizard:
+  inherit: base
+  locked: true
+  mana_max: "wisdom * 10"
+  mana_regeneration: "wisdom"
+  icon: spell_icon:265
+  icon_disabled: spell_icon_disabled:265
+  entity_attributes:
+    generic_max_health:
+      value: "constitution / 1.2"
+      operation: base
+  spells:
+    - missile
+  class_items:
+    - wizardwand
+

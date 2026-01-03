@@ -1,0 +1,18 @@
+mutant_captain:
+  type: piglin_brute
+  item: iron_sword
+  chestplate: gold_chestplate
+  leggings: gold_leggings
+  helmet: gold_helmet
+  boots: gold_boots
+  health: 50
+  default_drops: false
+  transformable: false
+  drops:
+  - sp:8
+  loot:
+    gold_nugget:
+      count: looting + 10
+  entity_attributes:
+    generic_knockback_resistance: 1
+    generic_attack_speed: 3

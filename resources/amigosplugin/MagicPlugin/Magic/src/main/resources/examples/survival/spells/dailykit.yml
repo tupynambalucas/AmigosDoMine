@@ -1,0 +1,10 @@
+dailykit:
+  hidden: true
+  category: npc
+  actions:
+    cast:
+      - class: GiveKit
+  parameters:
+    target: self
+    kit: daily
+

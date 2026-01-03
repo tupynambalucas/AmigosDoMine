@@ -1,0 +1,30 @@
+pickpocket:
+    # This refers to an icon defined in the icons folder/config
+    icon: pickpocket
+    hidden: true
+    category: staff
+    worth: 2000
+    show_undoable: false
+    actions:
+        cast:
+        - class: Inventory
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_enderman_hurt
+           location: origin
+    alternate_sneak_parameters:
+        type: ender_chest
+    parameters:
+        target_type: Player
+        target: other
+        type: inventory
+        range: 32
+        bypass_backfire: true
+        check_protection: true
+        bypass_pvp: true
+        bypass_friendly_fire: true
+        target_game_modes: "all"
+    costs:
+        mana: 75
+

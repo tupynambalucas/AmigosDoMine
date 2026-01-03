@@ -1,0 +1,20 @@
+testdummy:
+    # This refers to an icon defined in the icons folder/config
+    icon: testdummy
+    category: staff
+    quick_cast: true
+    hidden: true
+    actions:
+      cast:
+      - class: SpawnEntity
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_villager_yes
+    parameters:
+        target: block
+        track: false
+        type: dummy
+        allow_max_range: true
+        range: 24
+

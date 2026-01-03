@@ -1,0 +1,24 @@
+ignoreair:
+  overrides:
+    "fill.check_destructible": true
+    "fill.destructible": "!all_air"
+    "superblob.check_destructible": true
+    "superblob.destructible": "!all_air"
+    "supercube.check_destructible": true
+    "supercube.destructible": "!all_air"
+    "supercylinder.check_destructible": true
+    "supercylinder.destructible": "!all_air"
+    "superdisc.check_destructible": true
+    "superdisc.destructible": "!all_air"
+    "superdome.check_destructible": true
+    "superdome.destructible": "!all_air"
+    "superhemisphere.check_destructible": true
+    "superhemisphere.destructible": "!all_air"
+    "superpyramid.check_destructible": true
+    "superpyramid.destructible": "!all_air"
+    "superring.check_destructible": true
+    "superring.destructible": "!all_air"
+    "supershell.check_destructible": true
+    "supershell.destructible": "!all_air"
+    "superwalls.check_destructible": true
+    "superwalls.destructible": "!all_air"

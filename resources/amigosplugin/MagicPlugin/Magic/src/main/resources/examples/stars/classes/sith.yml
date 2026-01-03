@@ -1,0 +1,10 @@
+sith:
+  parent: force_user
+  locked: true
+  path: acolyte
+  discover_recipes:
+    - lightsaber_red
+  spells:
+    - forcepush
+    - forceignite
+

@@ -1,0 +1,12 @@
+kingslime:
+  type: slime
+  size: 18
+  interval: 3000
+  split: false
+  cast_requires_target: false
+  health: 75
+  triggers:
+    interval:
+      cast:
+        none: 100
+        "rubberize pdy -1 pdx 0 pdz 0": 50

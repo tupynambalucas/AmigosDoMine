@@ -1,0 +1,49 @@
+#
+# The move from "architect" to conduit requires that players obtain the "backup"
+# spell.
+#
+# In this way, it is up to the server owner whether or not players get access to
+# this OP rank.
+#
+conduit:
+    icon: blaze_rod{CustomModelData:18006}
+    legacy_icon: wooden_hoe:6
+    legacy_migrate_icon: gold_pickaxe
+    inherit: architect
+    override_properties:
+      mana_regeneration: 100
+      mana_max: 500
+      hotbar_count: 4
+      consume_reduction: 1
+      cost_reduction: 2
+      allow_container_copy: true
+      level_display:
+        currency: sp
+    spells:
+      - portal
+      - backup
+      - repair
+      - superrepair
+      - superbackup
+      - anvil
+      - day
+      - night
+      - weather
+      - capture
+      - commit
+      - forest
+      - regenerate
+      - superregenerate
+    brushes:
+      - light
+      - schematic|rainbow_blocks
+      - schematic|lantern
+      - schematic|creeper_rug
+      - schematic|elder_tree
+      - schematic|church
+      - schematic|blacksmith
+      - schematic|garden_house
+      - schematic|compact_house
+      - schematic|small_house
+      - schematic|nathanwolf
+

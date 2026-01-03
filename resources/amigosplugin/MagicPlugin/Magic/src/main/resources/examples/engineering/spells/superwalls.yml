@@ -1,0 +1,15 @@
+superwalls:
+    inherit: supercylinder
+    icon: superwalls
+    upgrade_required_casts: 50
+    parameters:
+        max_dimension: 16
+        orient_dimension_max: 16
+
+superwalls|2:
+  parameters:
+    max_dimension: 24
+
+superwalls|3:
+  parameters:
+    max_dimension: 32

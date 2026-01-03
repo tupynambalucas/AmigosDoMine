@@ -1,0 +1,53 @@
+emp:
+    # This refers to an icon defined in the icons folder/config
+    icon: emp
+    category: electrical
+    worth: 150
+    earns: 15
+    actions:
+        cast:
+        -  class: Sphere
+           actions:
+           -  class: PowerBlock
+    effects:
+        cast:
+        -  sound: block_beacon_deactivate
+           sound_pitch: 1.8
+           sound_volume: 1.2
+        -  class: EffectSingle
+           sound: magic.electrify
+        -  class: EffectTrail
+           particle: redstone
+           color: false
+           particle_offset_x: 0.2
+           particle_offset_y: 0.2
+           particle_offset_z: 0.2
+           particle_count: 10
+        -  class: EffectRing
+           size: 6
+           radius: 5
+           location: target
+           effectlib:
+             class: Modified
+             duration: 2000
+             parameters:
+               y_factor: "(t/i)*1.5"
+               size: "(t/i)*2 + 0.5"
+             effect:
+               class: AnimatedBall
+               particle: redstone
+               y_offset: 0
+    parameters:
+        target_type: LivingEntity
+        allow_max_range: true
+        range: 8
+        radius: 8
+        cooldown: 5000
+        check_destructible: true
+        destructible: powerable
+        physics: true
+        undo: 500
+        entity_undo_types: ""
+    costs:
+        mana: 45
+

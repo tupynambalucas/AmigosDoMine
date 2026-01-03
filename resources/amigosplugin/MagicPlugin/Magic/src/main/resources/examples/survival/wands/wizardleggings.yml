@@ -1,0 +1,15 @@
+wizardleggings:
+    icon: chainmail_leggings
+    keep: true
+    mana_max_boost: 0.1
+    mana_regeneration_boost: 0.05
+    passive: true
+    enchantable: true
+    hide_flags: 61
+    sets: wizard_armor
+    protection:
+      magic: 0.1
+    item_attribute_slot: legs
+    item_attributes:
+        generic_armor: 2
+        generic_armor_toughness: 1

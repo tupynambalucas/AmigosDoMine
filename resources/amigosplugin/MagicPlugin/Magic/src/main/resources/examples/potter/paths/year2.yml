@@ -1,0 +1,20 @@
+year2:
+    follows: beginner
+    upgrade: year3
+    upgrade_item: year3
+    inherit: year1
+    override_properties:
+      mana_max: 90
+      mana_regeneration: 12
+    spells:
+      - immobulus
+      - fumos
+      - finiteincantatem
+      - nox
+      - bogies
+      - expelliarmus
+      - araniaexumai
+      - rictusempra
+    required_spells:
+      - glacius
+

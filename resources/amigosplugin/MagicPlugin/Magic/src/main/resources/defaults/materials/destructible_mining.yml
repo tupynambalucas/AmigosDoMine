@@ -1,0 +1,16 @@
+# Destructible list minus ores, for mining spells.
+#
+non_destructible_mining:
+- "!destructible"
+- ores
+- planks
+- logs
+- buttons
+- gates
+- fences
+- rails
+- trees
+- stained_glasses
+- glass
+
+destructible_mining: "!non_destructible_mining"

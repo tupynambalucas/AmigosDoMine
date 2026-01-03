@@ -1,0 +1,57 @@
+gold_kit:
+  icon: gold_ingot
+  items:
+    - gold_ingot
+    - gold_nugget@8
+
+iron_kit:
+  icon: iron_ingot
+  items:
+    - iron_ingot
+    - iron_nugget@8
+
+tutorial:
+  starter: true
+  worlds: world
+  items:
+    - wooden_sword
+    - wooden_pickaxe
+    - wooden_shovel
+    - wooden_axe
+    - cyan_bed
+    - item: bread@32
+      slot: 8
+    - item: leather_helmet
+      slot: helmet
+    - item: leather_chestplate
+      slot: chestplate
+    - item: leather_leggings
+      slot: leggings
+    - item: leather_boots
+      slot: boots
+    - item: phome
+
+wandcrafting:
+  starter: true
+  worlds: world
+  items:
+    - stick
+    - book
+    - emerald@2
+    - diamond@2
+    - amethyst_shard@4
+
+navigator:
+  enabled: true
+
+ticket:
+  enabled: true
+  worlds: world_hogwarts
+
+club:
+  enabled: true
+  keep: true
+  permission: club
+  worlds: "*"
+  items:
+    - teleporter

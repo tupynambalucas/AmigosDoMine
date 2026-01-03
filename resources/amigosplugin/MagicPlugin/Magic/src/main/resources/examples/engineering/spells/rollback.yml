@@ -1,0 +1,113 @@
+rollback:
+    # This refers to an icon defined in the icons folder/config
+    icon: rollback
+    alias: undo
+    category: engineering
+    tags: noduel
+    worth: 9999
+    actions:
+        cast:
+        -  class: Undo
+        alternate_up:
+        -  class: Undo
+           target_caster: true
+        alternate_down:
+        -  class: Undo
+           target_down: true
+    effects:
+        no_target:
+        - sound: block_note_block_bass
+          sound_volume: 0.7
+          sound_pitch: 1.8
+        - class: EffectSingle
+          sound: magic.bonk
+          sound_volume: 1
+          use_target_location: false
+          effectlib:
+            class: Equation
+            iterations: 10
+            xEquation: "t/10"
+            yEquation: "sin(t) * (t/50)"
+            zEquation: "cos(t) * (t/50) + 1"
+            particle: crit
+            particle_count: 10
+            particle_offset_x: 0.1
+            particle_offset_y: 0.1
+            particle_offset_z: 0.1
+            updateDirections: false
+            particles: 20
+        alternate_up:
+        - sound: block_beacon_deactivate
+          sound_pitch: 0.3
+          sound_volume: 1.2
+          location: both
+        - class: EffectSingle
+          sound: magic.shimmer
+          sound_volume: 0.6
+          location: both
+          particle_override: particle_nucleus
+          color_override: colorOrbital
+          effectlib:
+               class: AtomEffect
+               particle_nucleus: enchantment_table
+               particle_orbital: redstone
+               iterations: 8
+        cast:
+        - sound: block_beacon_deactivate
+          sound_pitch: 0.8
+          sound_volume: 1.2
+          location: both
+        - sound: magic.shimmer
+          sound_volume: 1
+          location: both
+        - location: source
+          use_target_location: false
+          effectlib:
+            class: Equation
+            iterations: 30
+            xEquation: t
+            yEquation: "sin(t)"
+            zEquation: "cos(t)"
+            particle: enchantment_table
+            particle_count: 20
+            speed: 1
+            particle_offset_x: 0.2
+            particle_offset_y: 0.2
+            particle_offset_z: 0.2
+            updateDirections: false
+        - location: source
+          use_target_location: false
+          effectlib:
+            class: Equation
+            iterations: 10
+            xEquation: "t/10"
+            yEquation: "sin(t) * (t/50)"
+            zEquation: "cos(t) * (t/50) + 1"
+            particle: crit
+            particle_count: 10
+            particle_offset_x: 0.1
+            particle_offset_y: 0.1
+            particle_offset_z: 0.1
+            updateDirections: false
+            particles: 20
+        - location: target
+          effectlib:
+            class: Star
+            particle: falling_obsidian_tear
+            iterations: 1
+            particles: 30
+            spike_height: 1.5
+    parameters:
+        target: block
+        allow_max_range: true
+        range: 64
+        transparent: all_air
+        bypass_backfire: true
+        loud: true
+        cancel: true
+        admin_permission: Magic.undo_others
+        ignore_region_overrides: true
+        cancel_on_deactivate: false
+    costs:
+        mana: 100
+

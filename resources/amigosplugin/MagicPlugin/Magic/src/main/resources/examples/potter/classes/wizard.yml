@@ -1,0 +1,11 @@
+wizard:
+  inherit: base
+  locked: false
+  path: year1
+  spells:
+   - vermillious
+
+  # This is here to support easily switching back to the old system
+  # via `/mconfig configure path default allow_property_overrides false`
+  mana_max: 50
+  mana_regeneration: 5

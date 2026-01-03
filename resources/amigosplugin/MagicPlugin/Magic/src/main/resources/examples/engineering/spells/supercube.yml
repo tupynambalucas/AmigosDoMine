@@ -1,0 +1,91 @@
+supercube:
+    # This refers to an icon defined in the icons folder/config
+    icon: supercube
+    category: engineering
+    tags: noduel
+    class: ConstructSpell
+    worth: 5000
+    upgrade_required_casts: 50
+    effects:
+        no_target:
+          - sound: block_note_block_didgeridoo
+            sound_pitch: 1.75
+            sound_volume: 0.15
+          - location: both
+          - class: EffectTrail
+            particle: spell_mob
+          - class: EffectTrail
+            particle: redstone
+            color: "#880000"
+            particle_count: 8
+            particle_offset_x: 0.05
+            particle_offset_y: 0.05
+            particle_offset_z: 0.05
+        cast:
+          - sound: entity_illusioner_cast_spell
+            sound_pitch: 0.4
+          - class: EffectTrail
+            location: origin_to_selection
+            particle: block_crack
+            particle_count: 6
+            particle_offset_x: 0.01
+            particle_offset_y: 0.01
+            particle_offset_z: 0.01
+          - location: selection_to_target
+            target_location: block_center
+            source_location: block_center
+            radius_override: variable_a
+            effectlib:
+              class: Modified
+              duration: 1000
+              parameters:
+                edge_length: "a * 2 + 0.5"
+              effect:
+                class: Cube
+                particle: end_rod
+                particle_count: 3
+                particle_offset: 0.2
+                angular_velocity_x: 0
+                angular_velocity_y: 0
+                angular_velocity_z: 0
+                particles: 30
+          - location: selection_to_target
+            target_location: block_center
+            source_location: block_center
+            radius_override: variable_a
+            effectlib:
+              class: Modified
+              duration: 500
+              parameters:
+                edge_length: "a * 2 + 0.5"
+              effect:
+                class: Cube
+                particle: block_crack
+                particle_count: 3
+                particle_offset: 0.2
+                angular_velocity_x: 0
+                angular_velocity_y: 0
+                angular_velocity_z: 0
+                particles: 20
+    parameters:
+        allow_max_range: true
+        range: 64
+        max_dimension: 16
+        target: select
+        type: cuboid
+        transparent: transparent_to_construction
+        check_destructible: false
+        orient_dimension_min: 0
+        consume: true
+        ignore_region_overrides: true
+        cancel_on_deactivate: false
+    costs:
+        mana: 400
+
+supercube|2:
+  parameters:
+    max_dimension: 24
+
+supercube|3:
+  parameters:
+    max_dimension: 32

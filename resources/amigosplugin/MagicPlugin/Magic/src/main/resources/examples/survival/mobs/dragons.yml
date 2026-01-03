@@ -1,0 +1,258 @@
+base_dragon:
+  requires: LibsDisguises
+  hidden: true
+  type: phantom
+  disguise:
+    type: player
+    skin: NightScythe1
+    invisible: true
+    swimming: true
+    burning: false
+  chestplate: thorns
+  leggings: thorns
+  boots: thorns
+  health: 100
+  drop_xp: 100
+  persist: true
+  invisible: true
+  silent: true
+  combustible: false
+  boss_bar:
+    bar_color: red
+    bar_flags:
+      - play_boss_music
+  protection:
+    projectile: 0.9
+    magic: 0.2
+  default_drops: false
+  entity_attributes:
+    generic_attack_damage: 5.75
+    generic_armor: 20
+    generic_armor_toughness: 1
+    generic_movement_speed: 0.22
+    generic_knockback_resistance: 0.5
+  drops:
+  - gold_ingot: 100
+    iron_ingot: 50
+  - diamond: 10
+    emerald: 15
+    gold_nugget@18: 50
+    gold_nugget@16: 100
+    gold_nugget@12: 50
+    gold_nugget@8: 20
+    iron_nugget@4: 10
+  - sp:50
+  potion_effects:
+  - type: regeneration
+    amplifier: 0
+
+bluedragon:
+  inherit: base_dragon
+  hidden: false
+  item: dragonwingrightblue
+  offhand: dragonwingleftblue
+  helmet: dragonbodyblue
+  triggers:
+    launch:
+      cast:
+        dragonwater: 30
+    damage:
+      cast:
+        dragonexplodewater: 30
+        dragonwater: 10
+        dragonwingblast: 30
+
+cyandragon:
+  inherit: bluedragon
+  hidden: false
+  item: dragonwingrightcyan
+  offhand: dragonwingleftcyan
+  helmet: dragonbodycyan
+
+lightbluedragon:
+  inherit: bluedragon
+  item: dragonwingrightlightblue
+  offhand: dragonwingleftlightblue
+  helmet: dragonbodylightblue
+
+greendragon:
+  inherit: base_dragon
+  hidden: false
+  item: dragonwingrightgreen
+  offhand: dragonwingleftgreen
+  helmet: dragonbodygreen
+  triggers:
+    launch:
+      cast:
+        dragonpoison: 30
+    damage:
+      cast:
+        dragonexplodepoison: 30
+        dragonpoison: 10
+        dragonwingblast: 30
+
+limedragon:
+  inherit: greendragon
+  item: dragonwingrightlime
+  offhand: dragonwingleftlime
+  helmet: dragonbodylime
+
+greydragon:
+  inherit: base_dragon
+  hidden: false
+  item: dragonwingrightgrey
+  offhand: dragonwingleftgrey
+  helmet: dragonbodygrey
+  triggers:
+    launch:
+      cast:
+        dragondark: 30
+    damage:
+      cast:
+        dragonexplodedark: 30
+        dragondark: 10
+        dragonwingblast: 30
+
+whitedragon:
+  inherit: base_dragon
+  hidden: false
+  item: dragonwingrightwhite
+  offhand: dragonwingleftwhite
+  helmet: dragonbodywhite
+  triggers:
+    launch:
+      cast:
+        dragonwater: 30
+        dragonpoison: 30
+        dragonfire: 30
+        dragonlightning: 30
+    damage:
+      cast:
+        dragonexplodewater: 30
+        dragonwater: 10
+        dragonexplodepoison: 30
+        dragonpoison: 10
+        dragonexplodefire: 30
+        dragonfire: 10
+        dragonexplodelightning: 30
+        dragonlightning: 10
+        dragonwingblast: 50
+
+lightgreydragon:
+  inherit: greydragon
+  item: dragonwingrightlightgrey
+  offhand: dragonwingleftlightgrey
+  helmet: dragonbodylightgrey
+
+purpledragon:
+  inherit: base_dragon
+  hidden: false
+  item: dragonwingrightpurple
+  offhand: dragonwingleftpurple
+  helmet: dragonbodypurple
+  triggers:
+    launch:
+      cast:
+        dragonlightning: 30
+    damage:
+      cast:
+        dragonexplodelightning: 30
+        dragonlightning: 10
+        dragonwingblast: 30
+
+blackdragon:
+  inherit: greydragon
+  item: dragonwingrightblack
+  offhand: dragonwingleftblack
+  helmet: dragonbodyblack
+
+reddragon:
+  inherit: base_dragon
+  hidden: false
+  item: dragonwingrightred
+  offhand: dragonwingleftred
+  helmet: dragonbodyred
+  triggers:
+    launch:
+      cast:
+        dragonfire: 30
+    damage:
+      cast:
+        dragonexplodefire: 30
+        dragonfire: 10
+        dragonwingblast: 30
+
+lightreddragon:
+  inherit: reddragon
+  item: dragonwingrightlightgrey
+  offhand: dragonwingleftlightgrey
+  helmet: dragonbodylightgrey
+
+magentadragon:
+  inherit: reddragon
+  item: dragonwingrightmagenta
+  offhand: dragonwingleftmagenta
+  helmet: dragonbodymagenta
+
+pinkdragon:
+  inherit: reddragon
+  item: dragonwingrightpink
+  offhand: dragonwingleftpink
+  helmet: dragonbodypink
+
+orangedragon:
+  inherit: reddragon
+  item: dragonwingrightorange
+  offhand: dragonwingleftorange
+  helmet: dragonbodyorange
+
+yellowdragon:
+  inherit: reddragon
+  item: dragonwingrightyellow
+  offhand: dragonwingleftyellow
+  helmet: dragonbodyyellow
+
+browndragon:
+  inherit: base_dragon
+  hidden: false
+  item: dragonwingrightbrown
+  offhand: dragonwingleftbrown
+  helmet: dragonbodybrown
+  triggers:
+    launch:
+      cast:
+        dragonfire: 30
+    damage:
+      cast:
+        dragonexplodefire: 30
+        dragonfire: 10
+        dragonwingblast: 30
+
+rainbowdragon:
+  inherit: base_dragon
+  hidden: false
+  item: dragonwingrightwhite
+  offhand: dragonwingleftwhite
+  helmet: dragonbodywhite
+  interval: 100
+  interval_requires_target: false
+  triggers:
+    interval:
+      cast: rainbowdragon
+    launch:
+      cast:
+        dragonwater: 30
+        dragonpoison: 30
+        dragonfire: 30
+        dragonlightning: 30
+    damage:
+      cast:
+        dragonexplodewater: 30
+        dragonwater: 10
+        dragonexplodepoison: 30
+        dragonpoison: 10
+        dragonexplodefire: 30
+        dragonfire: 10
+        dragonexplodelightning: 30
+        dragonlightning: 10
+        dragonwingblast: 50

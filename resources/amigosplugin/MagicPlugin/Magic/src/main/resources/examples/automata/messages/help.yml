@@ -1,0 +1,5 @@
+help:
+  examples:
+    main: |-
+      `<li>``<help topic="instructions.example.automata" text="Automata (block monsters)">`
+

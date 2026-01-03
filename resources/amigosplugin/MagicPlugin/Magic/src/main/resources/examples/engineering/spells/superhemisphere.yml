@@ -1,0 +1,83 @@
+superhemisphere:
+    icon: spell_icon:95
+    icon_disabled: spell_icon_disabled:95
+    icon_url: http://textures.minecraft.net/texture/812a772ef923c597e12f41986d7bea9a9387055eb17eeebb1d8c6de3ca25f
+    category: engineering
+    tags: noduel
+    class: ConstructSpell
+    worth: 800
+    earns: 2
+    upgrade_required_casts: 50
+    effects:
+      no_target:
+        - sound: block_note_block_didgeridoo
+          sound_pitch: 1.75
+          sound_volume: 0.15
+        - location: both
+        - class: EffectTrail
+          particle: spell_mob
+        - class: EffectTrail
+          particle: redstone
+          color: "#880000"
+          particle_count: 8
+          particle_offset_x: 0.05
+          particle_offset_y: 0.05
+          particle_offset_z: 0.05
+      cast:
+        - sound: entity_illusioner_cast_spell
+          sound_pitch: 0.3
+        - class: EffectTrail
+          location: origin_to_selection
+          particle: block_crack
+          particle_count: 6
+          particle_offset_x: 0.01
+          particle_offset_y: 0.01
+          particle_offset_z: 0.01
+        - location: selection_to_target
+          radius_override: variable_a
+          effectlib:
+            class: Modified
+            duration: 1500
+            parameters:
+              radius: "(t / i) * a + 0.5"
+            effect:
+              class: Sphere
+              particle: block_crack
+              particles: 15
+              particle_count: 10
+              particle_offset_x: 0.5
+              particle_offset_y: 0.5
+              particle_offset_z: 0.5
+        - location: selection_to_target
+          radius_override: radius
+          effectlib:
+            class: Sphere
+            duration: 500
+            particle: end_rod
+            particles: 25
+            particle_count: 3
+            particle_offset_x: 0.05
+            particle_offset_y: 0.05
+            particle_offset_z: 0.05
+    parameters:
+        allow_max_range: true
+        check_destructible: false
+        range: 32
+        max_dimension: 16
+        target: select
+        type: sphere
+        transparent: transparent_to_construction
+        orient_dimension_min: 0
+        consume: true
+        ignore_region_overrides: true
+        cancel_on_deactivate: false
+    costs:
+        mana: 400
+
+superhemisphere|2:
+  parameters:
+    max_dimension: 24
+
+superhemisphere|3:
+  parameters:
+    max_dimension: 32

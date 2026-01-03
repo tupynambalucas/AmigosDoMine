@@ -1,0 +1,45 @@
+music:
+    # This refers to an icon defined in the icons folder/config
+    icon: music
+    category: music
+    worth: 30
+    earns: 1
+    show_undoable: false
+    actions:
+        cast:
+        -  class: PlayRecord
+    effects:
+        cast:
+        -  class: EffectTrail
+           particle: note
+           particle_offset_x: 0.1
+           particle_offset_y: 0.1
+           particle_offset_z: 0.1
+           particle_count: 10
+        -  class: EffectRing
+           size: 4
+           radius: 5
+           location: target
+           effectlib:
+             class: Modified
+             duration: 8000
+             period: 2
+             parameters:
+               y_factor: "(t/i)*0.5"
+               size: "(t/i)*2 + 0.5"
+             effect:
+               class: AnimatedBall
+               particle: note
+               particles: 100
+               particlesPerIteration: 20
+               offset: 0,3,0
+               updateLocations: false
+    parameters:
+        target_type: Player
+        target: any
+        allow_max_range: true
+        range: 16
+        cooldown: 120000
+    costs:
+        mana: 20
+

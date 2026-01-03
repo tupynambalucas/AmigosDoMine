@@ -1,0 +1,95 @@
+
+# Level 1
+
+classes:
+  Warrior:
+    items: magic:warrior
+    armor: iron_helmet,iron_chestplate,iron_leggings,iron_boots
+    offhand: magic:hylian_shield
+    unbreakable-weapons: false
+  Mage:
+    items: magic:mage
+    helmet: magic:wizardhelmet
+    boots: magic:wizardboots
+    chestplate: magic:wizardchestplate
+    leggings: magic:wizardleggings
+    unbreakable-weapons: false
+  Rogue:
+    items: magic:rogue, arrow:1
+    armor: leather_helmet,leather_chestplate,leather_leggings,leather_boots
+    unbreakable-weapons: false
+  Demolitions:
+    items: magic:demolitions,magic:c4@16
+    armor: golden_helmet,golden_chestplate,golden_leggings,golden_boots
+    unbreakable-weapons: false
+  Healer:
+    items: magic:healer,potion:instant_heal:30
+    armor: golden_helmet,golden_chestplate,golden_leggings,golden_boots
+    unbreakable-weapons: false
+  Soldier:
+    items: magic:pistol,magic:ak47
+    offhand: magic:riotshield
+    unbreakable-weapons: false
+  Jedi:
+    items: magic:jedi
+    unbreakable-weapons: false
+  Sith:
+    items: magic:sith
+    unbreakable-weapons: false
+  Bender:
+    items: magic:bender
+    unbreakable-weapons: false
+
+# Level 2
+
+classes:
+  Warrior:
+    items: magic:warrior2
+    leggings: diamond_leggings
+    helmet: diamond_helmet
+    boots: diamond_boots
+    chestplate: diamond_chestplate
+    offhand: magic:hylian_shield
+    unbreakable-weapons: false
+  Mage:
+    items: magic:mage2
+    helmet: magic:wizardhelmet
+    boots: magic:wizardboots
+    chestplate: magic:wizardchestplate
+    leggings: magic:wizardleggings
+    unbreakable-weapons: false
+  Rogue:
+    items: magic:rogue2, magic:emerald_sword, arrow:1
+    helmet: magic:apprenticehelmet
+    boots: magic:flashboots
+    chestplate: magic:apprenticechestplate
+    leggings: magic:apprenticeleggings
+    unbreakable-weapons: false
+  Demolitions:
+    items: magic:demolitions2,magic:c4@32
+    armor: golden_helmet,golden_chestplate,golden_leggings,golden_boots
+    unbreakable-weapons: false
+  Healer:
+    items: magic:healer2,potion:instant_heal:64,splash_potion:instant_heal:64,splash_potion:regen:2
+    leggings: leather_leggings
+    helmet: leather_helmet
+    boots: leather_boots
+    chestplate: magic:clericchestplate
+    unbreakable-weapons: false
+  Soldier:
+    items: magic:pistol,magic:ak47,magic:rocketlauncher,magic:sniper,magic:shotgun
+    offhand: magic:riotshield
+    unbreakable-weapons: false
+    leggings: iron_leggings
+    helmet: iron_helmet
+    boots: iron_boots
+    chestplate: iron_chestplate
+  Jedi:
+    items: magic:jedi2,magic:detonator@32
+    unbreakable-weapons: false
+  Sith:
+    items: magic:sith2,magic:detonator@32
+    unbreakable-weapons: false
+  Bender:
+    items: magic:bender2
+    unbreakable-weapons: false

@@ -1,0 +1,12 @@
+emerald_sword:
+  worth: 1000.0
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4325
+    id: minecraft:diamond_sword
+    count: 1
+    components:
+      minecraft:attribute_modifiers: '[{amount:5.0d,id:"magic:modifier",operation:"add_value",slot:"hand",type:"minecraft:attack_damage"},{amount:2.0d,id:"magic:modifier",operation:"add_value",slot:"hand",type:"minecraft:attack_speed"}]'
+      minecraft:custom_name: '{extra:["Emerald Sword"],text:""}'
+      minecraft:custom_model_data: '{floats:[18001.0f]}'
+    schema_version: 1

@@ -1,0 +1,59 @@
+place:
+    # This refers to an icon defined in the icons folder/config
+    icon: place
+    category: engineering
+    tags: noduel
+    worth: 1000
+    earns: 5
+    actions:
+        cast:
+        - class: ChangeContext
+          target_attachment: true
+          actions:
+          - class: ModifyBlock
+          - class: PlayEffects
+            effects: placed
+    effects:
+        cast:
+        -  sound: entity_illusioner_cast_spell
+           sound_pitch: 1.3
+           sound_volume: 0.1
+        -  sound: block_stone_place
+           location: both
+        placed:
+        -  effect: step_sound
+           location: target
+           target_location: block_center
+           particle: block_crack
+           particle_count: 16
+           particle_offset_x: 0.75
+           particle_offset_y: 0.75
+           particle_offset_z: 0.75
+        -  class: EffectTrail
+           particle: block_crack
+           particle_count: 10
+           particle_offset_x: 0.05
+           particle_offset_y: 0.05
+           particle_offset_z: 0.05
+           target_location: block_center
+        -  particle: end_rod
+           target_location: block_center
+           location: target
+           particle_count: 8
+           particle_offset_x: 0.75
+           particle_offset_y: 0.75
+           particle_offset_z: 0.75
+    parameters:
+        allow_max_range: false
+        range: 64
+        transparent: transparent_to_construction
+        check_destructible: false
+        consume: true
+        ignore_region_overrides: true
+        physics: true
+        auto_block_state: true
+    costs:
+        mana: 10
+
+
+

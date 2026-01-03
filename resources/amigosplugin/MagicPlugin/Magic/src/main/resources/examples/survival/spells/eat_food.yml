@@ -1,0 +1,7 @@
+eat_food:
+  actions:
+    cast:
+    - class: Feed
+    - class: PotionEffect
+  parameters:
+    target: self

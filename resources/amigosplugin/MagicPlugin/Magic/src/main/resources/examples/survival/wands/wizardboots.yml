@@ -1,0 +1,17 @@
+wizardboots:
+    icon: chainmail_boots
+    keep: true
+    mana_max_boost: 0.1
+    mana_regeneration_boost: 0.05
+    passive: true
+    enchantable: true
+    hide_flags: 61
+    potion_effects:
+        speed: 0
+    protection:
+      magic: 0.1
+    sets: wizard_armor
+    item_attribute_slot: feet
+    item_attributes:
+        generic_armor: 1
+        generic_armor_toughness: 1

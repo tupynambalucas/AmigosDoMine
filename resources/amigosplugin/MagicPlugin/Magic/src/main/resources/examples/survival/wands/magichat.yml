@@ -1,0 +1,18 @@
+magichat:
+    mode: cast
+    active_spell: magichat
+    icon: lectern{CustomModelData:18017}
+    legacy_icon: wand_icon:17
+    indestructible: true
+    keep: true
+    effect_color: '888888'
+    mana_max_boost: 0.2
+    mana_regeneration_boost: 0.1
+    wearable: helmet
+    sets:
+      wizard_armor:
+        bonuses:
+          # This replaces the default of 0.2
+          mana_max_boost: 0.3
+    spells:
+        - magichat

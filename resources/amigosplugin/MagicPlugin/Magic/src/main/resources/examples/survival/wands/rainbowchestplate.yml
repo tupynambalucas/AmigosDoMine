@@ -1,0 +1,8 @@
+rainbowchestplate:
+    icon: "leather_chestplate:#random"
+    indestructible: false
+    keep: true
+    cast_spell: rainbowchestplate
+    cast_interval: 100
+    passive: true
+

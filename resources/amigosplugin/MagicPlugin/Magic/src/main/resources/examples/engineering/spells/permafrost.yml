@@ -1,0 +1,57 @@
+permafrost:
+    icon: spell_icon:38
+    icon_disabled: spell_icon_disabled:38
+    icon_url: http://textures.minecraft.net/texture/872d9b98a6b34a2762aac1af915873c066c43c2b2b8d689d27626cc5afcb11
+    category: engineering
+    tags: noduel
+    worth: 2000
+    earns: 10
+    actions:
+        cast:
+        - class: Weather
+        - class: Sphere
+          actions:
+          - class: ChangeBiome
+          - class: Freeze
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.zap
+        tick:
+        - location: target
+          particle: snowball
+          particle_count: 4
+          particle_offset_x: 0.01
+          particle_offset_y: 0.01
+          particle_offset_z: 0.01
+        hit:
+        -  class: EffectSingle
+           location: target
+           color: F5EFFB
+           firework: ball
+        - class: EffectSingle
+          location: target
+          target_offset: 0,0.2,0
+          effectlib:
+             class: Shield
+             duration: 5000
+             period: 4
+             particle: snowball
+             radius: $radius
+    parameters:
+        target: block
+        allow_max_range: false
+        range: 48
+        radius: 16
+        transparent: freeze_transparent
+        destructible: freezeable
+        ice: ice
+        cooldown: 30000
+        freeze_lava: true
+        biome: ice_spikes
+        weather: storm
+        ignore_region_overrides: true
+        cancel_on_deactivate: false
+    costs:
+        mana: 200
+

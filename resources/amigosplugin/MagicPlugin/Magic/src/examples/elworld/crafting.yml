@@ -1,0 +1,82 @@
+#
+# Modify this file to change the available wand crafting recipes.
+# New recipies can be be added, existing recipes can be modified or disabled.
+#
+# See crafting.defaults.yml for more information, and to see the default recipes.
+#
+# If you want to disable any of the default recipes, simply add two lines as follows:
+#
+# beginner:
+#   enabled: false
+#
+
+camera:
+  enabled: true
+
+zombie_leather:
+  enabled: true
+
+coal_ink:
+  enabled: true
+
+saddle:
+  enabled: true
+  
+name_tag:
+  enabled: true
+
+elytra:
+  enabled: true
+
+mastersword:
+  enabled: true
+
+magictorch:
+  enabled: true
+
+rabbitboots:
+  enabled: true
+
+toasted_sandwich:
+  enabled: true
+
+toast:
+  enabled: true
+
+sliced_bread:
+  enabled: true
+
+sandwich:
+  enabled: true
+
+ruby_sword:
+  enabled: false
+  output: rubysword
+
+  materials:
+    o: stick
+    i: ruby
+
+  row_1: i
+  row_2: i
+  row_3: o
+
+sapphire_sword:
+  enabled: false
+  output: sapphiresword
+
+  materials:
+    o: stick
+    i: sapphire
+
+  row_1: i
+  row_2: i
+  row_3: o
+
+repairsword:
+  type: shapeless
+  ignore_damage: true
+  output: iron_sword
+  ingredients:
+    - iron_sword
+    - iron_sword

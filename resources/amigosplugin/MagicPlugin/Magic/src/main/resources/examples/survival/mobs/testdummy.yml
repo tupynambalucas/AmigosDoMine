@@ -1,0 +1,16 @@
+testdummy:
+  inherit: base_npc
+  type: skeleton
+  helmet: iron_helmet
+  chestplate: iron_chestplate
+  leggings: iron_leggings
+  boots: iron_boots
+  invulnerable: false
+  health: 100
+  static: false
+  gravity: true
+  triggers:
+    damage:
+      cast: dummydialog
+    death:
+      cast: dummyrespawn

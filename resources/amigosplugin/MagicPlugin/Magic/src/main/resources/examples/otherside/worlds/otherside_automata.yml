@@ -1,0 +1,30 @@
+otherside_automata:
+  world: world_other
+  cancel_spells_on_save: false
+  entity_spawn:
+
+    spawn_automata:
+      class: Cast
+      probability: 0.01
+      y_offset: 16
+      min_y: 63
+      allow_indoors: false
+      cooldown: 10000
+      priority: 10
+      target_types:
+        - enderman
+        - zombie
+        - spider
+        - creeper
+        - skeleton
+        - husk
+        - piglin
+        - blaze
+        - wither_skeleton
+        - hoglin
+      spells:
+        birth_hunter: 500
+        birth_defender: 300
+        birth_snake: 100
+        birth_worm: 50
+        birth_virus: 1

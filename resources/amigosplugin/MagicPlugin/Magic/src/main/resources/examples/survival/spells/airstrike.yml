@@ -1,0 +1,36 @@
+airstrike:
+    # This refers to an icon defined in the icons folder/config
+    icon: meteor
+    category: master
+    tags: noduel,nojail
+    worth: 1000
+    earns: 5
+    actions:
+        cast:
+        -  class: EntitySelect
+           actions:
+           -  class: Kill
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_player_levelup
+        entity_selected:
+        -  class: EffectSingle
+           sound: entity_enderman_ambient
+        -  class: EffectTrail
+           particle: portal
+           particle_count: 4
+        -  class: EffectSingle
+           location: both
+           effectlib:
+             class: WarpEffect
+             particle: portal
+    parameters:
+        target: none
+        target_self: false
+        target_type: LivingEntity
+        cooldown: 30000
+        radius: 48
+        limit: 64
+    costs:
+        mana: 200

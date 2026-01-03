@@ -1,0 +1,27 @@
+starclass:
+  icon: gunpowder
+  category: shop
+  hidden: true
+  actions:
+      cast:
+      - class: Selector
+  parameters:
+    title: "Switch Sides"
+    auto_close: true
+    placeholder_icon: air
+    options:
+      - placeholder: true
+      - placeholder: true
+      - placeholder: true
+      - placeholder: true
+      - switch_class: jedi
+        selected: "You became $name"
+        icon: lightsaber_blue
+      - switch_class: sith
+        selected: "You gave in to the dark side"
+        icon: lightsaber_red
+      - placeholder: true
+      - placeholder: true
+      - placeholder: true
+      - placeholder: true
+

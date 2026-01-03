@@ -1,0 +1,92 @@
+fairyspawner:
+  name: Fairy Spawner
+  interval: 8000
+  spawn:
+    player_range: 32
+    min_players: 1
+    limit_range: 32
+    limit: 1
+    probability: 1
+    radius : 1
+    mobs: fairy
+
+earth:
+  name: Earth
+  effects:
+   - offset: 0,2,0
+     effectlib:
+       class: Earth
+       duration: 86400000
+
+wolfanimation:
+  name: Wolf Animation
+  interval: 33000
+  cast:
+    spells: wolfanimation
+
+glideranimation:
+  name: Glider Animation
+  interval: 1200
+  cast:
+    spells: glideranimation bypass_undo true
+
+firetrap:
+    name: Fire Trap
+    interval: 5000
+    min_players: 1
+    player_range: 3
+    cast:
+      spells: fire radius 2 undo 0 quiet true
+      recast: false
+
+spooky:
+  name: Dungeon sounds
+  effects:
+    - class: Repeat
+      sound: entity_wither_death
+      pitch: 0.9
+      probability: 0.5
+      duration: infinite
+      delay: 5000
+
+loot:
+  name: Dungeon Loot
+  interval: 1000
+  spawn:
+    interval: 120000
+    player_range: 6
+    track: false
+    limit: 5
+    count: 5
+    mobs: loot
+
+seaspawner:
+  name: Sea Spawner
+  interval: 10000
+  spawn:
+    limit_range: 32
+    limit: 20
+    count: 5
+    probability: 1
+    radius: 4
+    vertical_radius: 2
+    track: false
+    mobs:
+      dolphin: 50
+      turtle: 50
+      cod: 100
+      salmon: 100
+      tropical_fish: 100
+
+automaton_npc:
+  name: Automaton NPC
+  interval: 5000
+  cast:
+    spells: automaton_npc
+
+automaton_arena:
+  name: Arena Automaton
+  interval: 5000
+  cast:
+    spells: automaton_arena
+

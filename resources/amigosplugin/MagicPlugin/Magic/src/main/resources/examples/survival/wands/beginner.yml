@@ -1,0 +1,54 @@
+#
+# An example of a progressed beginner wand
+#
+# These wands (student, master, etc) are meant to be used
+# as examples only!
+#
+# Make your own wands if you want to give out ranked wands,
+# or use the "wand" wand for the survival experience.
+#
+beginner:
+  inherit: base_wand
+  active_spell: missile
+  legacy_icon: wand_icon:1
+  icon: stick{CustomModelData:18001}
+  migrate_icon: wand_icon
+  effect_color: '004400'
+  mana_regeneration: 5
+  mana_max: 50
+  mana: 50
+  earn_multiplier: 0
+  level_spells_to_path: beginner
+  slots: gui,controls,spellmode,swappable
+  tags: tweakable
+  spells:
+    # Hotbar
+    - missile
+    - push
+    - arrow
+    - blast
+    - frost
+    - bubble
+    - fireball
+    - blind
+
+    # Inventory
+    - peek
+    - torch
+    - recall
+    - boon
+    - cloak
+    - collapse
+    - cure
+    - pull
+    - reflect
+    - poison
+    - fire
+
+    # Extra spells
+    - newpage
+
+    - flare
+    - stun
+    - workbench
+    - aqualung

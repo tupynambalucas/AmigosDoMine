@@ -1,0 +1,48 @@
+paint:
+    # This refers to an icon defined in the icons folder/config
+    icon: paint
+    category: engineering
+    tags: noduel
+    worth: 1000
+    earns: 10
+    actions:
+      cast:
+      - class: ModifyBlock
+    effects:
+        cast:
+        -  sound: entity_illusioner_cast_spell
+           sound_pitch: 0.7
+           sound_volume: 0.1
+        -  sound: block_stone_place
+           location: both
+        -  effect: step_sound
+           location: target
+           target_location: block_center
+           particle: block_crack
+           particle_count: 16
+           particle_offset_x: 0.75
+           particle_offset_y: 0.75
+           particle_offset_z: 0.75
+        -  class: EffectTrail
+           particle: block_crack
+           particle_count: 10
+           particle_offset_x: 0.05
+           particle_offset_y: 0.05
+           particle_offset_z: 0.05
+        -  particle: end_rod
+           target_location: block_center
+           location: target
+           particle_count: 4
+           particle_offset_x: 0.55
+           particle_offset_y: 0.55
+           particle_offset_z: 0.55
+    parameters:
+        target: block
+        allow_max_range: false
+        range: 64
+        check_destructible: false
+        transparent: transparent_to_construction
+        consume: true
+        ignore_region_overrides: true
+    costs:
+        mana: 5

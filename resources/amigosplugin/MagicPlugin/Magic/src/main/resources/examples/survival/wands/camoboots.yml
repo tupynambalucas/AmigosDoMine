@@ -1,0 +1,7 @@
+camoboots:
+    icon: "leather_boots:#random"
+    indestructible: false
+    keep: true
+    cast_spell: camoboots
+    cast_interval: 100
+    passive: true

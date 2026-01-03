@@ -1,0 +1,10 @@
+magicsword:
+  output: magicsword
+  output_type: wand
+  ingredients:
+    o: amethyst_shard
+    i: stick
+  row_1: o
+  row_2: o
+  row_3: i
+

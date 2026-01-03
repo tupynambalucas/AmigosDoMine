@@ -1,0 +1,182 @@
+otherside_mobs:
+  # This has been added automatically so that anything you remove here does not get inherited back in from the default configs
+  inherit: false
+  world: world_other
+  entity_spawn:
+
+    # Sea creatures are cursed
+    # Minecraft will keep trying to spawn them over and over
+    # Particularly seems to be the case for Cod, for some reason
+    # We're just going to prevent it, should be rare that water appears in the other side anyway.
+
+    drowned:
+      target_type: drowned
+      class: Replace
+      replace_type: stop
+    pufferfish:
+      target_type: pufferfish
+      class: Replace
+      replace_type: stop
+    dolphin:
+      target_type: dolphin
+      class: Replace
+      replace_type: stop
+    guardian:
+      target_type: guardian
+      class: Replace
+      replace_type: stop
+    elder_guardian:
+      target_type: elder_guardian
+      class: Replace
+      replace_type: stop
+    salmon:
+      target_type: salmon
+      class: Replace
+      replace_type: stop
+    turtle:
+      target_type: turtle
+      class: Replace
+      replace_type: stop
+    tropical_fish:
+      target_type: tropical_fish
+      class: Replace
+      replace_type: stop
+    cod:
+      target_type: cod
+      class: Replace
+      replace_type: stop
+
+    # Don't replace bats, they seem to be problematic. Caves really want bats.
+    bat:
+      priority: 1000
+      target_type: bat
+      class: Replace
+      replace_type: stop
+
+    fallback_flying:
+      priority: -400
+      y_offset: 32
+      highest_block: true
+      class: Replace
+      target_class: LivingEntity
+      not_types: armor_stand
+      replace_type:
+        mega_phantom: 5
+        polterghast: 15
+        fire_elemental: 15
+        none: 20000
+
+    # This will run if nothing else does, we make sure to replace every mob here.
+    fallback:
+      priority: -500
+      class: Replace
+      target_class: LivingEntity
+      not_types: armor_stand
+      replace_type:
+        warlock: 10
+        dark_wizard: 1
+        undead_overlord: 40
+        undead_minion: 100
+        mutant: 100
+        mutant_captain: 10
+        dark_spider: 20
+        mega_spider: 1
+        mutant_spider: 20
+        cube: 20
+        fire_elemental: 15
+        werewolf: 10
+        madscientist: 1
+        enderman: 1000
+        remove: 10000
+
+    rabbit:
+      class: Replace
+      target_type: rabbit
+      probability: 0.9
+      replace_type:
+        warlock: 20
+        dark_wizard: 1
+        killer_bunny: 50
+
+    skeleton:
+      class: Replace
+      target_type: skeleton
+      probability: 0.9
+      replace_type:
+        undead_overlord: 10
+        undead_minion: 100
+        warlock: 1
+        blaze: 5
+        remove: 50
+
+    creeper:
+      class: Replace
+      target_type: creeper
+      probability: 0.9
+      replace_type:
+        warlock: 1
+        blaze: 5
+        remove: 100
+
+    zombie:
+      class: Replace
+      target_type: zombie
+      probability: 0.9
+      replace_type:
+        mutant: 10
+        mutant_captain: 1
+        blaze: 5
+        remove: 100
+
+    spider:
+      class: Replace
+      target_type: spider
+      probability: 0.9
+      replace_type:
+        dark_spider: 10
+        mega_spider: 1
+        mutant_spider: 10
+        # Spiders are everywhere! eek
+        remove: 50
+
+    horse:
+      target_type: horse
+      class: Replace
+      replace_type:
+        skeleton_horse: 10
+        zombie_horse: 10
+
+    chicken:
+      target_type: chicken
+      class: Replace
+      replace_type:
+        skeleton: 5
+        wither_skeleton: 1
+
+    cow_mushroom_cow:
+      target_type: cow
+      class: Replace
+      replace_type: mushroom_cow
+
+    villager:
+      target_type: villager
+      class: Replace
+      replace_type:
+        mutant: 10
+        mutant_villager: 50
+        mutant_captain: 5
+
+    slime:
+      target_type: slime
+      class: Replace
+      replace_type:
+        magma_cube: 20
+        king_slime: 5
+        cube: 10
+
+    phantom:
+      target_type: phantom
+      class: Replace
+      replace_type:
+        mega_phantom: 10
+        none: 50

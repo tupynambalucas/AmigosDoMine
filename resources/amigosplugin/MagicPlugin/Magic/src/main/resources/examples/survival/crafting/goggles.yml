@@ -1,0 +1,10 @@
+goggles:
+  output: goggles
+  output_type: wand
+  ingredients:
+    o: amethyst_shard
+    d: nether_brick_fence
+  row_1: odo
+  row_2: d d
+  row_3: d d
+

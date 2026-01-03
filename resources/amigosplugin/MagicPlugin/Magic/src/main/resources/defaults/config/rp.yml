@@ -1,0 +1,98 @@
+# This resource pack will automatically be used if none is defined in your server.properties
+# Set this to "" if you have some other plugin or Bungee managing resource packs.
+# This can be a url, or an entry from alternate_resource_packs (see below)
+resource_pack: default
+
+# Use this to turn off all resource pack functionality
+enable_resource_pack: true
+
+# Turn this on to force Magic to use its resource pack system even when conflicting plugins such as ItemsAdder are present
+override_resource_pack_plugins: false
+
+# This will delay sending resource packs to players. This can mitigate issues with the vanilla
+# client timing out on connect due to RP processing on potato computers.
+# This value is in milliseconds.
+# Set this to 0 to set resource packs immediately on join.
+resource_pack_delay: 200
+
+# Delay the RP login prompt so players can see it
+resource_pack_prompt_delay: 2000
+
+# Set this to true to turn on the player skull-based spell icons
+# This may be needed if you have disabled the RP, spell icons are in the RP.
+url_icons_enabled: false
+
+# This should get set automatically based on your version, but if you want to override this
+# you can.
+# This will use the "legacy_icon" field in wands and spells, which generally use damage-based
+# icons rather than custom model data icons
+legacy_icons_enabled: false
+
+# Set this to revert to pre 10.9 item-based icons, rather than skulls
+# This only changes the items used for spell icons. If you want to use the previous
+# RP that includes those item-based icons, use the "vanilla" example instead.
+vanilla_icons_enabled: false
+
+# Set this to allow Magic to periodically check for updates to the resource pack.
+# Setting this to false is the same as setting resource_pack_check_interval to 0.
+enable_resource_pack_check: true
+
+# Set this to zero to turn off periodic RP update checks. The default is every five minutes.
+# This is done in a separate thread to avoid interfering with the main server thread.
+# Note that this value is in minutes!
+resource_pack_check_interval: 5
+
+# Set this to true, and resource packs will not be sent to payers on join, instead they will be prompted
+# It is not really recommended to use this anymore, the default behavior will prompt players and allow them
+# to control their own RP behaviors.
+resource_pack_prompt: false
+
+# Similar to the above command, this turns automatic resource packs off by default
+# Players can turn it back on using `/getrp auto`
+# They will be prompted at login with the "resource_pack.off_prompt" message, which by default
+# Goes to the action bar and will tell them to use `/getrp`
+resource_pack_default_auto: true
+
+# This turns on the wand GUI and any other features that rely on the resource pack,
+# without knowledge of the player having it.
+# Using this is not advised, unless you are really sure that *all* of your players
+# are getting and using the resource pack by some other means.
+assume_resource_pack_downloaded: false
+
+# Alternate resource packs can be accessed with /getrp <pack>
+alternate_resource_packs:
+  default:
+    url: "http://rp.elmakers.com/Magic-RP-1.21.6.zip"
+  borders:
+    url: "http://rp.elmakers.com/Magic-potter-RP-1.21.6.zip"
+  painterly:
+    url: "http://rp.elmakers.com/Magic-painterly-RP-1.21.6.zip"
+  lowres:
+    url: "http://rp.elmakers.com/Magic-lowres-RP-1.21.6.zip"
+  skulls:
+    url: "http://rp.elmakers.com/Magic-skulls-RP-1.21.6.zip"
+    url_icons_enabled: true
+  survival:
+    url: "http://rp.elmakers.com/Magic-RP-1.21.6.zip"
+  all:
+    url: "http://rp.elmakers.com/Magic-all-RP-1.21.6.zip"
+  modelengine:
+    url: "http://rp.elmakers.com/Magic-modelengine-RP-1.21.6.zip"
+  hires:
+    url: "http://rp.elmakers.com/Magic-hires-RP-1.21.6.zip"
+  hires-all:
+    url: "http://rp.elmakers.com/Magic-hires-all-RP-1.21.6.zip"
+  hires-modelengine:
+    url: "http://rp.elmakers.com/Magic-hires-modelengine-RP-1.21.6.zip"
+  hires-robes:
+    url: "http://rp.elmakers.com/Magic-hires-robes-RP-1.21.6.zip"
+  robes:
+    url: "http://rp.elmakers.com/Magic-robes-RP-1.21.6.zip"
+  vanilla:
+    url: "http://rp.elmakers.com/Magic-vanilla-RP-1.21.6.zip"
+  vanilla-all:
+    url: "http://rp.elmakers.com/Magic-vanilla-all-RP-1.21.6.zip"
+  vanilla-robes:
+    url: "http://rp.elmakers.com/Magic-vanilla-robes-RP-1.21.6.zip"
+  war:
+    url: "http://rp.elmakers.com/Magic-war-RP-1.21.6.zip"

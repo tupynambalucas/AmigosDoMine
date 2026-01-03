@@ -1,0 +1,2152 @@
+name: Magic
+main: com.elmakers.mine.bukkit.magic.MagicPlugin
+version: ${project.version}-${buildNumber}
+api-version: 1.20.5
+website: http://mine.elmakers.com
+author: NathanWolf
+description : A gameplay-oriented plugin for spells and wands
+load: startup
+softdepend:
+  - WorldGuard
+  - WGCustomFlags
+  - Essentials
+  - dynmap
+  - dtlTraders
+  - Factions
+  - CommandBook
+  - PvPManager
+  - Multiverse-Core
+  - Citizens
+  - Vault
+  - GriefPrevention
+  - NoCheatPlus
+  - LibsDisguises
+  - Minigames
+  - SkillAPI
+  - ProSkillAPI
+  - PlaceholderAPI
+  - Citadel
+  - Lockette
+  - LockettePro
+  - PreciousStones
+  - Residence
+  - Lands
+  - RedProtect
+  - LogBlock
+  - LightAPI
+  - DeadSouls
+  - ajParkour
+  - WildStacker
+  - SilkSpawners
+  - ModelEngine
+  - AureliumSkills
+  - PerWorldInventory
+  - MythicMobs
+  - TokenManager
+  - TradeSystem
+  - zAuctionHouseV3
+loadbefore:
+  - Scavenger
+  - Quests
+  - Heroes
+  - MobArena
+  - Skript
+commands:
+  getrp:
+    description: Download the Magic resource pack
+    usage: |
+      /getrp          Get the current resource pack
+      /getrp default  Set your RP preferences back to default
+      /getrp url      Show the current RP URL
+      /getrp download Mark yourself as having the RP
+      /getrp manual   Turn off automatic sending of the RP on login
+      /getrp auto     Turn on automatic sending of the RP on login
+      /getrp off      Turn off all RP features
+      /getrp <pack>   Set your preferred RP
+    permission: magic.commands.getrp
+  mtrigger:
+    description: Used by chat click handlers, not meant to be used manually
+    permission: magic.commands.mtrigger
+  cast:
+    aliases: [mcast]
+    description: Cast a spell directly
+    usage: cast <spellname> [parameters]
+    permission: magic.commands.cast
+  castp:
+    aliases: [mcastp]
+    description: Cast a spell directly on another player
+    usage: castp <player> <spellname> [parameters]
+    permission: magic.commands.cast
+  spells:
+    aliases: [mspells]
+    description: List all spells
+    usage: spells <page>
+    permission: magic.commands.spells
+  wand:
+    description: Create and modify wands
+    usage: |
+        Use /help wand [subcommand] for more information
+        /wand add         Add spells and brushes to a wand
+        /wand remove      Remove spells or brushes from a wand
+        /wand restore     Restore a player's lost wands
+        /wand configure   Set wand properties
+        /wand describe    Show information about a wand
+        /wand name        Change the display name of a wand
+        /wand organize    Re-organize a wand's spell inventory
+        /wand enchant     Upgrade a wand
+        /wand create      Turn an item into a wand
+        /wand destroy     Turn a wand into a normal item
+        /wand duplicate   Create a copy of a wand
+        /wand unlock      Allow a locked wand to be modified
+        /wand override    Set or check cast overrides on a wand
+        /wand upgrade     Upgrade properties of a wand
+        /wand bind        Bind a wand to the person holding it
+        /wand unbind      Unbind a wand, including backups
+        /wand save        Save a wand as a new template
+        /wand delete      Delete a saved wand
+        /wand levelspells Level up all spells for a wand
+        /wand list        List all wands
+    permission: magic.commands.wand
+  "wand add":
+    description: Add a spell or brush to a wand
+    usage: |
+
+       /wand add <spellname>
+       /wand add material <materialname>
+    permission: magic.commands.wand.add
+  "wand remove":
+    description: Remove a spell or brush from a wand
+    usage: |
+
+       /wand remove <spellname>
+       /wand remove material <materialname>
+    permission: magic.commands.wand.remove
+  "wand configure":
+    description: Configure wand properties
+    usage: |
+
+       /wand configure <property> [value]
+       /wand configure xp_max
+       /wand configure xp_max 500
+       /wand configure xp_regeneration 50
+       /wand configure description My Awesome Wand
+    permission: magic.commands.wand.configure
+  "wand save":
+    description: Save a wand to a template
+    usage: /wand save <template>
+    permission: magic.commands.wand.save
+  "wand delete":
+    description: Delete a saved wand
+    usage: /wand delete <template>
+    permission: magic.commands.wand.delete
+  "wand name":
+    description: Change the display name of a wand
+    usage: /wand name <new name>
+    permission: magic.commands.wand.name
+  "wand describe":
+    description: List wand properties, useful for checking what can be used with /wand configure
+    permission: magic.commands.wand.describe
+    usage: /wand describe
+  "wand organize":
+    description: Re-organize a wand's spell inventory, grouping by frequency of use and spell category
+    permission: magic.commands.wand.organize
+    usage: /wand organize
+  "wand enchant":
+    description: Upgrade a wand, adding spells and properties based on its path
+    permission: magic.commands.wand.enchant
+    usage: |
+
+       /wand enchant <levels>
+       /wand enchant
+       /wand enchant 10
+  "wand create":
+    description: Turn the item you are holding into a wand
+    permission: magic.commands.wand.create
+    usage: /wand create
+  "wand destroy":
+    description: Turn the wand you are holding into a normal item, wiping its magic data
+    permission: magic.commands.wand.destroy
+    usage: /wand unenchant
+  "wand duplicate":
+    description: Duplicate a wand, making an exact copy
+    permission: magic.commands.wand.duplicate
+    usage: /wand duplicate
+  "wand restore":
+    description: Restore your lost wands
+    permission: magic.commands.wand.restore
+    usage: /wand restore
+  "wand unlock":
+    description: Clear the "locked" setting on a wand so it can be used with /wand configure
+    permission: magic.commands.wand.unlock
+    usage: /wand unlock
+  "wand bind":
+    description: Binds a wand to the player holding it. Only works on unbound wands.
+    permission: magic.commands.wand.bind
+    usage: /wand bind
+  "wand unbind":
+    description: Unbinds a wand, turning off binding for that wand. Also removes /wand restore backups of the wand, only if the owner is online.
+    permission: magic.commands.wand.unbind
+    usage: /wand unbind
+  "wand override":
+    description: Check or set cast overrides, which modify how a wand casts a specific spell, or all spells
+    usage: |
+
+       To display current overrides
+       /wand override
+       To change parameters for a specific spell cast when using this wand
+       /wand override missile.entity_damage 20
+       /wand override boon.duration 30000
+       To change parameters for ALL spells cast with this wand
+       /wand override undo 0
+    permission: magic.commands.wand.override
+  "wand upgrade":
+    description: Upgrade wand properties, won't decrease values
+    usage: |
+
+       /wand upgrade <property> <value>
+       /wand upgrade xp_max 500
+       /wand upgrade xp_regeneration 50
+    permission: magic.commands.wand.upgrade
+  "wand levelspells":
+    description: Level up all spells on a wand
+    usage: |
+
+       To level up all spells on a wand to max level
+       /wand levelspells
+       Or to a specific level
+       /wand levelspells 3
+    permission: magic.commands.wand.levelspells
+  wandp:
+    description: Create and modify wands for another player
+    usage: |
+
+        /wandp <player> [command] [<spellname>|material] <materialname>
+        See /wand command help for details.
+    permission: magic.commands.wandp
+  mitem:
+    description: Create and modify custom items
+    usage: |
+        Use /help mitem [subcommand] for more information
+        /mitem add        Add enchantments, attributes or lore
+        /mitem remove     Remove enchantments, attributes or lore
+        /mitem name       Rename an item
+        /mitem describe   Show information about an item
+        /mitem configure  Modify NBT tags on an item (may be dangerous!)
+        /mitem duplicate  Create a copy of an item
+        /mitem amount     Change the amount of a stack of items
+        /mitem destroy    Destroy an item
+        /mitem clean      Strip any custom Magic data from an item
+        /mitem skull      Create a custom skull based on data in a book
+        /mitem save       Save an item as a new template
+        /mitem delete     Delete a saved item
+        /mitem worth      Show the value of an item
+        /mitem earns      Show the value of an item when sold
+        /mitem type       Change the type of an item
+        /mitem damage     Change the damage state of an item
+        /mitem export     Export all items, names and worth a CSV file
+        /mitem spawn      Spawn a specific item at a location
+    permission: magic.commands.mitem
+  "mitem add":
+    description: Add enchantments, attributes or lore to an item
+    usage: |
+
+       /mitem add enchant <enchantment> <level>
+       /mitem add attribute <attribute> <value> <slot> <operation>
+       /mitem add flag <flag>
+       /mitem add lore <some text>
+       /mitem add unbreakable
+  "mitem remove":
+    description: Remove enchantments, attributes or lore from an item
+    usage: |
+
+       /mitem remove enchant
+       /mitem remove enchant <enchantment>
+       /mitem remove attribute
+       /mitem remove attribute <attribute>
+       /mitem remove flag
+       /mitem remove flag <flag>
+       /mitem remove lore 3
+       /mitem remove lore
+       /mitem remove unbreakable
+    permission: magic.commands.mitem.remove
+  "mitem save":
+    description: Save an item to a template
+    usage: |
+       /mitem save <key> [worth] [earns]
+       /mitem save mycustomitem
+       /mitem save mycustomitem 1000
+  "mitem export":
+    description: Save a list of items to a CSV file
+    usage: |
+       /mitem export items
+  "mitem skull":
+    description: Convert a book containing skull profile data to a skull
+    usage: |
+       /mitem skull
+  "mitem type":
+    description: Change the type of an item
+    usage: |
+       /mitem type <material>[:data]
+       /mitem type gold_nugget
+       /mitem type wool:12
+    permission: magic.commands.mitem.type
+  "mitem damage":
+    description: Change the damage (aka durability) of an item
+    usage: |
+       /mitem damage <value>
+       /mitem damage 100
+       /mitem damage 0
+    permission: magic.commands.mitem.damage
+  "mitem destroy":
+    description: Destroy your held item
+    usage: /mitem destroy
+    permission: magic.commands.mitem.destroy
+  "mitem duplicate":
+    description: Duplicate your held item
+    usage: /mitem duplicate
+    permission: magic.commands.mitem.duplicate
+  "mitem amount":
+    description: Change the amount of your held item stack
+    usage: /mitem amount <count>
+    permission: magic.commands.mitem.amount
+  "mitem clean":
+    description: Clean magic data from  your held item
+    usage: /mitem clean
+    permission: magic.commands.mitem.clean
+  "mitem delete":
+    description: Delete a saved item
+    usage: /mitem delete <template>
+    permission: magic.commands.mitem.delete
+  "mitem name":
+    description: Change the display name of an item
+    usage: /mitem name <new name>
+    permission: magic.commands.mitem.name
+  "mitem describe":
+    description: List all item properties
+    permission: magic.commands.mitem.describe
+    usage: |
+
+            /mitem describe
+            /mitem describe wand
+            /mitem describe wand.spells
+  "mitem configure":
+    description: Modify NBT tags on an item
+    permission: magic.commands.mitem.configure
+    usage: |
+
+            /mitem configure wand.mana_max 100
+            /mitem configure wand.protected true
+            /mitem configure wand.protected
+  "mitem worth":
+    description: Show the value of an item
+    usage: /mitem worth
+    permission: magic.commands.mitem.worth
+  "mitem earns":
+    description: Show the value of an item when sold
+    usage: /mitem earns
+    permission: magic.commands.mitem.earns
+  "mitem spawn":
+    description: Spawn an item at a specific location
+    usage: |
+            /mitem spawn <type> <x> <y> <z> <world>
+            /mitem spawn <type> <uuid>
+    permission: magic.commands.mitem.spawn
+  mconfig:
+    aliases: [/mconfig]
+    description: Modify Magic configuration in-game
+    permission: magic.commands.mconfig
+    usage: |
+        Use /help mconfig [subcommand] for more information
+        /mconfig editor    Launch a web editor
+        /mconfig load      Apply changes from the web editor and reload configs
+        /mconfig apply     Apply changes from the web editor
+        /mconfig example   Enable or disable builtin examples
+        /mconfig disable   Disable a specific wand, spell, item, mob or recipe
+        /mconfig enable    Enable a specific wand, spell, item, mob or recipe
+        /mconfig reset     Delete a customized file, resetting to the builtin version
+        /mconfig configure Change parameters for a spell, wand or other config
+        /mconfig clean     Clean your custom configs, removing default values
+        /mconfig language  Change the language the plugin uses for in-game text
+  "mconfig editor":
+     description: Launch a web editor to edit or create a new spell, wand, item, mob or recipe
+     permission: magic.commands.mconfig.editor
+     usage: |
+         /mconfig editor spell
+         /mconfig editor spell missile
+         /mconfig editor mob warlock
+  "mconfig reset":
+     description: Reset a customized config
+     permission: magic.commands.mconfig.reset
+     usage: |
+         /mconfig reset spell missile
+         /mconfig reset wand wand
+  "mconfig apply":
+     description: Apply changes made remotely in the web editor
+     permission: magic.commands.mconfig.apply
+     usage: |
+         /mconfig apply
+         /mconfig apply abcdefg
+  "mconfig load":
+     description: Apply changes from the web editor and reload configs
+     permission: magic.commands.mconfig.load
+     usage: |
+         /mconfig load
+         /mconfig load abcdefg
+  "mconfig example":
+     description: Enable or disable builtin examples
+     permission: magic.commands.mconfig.example
+     usage: |
+         /mconfig example add potter
+         /mconfig example remove survival
+         /mconfig example set survival
+         /mconfig example set survival stars war
+         /mconfig example list
+         /mconfig example help
+         /mconfig example fetch superheroes
+         /mconfig example fetch potterplus https://github.com/grisstyl/BetterPotter/archive/master.zip
+         /mconfig example unfetch superheroes
+  "mconfig clean":
+    description: This will override your configs in plugins/Magic with collapsed versions.
+    permission: magic.commands.mconfig.clean
+    usage: |
+        /mconfig clean
+        /mconfig clean spells
+  "mconfig disable":
+    description: This will set the enabled flag of a config file to false.
+    permission: magic.commands.mconfig.disable
+    usage: |
+       /mconfig disable spell blink
+       /mconfig disable wand wolf
+  "mconfig enable":
+    description: This will set the enabled flag of a config file to true.
+    permission: magic.commands.mconfig.enable
+    usage: |
+       /mconfig enable crafting zombie_leather
+       /mconfig enable wand wolf
+  "mconfig configure":
+     description: This will change one property ina config file.
+     permission: magic.commands.mconfig.configure
+     usage: |
+        /mconfig configure spell missile parameters.damage_multiplier 2
+        /mconfig configure wand wolf icon coal
+        /mconfig configure config sp_enabled false
+        /mconfig configure message costs.sp Super Points
+  "mconfig language":
+     description: Change the language used by the plugin.
+     permission: magic.commands.mconfig.language
+     usage: |
+        /mconfig language ES
+        /mconfig language RU
+        /mconfig language FR
+        /mconfig language EN
+  "meditor":
+    aliases: [/meditor]
+    description: Launch a web editor (alias for /mconfig editor)
+    permission: magic.commands.mconfig.editor
+    usage: |
+      /meditor spell
+      /meditor spell missile
+      /meditor mob warlock
+  "mexample":
+    aliases: [/mexample]
+    description: Add or remove magic examples (alias for /mconfig example)
+    permission: magic.commands.mconfig.example
+    usage: |
+      /mexample add stars
+      /mexample set survival robes
+      /mexample remove stars
+  "mhelp":
+    aliases: [/mhelp]
+    description: Interactive help with magic
+    permission: magic.commands.mhelp
+    usage: |
+      /mhelp
+      /mhelp wands
+      /mhelp resource pack
+  magic:
+    aliases: [/magic]
+    description: Administer the Magic plugin
+    permission: magic.commands.magic
+    usage: |
+        Use /help magic [subcommand] for more information
+        /magic load        Reload configuration files
+        /magic reload      Same as above
+        /magic save        Save all player data
+        /magic cancel      Cancel any jobs or spells
+        /magic commit      Commit all spells, clear all undo queues
+        /magic list        List various bits of information
+        /magic give        Give players wands or items
+        /magic clear       Remove dropped wands from the world
+        /magic rpcheck     Check your resource pack for updates
+        /magic rpsend      Send the current RP to all connected players
+        /magic register    Register to use a web editor
+        /magic migrate     Migrate player data from one storage to another
+        /magic help        Interactive help with magic
+  "magic help":
+    description: Interactive help with magic, also accessible via /mhelp
+    permission: magic.commands.magic.help
+    usage: /magic help
+  "magic register":
+    description: Register via a web editor using a provided code
+    permission: magic.commands.magic.register
+    usage: /magic register <code>
+  "magic migrate":
+    description: If set up to do so in configs, migrate player data from a previous storage mechanism
+    permission: magic.commands.magic.migrate
+    usage: /magic migrate
+  "magic load":
+      description: Reload configuration files. Useful for testing spell or wand changes.
+      permission: magic.commands.magic.load
+      usage: /magic load
+  "magic reload":
+      description: Reload configuration files. Useful for testing spell or wand changes.
+      permission: magic.commands.magic.reload
+      usage: /magic reload
+  "magic save":
+    description: Immediately save all player data.
+    permission: magic.commands.magic.save
+    usage: /magic save
+  "magic cancel":
+    description: Cancel all pending jobs and spells
+    permission: magic.commands.magic.cancel
+    usage: /magic cancel
+  "magic commit":
+    description: Commit all spells, clear undo queues
+    permission: magic.commands.magic.commit
+    usage: /magic commit
+  "magic rpcheck":
+    description: Check for updates to your server resource pack, so clients will update if the file has changed
+    permission: magic.commands.magic.rpcheck
+    usage: /magic rpcheck
+  "magic rpsend":
+    description: Send the latest resource pack to all connected players
+    permission: magic.commands.magic.rpsend
+    usage: /magic rpsend
+  "magic list":
+    description: List various bits of information
+    permission: magic.commands.magic.list
+    usage: |
+
+        /magic list wands
+        /magic list maps
+        /magic list automata
+        /magic list tasks
+        /magic list schematics
+        /magic list entities
+        /magic list blocks
+        /magic list mages
+  "magic give":
+    description: Give players wands and other magic items
+    permission: magic.commands.magic.give
+    usage: |
+
+        /magic give elder
+        /magic give blink
+        /magic give material stone
+        /magic give upgrade apprentice
+  mage:
+    aliases: [/mage]
+    description: Configure or inspect Magic player data
+    permission: magic.commands.mage
+    usage: |
+        Use /help mage [subcommand] for more information
+        /mage configure   Set mage properties
+        /mage describe    Show mage properties
+        /mage add         Add spells and brushes to a player
+        /mage reward      Add spells to a player, or an equivalent reward
+        /mage remove      Remove spells or brushes from a player
+        /mage modifier    Add or remove modifiers to a player
+        /mage activate    Set or clear a player's active class
+        /mage unlock      Unlock a class for a player
+        /mage lock        Lock a class for a player
+        /mage switch      Switch classes for a player
+        /mage upgrade     Upgrade properties of a mage
+        /mage promote     Promote a mage to the next path
+        /mage setdata     Modify Mage data
+        /mage getdata     Describe Mage data
+        /mage attribute   Set or check mage attributes
+        /mage bypass      Toggle bypass on until logout
+        /mage check       Check player permissions
+        /mage debug       Enable/disable debug for a player
+        /mage reset       Reset all data for a Mage, or for a specific class
+        /mage clear       Clear magic items from a player's inventory
+        /mage unbind      Delete specific bound wands for a mage
+        /mage levelspells Level up all spells for a mage
+        /mage deactivate  Close the player's wand inventory, also can be used like /mage lock
+        /mage skin        Dump to chat a player's skin for use in a disguise
+        /mage forget      Clear knowledge of crafting recipes
+        /mage discover    Discover a crafting recipe
+  "mage configure":
+    description: Configure mage properties, configures the active class
+    usage: |
+
+       /mage configure <property> [value]
+       /mage configure xp_max
+       /mage configure xp_max 500
+       /mage configure xp_regeneration 50
+    permission: magic.commands.mage.configure
+  "mage add":
+    description: Add a spell or brush to a player
+    usage: |
+
+       /mage add <spellname>
+       /mage add brush <materialname>
+    permission: magic.commands.mage.add
+  "mage reward":
+    description: Add a spell to a player, or give an equivalent reward if they have it already
+    usage: |
+
+       /mage reward <spellname>
+       /mage reward <spellname> <currency>
+       /mage reward blink sp
+       /mage reward fling currency
+    permission: magic.commands.mage.reward
+  "mage remove":
+    description: Remove a spell or brush from a player
+    usage: |
+
+       /mage remove <spellname>
+       /mage remove material <materialname>
+    permission: magic.commands.mage.remove
+  "mage describe":
+    description: List mage properties, which can be changed with /mage configure
+    permission: magic.commands.mage.describe
+    usage: /mage describe
+  "mage modifier":
+    description: Add or remove modifiers on a player
+    usage: |
+
+      /mage modifier add <modifier> [duration]
+      /mage modifier remove <modifier>
+    permission: magic.commands.mage.modifier
+  "mage upgrade":
+    description: Upgrade mage properties, won't decrease values
+    usage: |
+
+       /mage upgrade <property> <value>
+       /mage upgrade xp_max 500
+       /mage upgrade xp_regeneration 50
+    permission: magic.commands.mage.upgrade
+  "mage promote":
+    description: Promote a mage to the next path
+    usage: |
+
+      /mage promote [path]
+      /mage promote
+      /mage promote apprentice
+    permission: magic.commands.mage.promote
+  "mage setdata":
+    description: Configure Mage player data or spell cast counts
+    permission: magic.commands.mage.setdata
+    usage: |
+
+        /mage setdata <Player> <Spell/Key> <Value/Cast Count>
+        /mage setdata NathanWolf sp 100
+        /mage setdata NathanWolf blink 0
+  "mage getdata":
+    description: List Mage player data or spell cast counts
+    permission: magic.commands.mage.getdata
+    usage: |
+
+        /mage getdata <Player> [SpellKey]
+        /mage getdata NathanWolf
+        /mage getdata NathanWolf blink
+  "mage attribute":
+    description: List or modify Mage attributes. Does not work with attributes from integrated plugins such as SkillAPI.
+    permission: magic.commands.mage.attribute
+    usage: |
+
+        /mage attribute <Player> <attribute> <value>
+        List all attributes set for a player
+        /mage attribute NathanWolf
+        List a specific attribute
+        /mage attribute NathanWolf intelligence
+        Set an attribute
+        /mage attribute NathanWolf intelligence 18
+        Clear an attribute
+        /mage attribute NathanWolf intelligence -
+  "mage activate":
+    description: Active a class for a player
+    permission: magic.commands.mage.activate
+    usage: |
+
+        /mage activate <Player> <Class>
+        /mage activate NathanWolf mage
+        /mage activate NathanWolf battle_mage
+  "mage deactivate":
+      description: Close a player's wand inventory and deactivate any active spells
+      permission: magic.commands.mage.deactivate
+      usage: |
+
+        /mage deactivate <Player>
+        /mage deactivate NathanWolf
+  "mage unlock":
+    description: Unlock a class for a player
+    permission: magic.commands.mage.unlock
+    usage: |
+
+        /mage unlock <Player> <Class>
+        /mage unlock NathanWolf jedi
+        /mage unlock NathanWolf waterbender
+  "mage lock":
+    description: Lock a class for a player
+    permission: magic.commands.mage.lock
+    usage: |
+
+        /mage lock <Player> <Class>
+        /mage lock NathanWolf jedi
+        /mage lock NathanWolf waterbender
+  "mage switch":
+    description: Lock the player's active class, unlock and activate a new one
+    permission: magic.commands.mage.switch
+    usage: |
+
+        /mage switch <Player> <Class>
+        /mage switch NathanWolf jedi
+        /mage lock NathanWolf waterbender
+  "mage reset":
+    description: Completely reset player data
+    permission: magic.commands.mage.reset
+    usage: |
+
+        /mage reset <Player> [Class]
+        /mage reset NathanWolf
+        /mage reset NathanWolf mage
+  "mage clear":
+    description: Remove magic items from a player's inventory
+    permission: magic.commands.mage.clear
+    usage: |
+
+        /mage clear <Player> [all|wands|skills|magic]
+        /mage clear NathanWolf
+        /mage clear NathanWolf all
+        /mage clear NathanWolf all
+  "mage forget":
+    description: Remove magic crafting recipes from a player
+    permission: magic.commands.mage.forget
+    usage: |
+
+        /mage forget <Player> <recipe>
+        /mage forget NathanWolf
+        /mage forget NathanWolf broomstick
+  "mage discover":
+    description: Discover magic crafting recipes for a player
+    permission: magic.commands.mage.discover
+    usage: |
+      /mage discover <Player> [recipe]
+      /mage discover NathanWolf broomstick
+  "mage bypass":
+    description: Toggle on/off bypass for pvp, build, break and other checks
+    permission: magic.commands.mage.bypass
+    usage: |
+        /mage bypass [Player]
+        /mage bypass
+        /mage bypass NathanWolf
+  "mage check":
+    description: Do a permission check on player, show debug info
+    permission: magic.commands.mage.check
+    usage: |
+        /mage check [Player]
+        /mage check
+        /mage check NathanWolf
+  "mage debug":
+    description: Toggle debug messages for a player's spell casts
+    permission: magic.commands.mage.debug
+    usage: |
+        /mage debug [Player] [Debug Level]
+        /mage debug
+        /mage debug NathanWolf
+        /mage debug NathanWolf 10
+  "mage unbind":
+    description: Unbinds a specific stored wand for a player, or all of them. Does not clear their inventory.
+    permission: magic.commands.mage.unbind
+    usage: |
+        /mage unbind
+        /mage unbind wand
+        /mage unbind battle
+  "mage levelspells":
+    description: Level up all spells on a player
+    permission: magic.commands.mage.levelspells
+    usage: |
+       To level up all spells on a player's current class to max level
+       /mage levelspells
+       Or to a specific level
+       /mage levelspells 3
+    "mage skin":
+      description: Get a player's skin for putting in a disguise
+      permission: magic.commands.mage.skin
+      usage: |
+         /mage skin
+         /mage skin <player>
+  mgive:
+    description: Give players items
+    permission: magic.commands.mgive
+    usage: |
+        /mgive <Player> [itemname] <amount>
+        /mgive elder
+        /mgive blink
+        /mgive brush:sea_lantern
+        /mgive sea_lantern 32
+        /mgive NathanWolf wolf
+  mkit:
+    description: Give players items from a kit
+    permission: magic.commands.mkit
+    usage: |
+        /mkit <Player> [kit]
+        /mgive starter
+        /mgive NathanWolf admin
+  mblock:
+    description: Manage Automatic Blocks, such as spawners or effects
+    permission: magic.commands.mblock
+    aliases: [mauto]
+    usage: |
+        /mblock add <template> <params>    Add a new automatic block at your feet
+        /mblock add spawner                Add a spawner from automata.yml
+        /mblock add fountain               Add a particle fountain from automata.yml
+        /mblock add spawner spawn.mobs creeper Add a custom creeper spawner
+        /mblock select                     Select the automaton closest to you
+        /mblock remove                     Remove the selected automaton
+        /mblock list <page>                List all automata
+        /mblock describe                   Show details of selected automaton
+        /mblock configure                  Configure properties of selected automaton
+        /mblock tp                         Teleport to the selected automaton
+        /mblock move                       Move the selected automaton to your location
+        /mblock debug                      Debug spell casts from the selected automaton
+        /mblock disable                    Turn off an automaton without removing it
+        /mblock enable                     Reactivate a disabled automaton
+  mmob:
+    description: Manage Magic Mobs
+    permission: magic.commands.mmob
+    usage: |
+        /mmob spawn mutant                Spawn a custom Mutant mob
+        /mmob spawn mutant 0 64 0 world   Spawn at a location
+        /mmob spawn creeper               Spawn a vanilla creeper
+        /mmob summon creeper              Spawn a vanilla creeper, allowing for replacement rules
+        /mmob egg mutant                  Get a spawn egg for a Mutant mob
+        /mmob list                        List custom mob types
+        /mmob clear                       Clear all custom mobs from all loaded worlds
+        /mmob clear mutant                Clear all mutants from all loaded worlds
+        /mmob clear mutant world          Clear all mutants from a specific world
+        /mmob clear all 20                Clear all magic mobs within 20 blocks of your location
+        /mmob clear all 20 0 64 0 world   Clear all magic mobs within 20 blocks of a specific location
+  mnpc:
+    description: Manage Magic NPCs
+    permission: magic.commands.mnpc
+    usage: |
+        /mnpc add Spell Teacher           Create a new villager NPC where you are standing
+        /mnpc select                      Select the NPC in front of you
+        /mnpc select Spell Teacher        Select a specific NPC
+        /mnpc name Spell Teacher          Rename the selected NPC
+        /mnpc list                        List all NPCs
+        /mnpc remove                      Remove the selected NPC
+        /mnpc type                        Change the mob type for the selected NPC
+        /mnpc template                    Change the magic mob NPC template for this NPC
+        /mnpc configure                   Configure an NPC
+        /mnpc describe                    Describe an NPC
+        /mnpc dialog                      Add some text for the NPC to say to nearby players
+        /mnpc cast                        Make an NPC cast a spell on right-click
+        /mnpc command                     Make an NPC run a command on right-click
+        /mnpc costs                       Require a player pay to interact with this NPC
+        /mnpc player                      Add a player disguise to an NPC
+        /mnpc import                      Import Citizens NPCs
+        /mnpc tp                          Teleport to the selected NPC
+        /mnpc move                        Moves the selected NPC to your location
+        /mnpc clean                       Remove any orphaned NPC entities in the world
+        /mnpc update                      Force-update an NPC in case some config changes haven't taken
+  mmap:
+    description: Create and manage Magic image maps
+    permission: magic.commands.mmap
+    usage: |
+        Use /help mmap [subcommand] for more information
+        /mmap load       Load a new image map
+        /mmap player     Load a map from a player's skin
+        /mmap slice      Load multiple maps from one image
+        /mmap list       List all loaded image maps
+        /mmap give       Give a player an image map
+        /mmap import     Import image maps from Pixelator
+        /mmap fix        Try to fix broken maps
+        /mmap restore    Try to restore maps when data file was lost
+        /mmap unnamed    Give yourself the first unnamed map in the database
+        /mmap name       Name the map in your hand
+  "mmap load":
+    description: Load a new map from a file or URL
+    permission: magic.commands.mmap.load
+    usage: |
+        /mmap load [url] <name> <width> <height>
+        /mmap load http://i.imgur.com/YsbKHg1.gif Magic
+        /mmap load plugins/Pixelator/MyImage.png
+        /mmap load http://i.imgur.com/EufZP2A.gif Cropped 128 128
+  "mmap slice":
+    description: Load multiple maps from one image
+    permission: magic.commands.mmap.slice
+    usage: |
+      /mmap slice [url] [name] [horizontal slices] [vertical slices]
+      /mmap slice https://i.imgur.com/nuRGWw7.png Magic 2 1
+  "mmap player":
+    description: Load a new map from a player skil
+    permission: magic.commands.mmap.player
+    usage: |
+        /mmap player [player name]
+        /mmap player Nathan
+  "mmap list":
+    description: List and search through loaded maps
+    permission: magic.commands.mmap.list
+    usage: |
+        /mmap list <search>
+        /mmap list
+        /mmap list Magic
+  "mmap give":
+    description: Give a player an image amp
+    permission: magic.commands.mmap.give
+    usage: |
+        /mmap give <player> [id]
+        /mmap give NathanWolf 1234
+        /mmap give 1234
+  "mmap import":
+    description: Import images from Pixelator
+    permission: magic.commands.mmap.import
+    usage: /mmap import
+  "mmap fix":
+    description: Attempt to fix broken map iages
+    permission: magic.commands.mmap.fix
+    usage: /mmap fix
+  "mmap restore":
+    description: Try to restore maps when data file was lost
+    permission: magic.commands.mmap.restore
+    usage: /mmap restore
+  "mmap unnamed":
+    description: Give yourself the first unnamed map
+    permission: magic.commands.mmap.unnamed
+    usage: /mmap unnamed
+  "mmap name":
+    description: Name the map in your hand, easier to find with /mmap list
+    permission: magic.commands.mmap.name
+    usage: /mmap name
+  mtrait:
+    description: Manage Magic NPCs
+    permission: magic.commands.mtrait
+    usage: |
+
+      First add a magic or command trait to an NPC
+      /trait magic
+      /trait command
+      Then configure the Magic trait
+      /mtrait <id#> <property> <value>
+      /mtrait
+      /mtrait spell heal
+      /mtrait parameters amount 100
+      /mtrait spell upgrades
+      /mtrait spell engineershop
+      /mtrait command /spawn
+      /mtrait caster true
+      /mtrait invisible true
+      /mtrait cost 200
+      /mtrait permission magic.npc.use.this.guy
+      /mtrait mob warlock
+  mskills:
+    description: Get Heroes skills
+    usage: /mskills
+    permission: magic.commands.mskills
+  mserver:
+    description: "Moves a player to another server"
+    usage: "mserver <player> <server>"
+    permission: magic.commands.mserver
+  msave:
+    description: Save player data, and execute command as console
+    usage: /msave <Player> [command to run]
+    permission: magic.commands.msave
+  mwarp:
+    aliases: [/mwarp]
+    description: Create and manage warps
+    usage: |
+        Use /help mwarp [subcommand] for more information
+        /mwarp add        Add a new warp
+        /mwarp replace    Replace an existing warp
+        /mwarp remove     Remove a warp
+        /mwarp go         Go to a warp
+        /mwarp send       Send another player to a warp
+        /mwarp list       List warps
+        /mwarp configure  Configure warps for Recall or Dynmap
+        /mwarp describe   Show warp parameters
+        /mwarp import     Import warps from Essentials or CommandBook
+        /mwarp map        Add all Recall warps to Dynmap
+    permission: magic.commands.mwarp
+  "mwarp add":
+    description: Add a new warp
+    permission: magic.commands.mwarp.add
+    usage: |
+
+       /mwarp add <warpname>
+  "mwarp replace":
+    description: Replace an existing warp
+    permission: magic.commands.mwarp.replace
+    usage: |
+
+       /mwarp replace <warpname>
+  "mwarp remove":
+    description: Remove a warp
+    permission: magic.commands.mwarp.remove
+    usage: |
+
+       /mwarp remove <warpname>
+  "mwarp go":
+    description: Go to a warp
+    permission: magic.commands.mwarp.go
+    usage: |
+
+       /mwarp go <warpname>
+  "mwarp send":
+   description: Send a player to a warp
+   permission: magic.commands.mwarp.send
+   usage: |
+
+      /mwarp send <player> <warpname>
+  "mwarp list":
+    description: List configured warps
+    permission: magic.commands.mwarp.list
+    usage: |
+
+       /mwarp list
+  "mwarp configure":
+    description: Configure warps, useful for Recall and Dynmap
+    permission: magic.commands.mwarp.configure
+    usage: |
+
+       /mwarp configure <warp> name Temple of Time
+       /mwarp configure <warp> description A Holy PLace
+       /mwarp configure <warp> icon stick{CustomModelData:18001}
+       /mwarp configure <warp> marker_icon portal
+       /mwarp configure <warp> marker_set portals
+  "mwarp describe":
+    description: Describe warp parameters
+    permission: magic.commands.mwarp.describe
+    usage: |
+
+      /mwarp describe <warp>
+  "mwarp import":
+    description: Import warps from Essentials or CommandBook. Will overwrite any Magic warps on collision.
+    permission: magic.commands.mwarp.import
+    usage: |
+
+       /mwarp import
+  "mwarp map":
+      description: Add all Recall warps to the map
+      permission: magic.commands.mwarp.map
+      usage: |
+
+         /mwarp map <marker icon>
+  marena:
+      description: Commands for managing mob and pvp arenas
+      usage: /marena [add, remove, describe, configure, stage, start, stop, join, leave, import]
+      permission: magic.commands.marena
+permissions:
+  magic.commands.*:
+    description: Player may use all Magic commands
+    default: op
+    children:
+    - magic.commands.spells
+    - magic.commands.mgive
+    - magic.commands.mgive.others
+    - magic.commands.mtrait
+    - magic.commands.mmob
+    - magic.commands.mnpc
+    - magic.commands.mblock
+    - magic.commands.cast
+    - magic.commands.castp
+    - magic.commands.cast.parameters
+    - magic.commands.wand
+    - magic.commands.wand.*
+    - magic.commands.wandp
+    - magic.commands.wandp.*
+    - magic.commands.mitem
+    - magic.commands.mitem.*
+    - magic.commands.mconfig
+    - magic.commands.mconfig.*
+    - magic.commands.magic
+    - magic.commands.magic.*
+    - magic.commands.mmap
+    - magic.commands.mmap.*
+    - magic.commands.mage
+    - magic.commands.mage.*
+    - magic.commands.mskills
+    - magic.commands.msave
+    - magic.commands.mserver
+    - magic.commands.getrp
+    - magic.commands.mtrigger
+    - magic.commands.mwarp
+    - magic.commands.mwarp.*
+    - magic.commands.marena
+    - magic.commands.marena.*
+  magic.commands.getrp:
+    description: Player may download the resource pack
+    type: boolean
+    default: true
+  magic.commands.mtrigger:
+    description: Player may click CheckChatClick links
+    type: boolean
+    default: true
+  magic.commands.spells:
+    description: Player may list spells
+    type: boolean
+    default: op
+  magic.commands.mgive:
+    description: Player may give themselves magic items
+    type: boolean
+    default: op
+  magic.commands.mgive.others:
+    description: Player may give magic items to other players. Requires magic.commands.mgive.
+    type: boolean
+    default: true
+  magic.commands.mkit:
+    description: Player may give themselves magic kits
+    type: boolean
+    default: op
+  magic.commands.mkit.others:
+    description: Player may give magic kits to other players. Requires magic.commands.mkit.
+    type: boolean
+    default: op
+  magic.commands.mtrait:
+    description: Player may manage Magic NPCs
+    type: boolean
+    default: op
+  magic.commands.mmob:
+    description: Player may spawn vanilla and magic mobs
+    type: boolean
+    default: op
+  magic.commands.mcnp:
+    description: Player may manage magic NPCs
+    type: boolean
+    default: op
+  magic.commands.mblock:
+    description: Player may create and manage magic blocks
+    type: boolean
+    default: op
+  magic.commands.cast:
+    description: Player may cast command-line spells
+    type: boolean
+    default: op
+  magic.commands.castp:
+    description: Player may cast command-line spells on behalf of another player
+    type: boolean
+    default: op
+  magic.commands.cast.parameters:
+    description: Player may use command-line parameters in /cast and /castp commands
+    type: boolean
+    default: op
+  magic.commands.wand:
+    description: Player may use the /wand command to create a wand
+    type: boolean
+    default: op
+  magic.commands.wand.*:
+    description: Player may use all /wand sub-commands
+    default: op
+    children:
+    - magic.commands.wand
+    - magic.commands.wand.override
+    - magic.commands.wand.list
+    - magic.commands.wand.describe
+    - magic.commands.wand.save
+    - magic.commands.wand.delete
+    - magic.commands.wand.enchant
+    - magic.commands.wand.create
+    - magic.commands.wand.destroy
+    - magic.commands.wand.add
+    - magic.commands.wand.add.spell
+    - magic.commands.wand.add.brush
+    - magic.commands.wand.organize
+    - magic.commands.wand.configure
+    - magic.commands.wand.combine
+    - magic.commands.wand.upgrade
+    - magic.commands.wand.levelspells
+    - magic.commands.wand.fill
+    - magic.commands.wand.remove
+    - magic.commands.wand.name
+    - magic.commands.wand.duplicate
+    - magic.commands.wand.restore
+    - magic.commands.wand.unlock
+    - magic.commands.wand.bind
+    - magic.commands.wand.unbind
+  magic.commands.wand.override:
+    description: Player may configure wand overrides
+    type: boolean
+    default: op
+  magic.commands.wand.list:
+    description: Player may list available wand templates
+    type: boolean
+    default: op
+  magic.commands.wand.describe:
+    description: Player may describe their wand
+    type: boolean
+    default: op
+  magic.commands.wand.save:
+    description: Player may save a wand to a template
+    type: boolean
+    default: op
+  magic.commands.wand.delete:
+    description: Player may delete a saved wand
+    type: boolean
+    default: op
+  magic.commands.wand.enchant:
+    description: Player may upgrade a wand
+    type: boolean
+    default: op
+  magic.commands.wand.create:
+    description: Player may turn an item into a wand
+    type: boolean
+    default: op
+  magic.commands.wand.destroy:
+    description: Player may destroy a wand
+    type: boolean
+    default: op
+  magic.commands.wand.add:
+    description: Player may add a spell to a wand
+    type: boolean
+    default: op
+  magic.commands.wand.add.spell:
+    description: Player may add a specific spell to a wand for another player
+    type: list
+  magic.commands.wand.add.brush:
+    description: Player may add a specific brush to a wand
+    type: boolean
+    default: op
+  magic.commands.wand.organize:
+    description: Player may organize their wand
+    type: boolean
+    default: op
+  magic.commands.wand.configure:
+    description: Player may set wand properties
+    type: boolean
+    default: op
+  magic.commands.wand.combine:
+    description: Player may add wand template to their wand
+    type: boolean
+    default: op
+  magic.commands.wand.upgrade:
+    description: Player may upgrade wand properties
+    type: boolean
+    default: op
+  magic.commands.wand.levelspells:
+    description: Player may upgrade all of a wand's spells
+    type: boolean
+    default: op
+  magic.commands.wand.fill:
+    description: Player may fill a wand with all spells
+    type: boolean
+    default: op
+  magic.commands.wand.remove:
+    description: Player may remove a spell from a wand
+    type: boolean
+    default: op
+  magic.commands.wand.name:
+    description: Player may name a wand
+    type: boolean
+    default: op
+  magic.commands.wand.duplicate:
+    description: Player may duplicate an existing wand
+    type: boolean
+    default: op
+  magic.commands.wand.restore:
+    description: Player may restore their bound wand
+    type: boolean
+    default: op
+  magic.commands.wand.unlock:
+    description: Player may unlock a locked wand
+    type: boolean
+    default: op
+  magic.commands.wand.bind:
+    description: Player may bind an unbound wand to themselves
+    type: boolean
+    default: op
+  magic.commands.wand.unbind:
+    description: Player may unbind the wand they are holding
+    type: boolean
+    default: op
+  magic.commands.wandp:
+    description: Player may use the wandp commands
+    type: boolean
+    default: op
+  magic.commands.wandp.*:
+    description: Player may use all /wandp sub-commands
+    default: op
+    children:
+    - magic.commands.wandp
+    - magic.commands.wandp.override
+    - magic.commands.wandp.list
+    - magic.commands.wandp.describe
+    - magic.commands.wandp.save
+    - magic.commands.wandp.delete
+    - magic.commands.wandp.enchant
+    - magic.commands.wandp.create
+    - magic.commands.wandp.destroy
+    - magic.commands.wandp.add
+    - magic.commands.wandp.add.spell
+    - magic.commands.wandp.add.brush
+    - magic.commands.wandp.organize
+    - magic.commands.wandp.configure
+    - magic.commands.wandp.combine
+    - magic.commands.wandp.upgrade
+    - magic.commands.wandp.levelspells
+    - magic.commands.wandp.fill
+    - magic.commands.wandp.remove
+    - magic.commands.wandp.name
+    - magic.commands.wandp.duplicate
+    - magic.commands.wandp.restore
+    - magic.commands.wandp.unlock
+    - magic.commands.wandp.bind
+    - magic.commands.wandp.unbind
+  magic.commands.wandp.create:
+    description: Player may create a wand for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.wand:
+    description: Player may create a specific wand for another player
+    type: list
+  magic.commands.wandp.override:
+    description: Player may configure wand overrides for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.add:
+    description: Player may add a spell to a wand for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.add.spell:
+    description: Player may add a specific spell to a wand for another player
+    type: list
+  magic.commands.wandp.configure:
+    description: Player may set wand properties for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.organize:
+    description: Player may organize another player's wand
+    type: boolean
+    default: op
+  magic.commands.wandp.combine:
+    description: Player may add wand template to another player's wand
+    type: boolean
+    default: op
+  magic.commands.wandp.describe:
+    description: Player may describe their wand
+    type: boolean
+    default: op
+  magic.commands.wandp.upgrade:
+    description: Player may upgrade wand properties for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.levelspells:
+    description: Player may upgrade all of another player's wand's spells
+    type: boolean
+    default: op
+  magic.commands.wandp.fill:
+    description: Player may fill a wand for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.remove:
+    description: Player may remove a spell from a wand for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.name:
+    description: Player may name a wand for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.enchant:
+    description: Player may turn an item into a wand for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.unenchant:
+    description: Player may destroy a wand for another player
+    type: boolean
+    default: op
+  magic.commands.wandp.duplicate:
+    description: Player may duplicate an existing wand held by another player
+    type: boolean
+    default: op
+  magic.commands.wandp.restore:
+    description: Player may restore another player's bound wand
+    type: boolean
+    default: op
+  magic.commands.wandp.unlock:
+    description: Player may unlock an existing wand held by another player
+    type: boolean
+    default: op
+  magic.commands.wandp.bind:
+    description: Player may bind an unbound wand to its holder
+    type: boolean
+    default: op
+  magic.commands.wandp.unbind:
+    description: Player may unbind the wand another player is holding
+    type: boolean
+    default: op
+  magic.commands.mitem:
+    description: Player may use the mitem command
+    type: boolean
+    default: op
+  magic.commands.mitem.*:
+    description: Player may use any mitem sub-commands
+    default: op
+    children:
+    - magic.commands.mitem
+    - magic.commands.mitem.add
+    - magic.commands.mitem.amount
+    - magic.commands.mitem.remove
+    - magic.commands.mitem.save
+    - magic.commands.mitem.export
+    - magic.commands.mitem.delete
+    - magic.commands.mitem.duplicate
+    - magic.commands.mitem.destroy
+    - magic.commands.mitem.clean
+    - magic.commands.mitem.name
+    - magic.commands.mitem.describe
+    - magic.commands.mitem.configure
+    - magic.commands.mitem.worth
+    - magic.commands.mitem.earns
+    - magic.commands.mitem.type
+    - magic.commands.mitem.damage
+    - magic.commands.mitem.skull
+    - magic.commands.mitem.spawn
+  magic.commands.mitem.add:
+    description: Player may add enchantments, attributes and lore to an item
+    type: boolean
+    default: op
+  magic.commands.mitem.remove:
+    description: Player may remove enchantments, attributes and lore from an item
+    type: boolean
+    default: op
+  magic.commands.mitem.save:
+    description: Player may save an item to a new template
+    type: boolean
+    default: op
+  magic.commands.mitem.export:
+    description: Player may export all items to a CSV file
+    type: boolean
+    default: op
+  magic.commands.mitem.delete:
+    description: Player may delete a saved item template
+    type: boolean
+    default: op
+  magic.commands.mitem.duplicate:
+    description: Player may duplicate their held item
+    type: boolean
+    default: op
+  magic.commands.mitem.amount:
+    description: Player may change the amount of their held item stack
+    type: boolean
+    default: op
+  magic.commands.mitem.destroy:
+    description: Player may destroy their held item
+    type: boolean
+    default: op
+  magic.commands.mitem.clean:
+    description: Player may clean Magic data from their held item
+    type: boolean
+    default: op
+  magic.commands.mitem.name:
+    description: Player may rename an item
+    type: boolean
+    default: op
+  magic.commands.mitem.describe:
+    description: Player may describe an item
+    type: boolean
+    default: op
+  magic.commands.mitem.configure:
+    description: Player may modify NBT tags of an item
+    type: boolean
+    default: op
+  magic.commands.mitem.worth:
+    description: Player may show the value of an item
+    type: boolean
+    default: op
+  magic.commands.mitem.earns:
+    description: Player may show the value of an item when sold
+    type: boolean
+    default: op
+  magic.commands.mitem.type:
+    description: Player may change the type of an item
+    type: boolean
+    default: op
+  magic.commands.mitem.damage:
+    description: Player may change the damaged state of an item
+    type: boolean
+    default: op
+  magic.commands.mitem.skull:
+    description: Player may create a player skull from a written book
+    type: boolean
+    default: op
+  magic.commands.mitem.spawn:
+    description: Player may spawn items into the world
+    type: boolean
+    default: op
+  magic.commands.mconfig:
+    description: Player may use mconfig commands
+    type: boolean
+    default: op
+  magic.commands.mconfig.*:
+    description: Player may use all mconfig sub-commands
+    default: op
+    children:
+    - magic.commands.mconfig
+    - magic.commands.mconfig.clean
+    - magic.commands.mconfig.disable
+    - magic.commands.mconfig.enable
+    - magic.commands.mconfig.configure
+    - magic.commands.mconfig.editor
+    - magic.commands.mconfig.reset
+    - magic.commands.mconfig.load
+    - magic.commands.mconfig.example
+    - magic.commands.mconfig.apply
+  magic.commands.mconfig.clean:
+    description: Player may auto-clean configs
+    type: boolean
+    default: op
+  magic.commands.mconfig.editor:
+    description: Player may use the web editor
+    type: boolean
+    default: op
+  magic.commands.mconfig.reset:
+    description: Player may reset customized configs
+    type: boolean
+    default: op
+  magic.commands.mconfig.load:
+    description: Player may load remote configs from the editor
+    type: boolean
+    default: op
+  magic.commands.mconfig.example:
+    description: Player may add or remove builtin examples
+    type: boolean
+    default: op
+  magic.commands.mconfig.apply:
+    description: Player may apply remote configs from the editor
+    type: boolean
+    default: op
+  magic.commands.mconfig.disable:
+    description: Player may disable spells, wands or other configs
+    type: boolean
+    default: op
+  magic.commands.mconfig.enable:
+    description: Player may enable spells, wands or other configs
+    type: boolean
+    default: op
+  magic.commands.mconfig.configure:
+    description: Player may configure spells, wands or other configs
+    type: boolean
+    default: op
+  magic.commands.magic:
+    description: Player may use the /magic command
+    type: boolean
+    default: op
+  magic.commands.magic.*:
+    description: Player may use any /magic sub-commands
+    default: op
+    children:
+    - magic.commands.magic
+    - magic.commands.magic.register
+    - magic.commands.magic.help
+    - magic.commands.magic.load
+    - magic.commands.magic.reload
+    - magic.commands.magic.save
+    - magic.commands.magic.clearcache
+    - magic.commands.magic.cancel
+    - magic.commands.magic.commit
+    - magic.commands.magic.rpcheck
+    - magic.commands.magic.list
+    - magic.commands.magic.list.*
+    - magic.commands.magic.clean
+    - magic.commands.magic.give
+    - magic.commands.magic.sell
+    - magic.commands.magic.worth
+    - magic.commands.magic.migrate
+  magic.commands.magic.help:
+    description: Player may show command help
+    type: boolean
+    default: op
+  magic.commands.magic.migrate:
+    description: Player may migrate player data
+    type: boolean
+    default: op
+  magic.commands.magic.register:
+    description: Player may register to use a web editor
+    type: boolean
+    default: op
+  magic.commands.magic.load:
+    description: Player may reload the configuration
+    type: boolean
+    default: op
+  magic.commands.magic.reload:
+    description: Player may reload the configuration
+    type: boolean
+    default: op
+  magic.commands.magic.save:
+    description: Player may save data
+    type: boolean
+    default: op
+  magic.commands.magic.clearcache:
+    description: Player may clears the image and schematic caches
+    type: boolean
+    default: op
+  magic.commands.magic.cancel:
+    description: Player may cancel any pending construction jobs
+    type: boolean
+    default: op
+  magic.commands.magic.commit:
+    description: Player may clear all player undo queues
+    type: boolean
+    default: op
+  magic.commands.magic.rpcheck:
+    description: Player may check for resource pack updates
+    type: boolean
+    default: op
+  magic.commands.magic.rpsend:
+    description: Player may update connected players' resourc epack
+    type: boolean
+    default: op
+  magic.commands.magic.list:
+    description: Player may list general Magic info
+    type: boolean
+    default: op
+  magic.commands.magic.list.*:
+    description: Player may list all Magic info
+    default: op
+    children:
+    - magic.commands.magic.list
+    - magic.commands.magic.list.wands
+    - magic.commands.magic.list.maps
+    - magic.commands.magic.list.automata
+    - magic.commands.magic.list.tasks
+    - magic.commands.magic.list.entities
+    - magic.commands.magic.list.schematics
+    - magic.commands.magic.list.blocks
+    - magic.commands.magic.list.mages
+  magic.commands.magic.list.wands:
+    description: Player may list lost wands
+    type: boolean
+    default: op
+  magic.commands.magic.list.maps:
+    description: Player may list map images
+    type: boolean
+    default: op
+  magic.commands.magic.list.automata:
+    description: Player may list stored automata
+    type: boolean
+    default: op
+  magic.commands.magic.list.tasks:
+    description: Player may list running tasks
+    type: boolean
+    default: op
+  magic.commands.magic.list.entities:
+    description: Player may inspect entity types
+    type: boolean
+    default: op
+  magic.commands.magic.list.schematics:
+    description: Player may inspect loaded schematics
+    type: boolean
+    default: op
+  magic.commands.magic.list.blocks:
+    description: Player may inspect registered blocks
+    type: boolean
+    default: op
+  magic.commands.magic.list.mages:
+    description: Player may inspect registered mages
+    type: boolean
+    default: op
+  magic.commands.magic.clean:
+    description: Player may remove lost wands from the world
+    type: boolean
+    default: op
+  magic.commands.magic.give:
+    description: Player may give themselves special wand items
+    type: boolean
+    default: op
+  magic.commands.magic.sell:
+    description: Player may give themselves items and their value
+    type: boolean
+    default: op
+  magic.commands.magic.worth:
+    description: Player may check the value of an item
+    type: boolean
+    default: op
+  magic.commands.mage:
+    description: Allows use of /mage commands
+    type: boolean
+    default: op
+  magic.commands.mage.*:
+    description: Allows use of all /mage sub-commands
+    default: op
+    children:
+    - magic.commands.mage
+    - magic.commands.mage.configure
+    - magic.commands.mage.add
+    - magic.commands.mage.reward
+    - magic.commands.mage.remove
+    - magic.commands.mage.modifier
+    - magic.commands.mage.upgrade
+    - magic.commands.mage.promote
+    - magic.commands.mage.describe
+    - magic.commands.mage.getdata
+    - magic.commands.mage.setdata
+    - magic.commands.mage.attribute
+    - magic.commands.mage.unlock
+    - magic.commands.mage.lock
+    - magic.commands.mage.switch
+    - magic.commands.mage.activate
+    - magic.commands.mage.deactivate
+    - magic.commands.mage.check
+    - magic.commands.mage.debug
+    - magic.commands.mage.reset
+    - magic.commands.mage.clear
+    - magic.commands.mage.unbind
+    - magic.commands.mage.levelspells
+    - magic.commands.mage.others
+    - magic.commands.mage.skin
+    - magic.commands.mage.forget
+    - magic.commands.mage.discover
+  magic.commands.mage.configure:
+    description: Player may configure Mage properties
+    type: boolean
+    default: op
+  magic.commands.mage.add:
+    description: Player may add spells to players
+    type: boolean
+    default: op
+  magic.commands.mage.reward:
+    description: Player may grant rewards to players
+    type: boolean
+    default: op
+  magic.commands.mage.remove:
+    description: Player may remove spells from players
+    type: boolean
+    default: op
+  magic.commands.mage.modifier:
+    description: Player may add and remove modifiers on a player
+    type: boolean
+    default: op
+  magic.commands.mage.upgrade:
+    description: Player may upgrade Mage properties
+    type: boolean
+    default: op
+  magic.commands.mage.promote:
+    description: Player may promote players
+    type: boolean
+    default: op
+  magic.commands.mage.describe:
+    description: Player may check Mage properties
+    type: boolean
+    default: op
+  magic.commands.mage.getdata:
+    description: Player may check Mage data
+    type: boolean
+    default: op
+  magic.commands.mage.attribute:
+    description: Player may check or set Mage attributes
+    type: boolean
+    default: op
+  magic.commands.mage.unlock:
+    description: Player may unlock mage classes
+    type: boolean
+    default: op
+  magic.commands.mage.switch:
+    description: Player may switch mage classes
+    type: boolean
+    default: op
+  magic.commands.mage.lock:
+    description: Player may lock mage classes
+    type: boolean
+    default: op
+  magic.commands.mage.activate:
+    description: Player may activate mage classes
+    type: boolean
+    default: op
+  magic.commands.mage.deactivate:
+    description: Player may deactivate mages
+    type: boolean
+    default: op
+  magic.commands.mage.setdata:
+    description: Player may modify Mage data
+    type: boolean
+    default: op
+  magic.commands.mage.check:
+    description: Player may check permissions
+    type: boolean
+    default: op
+  magic.commands.mage.debug:
+    description: Player may toggle debug
+    type: boolean
+    default: op
+  magic.commands.mage.reset:
+    description: Player may delete player data
+    type: boolean
+    default: op
+  magic.commands.mage.forget:
+    description: Player may reset player recipe knowledge
+    type: boolean
+    default: op
+  magic.commands.mage.discover:
+    description: Player may add to recipe knowledge
+    type: boolean
+    default: op
+  magic.commands.mage.unbind:
+    description: Player may unbind all of a player's stored wands
+    type: boolean
+    default: op
+  magic.commands.mage.levelspells:
+    description: Player may upgrade all of a player's spells
+    type: boolean
+    default: op
+  magic.commands.mage.others:
+    description: Player may use the mage command on other players
+    type: boolean
+    default: op
+  magic.commands.mskills:
+    description: Player may use the /mskills menu
+    type: boolean
+    default: op
+  magic.commands.mmap:
+    description: Player may use the /mmap command
+    type: boolean
+    default: op
+  magic.commands.mmap.*:
+    description: Player may use all /mmap sub-commands
+    default: op
+    children:
+    - magic.commands.mmap
+    - magic.commands.mmap.list
+    - magic.commands.mmap.give
+    - magic.commands.mmap.load
+    - magic.commands.mmap.import
+    - magic.commands.mmap.remove
+    - magic.commands.mmap.player
+    - magic.commands.mmap.fix
+    - magic.commands.mmap.restore
+    - magic.commands.mmap.unnamed
+    - magic.commands.mmap.name
+  magic.commands.mmap.list:
+    description: Player may use the /mmap list command
+    type: boolean
+    default: op
+  magic.commands.mmap.give:
+    description: Player may use the /mmap give command
+    type: boolean
+    default: op
+  magic.commands.mmap.load:
+    description: Player may use the /mmap load command
+    type: boolean
+    default: op
+  magic.commands.mmap.import:
+    description: Player may use the /mmap import command
+    type: boolean
+    default: op
+  magic.commands.mmap.remove:
+    description: Player may use the /mmap remove command
+    type: boolean
+    default: op
+  magic.commands.mmap.player:
+    description: Player may use the /mmap player command
+    type: boolean
+    default: op
+  magic.commands.mmap.fix:
+    description: Player may use the /mmap fix command
+    type: boolean
+    default: op
+  magic.commands.mmap.restore:
+    description: Player may use the /mmap restore command
+    type: boolean
+    default: op
+  magic.commands.mmap.unnamed:
+    description: Player may use the /mmap unnamed command
+    type: boolean
+    default: op
+  magic.commands.mmap.name:
+    description: Player may use the /mmap name command
+    type: boolean
+    default: op
+  magic.commands.mserver:
+    description: Player may sender players to other servers
+    type: boolean
+    default: op
+  magic.commands.msave:
+    description: Player may save mage data and run commands
+    type: boolean
+    default: op
+  magic.commands.mwarp.*:
+    description: Player may use all /mwarp sub-commands
+    default: op
+    children:
+    - magic.commands.mwarp
+    - magic.commands.mwarp.add
+    - magic.commands.mwarp.replace
+    - magic.commands.mwarp.remove
+    - magic.commands.mwarp.go
+    - magic.commands.mwarp.send
+    - magic.commands.mwarp.import
+    - magic.commands.mwarp.list
+    - magic.commands.mwarp.configure
+    - magic.commands.mwarp.describe
+  magic.commands.mwarp.add:
+    description: Player may use the /mwarp add command
+    type: boolean
+    default: op
+  magic.commands.mwarp.replace:
+    description: Player may use the /mwarp replace command
+    type: boolean
+    default: op
+  magic.commands.mwarp.remove:
+    description: Player may use the /mwarp remove command
+    type: boolean
+    default: op
+  magic.commands.mwarp.go:
+    description: Player may use the /mwarp go command
+    type: boolean
+    default: op
+  magic.commands.mwarp.configure:
+    description: Player may use the /mwarp configure command
+    type: boolean
+    default: op
+  magic.commands.mwarp.describe:
+    description: Player may use the /mwarp describe command
+    type: boolean
+    default: op
+  magic.commands.mwarp.send:
+    description: Player may use the /mwarp send command
+    type: boolean
+    default: op
+  magic.commands.mwarp.import:
+    description: Player may use the /mwarp import command
+    type: boolean
+    default: op
+  magic.wand.use:
+    description: The player may use a wand
+    default: true
+    type: boolean
+  magic.wand.use.protected:
+    description: The player may use a protected wand
+    default: true
+    type: boolean
+  magic.wand.use.powered:
+    description: The player may use a powered wand
+    default: true
+    type: boolean
+  magic.use:
+    description: The wands a player may use
+    type: list
+  magic.use.*:
+    description: A player may use any wand
+    type: boolean
+    default: true
+  magic.team:
+    description: The teams a player is on, used for mob factions
+    type: list
+  magic.team.*:
+    description: A player is on every magic team
+    type: boolean
+    default: false
+  magic.wand.enchant:
+    description: The player may enchant a wand
+    default: true
+    type: boolean
+  magic.wand.enchant_vanilla:
+    description: The player may vanilla enchant an enchantable wand
+    default: true
+    type: boolean
+  magic.wand.craft:
+    description: The player may craft a wand
+    default: true
+    type: boolean
+  magic.wand.override_bind:
+    description: A player may use a wand even if it is bound to another player.
+    default: false
+    type: boolean
+  magic.wand.override_stash:
+    description: A player may put wands in chests.
+    default: false
+    type: boolean
+  magic.wand.override_modifiable:
+    description: A player may modify unmodifiable wands with wand commands.
+    default: op
+    type: boolean
+  magic.bypass_pvp:
+    description: A player always bypasses PVP checks
+    default: false
+    type: boolean
+  magic.bypass_build:
+    description: A player always bypasses build checks
+    default: false
+    type: boolean
+  magic.bypass_break:
+    description: A player always bypasses block break checks
+    default: false
+    type: boolean
+  magic.bypass_hidden:
+    description: A player sees hidden spells in /spells and tab-complete
+    default: op
+    type: boolean
+  magic.bypass_kit_cooldown:
+    description: A player bypasses kit cooldowns
+    default: false
+    type: boolean
+  magic.bypass_kit_requirements:
+    description: A player bypasses kit bypass_kit_requirements
+    default: false
+    type: boolean
+  magic.bypass:
+    description: A player always bypasses other permission checks
+    default: false
+    type: boolean
+  magic.bypass_restricted:
+    description: A player may bypass restricted material checks
+    default: false
+    type: boolean
+  magic.bypass_upgrade_commands:
+    description: A player will skip upgrade commands when ranking up
+    default: false
+    type: boolean
+  magic.bypass_upgrade_broadcast:
+    description: A player will skip upgrade broadcast messages when ranking up
+    default: false
+    type: boolean
+  magic.mtrigger:
+    description: A player may use the /mtrigger command with any trigger
+    default: false
+    type: boolean
+  magic.craft:
+    description: The wands and items a player may craft
+    type: list
+  magic.craft.*:
+    description: A player may craft any item
+    type: boolean
+    default: true
+  magic.cast:
+    description: The spells a player may cast
+    type: list
+  magic.cast.*:
+    description: A player may cast any spell
+    type: boolean
+    default: true
+  magic.allowed_spell_categories:
+    description: The spell categories a player may cast
+    type: list
+  magic.allowed_spell_categories.*:
+    description: A player may cast all spell categories
+    type: boolean
+    default: true
+  magic.castp:
+    description: The spells a player may cast on behalf of another player
+    type: list
+  magic.castp.*:
+    description: A player may cast any spell on behalf of another player
+    type: boolean
+    default: op
+  magic.cast_via_command:
+    description: The spells a player may cast with the /cast command
+    type: list
+  magic.cast_via_command.*:
+    description: A player may cast any spell with the /cast command
+    type: boolean
+    default: true
+  magic.protected:
+    description: The spells a player is immune to
+    type: list
+  magic.create:
+    description: The wands a player may create with the /wand command
+    type: list
+  magic.create.*:
+    description: A player may create any wand with the /wand command
+    type: boolean
+    default: true
+  magic.wand.overwrite:
+    description: A player may delete or overwrite saved wands
+    default: op
+    type: boolean
+  magic.wand.overwrite_own:
+    description: A player may delete or overwrite their own saved wands
+    default: true
+    type: boolean
+  magic.item.overwrite:
+    description: A player may delete or overwrite saved items
+    default: op
+    type: boolean
+  magic.item.overwrite_own:
+    description: A player may delete or overwrite their own saved items
+    default: true
+    type: boolean
+  magic.item.enchant.unsafe:
+    description: A player may apply unsafe enchantments to an item
+    default: true
+    type: boolean
+  magic.item.enchant.extreme:
+    description: A player may apply extremely unsafe enchantments to an item
+    default: op
+    type: boolean
+  magic.item.attribute.unsafe:
+    description: A player may apply unsafe attributes to an item
+    default: true
+    type: boolean
+  magic.spawners:
+    description: A player may place custom mob spawners
+    default: op
+    type: boolean
+  magic.migrate:
+    description: A player will be notified of data migration status
+    default: op
+    type: boolean
+  magic.notify:
+    description: A player will be notified of errors, warnings and other events
+    default: op
+    type: boolean
+  magic.commands.marena:
+    description: Player may use the base /marena command
+    type: boolean
+    default: op
+  magic.commands.marena.add:
+    description: Player may use the /marena add command
+    type: boolean
+    default: op
+  magic.commands.marena.remove:
+    description: Player may use the /marena remove command
+    type: boolean
+    default: op
+  magic.commands.marena.start:
+    description: Player may use the /marena start command
+    type: boolean
+    default: op
+  magic.commands.marena.stop:
+    description: Player may use the /marena stop command
+    type: boolean
+    default: op
+  magic.commands.marena.join:
+    description: Player may use the /marena join command
+    type: boolean
+    default: op
+  magic.commands.marena.leave:
+    description: Player may use the /marena leave command
+    type: boolean
+    default: op
+  magic.commands.marena.reset:
+    description: Player may use the /marena reset command
+    type: boolean
+    default: op
+  magic.commands.marena.configure:
+    description: Player may use the /marena configure command
+    type: boolean
+    default: op
+  magic.commands.marena.stage:
+    description: Player may use the /marena stage command
+    type: boolean
+    default: op
+  magic.commands.marena.join.other:
+    description: Player may use the /marena join command on others
+    type: boolean
+    default: op
+  magic.commands.marena.leave.other:
+    description: Player may use the /marena leave command on others
+    type: boolean
+    default: op
+  magic.commands.marena.import:
+    description: Player may use the /marena import command
+    type: boolean
+    default: op
+  magic.arena.signs.create:
+    description: Player may create arena signs
+    type: boolean
+    default: op
+  magic.arena.signs.use:
+    description: Player may use arena signs
+    type: boolean
+    default: true

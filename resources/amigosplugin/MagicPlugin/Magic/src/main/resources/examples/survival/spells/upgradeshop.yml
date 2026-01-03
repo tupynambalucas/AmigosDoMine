@@ -1,0 +1,20 @@
+upgradeshop:
+    icon: golden_axe
+    category: npc
+    hidden: true
+    inherit: buyshop
+    parameters:
+        quiet: true
+        confirm_filler: lime_stained_glass_pane
+        confirm: true
+        requirements:
+        - holding_wand: true
+        apply_to_wand: true
+        items:
+        - item: wand|antihunger
+          cost: 2000
+        - item: wand|hotbar2
+          cost: 500
+        - item: wand|hotbar3
+          cost: 1000
+

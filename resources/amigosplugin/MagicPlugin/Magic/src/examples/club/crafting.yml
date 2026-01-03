@@ -1,0 +1,85 @@
+# Craftable teleporter
+teleporter:
+  output: teleporter
+  auto_discover: true
+  materials:
+    o: ender_eye
+    a: amethyst_shard
+  row_1: " a "
+  row_2: "aoa"
+  row_3: " a "
+
+# Enable some cruelty-free recipes
+
+zombie_leather:
+  enabled: true
+
+coal_ink:
+  enabled: true
+
+# and some OP ones
+
+saddle:
+  enabled: true
+
+name_tag:
+  enabled: true
+
+# Disable all magic items for now
+
+broomstick:
+  enabled: false
+  inherit: false
+  auto_discover: true
+  output: broomstick
+  output_type: wand
+  group: "Broomsticks"
+  materials:
+    i: stick
+    o: phantom_membrane
+    w: wheat
+  row_1: " i "
+  row_2: " i "
+  row_3: "wow"
+
+camera:
+  enabled: true
+  inherit: false
+  output: camera
+  output_type: wand
+  auto_discover: true
+  materials:
+    i: dispenser
+    d: daylight_detector
+  row_1:
+  row_2: i
+  row_3: d
+
+# Stars
+
+blaster_blue:
+  enabled: false
+
+blaster_green:
+  enabled: false
+
+blaster_red:
+  enabled: false
+
+lightsaber_blue:
+  enabled: false
+
+lightsaber_green:
+  enabled: false
+
+lightsaber_hilt:
+  enabled: false
+
+lightsaber_orange:
+  enabled: false
+
+lightsaber_purple:
+  enabled: false
+
+lightsaber_red:
+  enabled: false

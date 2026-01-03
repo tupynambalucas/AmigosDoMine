@@ -1,0 +1,7 @@
+#
+# Actual spells are in the spells folder, this is just here to change the SP earn cooldown
+#
+
+default:
+    # Spells take 1 minute to return to full SP earning potential
+    earns_cooldown: 1 minutes

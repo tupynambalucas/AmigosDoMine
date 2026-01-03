@@ -1,0 +1,16 @@
+help:
+  examples:
+    main: |-
+      `<li>``<help topic="instructions.example.chests" text="Magic Chests">`
+
+examples:
+  chests:
+    instructions: |-
+      `<title text="Magic Chest Instructions">`
+      `<p>`You can now find &6Spell Points &fin naturally-spawned chests &r
+      `<p>`They will only be added once, and so can only be found in &r
+      `<p>`chunks generated after this example has been enabled. &r
+      `<p>`If your default world is not called &6world&f you will &r
+      `<p>`need to customize your configuration using &r
+      `<p>`&7/mconfig world overworld_chests world yourworld &r
+      `<p>`&7/mconfig world nether_chests world yournether &r

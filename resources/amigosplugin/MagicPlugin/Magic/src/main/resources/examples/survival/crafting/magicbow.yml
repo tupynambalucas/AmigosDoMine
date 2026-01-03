@@ -1,0 +1,10 @@
+magicbow:
+  output: magicbow
+  output_type: wand
+  ingredients:
+    i: bow
+    h: amethyst_shard
+  row_1: h
+  row_2: i
+  row_3: h
+

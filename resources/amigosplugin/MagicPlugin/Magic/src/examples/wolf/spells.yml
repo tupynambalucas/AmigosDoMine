@@ -1,0 +1,206 @@
+#
+# Modify this file to change the available spells.
+# New spells can be added, existing spells modified or removed (disabled)
+#
+# You can also add individual files to the spells/ folder
+#
+# To see the current default builtin configs, look in this folder:
+# https://github.com/elBukkit/MagicPlugin/tree/master/src/main/resources/defaults/spells
+#
+# For customization help see: 
+# https://github.com/elBukkit/MagicPlugin/wiki/Customization
+#
+
+#
+# This is the Spell configuration file for the Magic plugin.
+#
+# Here you may alter default spell behavior, or add and remove spells.
+# 
+# The name, description, and usage of a spell should be defined in messages.yml as
+#  messages.spells.<spellkey>.name
+#  messages.spells.<spellkey>.description
+#  messages.spells.<spellkey>.usage
+#  messages.spells.<spellkey>.cast
+#  ... etc.
+#
+# General format:
+#
+# <spellkey>:
+#       icon:  <material name>
+#       category: <anything>
+#       class: <Must be a class from the spells package.>
+#       costs:
+#           xp: <xp/mana amount>
+#           <material_name>: <reagent amount>#      
+#       parameters:
+#           <specific spell parameters- TODO: list common ones>
+#
+
+#
+# Examples:
+# Note that a "#" chararacter means the line is commented out and has no effect.
+# Make sure to not comment out the lines you add, there should not be a space in front of the name, indentation is important.
+# Use http://www.yamllint.com if you have issues with your config, make sure not to use tabs!
+# 
+
+# Disable the kill spell completely
+# kill:
+#   enabled: false
+
+# Change the cooldown on the petrify spell to one minute (60 seconds, 60000 ms)
+# petrify:
+#   parameters:
+#      cooldown: 60000
+
+# Change casting cost of blind spell to 100 mana
+# blind:
+#   costs:
+#      mana: 100
+
+# Require kill spell to consume health
+# kill:
+#    costs:
+#       health: 10
+
+override:  
+  pvp_restricted: false
+
+dragonize:
+  icon: spell_icon:152
+  icon_disabled: spell_icon_disabled:152
+  icon_url: http://textures.minecraft.net/texture/c52264ac4e5621668c43e87aed7918ed6b883abc5018769c9536d27b77f
+  quick_cast: true
+  actions:
+    cast:
+    - class: Disguise
+    - class: Velocity
+      direction: 0,1,0
+      additive: true
+      speed: 2
+    - class: Delay
+      delay: 100
+    - class: Fly
+    - class: SuperProtection
+      duration: 360000
+  effects:
+      cast:
+      -  class: EffectSingle
+         sound: magic.zap_big
+      -  class: EffectSingle
+         sound: magic.zap
+      tick:
+      - location: target
+        particle: fireworks_spark
+        particle_count: 3
+        particle_offset_x: 0.01
+        particle_offset_y: 0.01
+        particle_offset_z: 0.01
+      hit:
+      - class: EffectSingle
+        location: target
+        color: F5EFFB
+        firework: ball
+      - class: EffectSingle
+        sound: entity_experience_orb_pickup
+        location: target
+        requires_entity_target: true
+        particle_override: particle_orbital
+        effectlib:
+           class: AtomEffect
+           particle_nucleus: fireworks_spark
+           particle_orbital: fireworks_spark
+           iterations: 40
+  parameters:
+      target: self
+      disguise:
+        type: ender_dragon
+      cooldown: 10000
+      speed: 2
+
+dragonbreath:
+    icon: spell_icon:153
+    icon_disabled: spell_icon_disabled:153
+    icon_url: http://textures.minecraft.net/texture/e511624fac75f03cf2f3a56d5fe4582d6e74fc9f5e1e1160af1941ee144928
+    category: combat
+    pvp_restricted: true
+    worth: 800
+    earns_sp: 12
+    actions:
+        cast:
+        -  class: Projectile
+    effects:
+        cast:
+        -  class: EffectSingle
+           effectlib:
+             class: ConeEffect
+             iterations: 15
+             particle: dragon_breath
+             lengthGrow: 0.1
+           sound: entity_ender_dragon_shoot
+           sound_volume: 1
+           sound_pitch: 0.25
+        -  class: EffectSingle
+           sound: entity_ender_dragon_growl
+           sound_volume: 0.9
+           sound_pitch: 0.5
+        projectile:
+        -  class: EffectSingle
+           location: origin
+           effectlib:
+             class: SmokeEffect
+             iterations: 4
+             period: 5
+             particle: dragon_breath
+        hit:
+        -  class: EffectSingle
+           location: target
+           color: FF00FF
+           firework: ball
+    parameters:
+        projectile: DragonFireball
+        cooldown: 2000
+        start: 1
+        break_blocks: false
+
+creeperize:
+  icon: creeper_head
+  icon_disabled: creeper_head
+  quick_cast: true
+  actions:
+    cast:
+      - class: Disguise
+      - class: Modifier
+  effects:
+    cast:
+      - class: EffectSingle
+        sound: magic.zap_big
+      - class: EffectSingle
+        sound: magic.zap
+    tick:
+      - location: target
+        particle: fireworks_spark
+        particle_count: 3
+        particle_offset_x: 0.01
+        particle_offset_y: 0.01
+        particle_offset_z: 0.01
+    hit:
+      - class: EffectSingle
+        location: target
+        color: F5EFFB
+        firework: ball
+      - class: EffectSingle
+        sound: entity_experience_orb_pickup
+        location: target
+        requires_entity_target: true
+        particle_override: particle_orbital
+        effectlib:
+          class: AtomEffect
+          particle_nucleus: fireworks_spark
+          particle_orbital: fireworks_spark
+          iterations: 40
+  parameters:
+    modifier: hidden
+    target: self
+    disguise:
+      type: creeper
+    cooldown: 10000

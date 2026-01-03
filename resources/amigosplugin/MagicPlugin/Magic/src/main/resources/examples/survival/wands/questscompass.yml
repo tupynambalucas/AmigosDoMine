@@ -1,0 +1,12 @@
+# Quests integration
+questscompass:
+  active_spell: quests
+  icon: compass
+  undroppable: true
+  indestructible: false
+  mode: cast
+  keep: true
+  spells:
+  - quests
+
+

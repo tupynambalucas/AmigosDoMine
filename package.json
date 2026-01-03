@@ -12,7 +12,8 @@
     "url": "git+https://github.com/tupynambalucas/AmigosDoMine.git"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "resources"
   ],
   "scripts": {
     "// [1] INSTALAÇÃO E SETUP": "-------------------------------------------------------",
@@ -28,7 +29,7 @@
     "stabledf": "docker compose up -d --build stabledf",
     "stabledf:logs": "docker compose logs -f stabledf",
     "// [3] MINECRAFT RESOURCE DEVELOPMENT": "----------------------------------------------------",
-    "build:plugin": "cd packages/resources-devlopment/masterplugin && .\\gradlew shadowJar",
+    "build:plugin": "cd resources/plugins/amigosplugin && .\\gradlew shadowJar",
     "// [3] SEED MONGODB": "----------------------------------------------------",
     "backend:seed": "npm run seed -w @amigos-do-mine/backend",
     "// [4] INFRAESTRUTURA LOCAL (DOCKER)": "---------------------------------------------",

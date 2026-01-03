@@ -1,0 +1,12 @@
+# Materials that you can't attach items (e.g. torches) to.
+# Used by the Torch action.
+not_attachable:
+- glass
+- sea_lantern
+- ice
+- glowstone
+- leaves
+- leaves_2
+- stained_glasses
+- stained_glass_panes
+

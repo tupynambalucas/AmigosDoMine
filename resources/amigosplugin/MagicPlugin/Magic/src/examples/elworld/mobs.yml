@@ -1,0 +1,298 @@
+cowlock:
+  type: zombie
+  name: Cowlock
+  health: 200
+  default_drops: false
+  disguise:
+    type: cow
+    
+madscientist2:
+  name: Mad Scientist
+  type: husk
+  disguise:
+    type: player
+    name: Mad Scientist
+    skin: NathanWolf
+  item: madscientist_wand
+  chestplate: warlock_chestplate
+  leggings: warlock_leggings
+  helmet: madscientist_helmet
+  boots: warlock_boots
+  health: 5000
+  default_drops: false
+  cast_interval: 1000
+  cast:
+    missile|4: 200
+    none: 20
+  drops:
+  - gold_ingot@30
+  - sp:200
+  potion_effects:
+  - type: speed
+    amplifier: 1
+
+nathanstack:
+  inherit: madscientist
+  mount: nathanstack
+
+skeletoncompanion:
+   type: wolf
+   name: Skeletal Companion
+   health: 30
+   tamed: true
+   default_drops: false
+   disguise:
+     type: skeleton
+
+basher:
+  type: zombie
+  villager_profession: butcher
+  item: warlock_wand
+  cast_requires_item: warlock_wand
+  chestplate: warlock_chestplate
+  leggings: warlock_leggings
+  helmet: chainmail_helmet
+  boots: warlock_boots
+  name: Basher
+  health: 200
+  default_drops: false
+  protection:
+    fall: 1
+  interval: 1000
+  triggers:
+    interval:
+      cast:
+        wound: 100
+        none: 10
+  drops:
+  - gold_nugget@16
+  - sp:16
+
+killercar:
+  name: Christine
+  type: husk
+  disguise:
+    type: armor_stand
+    name: Carrie
+    invisible: true
+    baseplate: false
+    small: true
+  helmet: model3_black_item
+  health: 5000
+  default_drops: false
+  interval: 1000
+  triggers:
+    interval:
+      cast:
+        missile|4: 200
+        none: 20
+  drops:
+  - gold_ingot@30
+  - sp:200
+  potion_effects:
+  - type: speed
+    amplifier: 1
+
+timebomb:
+  name: Time Bomb
+  type: creeper
+  triggers:
+    interval:
+      cast:
+        fling: 200
+        none: 20
+    detonate:
+      cast:
+        timebomb_electrify: 100
+        timebomb_explode: 10
+
+blocky:
+  name: Blocky
+  type: falling_block
+  material: glass
+  gravity: false
+
+player:
+  drops_require_player_killer: true
+  drops:
+  - sp:20
+
+zombie:
+  drops_require_player_killer: true
+  drops:
+  - sp:2
+
+spider:
+  drops_require_player_killer: true
+  drops:
+  - sp:2
+
+skeleton:
+  drops_require_player_killer: true
+  drops:
+  - sp:3
+
+creeper:
+  drops_require_player_killer: true
+  drops:
+  - sp:5
+
+nerflock:
+  type: zombie
+  item: warlock_wand
+  cast_requires_item: warlock_wand
+  name: Nerflock
+  health: 50
+  default_drops: false
+  offhand: golden_sword
+  mage:
+    stack: true
+    strength:
+      # Note that this is 10% of the overall max multiplier, which is 5x
+      # So really this will be a 50% damage reduction, or thereabouts.
+      overall: -0.1
+  interval: 1000
+  triggers:
+    interval:
+      cast:
+        missile: 20
+  drops:
+  - sp:10
+
+permaspider:
+  name: Perma-Spider
+  type: creeper
+  health: 1000
+  persist: true
+
+namedspider:
+  name: Named Spider
+  type: zombie
+  health: 10
+
+redsheep:
+  type: sheep
+  color: red
+
+mounted:
+  type: chicken
+  mount:
+    type: zombie
+
+dungeonboss:
+  name: Dungeon Master
+  type: zombie
+  item: warlock_wand
+  cast_requires_item: warlock_wand
+  chestplate: warlock_chestplate
+  leggings: warlock_leggings
+  helmet: chainmail_helmet
+  boots: warlock_boots
+  health: 100
+  default_drops: false
+  transformable: false
+  protection:
+    fall: 1
+  interval: 1000
+  triggers:
+    death:
+      cast: bossdeath
+    interval:
+      cast:
+        missile: 20
+        poison: 30
+        pull: 100
+        curse: 100
+        blob: 20
+        lava: 10
+        shell: 20
+        none: 300
+  drops:
+  - diamond: 10
+    emerald: 15
+    gold_nugget@18: 50
+    gold_nugget@16: 100
+    gold_nugget@12: 50
+    gold_nugget@8: 20
+  - sp:128
+
+loot:
+  name: Diamond
+  type: dropped_item
+  item: diamond
+
+goblin:
+  type: husk
+  name: "&2Goblin"
+  health: 50
+  prevent_melee: true
+
+superfox:
+  type: fox
+  name: "&2Foxy"
+  fox_type: snow
+  # TBW
+  # trusted: 892bba3e-76c1-4cd4-97cb-bfa8221e2332
+  trusted: 4cb358ae-719c-4423-93c7-8769ce46e9c3
+  owner: 4cb358ae-719c-4423-93c7-8769ce46e9c3
+  health: 10000
+  persist: true
+  baby: true
+  brain:
+    goals:
+      - follow_owner
+      - look_at_player
+  disguise:
+    type: fox
+    baby: true
+  protection:
+    all: 2
+
+teams:
+  inherit: false
+  show_name: true
+  name: Teamers
+  type: zombie
+  item: diamond_sword
+  helmet: diamond_helmet
+  chestplate: diamond_chestplate
+  leggings: iron_leggings
+  boots: iron_boots
+  health: 75
+  default_drops: false
+  permissions: magic.team.mobs
+  targeting:
+    denied_permissions: magic.team.mobs
+  interval: 5000
+  triggers:
+    interval:
+      cast:
+        curse|2: 25
+        missile|4: 15
+        stun|3: 15
+        petrify|3: 10
+        gatling|2: 10
+        anvil: 15
+        none: 10
+  drops:
+    - currency:10
+    - currency:15
+    - currency:20
+    - sp:10
+    - sp:15
+    - sp:20
+  potion_effects:
+    - type: speed
+      amplifier: 1
+
+deathbell:
+  type: zombie
+  interval: 1000
+  triggers:
+    interval:
+      cast:
+        "missile player_damage 500": 1
+    kill1:
+      type: kill
+      cast:
+        shutdown: 1

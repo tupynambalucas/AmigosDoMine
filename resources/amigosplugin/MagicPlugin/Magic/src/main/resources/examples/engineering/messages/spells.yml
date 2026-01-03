@@ -1,0 +1,317 @@
+spells:
+    wolfhouse:
+        name: Wolf House
+        description: Create an auto-regenerating base
+    wolfhouse_build:
+        name: Wolf House Expand
+    wolfhouse_clear:
+        name: Wolf House Self-Destruct
+    wolfhouse_dome:
+        name: Wolf House Dome
+    wolfhouse_shields:
+        name: Wolf House Shields
+    convert:
+        name: Convert
+        description: Convert a spherical area of blocks
+        usage: Does not fill air
+        cast_finish: Converted @blocks blocks to $material
+        upgrade_description: "Increased radius"
+    superconvert:
+        name: SuperConvert
+        description: Convert a large sphere of blocks
+        usage: Cast twice to convert, shift-cast to match specific block data
+        target_selected: Cast again to convert $target
+        fail: "a:&cToo large!"
+        cast_finish: Converted @blocks blocks to $material
+        upgrade_description: "Increased max radius"
+    supercollapse:
+        name: SuperCollapse
+        description: Collapse a large sphere of blocks
+        usage: Cast twice to collapse
+        target_selected: Cast again to collapse
+        fail: "a:&cToo large!"
+        cast_finish: Collapsed @blocks blocks
+    superblob:
+        name: SuperBlob
+        description: Create a large solid sphere
+        usage: Cast twice to construct
+        target_selected: Cast again to build sphere
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    superhemisphere:
+        name: SuperHemisphere
+        description: Create a large solid half-sphere
+        usage: Cast twice to construct
+        target_selected: Cast again to build hemisphere
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    supercylinder:
+        name: SuperCylinder
+        description: Create a large cylinder
+        usage: Cast twice to construct
+        target_selected: Cast again to build cylinder
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    superwalls:
+        name: SuperWalls
+        description: Create a high walls around your area
+        usage: Cast twice to construct
+        target_selected: Cast again to build walls
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    superrepair:
+        name: SuperRepair
+        description: Repairs a large area saved with Backup
+        usage: Cast twice to repair
+        target_selected: Cast again to repair
+        fail: "a:&cToo large!"
+        cast_finish: Repaired @blocks blocks
+    iterate:
+        name: Iterate
+        description: Construct a line of blocks
+        usage: Must aim at a target block
+        cast: Filled @blocks blocks
+    column:
+        name: Column
+        description: Construct a large column of blocks
+        cast: Filled @blocks blocks
+    rollback:
+        name: Rollback
+        description: Undo the targeted spell
+        usage: "Aim up to undo your most recent cast\nAim down to undo at your feet"
+        cast: "&5You undo &d&o$target's &r&6$spell &5cast"
+        cast_player: "&5You undo &d&o$target's&r&6 $spell &5cast"
+        alternate_up: "&5You undo your previous&r&6 $spell &5cast"
+        alternate_down: "&5You undo &d&o$target's &r&6$spell &5cast"
+        deactivate: "&5You cancel your &6$spell &5cast"
+        fail: Nothing to undo
+        no_target: Nothing to undo there
+    commit:
+        name: Commit
+        description: Make your spells permanent
+        usage: Clears your Rollback queue
+        cast_player: You commit $target's spells
+        cast: Your Rollback queue has been cleared
+        fail: Nothing to commit
+    alter:
+        name: Alter
+        description: Alter certain objects
+        usage: Use on wool, stairs, etc
+        cast_entity: You altered the target $target
+        cast: You altered your target
+        fail: Can't adjust that
+    superalter:
+        name: SuperAlter
+        description: Alter objects recursively
+        usage: Use on wool, stairs, etc
+        cast: Altered @blocks blocks
+        fail: Can't adjust that
+    sphere:
+        name: Sphere
+        description: Create a real sphere
+        cast_finish: Created a $material sphere
+    backup:
+        name: Backup
+        description: Save your target area for Repair
+        cast_finish: Backed up the area
+        target_selected: Cast again to backup
+    superbackup:
+        name: SuperBackup
+        description: Save a large target area for Repair
+        usage: Cast twice to save
+        fail: "a:&cToo large!"
+        cast_finish: Backed up the selected area
+        target_selected: Cast again to backup
+    superemp:
+        name: SuperEMP
+        description: Electrify a large area
+        usage: Cast twice to electrify
+        fail: "a:&cToo large!"
+        cast_finish: Electrified @blocks blocks
+        target_selected: Cast again to electrify sphere
+    supershell:
+        name: SuperShell
+        description: Create a large hollow sphere
+        usage: Cast twice to construct
+        target_selected: Cast again to build shell
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    superdisc:
+        name: SuperDisc
+        description: Create a large circular disc
+        usage: Cast twice to construct
+        target_selected: Cast again to build disc
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    superring:
+        name: SuperRing
+        description: Create a large circular ring
+        usage: Cast twice to construct
+        target_selected: Cast again to build ring
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    superdome:
+        name: SuperDome
+        description: Create a very large dome
+        usage: Cast twice to construct
+        target_selected: Cast again to build dome
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    superpyramid:
+        name: SuperPyramid
+        description: Create a large hollow pyramid
+        usage: Cast twice to construct
+        target_selected: Cast again to build pyramid
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    superbox:
+        name: SuperBox
+        description: Create a large hollow box
+        usage: Cast twice to construct
+        target_selected: Cast again to build box
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    supercube:
+        name: SuperCube
+        description: Create a large solid cube
+        usage: Cast twice to construct
+        target_selected: Cast again to build cube
+        fail: "a:&cToo large!"
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased max radius"
+    superblast:
+        name: SuperBlast
+        description: Mine out a very large area
+        cast_finish: Blasted @blocks blocks
+    box:
+        name: Box
+        description: Create a large hollow box
+        cast_finish: Filled @blocks blocks with $material
+    pillar:
+        name: Pillar
+        description: Raises a pillar up
+        cast: You create a pillar of $material
+        no_target: Can't pillar any further
+    raise:
+        name: Raise
+        description: Raises the ground up to form a nice slope
+        cast: You raise up the ground
+        upgrade_description: "Increased radius"
+    flatten:
+        name: Flatten
+        description: Lower the ground to flatten it to the lowest point in the area
+        cast: You flatten the hills
+        upgrade_description: "Increased radius"
+    place:
+        name: Place
+        description: Place a block at your target
+        cast: You place a block of $material
+    transmute:
+        name: Transmute
+        description: Convert your last construction
+        no_target: Nothing to transmute
+        cast: You transmute your structure to $material
+    fill:
+        name: Fill
+        description: Fill a selected cuboid area
+        usage: Cast twice to fill
+        target_selected: Cast again to fill with $material
+        fail: Can't fill that much!
+        cast_finish: Filled @blocks blocks with $material
+    save:
+        name: Save
+        description: Save a selected cuboid area to a schematic file
+        usage: Cast twice to fill
+        target_selected: Cast again to save schematic
+        fail: Can't save that much!
+        cast_finish: Saved selection to $filename
+    superregenerate:
+        name: SuperRegenerate
+        description: Regenerate a selected area
+        usage: Cast twice to regenerate
+        fail: Can't regenerate that much!
+        cast: Regenerating blocks
+        target_selected: Cast again to regenerate blocks
+        cast_finish: Regenerated @blocks blocks
+    regenerate:
+        name: Regenerate
+        description: Regenerate a small area
+        cast: Regenerating area
+        cast_finish: Regenerated @blocks blocks
+    recurse:
+        name: Recurse
+        description: Recursively fill blocks
+        cast_finish: Filled @blocks blocks with $material
+        upgrade_description: "Increased recursion depth and build speed"
+    floodfill:
+        name: Flood Fill
+        description: Fill up a hole
+        cast_finish: Flooded @blocks blocks with $material
+    absorb:
+        name: Absorb
+        description: Absorb some of the target
+        usage: Adds materials to your wand
+        fail: This spell requires a wand
+        cast: Absorbing some $material
+        upgrade_description: "Sneak-cast to absorb a wildcard material\nThese can be used with SuperReplace to change stairs, fences or other complex blocks in-place"
+        insufficient_permission: "a:&cYou are not allowed to absorb that block"
+    bridge:
+        name: Bridge
+        description: Extend the ground underneath you
+        usage: Can be used in mid-air
+        no_target: Can't bridge here
+        cast: A bridge of $material extends
+    brushselect:
+        name: Brush Selector
+        descriptions: Chooses your active brush, for use with engineering spells
+        usage: You can also shift+activate with your wand to show the brush selector
+        fail: You must be holding a wand!
+        variant_name: "&b$variant &3+Variants"
+        variant_description: "Choose a type of $variant"
+        title: "&bBrushes &7(&d@materia &5Materia&7)"
+    tree:
+        name: Tree
+        description: Instantly grow a tree
+        fail: Your tree didn't grow
+        cast: You grow a $tree!
+    forest:
+        name: Forest
+        description: Instantly grow a forest
+        fail: No trees grew
+        cast: You grow a forest!
+    supertorch:
+        name: SuperTorch
+        description: Creates a permanent torch
+        no_target: Can't put a torch there
+        cast: Flame on!
+    tunnel:
+        name: Tunnel
+        description: Mine out a tunnel in front of you
+        no_target: You need to be standing on something!
+        cast: Tunneled through @blocks blocks
+    toggleair:
+        name: Cycle Construction Modifiers
+        description: Will change several spells (Fill, SuperBlob, etc) behavior by changing what types of blocks they will replace
+        ignoreair: "&fAir &cwill not be &breplaced by Architect spells"
+        onlyair: "&fOnly air &awill be &breplaced by Architect spells"
+        normal: "&fAll block types &awill be &breplaced by Architect spells"
+    fling|5:
+        upgrade_description: "Faster, Can now be used while gliding with an elytra"
+    materiashop:
+        name: Materia Shop
+        description: Exchange money for Spell Points
+        title: "&3Materia &7(&a$balance&7)"
+        not_applicable: "&cYou are at the limit for &3Materia"
+    light:
+        name: Light
+        description: Create an invisible light source

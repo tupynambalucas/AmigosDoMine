@@ -1,0 +1,25 @@
+# Add a custom currency that can be used to manifest blocks if you do not have
+# the correct blocks in your inventory
+custom_currency:
+  materia:
+    max: 9999
+    default: 0
+    icon: skull:http://textures.minecraft.net/texture/a5454f6488662cdb7d57d5fcaf3d9b061b57c109ba2aaa06c54707174d7a0c4
+
+    # This is how much each materia is worth in vault currency
+    # This is used to translate worth values assigned to blocks in item.yml into materia
+    # values, which is the basis for all of the block exchanges.
+    # Make this value larger to make blocks worth (and cost) more materia.
+    worth: 10
+
+# This allows engineering spells to work with a custom currency instead
+# of requiring the blocks to build.
+# This only affects spells that use `consume: true`
+block_exchange:
+  # This is needed because added examples can't override main config options, only add to them
+  override: true
+
+  # Turn on block exchange using the materia currency
+  enabled: true
+  currency: materia
+

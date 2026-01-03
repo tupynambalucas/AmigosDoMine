@@ -1,0 +1,100 @@
+wither:
+    # This refers to an icon defined in the icons folder/config
+    icon: wither
+    upgrade_required_path: apprentice
+    upgrade_required_casts: 50
+    category: dark
+    worth: 350
+    earns: 10
+    actions:
+        cast:
+        - class: Projectile
+          actions:
+          - class: AreaOfEffect
+            actions:
+            - class: PotionEffect
+            - class: Damage
+            - class: PlayEffects
+              effects: withered
+    effects:
+        cast:
+        - sound: entity_wither_shoot
+          sound_pitch: 0.8
+          sound_volume: 0.4
+        projectile:
+        - class: EffectSingle
+          location: origin
+          effectlib:
+             class: Sphere
+             iterations: 10
+             period: 2
+             particles: 5
+             particle: redstone
+             color: "010101"
+             disappear_with_origin_entity: true
+        hit:
+        - location: target
+          sound: entity_wither_break_block
+          sound_pitch: 0.8
+          effectlib:
+            class: Modified
+            disappear_with_origin_entity: true
+            duration: 750
+            parameters:
+              radius: "(t / i) * 1.5 + 0.1"
+            effect:
+              class: Sphere
+              particle: smoke_normal
+              particles: 20
+              particle_count: 5
+              particle_offset_x: 0.2
+              particle_offset_y: 0.2
+              particle_offset_z: 0.2
+        withered:
+        - location: target
+          target_location: body
+          effectlib:
+           class: Modified
+           disappear_with_origin_entity: true
+           duration: $duration
+           parameters:
+            size: "(1 - (t / i)) * 1.5 + 0.5"
+           effect:
+             class: AnimatedBall
+             particle: smoke_normal
+             particle_count: 5
+             particles: 20
+             particles_per_iteration: 5
+             particle_offset_x: 0.05
+             particle_offset_y: 0.05
+             particle_offset_z: 0.05
+             y_factor: 1
+    parameters:
+        target: none
+        projectile: WitherSkull
+        effect_wither: 0
+        duration: 5000
+        radius: 1
+        count: 1
+        undo: 10000
+        cooldown: 15000
+        start: 1
+        break_blocks: false
+        damage: 1
+    costs:
+        mana: 60
+
+wither|2:
+    upgrade_required_path: master
+    upgrade_required_casts: 50
+    parameters:
+       count: 3
+       radius: 3
+       duration: 8000
+
+wither|3:
+    parameters:
+       count: 4
+       radius: 4
+       duration: 10000
+

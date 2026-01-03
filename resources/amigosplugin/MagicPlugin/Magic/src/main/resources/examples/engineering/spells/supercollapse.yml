@@ -1,0 +1,34 @@
+supercollapse:
+    # This refers to an icon defined in the icons folder/config
+    icon: supercollapse
+    category: engineering
+    tags: noduel
+    cancellable: false
+    class: ConstructSpell
+    worth: 900
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_generic_explode
+        -  class: EffectSingle
+           sound: entity_generic_explode
+           location: target
+           particle: explosion_huge
+        -  class: EffectTrail
+           particle: explosion_normal
+    parameters:
+        allow_max_range: true
+        range: 32
+        cooldown: 10000
+        max_dimension: 5
+        brush: air
+        falling: true
+        check_destructible: false
+        target: select
+        type: sphere
+        transparent: transparent_to_construction
+        ignore_region_overrides: true
+        cancel_on_deactivate: false
+    costs:
+        mana: 250
+

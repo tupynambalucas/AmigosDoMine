@@ -1,0 +1,44 @@
+student:
+    icon: stick{CustomModelData:18002}
+    legacy_icon: wooden_hoe:2
+    legacy_migrate_icon: wooden_hoe
+    upgrade: apprentice
+    upgrade_item: apprentice_upgrade
+    inherit: beginner
+    # Mana will be upgraded when ranking up
+    override_properties:
+      mana_regeneration: 15
+      mana_max: 100
+      hotbar_count: 2
+    extra_spells:
+      - familiar
+      - monster
+      - tracking
+      - rocket
+      - secure
+      - admission
+      - tag
+      - phase
+      - grow
+      - sparkle
+    spells:
+      - blink
+      - arrowrain
+      - boom
+      - fling
+      - grenade
+      - heal
+      - lightning
+      - lava
+      - stream
+      - flamethrower
+      - wither
+      - mine
+      - chop
+      - shell
+      - blob
+      - entangle
+      - whip
+      - curse
+      - vengeance
+

@@ -1,0 +1,55 @@
+#
+# A starter engineering wand
+#
+engineer:
+    inherit: master
+    effect_color: '00FF00'
+    path: engineer
+    icon: blaze_rod{CustomModelData:18005}
+    legacy_icon: wand_icon:5
+    legacy_migrate_icon: golden_axe
+    mana_regeneration: 50
+    mana_max: 300
+    hotbar_count: 2
+    level_spells_to_path: engineer
+    spells:
+      # Hotbar 1, Engineering
+      - levitate|4
+      - fling|4
+      - blink|6
+      - place
+      - paint
+      - alter
+      - brushselect
+      - rollback
+
+      # Hotbar 2, brushes
+      # This is a blank hotbar to be filled in by the brushes list below
+      - newpage
+
+      # Page 1, Engineering
+      - bridge
+      - pillar
+      - convert
+      - recurse
+      - toss
+      - iterate
+      - tunnel
+      - supertorch
+      - raise
+      - flatten
+      - tree
+      - commit
+    brushes:
+      - erase@8
+      - stone
+      - dirt
+      - sand
+      - grass
+      - gravel
+      - glass
+      - glowstone
+      - white_terracotta
+      - white_stained_glass
+      - white_stained_glass_pane
+

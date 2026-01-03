@@ -1,0 +1,4 @@
+bender:
+  inherit: base
+  locked: false
+  limit_spells_to_path: true

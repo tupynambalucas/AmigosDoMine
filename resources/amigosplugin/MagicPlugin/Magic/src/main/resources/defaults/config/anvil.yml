@@ -1,0 +1,11 @@
+# This disables all interaction with an anvil
+disable_anvil: false
+
+# Turn off renaming wands on an anvil
+enable_wand_renaming: true
+
+# Allow combining enchanted books with an (unenchanted but enchantable) wand
+enable_wand_book_combining: true
+
+# Disable book combining with vanilla items
+disable_book_combining: false

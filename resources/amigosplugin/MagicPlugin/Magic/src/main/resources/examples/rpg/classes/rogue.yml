@@ -1,0 +1,9 @@
+rogue:
+  icon: spell_icon:264
+  icon_disabled: spell_icon_disabled:264
+  inherit: base
+  locked: true
+  entity_attributes:
+    generic_max_health:
+      value: "constitution"
+      operation: base

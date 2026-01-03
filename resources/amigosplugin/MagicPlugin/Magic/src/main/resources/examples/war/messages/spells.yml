@@ -1,0 +1,103 @@
+spells:
+    radar:
+        name: RADAR
+        cast: $target shows on the RADAR
+        no_target: RADAR is quiet
+        cast_player_message: ""
+        indirect_player_message: ""
+    sniper:
+        name: Sniper Rifle Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    rifle:
+        name: Marksman Rifle Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    ak47:
+        name: AK-47 Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    mp5:
+        name: MP5 Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    pkp:
+        name: Pecheneg Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    thompson:
+        name: Thompson Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    pistol:
+        name: Pistol Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    shotgun:
+        name: Combat Shotgun Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    hawk_shotgun:
+        name: Hawk Shotgun Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    rocketlauncher:
+        name: Rocket Launcher Skill
+        cast_player_message: ""
+        indirect_player_message: ""
+        insufficient_resources: "a:Left-click to reload"
+        cooldown: ""
+    reload_sniper:
+        cooldown: ""
+    reload_ak47:
+        cooldown: ""
+    reload_mp5:
+        cooldown: ""
+    reload_pistol:
+        cooldown: ""
+    reload_shotgun:
+        cooldown: ""
+    reload_rocketlauncher:
+        cooldown: ""
+    reload_pkp:
+        cooldown: ""
+    reload_thompson:
+        cooldown: ""
+    reload_hawk_shotgun:
+        cooldown: ""
+    reload_rifle:
+        cooldown: ""
+    c4:
+        cast_player_message: ""
+        indirect_player_message: ""
+        cooldown: ""
+    incendiary:
+        cast_player_message: ""
+        indirect_player_message: ""
+        cooldown: ""
+    flash_bang:
+        cast_player_message: "a:You were hit by $player's flash bang"
+        cooldown: ""
+    steal_model3:
+        cast_player_message: "a:$player ran you down"
+    steal_ferrari:
+        cast_player_message: "a:$player ran you down"
+

@@ -1,0 +1,163 @@
+package com.elmakers.mine.bukkit.protection;
+
+import java.lang.reflect.Method;
+import java.util.Collections;
+import java.util.Set;
+import java.util.logging.Level;
+import javax.annotation.Nullable;
+
+import org.bukkit.plugin.Plugin;
+
+import com.elmakers.mine.bukkit.api.spell.SpellTemplate;
+import com.elmakers.mine.bukkit.api.wand.Wand;
+import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
+import com.sk89q.worldguard.protection.ApplicableRegionSet;
+import com.sk89q.worldguard.protection.association.RegionAssociable;
+import com.sk89q.worldguard.protection.flags.RegionGroup;
+import com.sk89q.worldguard.protection.flags.SetFlag;
+import com.sk89q.worldguard.protection.flags.StringFlag;
+import com.sk89q.worldguard.protection.flags.registry.FlagRegistry;
+
+public class WorldGuardFlagsManager implements WorldGuardFlags {
+    public static SetFlag<String> ALWAYS_ALLOWED_SPELLS = new SetFlag<>("always-allowed-spells", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> ALLOWED_SPELLS = new SetFlag<>("allowed-spells", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> BLOCKED_SPELLS = new SetFlag<>("blocked-spells", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> ALWAYS_ALLOWED_SPELL_CATEGORIES = new SetFlag<>("always-allowed-spell-categories", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> ALLOWED_SPELL_CATEGORIES = new SetFlag<>("allowed-spell-categories", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> BLOCKED_SPELL_CATEGORIES = new SetFlag<>("blocked-spell-categories", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> ALWAYS_ALLOWED_WANDS = new SetFlag<>("always-allowed-wands", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> ALLOWED_WANDS = new SetFlag<>("allowed-wands", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> BLOCKED_WANDS = new SetFlag<>("blocked-wands", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> SPELL_OVERRIDES = new SetFlag<>("spell-overrides", RegionGroup.ALL, new StringFlag(null));
+    public static SetFlag<String> TAGS = new SetFlag<>("magic-tags", RegionGroup.ALL, new StringFlag(null));
+    public static StringFlag DESTRUCTIBLE = new StringFlag("destructible", RegionGroup.ALL);
+    public static StringFlag REFLECTIVE = new StringFlag("reflective", RegionGroup.ALL);
+    public static StringFlag PORTAL_SPELL = new StringFlag("portal-spell", RegionGroup.ALL);
+    public static StringFlag PORTAL_WARP = new StringFlag("portal-warp", RegionGroup.ALL);
+
+    // These are outdated but we'll probably keep them forever anyway
+    public static SetFlag<String> SPAWN_TAGS = new SetFlag<>("spawn-tags", RegionGroup.ALL, new StringFlag(null));
+
+    public WorldGuardFlagsManager(Plugin callingPlugin, WorldGuardPlugin worldGuardPlugin, Object worldGuard) {
+        FlagRegistry registry = null;
+        if (worldGuard != null) {
+            try {
+                Method getFlagRegistryMethod = worldGuard.getClass().getMethod("getFlagRegistry");
+                registry = (FlagRegistry)getFlagRegistryMethod.invoke(worldGuard);
+            } catch (Exception ex) {
+                callingPlugin.getLogger().log(Level.WARNING, "An error occurred binding to WorldGuard.getFlagRegistry", ex);
+            }
+        } else {
+            registry = worldGuardPlugin.getFlagRegistry();
+        }
+        if (registry == null) {
+            callingPlugin.getLogger().warning("Failed to find FlagRegistry, custom WorldGuard flags will not work");
+        }
+        registry.register(ALLOWED_SPELLS);
+        registry.register(ALWAYS_ALLOWED_SPELLS);
+        registry.register(BLOCKED_SPELLS);
+        registry.register(ALWAYS_ALLOWED_SPELL_CATEGORIES);
+        registry.register(ALLOWED_SPELL_CATEGORIES);
+        registry.register(BLOCKED_SPELL_CATEGORIES);
+        registry.register(ALWAYS_ALLOWED_WANDS);
+        registry.register(ALLOWED_WANDS);
+        registry.register(BLOCKED_WANDS);
+        registry.register(SPELL_OVERRIDES);
+        registry.register(DESTRUCTIBLE);
+        registry.register(REFLECTIVE);
+        registry.register(TAGS);
+        registry.register(SPAWN_TAGS);
+        registry.register(PORTAL_SPELL);
+        registry.register(PORTAL_WARP);
+        callingPlugin.getLogger().info("Registered custom WorldGuard flags: allowed-spells, always-allowed-spells, blocked-spells, always-allowed-spell-categories, allowed-spell-categories, blocked-spell-categories, allowed-wands, always-allowed-wands, blocked-wands, spell-overrides, destructible, reflective, tags, portal-spell, portal-warp");
+    }
+
+    @Nullable
+    @Override
+    public String getPortalSpell(RegionAssociable source, ApplicableRegionSet checkSet) {
+        return checkSet.queryValue(source, PORTAL_SPELL);
+    }
+
+    @Nullable
+    @Override
+    public String getPortalWarp(RegionAssociable source, ApplicableRegionSet checkSet) {
+        return checkSet.queryValue(source, PORTAL_WARP);
+    }
+
+    @Nullable
+    @Override
+    public String getDestructible(RegionAssociable source, ApplicableRegionSet checkSet) {
+        return checkSet.queryValue(source, DESTRUCTIBLE);
+    }
+
+    @Nullable
+    @Override
+    public String getReflective(RegionAssociable source, ApplicableRegionSet checkSet) {
+        return checkSet.queryValue(source, REFLECTIVE);
+    }
+
+    @Nullable
+    @Override
+    public Set<String> getSpellOverrides(RegionAssociable source, ApplicableRegionSet checkSet) {
+        return checkSet.queryValue(source, SPELL_OVERRIDES);
+    }
+
+    @Nullable
+    @Override
+    public Boolean getWandPermission(RegionAssociable source, ApplicableRegionSet checkSet, Wand wand) {
+        String wandTemplate = wand.getTemplateKey();
+
+        Set<String> alwaysAllowed = checkSet.queryValue(source, ALWAYS_ALLOWED_WANDS);
+        if (alwaysAllowed != null && (alwaysAllowed.contains("*") || alwaysAllowed.contains(wandTemplate))) return true;
+
+        Set<String> blocked = checkSet.queryValue(source, BLOCKED_WANDS);
+        if (blocked != null && blocked.contains(wandTemplate)) return false;
+
+        Set<String> allowed = checkSet.queryValue(source, ALLOWED_WANDS);
+        if (allowed != null && (allowed.contains("*") || allowed.contains(wandTemplate))) return true;
+
+        if (blocked != null && blocked.contains("*")) return false;
+
+        return null;
+    }
+
+    @Nullable
+    @Override
+    public Boolean getCastPermission(RegionAssociable source, ApplicableRegionSet checkSet, SpellTemplate spell) {
+        String spellKey = spell.getSpellKey().getBaseKey();
+
+        Set<String> alwaysAllowed = checkSet.queryValue(source, ALWAYS_ALLOWED_SPELLS);
+        if (alwaysAllowed != null && (alwaysAllowed.contains("*") || alwaysAllowed.contains(spellKey))) return true;
+
+        Set<String> alwaysAllowedCategories = checkSet.queryValue(source, ALWAYS_ALLOWED_SPELL_CATEGORIES);
+        if (alwaysAllowedCategories != null && spell.hasAnyTag(alwaysAllowedCategories)) return true;
+
+        Set<String> blocked = checkSet.queryValue(source, BLOCKED_SPELLS);
+        if (blocked != null && blocked.contains(spellKey)) return false;
+        Set<String> blockedCategories = checkSet.queryValue(source, BLOCKED_SPELL_CATEGORIES);
+        if (blockedCategories != null && spell.hasAnyTag(blockedCategories)) return false;
+
+        Set<String> allowed = checkSet.queryValue(source, ALLOWED_SPELLS);
+        if (allowed != null && (allowed.contains("*") || allowed.contains(spellKey))) return true;
+
+        Set<String> allowedCategories = checkSet.queryValue(source, ALLOWED_SPELL_CATEGORIES);
+        if (allowedCategories != null && spell.hasAnyTag(allowedCategories)) return true;
+
+        if (blocked != null && blocked.contains("*")) return false;
+
+        return null;
+    }
+
+    @Override
+    public boolean inTaggedRegion(RegionAssociable source, ApplicableRegionSet checkSet, Set<String> tags) {
+        Set<String> regionTags = checkSet.queryValue(source, TAGS);
+        if (regionTags == null) {
+            // Fall back to old spawn tags, but these should not really be used anymore.
+            regionTags = checkSet.queryValue(source, SPAWN_TAGS);
+        }
+        if (regionTags == null) {
+            return false;
+        }
+        return regionTags.contains("*") || !Collections.disjoint(regionTags, tags);
+    }
+}

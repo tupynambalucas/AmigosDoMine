@@ -1,0 +1,8 @@
+mutant_villager:
+  type: zombified_piglin
+  health: 10
+  default_drops: false
+  transformable: false
+  loot:
+    gold_nugget:
+      count: looting + 2

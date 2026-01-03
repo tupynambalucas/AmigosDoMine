@@ -1,0 +1,10 @@
+peeves:
+  inherit: base_npc
+  name: Peeves
+  type: creeper
+  powered: true
+  cancel_explosion: true
+  potion_effects:
+    - invisibility
+  dialog:
+    - BOO!

@@ -1,0 +1,12 @@
+wizardboots:
+  enabled: false
+  output: wizardboots
+  output_type: wand
+  ingredients:
+    o: amethyst_shard
+    i: purple_wool
+    d: diamond
+  row_1: d d
+  row_2: o o
+  row_3: i i
+

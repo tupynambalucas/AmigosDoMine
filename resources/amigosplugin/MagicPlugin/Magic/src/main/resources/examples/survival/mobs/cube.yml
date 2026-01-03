@@ -1,0 +1,5 @@
+cube:
+  type: slime
+  health: 25
+  size: 10
+  split: false

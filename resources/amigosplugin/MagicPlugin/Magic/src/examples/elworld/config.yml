@@ -1,0 +1,80 @@
+# This IS a dev server, after all!
+log_verbosity: 20
+debug_configuration_files: true
+debug_effects: true
+debug_effects_stack_traces: true
+
+# Creative mode is super annoying sometimes
+prevent_creative_breaking: 0
+
+# Don't reduce melee damage anymore, it makes testing item attributes and damage too difficult!
+# melee_damage_reduction: 0.5
+
+# Turn on auto-rollback for creeper explosions and TNT
+auto_rollback_duration: 10000
+auto_rollback_speed: 0.5
+auto_rollback_explosions:
+- creeper
+- fireball
+# - primed_tnt
+
+# We are mixing in all of the configs here to show them off.
+examples:
+- automata
+- engineering
+- stars
+- potter
+- bending
+- war
+- arenas
+- robes
+- spawnmobs
+- chests
+- otherside
+- mars
+- pride
+- creative
+- httyd
+- banners
+
+# - lucky
+
+# Testing custom currencies
+custom_currency:
+ tc:
+  max: 9999
+  default: 0
+  item: skull:http://textures.minecraft.net/texture/b11206551e723c356c23b32383abd19e6d7e9e5988f191e7866ae89ed6cb24
+ ac:
+  max: 9999
+  default: 0
+  item: skull:http://textures.minecraft.net/texture/82d8ccac4d982bf3199761c1c74b9aa18e312ff5ca0a6e51b77a87abad610b
+
+# Just leaving this here for now, to re-enable wand enchanting:
+# enable_enchanting: true
+# sp_enabled: false
+# enchant_click: ""
+# wand_item_enchantable: wood_sword
+
+# resource_pack_prompt: true
+resource_pack_delay: 2000
+
+# Model engine integration is broken, so...
+# resource_pack: "http://rp.elmakers.com/Magic-modelengine-RP-1.19.zip"
+# add_resource_pack: "http://rp.elmakers.com/Magic-modelengine-RP-1.19.zip"
+
+# Using SQLLite here
+player_data_store:
+  class: SQLite
+  database: players
+
+# migrate_data_store:
+#  class: Yaml
+#  folder: data/players
+
+# Clean up broken NPC villagers
+remove_invulnerable_mobs: true
+
+# Clean up out of bounds entities
+world_modification:
+  remove_invalid_entities: true

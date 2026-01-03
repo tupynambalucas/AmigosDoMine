@@ -1,0 +1,4 @@
+# This config only changes the RP
+resource_pack: painterly
+add_resource_pack: painterly
+

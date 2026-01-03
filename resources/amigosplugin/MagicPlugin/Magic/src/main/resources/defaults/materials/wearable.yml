@@ -1,0 +1,34 @@
+wearable:
+- gold_helmet
+- chainmail_helmet
+- iron_helmet
+- leather_helmet
+- diamond_helmet
+- gold_chestplate
+- chainmail_chestplate
+- iron_chestplate
+- leather_chestplate
+- diamond_chestplate
+- gold_boots
+- chainmail_boots
+- iron_boots
+- leather_boots
+- diamond_boots
+- gold_leggings
+- chainmail_leggings
+- iron_leggings
+- leather_leggings
+- diamond_leggings
+- elytra
+- skulls
+- pumpkin
+- turtle_helmet
+- netherite_helmet
+- netherite_chestplate
+- netherite_leggings
+- netherite_boots
+
+# Not strictly wearable, but will go to the offhand slot with a shift_click, which we do not want
+- map
+- filled_map
+- empty_map

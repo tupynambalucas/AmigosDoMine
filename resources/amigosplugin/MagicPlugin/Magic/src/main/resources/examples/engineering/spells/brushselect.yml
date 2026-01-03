@@ -1,0 +1,17 @@
+brushselect:
+    # This refers to an icon defined in the icons folder/config
+    icon: brushselect
+    category: specialty
+    hidden: true
+    show_undoable: false
+    worth: 10
+    quick_cast: true
+    actions:
+        cast:
+        - class: BrushSelect
+    effects:
+        cast:
+          sound: block_ender_chest_open
+          sound_pitch: 1.5
+          sound_volume: 1.1
+

@@ -1,0 +1,18 @@
+airbender:
+  class_items: airstaff
+  parent: bender
+  locked: true
+  path: airbending
+  protection:
+    fall: 0.7
+    air: 0.5
+    suffocation: 0.5
+  spells:
+    - airblast
+    - suction
+    - airscooter
+
+  # This is here to support easily switching back to the old system
+  # via `/mconfig configure path default allow_property_overrides false`
+  mana_max: 50
+  mana_regeneration: 5

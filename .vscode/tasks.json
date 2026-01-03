@@ -6,7 +6,7 @@
       "type": "shell",
       "command": "./gradlew shadowJar",
       "options": {
-        "cwd": "${workspaceFolder}/packages/resources-devlopment/plugins/amigosplugin"
+        "cwd": "${workspaceFolder}/resources/amigosplugin"
       },
       "group": {
         "kind": "build",
@@ -14,7 +14,19 @@
       },
       "problemMatcher": []
     },
-
+    {
+      "label": "🎨 Build ResourcePack",
+      "type": "shell",
+      "command": "./gradlew build",
+      "options": {
+        "cwd": "${workspaceFolder}/resources/resourcepack"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": []
+    },
     {
       "label": "🤖 Gemini CLI",
       "type": "shell",
@@ -25,6 +37,23 @@
         "'${workspaceFolder}'",
         "-ArgumentList",
         "'-Command $Host.UI.RawUI.WindowTitle = \"Gemini Agent\"; gemini --include-directories .'"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "🎮 Minecraft Server",
+      "type": "shell",
+      "command": "Start-Process",
+      "args": [
+        "powershell",
+        "-WorkingDirectory",
+        "'${workspaceFolder}'",
+        "-ArgumentList",
+        "'-NoExit -Command $Host.UI.RawUI.WindowTitle = \"Minecraft Server\"; docker compose up -d --build minecraft; docker compose attach minecraft'"
       ],
       "problemMatcher": [],
       "presentation": {

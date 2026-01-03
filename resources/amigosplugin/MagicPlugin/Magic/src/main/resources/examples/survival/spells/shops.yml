@@ -1,0 +1,517 @@
+woolshop:
+    hidden: true
+    inherit: buyshop
+    parameters:
+        items:
+        - black_wool@16
+        - blue_wool@16
+        - brown_wool@16
+        - cyan_wool@16
+        - gray_wool@16
+        - green_wool@16
+        - light_blue_wool@16
+        - light_gray_wool@16
+        - lime_wool@16
+        - magenta_wool@16
+        - orange_wool@16
+        - pink_wool@16
+        - purple_wool@16
+        - red_wool@16
+        - white_wool@16
+        - yellow_wool@16
+        - black_carpet@16
+        - blue_carpet@16
+        - brown_carpet@16
+        - cyan_carpet@16
+        - gray_carpet@16
+        - green_carpet@16
+        - light_blue_carpet@16
+        - light_gray_carpet@16
+        - lime_carpet@16
+        - magenta_carpet@16
+        - orange_carpet@16
+        - pink_carpet@16
+        - purple_carpet@16
+        - red_carpet@16
+        - white_carpet@16
+        - yellow_carpet@16
+
+glassshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - glass@16
+        - black_stained_glass@16
+        - blue_stained_glass@16
+        - brown_stained_glass@16
+        - cyan_stained_glass@16
+        - gray_stained_glass@16
+        - green_stained_glass@16
+        - light_blue_stained_glass@16
+        - light_gray_stained_glass@16
+        - lime_stained_glass@16
+        - magenta_stained_glass@16
+        - orange_stained_glass@16
+        - pink_stained_glass@16
+        - purple_stained_glass@16
+        - red_stained_glass@16
+        - white_stained_glass@16
+        - yellow_stained_glass@16
+        - thin_glass@16
+        - black_stained_glass_pane@16
+        - blue_stained_glass_pane@16
+        - brown_stained_glass_pane@16
+        - cyan_stained_glass_pane@16
+        - gray_stained_glass_pane@16
+        - green_stained_glass_pane@16
+        - light_blue_stained_glass_pane@16
+        - light_gray_stained_glass_pane@16
+        - lime_stained_glass_pane@16
+        - magenta_stained_glass_pane@16
+        - orange_stained_glass_pane@16
+        - pink_stained_glass_pane@16
+        - purple_stained_glass_pane@16
+        - red_stained_glass_pane@16
+        - white_stained_glass_pane@16
+        - yellow_stained_glass_pane@16
+
+stoneshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - stone@16
+        - adesite@16
+        - diorite@16
+        - granite@16
+        - quartz_block@16
+        - chiseled_quartz_block@16
+        - quartz_pillar@16
+        - flint@4
+
+brickshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - stone@16
+        - andesite@16
+        - diorite@16
+        - granite@16
+        - ender_stone@4
+        - cobblestone@16
+        - cobblestone_stairs@16
+        - step:3@16
+        - smooth_brick@16
+        - smooth_stairs@16
+        - brick_stairs@16
+        - sandstone@16
+        - sandstone_stairs@16
+        - quartz_block@16
+        - quartz_stairs@16
+        - step:7@16
+        - nether_brick@16
+        - nether_brick_stairs@16
+        - brick@16
+
+woodshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - oak_planks@16
+        - spruce_planks@16
+        - birch_planks@16
+        - jungle_planks@16
+        - dark_oak_planks@16
+        - acacia_planks@16
+        - crimson_planks@16
+        - warped_planks@16
+        - mangrove_planks@16
+        - cherry_planks@16
+        - bamboo_mosaic@16
+        - dark_oak_stairs@16
+        - jungle_stairs@16
+        - oak_stairs@16
+        - spruce_stairs@16
+        - bamboo_stairs@16
+        - crimson_stairs@16
+        - warped_stairs@16
+        - wood_stairs@16
+        - mangrove_stairs@16
+        - cherry_stairs@16
+        - acacia_slab@16
+        - birch_slab@16
+        - dark_oak_slab@16
+        - jungle_slab@16
+        - oak_slab@16
+        - spruce_slab@16
+        - petrified_oak_slab@16
+        - mangrove_slab@16
+        - cherry_slab@16
+        - bamboo_slab@16
+        - bamboo_mosaic_slab@16
+        - crimson_slab@16
+        - warped_slab@16
+        - oak_log@16
+        - spruce_log@16
+        - birch_log@16
+        - jungle_log@16
+        - dark_oak_log@16
+        - acacia_log@16
+
+decorshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - stone_plate@8
+        - wood_plate@8
+        - wood_button@4
+        - lever@4
+        - trap_door@2
+        - redstone_torch@8
+        - packed_ice@16
+        - iron_fence@8
+        - brewing_stand@2
+        - ladder@16
+        - tripwire_hook@4
+        - torch@16
+        - furnace
+        - cauldron_item
+        - vine@8
+        - sign@2
+        - flower_pot@4
+        - bookshelf@4
+
+doorshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - oak_door@2
+        - spruce_door@2
+        - acacia_door@2
+        - jungle_door@2
+        - dark_oak_door@2
+        - oak_fence@8
+        - oak_fence_gate@8
+        - dark_oak_fence@8
+        - spruce_fence@8
+        - nether_brick_fence@8
+        - cobble_wall@8
+        - cobble_wall:1@8
+
+terrainshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - dirt@16
+        - grass@16
+        - gravel@16
+        - snow_block@16
+        - snow@16
+        - jack_o_lantern@8
+
+plantshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - lilypad
+        - oxeye_daisy
+        - blue_orchid
+        - dandelion
+        - orange_tulip
+        - pink_tulip
+        - poppy
+        - red_tulip
+        - white_tulip
+        - allium
+        - azure_bluet
+        - cornflower
+        - lily_of_the_valley
+        - wither_rose
+        - sunflower
+        - peony
+        - rose_bush
+        - lilac
+        - flower_pot
+        - red_mushroom@2
+        - vine@8
+
+saplingshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - spruce_sapling
+        - acacia_sapling
+        - birch_sapling
+        - dark_oak_sapling
+        - jungle_sapling
+        - oak_sapling
+        - azalea
+        - flowering_azalea
+        - mangrove_propagule
+        - cherry_sapling
+        - pale_oak_sapling
+
+
+clayshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - clay@16
+        - black_terracotta@16
+        - blue_terracotta@16
+        - brown_terracotta@16
+        - cyan_terracotta@16
+        - gray_terracotta@16
+        - green_terracotta@16
+        - light_blue_terracotta@16
+        - light_gray_terracotta@16
+        - lime_terracotta@16
+        - magenta_terracotta@16
+        - orange_terracotta@16
+        - pink_terracotta@16
+        - purple_terracotta@16
+        - red_terracotta@16
+        - white_terracotta@16
+        - yellow_terracotta@16
+
+foodshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - apple@3
+        - carrot@4
+        - potato@6
+        - baked_potato@3
+        - melon@2
+        - pumpkin@1
+        - beetroot@4
+
+farmshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - carrot@4
+        - potato@6
+        - wheat_seeds@4
+        - melon_seeds@4
+        - pumpkin_seeds@4
+        - beetroot_seeds@4
+
+bowshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - bow
+        - arrow
+
+leathershop:
+    inherit: buyshop
+    parameters:
+        items:
+        - leather@1
+        - rotten_flesh@1
+        - leather_helmet@1
+        - leather_chestplate@1
+        - leather_leggings@1
+        - leather_boots@1
+
+fishshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - fishing_rod@1
+        - cooked_salmon@1
+        - cooked_cod@1
+        - salmon@1
+        - cod@1
+
+redstoneshop:
+    inherit: buysellshop
+    parameters:
+        items:
+        - slime_ball@1
+        - redstone@8
+        - redstone@16
+        - redstone@64
+        - redstone_torch@2
+        - redstone_block
+        - redstone_lamp@4
+        - daylight_detector@3
+        - dropper
+        - hopper
+        - comparator@3
+        - repeater@3
+        - dispenser
+        - note_block
+        - piston
+        - sticky_piston
+        - lever
+        - stone_button
+        - stone_plate
+        - observer
+
+generalshop:
+    inherit: buyshop
+    parameters:
+        items:
+        - enchantment_table
+        - glass
+        - ender_chest
+        - painting
+        - item_frame
+        - furnace
+        - jukebox
+        - chest
+        - glass_pain
+        - workbench
+        - sign
+        - red_bed
+        - anvil
+
+coffeeshop:
+    icon: brown_dye
+    inherit: buyshop
+    parameters:
+        items:
+        - coffee1
+        - coffee2
+        - coffee3
+
+axeshop:
+    icon: spell_icon
+    inherit: buyshop
+    parameters:
+        confirm: true
+        confirm_filler: light_blue_stained_glass
+        auto_close: true
+        items:
+        - diamond_axe
+        - dwarven_battle_axe
+
+armorshop:
+    icon: diamond_helmet
+    inherit: buyshop
+    parameters:
+        confirm: true
+        confirm_filler: light_blue_stained_glass
+        auto_close: true
+        items:
+        - diamond_helmet
+        - helmet_of_blinding
+
+toolshop:
+    icon: diamond_helmet
+    inherit: buyshop
+    parameters:
+        confirm: true
+        confirm_filler: light_blue_stained_glass
+        auto_close: true
+        items:
+        - diamond_spade
+        - diamond_axe
+        - dwarven_spade
+        - dwarven_axe
+        - diamond_pickaxe
+        - dwarven_pickaxe
+
+pickaxeshop:
+    icon: diamond_pickaxe
+    inherit: buyshop
+    parameters:
+        confirm: true
+        confirm_filler: light_blue_stained_glass
+        auto_close: true
+        items:
+        - diamond_pickaxe
+        - dwarven_pickaxe
+        - dwarven_pickaxe_luck
+        - felicis_pickaxe
+        - dwarven_felicis_pickaxe
+
+potionshop:
+    icon: potion
+    category: shop
+    hidden: true
+    inherit: buyshop
+    parameters:
+      confirm: true
+      items:
+      - potion_splash_swiftness_long
+
+brushshop:
+    inherit: buyshop
+    parameters:
+        require_wand: true
+        path: engineer
+        items:
+            brush:glass: 100
+            brush:glass_pane: 100
+            brush:black_wool: 300
+            brush:blue_wool: 300
+            brush:brown_wool: 300
+            brush:cyan_wool: 300
+            brush:gray_wool: 300
+            brush:green_wool: 300
+            brush:light_blue_wool: 300
+            brush:light_gray_wool: 300
+            brush:lime_wool: 300
+            brush:magenta_wool: 300
+            brush:orange_wool: 300
+            brush:pink_wool: 300
+            brush:purple_wool: 300
+            brush:red_wool: 300
+            brush:white_wool: 300
+            brush:yellow_wool: 300
+            brush:black_stained_glass: 300
+            brush:blue_stained_glass: 300
+            brush:brown_stained_glass: 300
+            brush:cyan_stained_glass: 300
+            brush:gray_stained_glass: 300
+            brush:green_stained_glass: 300
+            brush:light_blue_stained_glass: 300
+            brush:light_gray_stained_glass: 300
+            brush:lime_stained_glass: 300
+            brush:magenta_stained_glass: 300
+            brush:orange_stained_glass: 300
+            brush:pink_stained_glass: 300
+            brush:purple_stained_glass: 300
+            brush:red_stained_glass: 300
+            brush:white_stained_glass: 300
+            brush:yellow_stained_glass: 300
+            brush:black_stained_glass_pane: 300
+            brush:blue_stained_glass_pane: 300
+            brush:brown_stained_glass_pane: 300
+            brush:cyan_stained_glass_pane: 300
+            brush:gray_stained_glass_pane: 300
+            brush:green_stained_glass_pane: 300
+            brush:light_blue_stained_glass_pane: 300
+            brush:light_gray_stained_glass_pane: 300
+            brush:lime_stained_glass_pane: 300
+            brush:magenta_stained_glass_pane: 300
+            brush:orange_stained_glass_pane: 300
+            brush:pink_stained_glass_pane: 300
+            brush:purple_stained_glass_pane: 300
+            brush:red_stained_glass_pane: 300
+            brush:white_stained_glass_pane: 300
+            brush:yellow_stained_glass_pane: 300
+
+dyeshop:
+  icon: white_dye
+  inherit: buyshop
+  parameters:
+    items:
+      - black_dye
+      - blue_dye
+      - brown_dye
+      - cyan_dye
+      - gray_dye
+      - green_dye
+      - light_blue_dye
+      - light_gray_dye
+      - lime_dye
+      - magenta_dye
+      - orange_dye
+      - pink_dye
+      - purple_dye
+      - red_dye
+      - white_dye
+      - yellow_dye

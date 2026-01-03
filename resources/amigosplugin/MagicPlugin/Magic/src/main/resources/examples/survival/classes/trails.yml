@@ -1,0 +1,23 @@
+butterfly:
+  icon: feather
+  passive: true
+  locked: true
+  triggers:
+    join:
+      effects: butterfly
+
+crown:
+  icon: gold_nugget
+  passive: true
+  locked: true
+  triggers:
+    join:
+      effects: crown
+
+tail:
+  icon: lead
+  passive: true
+  locked: true
+  triggers:
+    join:
+      effects: tail

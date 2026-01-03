@@ -1,0 +1,21 @@
+# Copied from attachable_double
+# Things that can specifically be attached to walls.
+# this will be a more complex check in construction, otherwise
+# for an attachable, only the floor block is checked.
+attachable_wall:
+- wood_button
+- stone_button
+- lever
+- cocoa
+- vine
+- redstone_torch
+- torch
+- ladder
+- wall_sign
+- wall_banner
+- wall_torch
+- redstone_wall_torch
+- cocoa
+- cactus
+- beds
+- trap_doors

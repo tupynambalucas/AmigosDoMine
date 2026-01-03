@@ -54,3 +54,7 @@ lerna-debug.log*
 Thumbs.db
 ehthumbs.db
 gha-creds-*.json
+
+packages/flow/
+
+.gemini/

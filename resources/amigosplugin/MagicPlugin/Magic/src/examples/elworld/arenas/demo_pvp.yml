@@ -1,0 +1,22 @@
+demo_pvp:
+  min_players: 1
+  keep_inventory: false
+  keep_level: false
+  item_wear: false
+  allow_consuming: true
+  allow_melee: true
+  allow_projectiles: true
+  magic_blocks:
+  - arena2
+  - arena
+  leaderboard_sign_type: oak_wall_sign
+  countdown: 5
+  countdown_max: 5
+  op_check: false
+  lobby: 41.864338100768805,7.0,24.630410012195966,89.445755,-5.2500143
+  win: 42.80429567106546,20.0,27.423823581700503,91.69574,3.300016
+  lose: 42.61475886390542,20.0,24.409674314339554,91.545746,2.8500156
+  exit: 52.2046550660059,20.0,26.55510681605199,-143.35426,-0.59998477
+  spawns:
+  - -23.565820223462538,0.0,-0.7608021125838604,-88.00416,0.75002146
+  - 22.52670444754483,0.0,0.014928178769423539,90.04582,-2.8499799

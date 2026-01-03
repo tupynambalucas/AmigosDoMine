@@ -1,0 +1,79 @@
+bigbluedragon:
+  inherit: base_dragon
+  hidden: false
+  item: bigdragonwingrightblue
+  offhand: bigdragonwingleftblue
+  helmet: bigdragonbodyblue
+  triggers:
+    launch:
+      cast:
+        dragonwater: 30
+    damage:
+      cast:
+        dragonexplodewater: 30
+        dragonwater: 10
+        dragonwingblast: 30
+
+biggreendragon:
+  inherit: base_dragon
+  hidden: false
+  item: bigdragonwingrightgreen
+  offhand: bigdragonwingleftgreen
+  helmet: bigdragonbodygreen
+  triggers:
+    launch:
+      cast:
+        dragonpoison: 30
+    damage:
+      cast:
+        dragonexplodepoison: 30
+        dragonpoison: 10
+        dragonwingblast: 30
+
+biggreydragon:
+  inherit: base_dragon
+  hidden: false
+  item: bigdragonwingrightgrey
+  offhand: bigdragonwingleftgrey
+  helmet: bigdragonbodygrey
+  triggers:
+    launch:
+      cast:
+        dragondark: 30
+    damage:
+      cast:
+        dragonexplodedark: 30
+        dragondark: 10
+        dragonwingblast: 30
+
+bigpurpledragon:
+  inherit: base_dragon
+  hidden: false
+  item: bigdragonwingrightpurple
+  offhand: bigdragonwingleftpurple
+  helmet: bigdragonbodypurple
+  triggers:
+    launch:
+      cast:
+        dragonlightning: 30
+    damage:
+      cast:
+        dragonexplodelightning: 30
+        dragonlightning: 10
+        dragonwingblast: 30
+
+bigreddragon:
+  inherit: base_dragon
+  hidden: false
+  item: bigdragonwingrightred
+  offhand: bigdragonwingleftred
+  helmet: bigdragonbodyred
+  triggers:
+    launch:
+      cast:
+        dragonfire: 30
+    damage:
+      cast:
+        dragonexplodefire: 30
+        dragonfire: 10
+        dragonwingblast: 30

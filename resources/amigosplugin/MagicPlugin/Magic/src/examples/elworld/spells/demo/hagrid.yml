@@ -1,0 +1,32 @@
+hagrid:
+  hidden: true
+  category: npc
+  actions:
+    cast:
+      - class: CheckInventory
+        actions:
+          - class: Selector
+            auto_close: true
+            title: Ready to go to Hogwarts?
+            placeholder_icon: icon_placeholder
+            options:
+              - placeholder: true
+              - placeholder: true
+              - icon: icon_yes
+                warp: greathall
+                name: Yes, Let's Go!
+              - placeholder: true
+              - placeholder: true
+              - icon: icon_no
+                name: No, not yet
+              - placeholder: true
+              - placeholder: true
+              - placeholder: true
+        fail:
+          - class: Message
+            message: Ye need te go see Ollivander!
+          - class: Message
+            message: Give 'im that ticket and he'll set ye up with a wand.
+  parameters:
+    target: self
+    item: potterwand

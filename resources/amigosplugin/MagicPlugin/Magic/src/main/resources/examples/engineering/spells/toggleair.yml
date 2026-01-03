@@ -1,0 +1,225 @@
+toggleair:
+  # This refers to an icon defined in the icons folder/config
+  icon: toggleair
+  quick_cast: true
+  category: engineering
+  worth: 500
+  show_undoable: false
+  actions:
+    cast:
+      - class: Selector
+        onlyair:
+        - class: Modifier
+          add_modifiers:
+            - onlyair
+          remove_modifiers:
+            - ignoreair
+            - noliquid
+            - onlyliquid
+            - nosolid
+            - onlysolid
+            - noplants
+            - onlyplants
+            - noearth
+            - onlyearth
+        noair:
+        - class: Modifier
+          add_modifiers:
+            - ignoreair
+          remove_modifiers:
+            - onlyair
+            - noliquid
+            - onlyliquid
+            - nosolid
+            - onlysolid
+            - noplants
+            - onlyplants
+            - noearth
+            - onlyearth
+        onlyliquid:
+        - class: Modifier
+          add_modifiers:
+            - onlyliquid
+          remove_modifiers:
+            - ignoreair
+            - onlyair
+            - noliquid
+            - nosolid
+            - onlysolid
+            - noplants
+            - onlyplants
+            - noearth
+            - onlyearth
+        noliquid:
+        - class: Modifier
+          add_modifiers:
+            - noliquid
+          remove_modifiers:
+            - ignoreair
+            - onlyair
+            - onlyliquid
+            - nosolid
+            - onlysolid
+            - noplants
+            - onlyplants
+            - noearth
+            - onlyearth
+        onlysolid:
+        - class: Modifier
+          add_modifiers:
+            - onlysolid
+          remove_modifiers:
+            - ignoreair
+            - onlyair
+            - noliquid
+            - onlyliquid
+            - nosolid
+            - noplants
+            - onlyplants
+            - noearth
+            - onlyearth
+        nosolid:
+        - class: Modifier
+          add_modifiers:
+            - nosolid
+          remove_modifiers:
+            - ignoreair
+            - onlyair
+            - noliquid
+            - onlyliquid
+            - onlysolid
+            - noplants
+            - onlyplants
+            - noearth
+            - onlyearth
+        onlyplants:
+        - class: Modifier
+          add_modifiers:
+            - onlyplants
+          remove_modifiers:
+            - ignoreair
+            - onlyair
+            - noliquid
+            - onlyliquid
+            - nosolid
+            - onlysolid
+            - noplants
+            - noearth
+            - onlyearth
+        noplants:
+        - class: Modifier
+          add_modifiers:
+            - noplants
+          remove_modifiers:
+            - ignoreair
+            - onlyair
+            - noliquid
+            - onlyliquid
+            - nosolid
+            - onlysolid
+            - onlyplants
+            - noearth
+            - onlyearth
+        onlyearth:
+          - class: Modifier
+            add_modifiers:
+              - onlyearth
+            remove_modifiers:
+              - ignoreair
+              - onlyair
+              - noliquid
+              - onlyliquid
+              - nosolid
+              - onlysolid
+              - noplants
+              - onlyplants
+              - noearth
+        noearth:
+          - class: Modifier
+            add_modifiers:
+              - noearth
+            remove_modifiers:
+              - ignoreair
+              - onlyair
+              - noliquid
+              - onlyliquid
+              - nosolid
+              - onlysolid
+              - noplants
+              - onlyplants
+              - onlyearth
+        default:
+        - class: Modifier
+          remove_modifiers:
+            - ignoreair
+            - onlyair
+            - noliquid
+            - onlyliquid
+            - nosolid
+            - onlysolid
+            - noplants
+            - onlyplants
+            - noearth
+            - onlyearth
+  parameters:
+    title: "Select modifier"
+    options:
+     - actions: onlyair
+       icon: bone_meal
+       name: "&aONLY air"
+       slot: 0
+     - actions: noair
+       icon: bone_meal
+       name: "&cIGNORE air"
+       slot: 0
+       requirements:
+         - modifiers: onlyair
+     - actions: onlyliquid
+       icon: water_bucket
+       name: "&aONLY liquid"
+       slot: 1
+     - actions: noliquid
+       icon: water_bucket
+       name: "&cIGNORE liquid"
+       slot: 1
+       requirements:
+         - modifiers: onlyliquid
+     - actions: onlysolid
+       icon: stone
+       name: "&aONLY solid"
+       slot: 2
+     - actions: nosolid
+       icon: stone
+       name: "&cIGNORE solid"
+       slot: 2
+       requirements:
+         - modifiers: onlysolid
+     - actions: onlyplants
+       icon: rose_bush
+       name: "&aONLY plants"
+       slot: 3
+     - actions: noplants
+       icon: rose_bush
+       name: "&cIGNORE plants"
+       slot: 3
+       requirements:
+         - modifiers: onlyplants
+     - actions: onlyearth
+       icon: grass_block
+       name: "&aONLY earth"
+       slot: 4
+     - actions: noearth
+       icon: grass_block
+       name: "&cIGNORE earth"
+       slot: 4
+       requirements:
+         - modifiers: onlyearth
+     - actions: default
+       icon: barrier
+       name: "&fDEFAULT"
+       slot: 8
+       requirements:
+       - modifiers: onlyair,ignoreair,onlyliquid,noliquid,onlysolid,nosolid,onlyplants,noplants
+    target: self
+    auto_close: true
+    message_type: action_bar

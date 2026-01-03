@@ -1,0 +1,26 @@
+tunnel:
+    # This refers to an icon defined in the icons folder/config
+    icon: tunnel
+    category: engineering
+    tags: noduel
+    class: TunnelSpell
+    worth: 200
+    effects:
+        cast:
+        - sound: entity_generic_explode
+          sound_volume: 0.2
+        - sound: entity_illusioner_cast_spell
+          sound_pitch: 1.5
+          sound_volume: 0.7
+        - class: EffectTrail
+          length: 16
+          iterations: 10
+          particle: explosion_large
+    parameters:
+        allow_max_range: false
+        range: 32
+        destructible: destructible_mining
+        ignore_region_overrides: true
+    costs:
+        mana: 30
+

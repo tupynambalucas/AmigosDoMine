@@ -1,0 +1,11 @@
+acolyte:
+    inherit: default
+    upgrade: sith_apprentice
+    override_properties:
+      mana_max: 50
+      mana_regeneration: 5
+    spells:
+      - forcepush
+      - forcepull
+      - forceignite
+

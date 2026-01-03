@@ -1,0 +1,14 @@
+#
+# Lightsaber creation
+#
+
+lightsaber_hilt:
+  output: lightsaber_hilt
+  output_type: item
+  ingredients:
+    o: nether_star
+    i: iron_ingot
+    q: quartz
+  row_1: "iqi"
+  row_2: "ioi"
+  row_3: "iii"

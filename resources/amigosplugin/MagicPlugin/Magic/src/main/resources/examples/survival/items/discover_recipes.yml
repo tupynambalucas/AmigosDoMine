@@ -1,0 +1,42 @@
+amethyst_shard:
+  worth: 100
+  discover_recipes:
+    - wand
+    - spellbook
+    - magicsword
+
+purple_wool:
+  worth: 3.43
+  discover_recipes:
+    - wizardhelmet
+    - wizardchestplate
+    - wizardleggings
+    - wizardboots
+
+phantom_membrane:
+  worth: 183.93
+  discover_recipes:
+    - broomstick
+
+conduit:
+  worth: 7458.79
+  discover_recipes:
+    - divinghelmet
+
+daylight_detector:
+  worth: 3
+  discover_recipes:
+    - camera
+
+emerald:
+  worth: 50
+  discover_recipes:
+    - emerald_sword
+    - wand
+    - spellbook
+
+diamond:
+  worth: 100
+  discover_recipes:
+    - wand
+    - spellbook

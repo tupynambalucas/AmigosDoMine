@@ -1,0 +1,78 @@
+arrowrain:
+    # This refers to an icon defined in the icons folder/config
+    icon: arrowrain
+    upgrade_required_path: apprentice
+    upgrade_required_casts: 50
+    example_thumbnail: https://thumbs.gfycat.com/SpeedyPlainIaerismetalmark-size_restricted.gif
+    example_link: https://thumbs.gfycat.com/SpeedyPlainIaerismetalmark
+    category: combat
+    worth: 100
+    earns: 5
+    actions:
+        cast:
+        -  class: Projectile
+    effects:
+        cast:
+        -  sound: entity_generic_splash
+           sound_pitch: 0.8
+           sound_volume: 0.8
+        -  class: EffectSingle
+           sound: entity_arrow_shoot
+           sound_pitch: 0.8
+        -  class: EffectSingle
+           sound: entity_arrow_shoot
+           sound_pitch: 0.5
+        -  class: EffectSingle
+           sound: entity_arrow_shoot
+           sound_pitch: 1.2
+        hit:
+        - location: target
+          sound: entity_generic_splash
+          sound_pitch: 1.8
+          sound_volume: 0.8
+          effectlib:
+            class: Modified
+            period: 2
+            iterations: 10
+            parameters:
+                radius: "(t / i) * 3"
+                particle_offset_y: "(t / i) * 2"
+            effect:
+                class: Shield
+                particles: 4
+                particle_count: 5
+                particle_offset_x: 0.5
+                particle_offset_z: 0.5
+                particle: water_drop
+        projectile:
+        - location: origin
+          effectlib:
+             class: Sphere
+             iterations: 10
+             period: 3
+             particles: 4
+             particle_count: 5
+             particle_offset_x: 0.2
+             particle_offset_y: 0.2
+             particle_offset_z: 0.2
+             particle: water_drop
+    parameters:
+        target: none
+        projectile: TippedArrow
+        count: 4
+        fire: false
+        speed: 1
+        spread: 12
+        py: ~4
+        pdy: ~-0.2
+        undo: 15000
+        cooldown: 10000
+        arrow_damage: 0.8
+    costs:
+        mana: 30
+
+arrowrain|2:
+    parameters:
+       count: 8
+       fire: true
+

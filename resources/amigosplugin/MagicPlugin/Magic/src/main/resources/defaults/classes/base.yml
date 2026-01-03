@@ -1,0 +1,24 @@
+base:
+  storage:
+    # Path needs to be set first here so we can identify if mana is coming from the path or
+    # The base class
+    path: subclass
+    # mana is usually controlled by path progression, and so we should read
+    # it from that same place.
+    # This could be changed to class if we want to share mana between
+    # multiple classes.
+    mana_max: path
+    mana_regeneration: path
+    # Current mana level and timestamp (controls regeneration
+    # Should get stored in the same place that max/regen come from
+    mana: mana_regeneration
+    mana_timestamp: mana_regeneration
+    spell_levels: class
+    spells: class
+    brushes: class
+    hotbar_count: subclass
+
+    # Attributes are primarily stored on the mage
+    # But attributes can also be set on wands to provide attribute buffs.
+    attributes: mage,wand
+

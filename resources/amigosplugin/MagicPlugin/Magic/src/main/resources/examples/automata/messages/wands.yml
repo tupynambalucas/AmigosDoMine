@@ -1,0 +1,25 @@
+wands:
+  conway:
+    name: Conway's Wand
+    description: The Game of Life
+  science:
+    name: For Science!
+    description: For testing automata
+  defenderheart:
+    name: Heart of Defender
+    description: He sacrified himself to save you
+  virusheart:
+    name: Heart of Virus
+    description: This should be destroyed
+  hunterheart:
+    name: Heart of Hunter
+    description: It wants to be reborn
+  snakeheart:
+    name: Heart of Snake
+    description: Sssssssssave me
+  golemheart:
+    name: Heart of Golem
+    description: It pulsates with power
+  wormheart:
+    name: Heart of Worm
+    description: It wanted to consume the world

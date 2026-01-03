@@ -1,0 +1,24 @@
+navigator:
+  actions:
+    cast:
+      - class: Recall
+  parameters:
+    allow_all: false
+    title: "Server Navigation"
+    options:
+      - warp: sandbox
+        icon: sand
+        name: Sandbox Spawn
+        description: Back to the ole' floor of sea lanterns
+      - type: placeholder
+      - type: placeholder
+      - type: placeholder
+      - type: placeholder
+      - type: placeholder
+      - type: placeholder
+      - type: placeholder
+      - warp: lobby
+        name: Demo Server
+        icon: diamond_pickaxe
+        description: An in-depth Magic tutorial where you get to experience the various builting exampel configurations
+        server: survival

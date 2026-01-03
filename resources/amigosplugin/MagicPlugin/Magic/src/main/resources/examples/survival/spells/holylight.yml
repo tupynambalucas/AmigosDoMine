@@ -1,0 +1,55 @@
+holylight:
+    # This refers to an icon defined in the icons folder/config
+    icon: blessing
+    category: master
+    worth: 700
+    earns: 8
+    actions:
+        cast:
+         -  class: AreaOfEffect
+            actions:
+            -  class: CheckEntity
+               allowed_entities: player
+               actions:
+               - class: Heal
+               - class: PlayEffects
+                 effects: heal
+                 ignore_result: true
+            -  class: CheckEntity
+               denied_entities: player
+               actions:
+               - class: Damage
+               - class: PlayEffects
+                 effects: hurt
+                 ignore_result: true
+    effects:
+        heal:
+        -  class: EffectSingle
+           sound: entity_villager_yes
+           location: origin
+           effectlib:
+             class: HelixEffect
+             particle: heart
+             iterations: 10
+             radius: 2
+        hurt:
+        -  class: EffectSingle
+           sound: entity_bat_hurt
+           location: origin
+           effectlib:
+             class: HelixEffect
+             particle: smoke_normal
+             iterations: 10
+             radius: 2
+    parameters:
+        target: self
+        target_caster: true
+        target_type: LivingEntity
+        amount: 10
+        damage: 10
+        radius: 16
+        cooldown: 30000
+        bypass_friendly_fire: true
+    costs:
+        mana: 150
+

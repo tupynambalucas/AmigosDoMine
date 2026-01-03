@@ -1,0 +1,23 @@
+classes:
+
+  battle_mage:
+    name: "Battle Mage"
+    description: "A warrior who wields a magic sword"
+
+  mage:
+    name: "Mage"
+    description: "The ultimate spellcaster"
+
+  archer_mage:
+    name: "Archer Mage"
+    description: "Skilled with magic bows"
+
+  butterfly:
+    name: Butterfly Wings
+    description: It gives you wiiiiiiiings
+  tail:
+    name: Demon Tail
+    description: So pointy!
+  crown:
+    name: Crown
+    description: You'll always be royal

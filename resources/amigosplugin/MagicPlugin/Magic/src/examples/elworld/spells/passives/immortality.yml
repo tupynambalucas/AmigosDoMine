@@ -1,0 +1,15 @@
+immortality:
+  icon: spell_icon:76
+  icon_disabled: spell_icon_disabled:76
+  name: Immortality
+  inherit: base_passive
+  triggers: damage
+  actions:
+    cast:
+    - class: CheckHealth
+      actions:
+        - class: Heal
+  parameters:
+    target: self
+    max_health: damage
+    amount: damage - health + 1

@@ -1,0 +1,13 @@
+buyshop:
+    # This refers to an icon defined in the icons folder/config
+    icon: buyshop
+    category: shop
+    hidden: true
+    actions:
+        cast:
+        - class: Shop
+    parameters:
+        confirm: false
+        auto_close: false
+        confirm_filler: stained_glass_pane
+

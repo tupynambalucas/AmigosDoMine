@@ -1,0 +1,10 @@
+sith:
+    inherit: sith_apprentice
+    upgrade: marauder
+    override_properties:
+      mana_max: 100
+      mana_regeneration: 10
+    spells:
+      - forceleap
+      - forcethrow
+

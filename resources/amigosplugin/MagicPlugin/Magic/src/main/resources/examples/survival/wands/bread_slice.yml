@@ -1,0 +1,7 @@
+bread_slice:
+  icon: bread{18003}
+  consume_spell: eat_food
+  craftable: true
+  overrides:
+    feed: 2
+    saturation: 1

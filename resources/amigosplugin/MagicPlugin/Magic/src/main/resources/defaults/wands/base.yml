@@ -1,0 +1,124 @@
+#
+# Base templates
+#
+# These are used to specify defaults for wands and other magic items.
+#
+# Their use is optional, but using them is a quick way to make wands work in an intuitive way,
+# and also ensures your wands will update properly when the plugin updates.
+#
+base_magic:
+  hidden: true
+  effects:
+    open:
+      - sound: magic.wandup
+        sound_broadcast: false
+        sound_volume: 0.4
+      - sound: block_chest_open
+        sound_pitch: 1.5
+        sound_volume: 0.1
+        sound_broadcast: false
+    close:
+      - sound: magic.wanddown
+        sound_broadcast: false
+        sound_volume: 0.4
+      - sound: block_chest_close
+        sound_pitch: 1.5
+        sound_volume: 0.1
+        sound_broadcast: false
+    cycle:
+      - sound: magic.paperturn
+        sound_broadcast: false
+        sound_volume: 0.4
+      - sound: item_book_page_turn
+        sound_pitch: 1.5
+        sound_volume: 0.2
+        sound_broadcast: false
+    cycle_spell:
+      - sound: ui_button_click
+        sound_pitch: 1.9
+        sound_volume: 0.1
+        sound_broadcast: false
+    cycle_hotbar:
+      - sound: magic.paperturn
+        sound_broadcast: false
+        sound_volume: 0.1
+      - sound: item_spyglass_use
+        sound_pitch: 0.3
+        sound_volume: 1.5
+        sound_broadcast: false
+
+base_undroppable:
+  inherit: base_magic
+  hidden: true
+  undroppable: true
+  unstashable: false
+  indestructible: true
+
+base_keep:
+  inherit: base_undroppable
+  hidden: true
+  keep: true
+  invulnerable: true
+
+base_bound:
+  inherit: base_keep
+  hidden: true
+  bound: true
+  immortal: true
+  track: true
+
+basic_wand:
+  inherit: base_magic
+  hidden: true
+  mode: inventory
+  drop: cycle_hotbar
+  left_click: cast
+  right_click: toggle
+  swap: cycle_hotbar
+  quiet: 1
+  effect_bubbles: false
+  item_attributes:
+    GENERIC_ATTACK_SPEED: 10
+  item_attribute_slot: mainhand
+
+base_wand:
+    hidden: true
+    inherit: base_bound
+    mode: inventory
+    left_click: cast
+    drop: toggle
+    right_click: toggle
+    swap: cycle_hotbar
+    swap_sneak: cycle_hotbar_reverse
+    quiet: 1
+    effect_bubbles: false
+    item_attributes:
+      GENERIC_ATTACK_SPEED: 10
+    item_attribute_slot: mainhand
+
+base_sword:
+    hidden: true
+    inherit: base_bound
+    mode: inventory
+    drop: toggle
+    left_click: none
+    right_click: toggle
+    swap: cycle_hotbar
+    quick_cast: true
+    quiet: 1
+    enchantable: true
+    hide_flags: 61
+
+base_bow:
+    hidden: true
+    inherit: base_bound
+    mode: inventory
+    drop: toggle
+    left_click: none
+    right_click: none
+    swap: cycle_hotbar
+    quiet: 1
+    cast_location: 0,0,0.35
+    infinity_cost_free: true
+    enchantable: true
+    allowed_enchantments: infinity

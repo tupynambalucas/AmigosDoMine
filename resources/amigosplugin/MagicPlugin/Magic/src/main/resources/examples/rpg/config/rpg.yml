@@ -1,0 +1,35 @@
+#
+# Set up for an RPG-style server, with different classes for players to choose from.
+#
+
+# No SP system here
+sp_enabled: false
+
+# This is a modifier on the default survival configs
+inherit: survival
+
+# Include only survival spells, but disable them so we can inherit without them being available
+include_inherited:
+ - spells
+ - icons
+disable_inherited:
+ - spells
+
+# Default class
+default_mage_class: peasant
+
+# Turn off the enchant table, repurpose it for progressmenu
+disable_enchanting: true
+enchant_click: "progressmenu"
+enchant_sneak_click: ""
+enchant_click_requires_wand: false
+
+# Disable enchanting via the anvil
+disable_book_combining: true
+enable_wand_book_combining: false
+
+custom_currency:
+ ap:
+  max: 100
+  default: 20
+  icon: skull:http://textures.minecraft.net/texture/b11206551e723c356c23b32383abd19e6d7e9e5988f191e7866ae89ed6cb24

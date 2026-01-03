@@ -1,0 +1,57 @@
+superkill:
+    # This refers to an icon defined in the icons folder/config
+    icon: superkill
+    category: staff
+    worth: 50000
+    actions:
+      cast:
+      - class: Kill
+    effects:
+        cast:
+        - sound: entity_wither_shoot
+          sound_pitch: 0.2
+          sound_volume: 0.1
+        - sound: entity_guardian_attack
+          sound_pitch: 1.5
+          sound_volume: 0.1
+        - class: EffectSingle
+          sound: magic.electrify
+          sound_volume: 0.2
+          sound_pitch: 0.25
+          location: origin
+          effectlib:
+             class: AtomEffect
+             particle_nucleus: spell_mob
+             colorNucleus: "00FF00"
+             particle_orbital: redstone
+             colorOrbital: "00FF00"
+             iterations: 16
+             radius: 5
+        - class: EffectSingle
+          sound: magic.zap_big
+          sound_volume: 0.2
+          location: origin
+          effectlib:
+             class: ConeEffect
+             iterations: 16
+             particle: spell_mob
+             color: 00FF00
+             lengthGrow: 0.4
+        - class: EffectSingle
+          location: targets
+          color: "00FF00"
+          firework: ball_large
+          sound: entity_wither_death
+          sound_pitch: 0.8
+          sound_volume: 0.8
+    parameters:
+        target: other
+        target_type: Damageable
+        cooldown: 500
+        target_breakables: 5
+        bypass_backfire: true
+        bypass_pvp: true
+        range: 64
+    costs:
+        mana: 300
+

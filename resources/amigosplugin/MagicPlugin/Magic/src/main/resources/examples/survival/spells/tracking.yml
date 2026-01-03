@@ -1,0 +1,93 @@
+tracking:
+    # This refers to an icon defined in the icons folder/config
+    icon: tracking
+    upgrade_required_path: student
+    upgrade_required_casts: 30
+    category: utility
+    worth: 50
+    earns: 5
+    actions:
+        cast:
+         - class: Orient
+         - class: PotionEffect
+         - class: ModifyCompass
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.zap
+           location: origin
+           sound_volume: 0.1
+        -  class: EffectSingle
+           effectlib:
+             class: LineEffect
+             particle: redstone
+             particle_count: 5
+             particle_offset_x: 0.1
+             particle_offset_y: 0.1
+             particle_offset_z: 0.1
+        - particle: vibration
+          particle_arrival_time: 40
+          particle_count: 8
+          particle_offset_x: 0.1
+          particle_offset_y: 0.1
+          particle_offset_z: 0.1
+        - requires_entity_target: true
+          sound: entity_villager_yes
+          sound_pitch: 1.25
+        - requires_no_entity_target: true
+          sound: entity_villager_no
+          sound_pitch: 0.9
+    parameters:
+        range: 32
+        fov: 3
+        close_fov: 3
+        fov_weight: 400
+        player_weight: 500
+        target: other_entity
+        target_type: LivingEntity
+        ignore_types: Player
+        cooldown: 5000
+        ignore_blocks: true
+        loud: true
+        bypass_pvp: true
+        effect_glowing: 1
+        duration: 10000
+        target_invisible: true
+    costs:
+        mana: 20
+
+tracking|2:
+    upgrade_required_path: apprentice
+    upgrade_required_casts: 30
+    parameters:
+        range: 64
+
+tracking|3:
+    upgrade_required_path: master
+    upgrade_required_casts: 40
+    parameters:
+        range: 128
+
+tracking|4:
+    upgrade_required_path: master
+    upgrade_required_casts: 50
+    alternate_sneak_parameters:
+        target_type: Player
+        ignore_types: ""
+
+tracking|5:
+  actions:
+    alternate_down:
+      - class: AreaOfEffect
+        actions:
+          - class: PotionEffect
+  alternate_down_parameters:
+     target: self
+     ignore_types: ""
+     target_type: LivingEntity
+     effect_glowing: 1
+     duration: 10000
+     cooldown: 15000
+     radius: 16
+     y_radius: 16
+

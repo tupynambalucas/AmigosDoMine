@@ -1,0 +1,30 @@
+base_npc:
+  hidden: true
+  npc: true
+  type: villager
+  use_npc_name: true
+  villager_profession: librarian
+  # This is needed in 1.18+ to make the villager profession show up
+  villager_level: 2
+  # This will turn off AI pre-1.17 where the goals won't work
+  ai: false
+  brain:
+    remove_default_goals: true
+    goals:
+      - look_at_player
+  invulnerable: true
+  transformable: false
+  collidable: false
+  leash_range: 2
+  silent: true
+  gravity: false
+  remove_when_far_away: false
+  interact_spell_target: none
+  interact_spell_source: player
+  interact_command_source: console
+  dialog_interval: 4000
+  dialog_range: 3
+  dialog_random: false
+  cancel_interact: true
+  prevent_dismount: true
+  default_drops: false

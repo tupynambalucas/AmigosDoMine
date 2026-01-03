@@ -1,0 +1,56 @@
+workbench:
+    # This refers to an icon defined in the icons folder/config
+    icon: workbench
+    category: utility
+    tags: noduel
+    quick_cast: true
+    worth: 80
+    show_undoable: false
+    upgrade_required_casts: 50
+    upgrade_required_path: apprentice
+    actions:
+        cast:
+        - class: Inventory
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: block_piston_extend
+           effectlib:
+            class: WarpEffect
+            particle: block_crack
+            material: crafting_table
+            duration: 1000
+            particle_count: 10
+            particle_offset_x: 1
+            particle_offset_z: 1
+            particle_offset_y: 1
+    parameters:
+        target: none
+        cooldown: 20000
+        type: workbench
+    costs:
+        mana: 50
+
+workbench|2:
+    upgrade_required_casts: 50
+    upgrade_required_path: student
+    parameters:
+        cooldown: 10000
+    costs:
+        mana: 30
+
+workbench|3:
+    upgrade_required_casts: 50
+    upgrade_required_path: student
+    parameters:
+        cooldown: 5000
+    costs:
+        mana: 10
+
+workbench|4:
+    upgrade_required_casts: 100
+    upgrade_required_path: master
+    parameters:
+        cooldown: 0
+    costs:
+        mana: 0

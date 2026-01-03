@@ -1,0 +1,32 @@
+gasp:
+    # This refers to an icon defined in the icons folder/config
+    icon: gasp
+    category: utility
+    worth: 20
+    earns: 2
+    actions:
+      cast:
+      - class: AirSupply
+    effects:
+      cast:
+      - sound: magic.shimmer
+      - sound: entity_generic_drink
+        sound_pitch: 0.8
+      - location: origin
+        effectlib:
+          class: Sphere
+          particle_count: 2
+          particles: 10
+          particle_offset_x: 0.5
+          particle_offset_y: 0.5
+          particle_offset_z: 0.5
+          particle: cloud
+          radius: 1
+          duration: 1000
+    parameters:
+      target: self
+      air: 300
+      cooldown: 30000
+    costs:
+      mana: 10
+

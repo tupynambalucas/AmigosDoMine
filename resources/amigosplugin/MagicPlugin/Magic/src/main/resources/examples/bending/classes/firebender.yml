@@ -1,0 +1,16 @@
+firebender:
+  class_items: firebending
+  parent: bender
+  locked: true
+  path: firebending
+  protection:
+    fire: 0.9
+    lightning: 0.7
+  spells:
+    - fire
+    - fireball
+
+  # This is here to support easily switching back to the old system
+  # via `/mconfig configure path default allow_property_overrides false`
+  mana_max: 50
+  mana_regeneration: 5

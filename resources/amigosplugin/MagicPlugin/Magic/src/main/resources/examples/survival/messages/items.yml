@@ -1,0 +1,17 @@
+items:
+  emerald_sword:
+    name: Emerald Sword
+  invisible_item_frame:
+    name: Invisible Item Frame
+  coffee1:
+    name: Cup o' Jo
+  coffee2:
+    name: Espresso
+  coffee3:
+    name: Double Espresso
+  overworld_compass:
+    name: 'Magnetic Compass'
+  nether_compass:
+    name: 'Magnetic Compass (Nether)'
+  end_compass:
+    name: 'Magnetic Compass (The End)'

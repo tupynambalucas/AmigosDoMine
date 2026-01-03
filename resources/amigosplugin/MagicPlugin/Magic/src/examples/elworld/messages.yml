@@ -1,0 +1,145 @@
+#
+# Use this to add "The Other Side" as a world label for Phase
+#
+
+path:
+  level_up: "t:&r&b*** &r&5$path &b***\n&5Advanced"
+
+worlds:
+    world_other:
+        name: The Other Side
+    world:
+        name: The Overworld
+
+spells:
+  teleportermenu:
+    name: "Pocket Teleporter"
+    title: "Pocket Teleporter"
+    selected_free: ""
+    cast_fail: ""
+  teleporter:
+    name: Teleport to a Place
+    description: Can return to places you have already discovered
+    description_marker: "Set this to any location you want from the Pocket Teleporter menu"
+  tprequest:
+    name: Teleport to a Friend
+    desscription: Will ask them if you can TP to them. Please don't spam!
+    no_target: "&4No one is around"
+    cast_to_player: Teleporting you to $target
+    cast_entity: Teleporting $target to your target
+    send_request_title: "Teleport To:"
+    friend_request_title: "@tn wants to teleport"
+    title_friend: $name
+    no_target_friend: Can't warp to $name
+    cast_target: "a:&d&o$player &r&5warped to you"
+    cast_friend: "a:&5Warping you to &o&d$tn"
+    reject: "a:&o&d@pn &5&rsaid no &b;("
+    selected_free: ""
+    click: "Click here"
+    request_tp: "&3@pn &bwould like to &dteleport &bto you. &e$click &bto allow this."
+  movemarker:
+    name: Set Warp Marker
+    description: You can save 4 personal warp locations to go back to at any time!
+  othershop:
+    name: Warrior Shop
+    title: "Warrior Shop ($balance)"
+    description: For battling Automata
+    cost_lore: "Costs: $cost"
+    cast: ""
+    cast_player_message: ""
+    fail: ""
+    no_items: There are no spells for you to buy here
+    no_path: You may not learn with that $wand.
+    no_upgrade: There is nothing more for you here.
+    no_required_path: You must be at least $path!
+    no_path_end: You must be ready to advance to $path!
+    no_wand: You must be holding a wand!
+    confirm_title: "Buy $item"
+    insufficient_resources: Costs $cost
+    deducted: "&d&oYou bought &r&6$item &r&d&ofor &r&a$cost"
+  blinkshop:
+    name: Explorer Shop
+    title: "Explorer Shop ($balance)"
+    description: For exploring the Other Side
+    cost_lore: "Costs: $cost"
+    cast: ""
+    cast_player_message: ""
+    fail: ""
+    no_items: There are no spells for you to buy here
+    no_path: You may not learn with that $wand.
+    no_upgrade: There is nothing more for you here.
+    no_required_path: You must be at least $path!
+    no_path_end: You must be ready to advance to $path!
+    no_wand: You must be holding a wand!
+    confirm_title: "Buy $item"
+    insufficient_resources: Costs $cost
+    deducted: "&d&oYou bought &r&6$item &r&d&ofor &r&a$cost"
+  madscienceshop:
+    name: Mad Science Shop
+    title: "Mad Science ($balance)"
+    description: Mess with electricity
+    cost_lore: "Costs: $cost"
+    cast: ""
+    cast_player_message: ""
+    fail: ""
+    no_items: There are no spells for you to buy here
+    no_path: You may not learn with that $wand.
+    no_upgrade: There is nothing more for you here.
+    no_required_path: You must be at least $path!
+    no_path_end: You must be ready to advance to $path!
+    no_wand: You must be holding a wand!
+    confirm_title: "Buy $item"
+    insufficient_resources: Costs $cost
+    deducted: "&d&oYou bought &r&6$item &r&d&ofor &r&a$cost"
+  beaconshop:
+      name: Beacon Shop
+      title: "Protection ($balance)"
+      description: Trade XP for Beacons
+      cost_lore: "Costs: $cost"
+      cast: ""
+      cast_player_message: ""
+      fail: ""
+      no_items: There is nothing to buy here!
+      insufficient_resources: Costs $cost
+      confirm_title: "Buy $item"
+      deducted: "&d&oYou bought &r&6$item &r&d&ofor &r&a$cost"
+  cleanup:
+    name: Anomaly Cleanup
+    description: We thank you for your service!
+  ajshop:
+    title: "Inventory"
+  intro_spshop:
+    name: SP Shop
+    cooldown: You may only use this shop once!
+    fail: ""
+  bendingshop:
+    name: Bending Shop
+    title: Choose Your Element
+    cooldown: You may only use this shop once!
+    fail: ""
+  ticketshop:
+    name: Ticket Shop
+    title: Tickets!
+    cooldown: You may only use this shop once!
+    fail: ""
+  kitshop:
+    name: Kit Shop
+    title: Kits
+  recall:
+    unavailable_warp_description: "\n&eFind this location to unlock!\nSee http://map.elmakers.com if you want a hint."
+  survivalgate:
+    unlock_warp: "t:&r&6$name\n&d&oUnlocked in Recall"
+
+resource_pack:
+    off_prompt: "&6This server is best experienced with resource packs enabled!\n&eUse &b/getrp &eto download the resource pack.\n&6Use &b/getrp off&e to disable this message."
+
+kits:
+  gold_kit:
+    name: Gold Kit
+  iron_kit:
+    name: Iron Kit
+
+wands:
+  teleporter:
+    name: "Pocket Teleporter"
+    description: "Right-Click (Or swing at ground) to use\nClick on (or take) item to teleport"

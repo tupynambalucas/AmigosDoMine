@@ -1,0 +1,12 @@
+apprenticehelmet:
+  enabled: false
+  output: apprenticehelmet
+  output_type: wand
+  discover:
+    - wizardhelmet
+  ingredients:
+    o: amethyst_shard
+    i: white_wool
+  row_1: iii
+  row_2: ioi
+  row_3: ""

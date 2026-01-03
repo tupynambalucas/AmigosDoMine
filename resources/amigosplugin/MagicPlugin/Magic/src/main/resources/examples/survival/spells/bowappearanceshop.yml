@@ -1,0 +1,27 @@
+bowappearanceshop:
+    # This refers to an icon defined in the icons folder/config
+    icon: bow
+    hidden: true
+    actions:
+        cast:
+        -  class: Selector
+    parameters:
+        auto_close: true
+        confirm_filler: light_blue_stained_glass
+        show_unavailable: true
+        requirements:
+        - wand_tags: transformablebow
+        unlock_section: wand_appearances
+        apply_to_wand: true
+        cost_type: sp
+        options:
+        - item: none
+        - item: appearance_bow1
+        - item: appearance_bow2
+          unlock: bow2
+          confirm: true
+          cost: 5000
+        - item: appearance_longbow
+          unlock: longbow
+          confirm: true
+          cost: 9000

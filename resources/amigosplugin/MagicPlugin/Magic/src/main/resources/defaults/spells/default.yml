@@ -1,0 +1,154 @@
+#
+# These options are applied to all spells by default.
+#
+default:
+    # Spells take 15 minutes to return to full SP earning potential
+    earns_cooldown: 15 minutes
+    # Enable this to prevent spell casts outside the world border
+    world_border_restricted: false
+    effects:
+       target_selected:
+        - location: origin
+          sound: magic.hit
+          sound_volume: 0.5
+        - location: both
+          sound: entity_illusioner_prepare_mirror
+          sound_volume: 0.5
+          sound_pitch: 1.6
+        - location: target
+          use_block_location: true
+          color_override: color
+          effectlib:
+            class: CubeEffect
+            duration: 1000
+            particle: redstone
+            color: "00FFAA"
+            edge_length: 1.2
+            enable_rotation: false
+            offset: 0.5,0.5,0.5
+        - class: EffectTrail
+          particle: spell_mob
+        - class: EffectTrail
+          particle: spell_instant
+          particle_count: 8
+          particle_offset_x: 0.05
+          particle_offset_y: 0.05
+          particle_offset_z: 0.05
+       deactivate:
+        - sound: block_fire_extinguish
+          sound_pitch: 2
+          sound_volume: 0.3
+        - sound: block_note_block_didgeridoo
+          sound_pitch: 1.75
+          sound_volume: 0.15
+        - sound: block_beacon_deactivate
+          sound_pitch: 1.75
+          sound_volume: 0.6
+       fail:
+       - class: EffectSingle
+         location: origin
+         sound: block_note_block_basedrum
+         sound_broadcast: false
+         sound_volume: 0.8
+         sound_pitch: 1.2
+       insufficient_resources:
+       - class: EffectSingle
+         location: origin
+         sound: block_note_block_bass
+         sound_broadcast: false
+         sound_volume: 0.7
+         sound_pitch: 1.2
+       insufficient_permission:
+       - class: EffectSingle
+         location: origin
+         sound: block_note_block_bass
+         sound_broadcast: false
+         sound_volume: 0.9
+         sound_pitch: 1.5
+       cooldown:
+       - class: EffectSingle
+         location: origin
+         sound: block_note_block_basedrum
+         sound_broadcast: false
+         sound_volume: 0.6
+         sound_pitch: 0.8
+       cursed:
+       - class: EffectSingle
+         location: origin
+         entity_effect: hurt
+       backfire:
+       - class: EffectSingle
+         location: origin
+         entity_effect: hurt
+       blocked:
+       - class: EffectSingle
+         location: origin
+         entity_effect: hurt
+       upgrade:
+       - class: EffectSingle
+         location: origin
+         sound: entity_player_levelup
+         firework: ball_large
+       progress:
+       - class: EffectSingle
+         location: origin
+         sound: entity_player_levelup
+         firework: ball_large
+       break:
+       - class: EffectSingle
+         location: target
+         effect: step_sound
+       earn_sp:
+       - class: EffectSingle
+         location: origin
+         sound: entity_player_levelup
+         sound_volume: 0.1
+         sound_pitch: 0.75
+       - class: EffectSingle
+         location: origin
+         sound: entity_experience_orb_pickup
+         sound_volume: 0.05
+         sound_pitch: 0.5
+       earn_scaled_sp:
+       - class: EffectSingle
+         location: origin
+         sound: entity_experience_orb_pickup
+         sound_volume: 0.05
+         sound_pitch: 1.5
+       reflect:
+       - class: EffectSingle
+         location: target
+         particle: fireworks_spark
+         particle_count: 3
+         particle_offset_x: 0.1
+         particle_offset_y: 0.1
+         particle_offset_z: 0.1
+         sound: magic.shimmer_quiet
+       fizzle:
+       - location: origin
+         sound: block_note_block_basedrum
+         sound_broadcast: false
+         sound_volume: 0.8
+         sound_pitch: 1.2
+       - sound: block_beacon_deactivate
+         sound_pitch: 0.9
+         sound_volume: 0.3
+         particle: fireworks_spark
+         particle_count: 16
+         particle_offset: 0.5
+       headshot: hit
+       cast_self: cast
+       no_target: cast
+       no_action: cast
+       alternate: cast
+       alternate_up: cast
+       alternate_down: cast
+       alternate_sneak: cast
+       cancelled: fail
+       entity_required: fail
+       living_entity_required: fail
+       player_required: fail
+       location_required: fail
+       world_required: fail
+       invalid_world: fail
+

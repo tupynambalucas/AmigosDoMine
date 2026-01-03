@@ -1,0 +1,46 @@
+classselector:
+  icon: gunpowder
+  category: shop
+  hidden: true
+  actions:
+      cast:
+      -  class: Selector
+  parameters:
+    lock_class: peasant
+    confirm: true
+    auto_close: true
+    placeholder_icon: gray
+    confirm_filler: gray
+    quiet: false
+    loud: true
+    limit: 1
+    options:
+    - placeholder: true
+    - placeholder: true
+    - placeholder: true
+    - switch_class: sorcerer
+    - switch_class: warlock
+    - switch_class: wizard
+    - placeholder: true
+    - placeholder: true
+    - placeholder: true
+
+    - placeholder: true
+    - placeholder: true
+    - switch_class: bard
+    - switch_class: cleric
+    - switch_class: druid
+    - switch_class: paladin
+    - switch_class: monk
+    - placeholder: true
+    - placeholder: true
+
+    - placeholder: true
+    - placeholder: true
+    - switch_class: artificer
+    - switch_class: barbarian
+    - switch_class: fighter
+    - switch_class: ranger
+    - switch_class: rogue
+    - placeholder: true
+    - placeholder: true

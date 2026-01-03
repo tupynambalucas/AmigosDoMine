@@ -1,0 +1,10 @@
+black:
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4325
+    id: minecraft:diamond_axe
+    count: 1
+    components:
+      minecraft:unbreakable: '{}'
+      minecraft:damage: '254'
+    schema_version: 1

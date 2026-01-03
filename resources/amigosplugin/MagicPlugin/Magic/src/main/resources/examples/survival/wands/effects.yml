@@ -1,0 +1,143 @@
+#
+# COLOR UPGRADE ITEMS
+#
+
+whiteeffects:
+    upgrade: true
+    indestructible: false
+    icon: white_carpet
+    effect_color: 'FFFFFF'
+orangeeffects:
+    upgrade: true
+    indestructible: false
+    icon: orange_carpet
+    effect_color: 'FFAA00'
+magentaeffects:
+    upgrade: true
+    indestructible: false
+    icon: magenta_carpet
+    effect_color: 'FF00FF'
+lightblueeffects:
+    upgrade: true
+    indestructible: false
+    icon: light_blue_carpet
+    effect_color: 'ADD8E6'
+yelloweffects:
+    upgrade: true
+    indestructible: false
+    icon: yellow_carpet
+    effect_color: 'FFFF00'
+greeneffects:
+    upgrade: true
+    indestructible: false
+    icon: lime_carpet
+    effect_color: '00FF00'
+pinkeffects:
+    upgrade: true
+    indestructible: false
+    icon: pink_carpet
+    effect_color: 'FAAFBE'
+grayeffects:
+    upgrade: true
+    indestructible: false
+    icon: gray_carpet
+    effect_color: '808080'
+lightgrayeffects:
+    upgrade: true
+    indestructible: false
+    icon: light_gray_carpet
+    effect_color: 'D0D0D0'
+aquaeffects:
+    upgrade: true
+    indestructible: false
+    icon: cyan_carpet
+    effect_color: '00FFFF'
+purpleeffects:
+    upgrade: true
+    indestructible: false
+    icon: purple_carpet
+    effect_color: '800080'
+blueeffects:
+    upgrade: true
+    indestructible: false
+    icon: blue_carpet
+    effect_color: '0000FF'
+browneffects:
+    upgrade: true
+    indestructible: false
+    icon: brown_carpet
+    effect_color: '806517'
+darkgreeneffects:
+    upgrade: true
+    indestructible: false
+    icon: green_carpet
+    effect_color: '254117'
+redeffects:
+    upgrade: true
+    indestructible: false
+    icon: red_carpet
+    effect_color: 'FF0000'
+blackeffects:
+    upgrade: true
+    indestructible: false
+    icon: black_carpet
+    effect_color: '010101'
+randomeffects:
+    upgrade: true
+    indestructible: false
+    icon: skull:http://textures.minecraft.net/texture/1adaf6e6e387bc18567671bb82e948488bbacff97763ee5985442814989f5d
+    effect_color: 'random'
+bubbleeffects:
+    upgrade: true
+    indestructible: false
+    icon: glass_bottle
+    effect_bubbles: true
+cleareffects:
+    force: true
+    upgrade: true
+    effect_bubbles: false
+    effect_particle: ""
+    icon: icon_no
+    effects:
+        activate: ""
+rainboweffects:
+    upgrade: true
+    indestructible: false
+    icon: magma_cream
+    effect_particle: spell_mob
+    effect_particle_data: 2
+    effect_particle_count: 10
+    effect_particle_radius: 2
+    effect_particle_interval: 500
+    effect_particle_offset: 0.5
+haloeffects:
+    upgrade: true
+    indestructible: false
+    icon: magma_cream
+    effect_particle: redstone
+    effect_particle_count: 6
+    effect_particle_interval: 100
+    effect_particle_data: 0
+    effect_particle_radius: 0.4
+    effect_particle_offset: 0.5
+wandeffects:
+  hidden: true
+  upgrade: true
+  indestructible: false
+  icon: feather
+  effect_bubbles: false
+  effect_particle: ""
+butterflyeffects:
+  inherit: wandeffects
+  effects:
+    activate: butterfly
+taileffects:
+  inherit: wandeffects
+  icon: lead
+  effects:
+    activate: tail
+crowneffects:
+  inherit: wandeffects
+  icon: gold_nugget
+  effects:
+      activate: crown

@@ -1,0 +1,63 @@
+bubble:
+    # This refers to an icon defined in the icons folder/config
+    icon: bubble
+    alias: cushion
+    category: utility
+    worth: 100
+    earns: 5
+    upgrade_required_path: student
+    upgrade_required_casts: 50
+    actions:
+        cast:
+        - class: CustomProjectile
+          actions:
+          - class: DisablePhysics
+          - class: Volume
+            actions:
+            - class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_generic_splash
+           location: both
+        tick:
+        -  location: target
+           particle: water_splash
+           particle_count: 8
+           particle_offset_x: 0.2
+           particle_offset_y: 0.2
+           particle_offset_z: 0.2
+        hit:
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: Shield
+             iterations: 10
+             particle: water_splash
+             radius: 1.8
+             particles: 30
+             particle_count: 20
+             particle_offset_x: 0.2
+             particle_offset_y: 0.2
+             particle_offset_z: 0.2
+    parameters:
+        velocity: 250
+        target_type: LivingEntity
+        allow_max_range: true
+        radius: 1
+        range: 25
+        cooldown: 2000
+        undo: 1000
+        duration: 3000
+        destructible: destructible_replace
+        brush: stationary_water
+        hitbox: true
+    costs:
+        mana: 10
+
+bubble|2:
+    parameters:
+        radius: 2
+        range: 40
+        undo: 2000
+

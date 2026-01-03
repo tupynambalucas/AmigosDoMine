@@ -1,0 +1,19 @@
+#
+# Add Avatar (Bending) themed progression
+#
+
+airbending:
+  inherit: default
+  override_properties:
+    mana_regeneration: 5
+    mana_max: 50
+  spells:
+    - airblast
+    - suction
+    - airscooter
+    - breathofwind
+    - airbomb
+    - airshield
+    - enhancedspeed
+    - tornado
+

@@ -1,0 +1,5 @@
+caster:
+  inherit: base
+  locked: false
+  spells:
+  - missile

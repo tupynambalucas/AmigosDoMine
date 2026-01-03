@@ -6,11 +6,11 @@ This is your primary directive. When you are writing code for **Amigos Do Mine**
 ## 1. The Prime Directives 🛡️
 
 *   **SSOT or Die**: Never, ever use `any`. All data shapes must come from `@amigos-do-mine/shared`. If a type is missing, create it there first.
-*   **Asset Safety**: Do not touch raw assets in `backend`. Always edit in `packages/resources-devlopment` and use the build pipeline.
+*   **Asset Safety**: Do not touch raw assets in `backend`. Always edit in `resources` and use the build pipeline.
 *   **Async Everything**: Java I/O (file reads, web requests) on the game server MUST be asynchronous. If you block the main thread, the server lags, and players cry.
 
 ## 2. Minecraft Resource Rules 🎨
-(`packages/resources-devlopment`)
+(`resources`)
 
 *   **Naming is Key**:
     *   ✅ `ruby_sword.png`

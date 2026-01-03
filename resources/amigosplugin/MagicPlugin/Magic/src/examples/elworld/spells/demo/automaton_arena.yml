@@ -1,0 +1,54 @@
+automaton_arena:
+  # This has been added automatically so that anything you remove here does not get inherited back in from the default configs
+  inherit: false
+  creator: NathanWolf
+  creator_id: 4cb358ae-719c-4423-93c7-8769ce46e9c3
+  name: Automaton NPC
+  class: AnimateSpell
+  effects:
+    cast:
+      -  class: EffectSingle
+         sound: entity_ender_dragon_growl
+      -  class: EffectTrail
+         particle: block_crack
+    tick:
+      - sound: entity_ender_dragon_growl
+    hurt:
+      - sound: entity_ender_dragon_hurt,0.3,2
+  parameters:
+    target: self
+    bypass_build: true
+    bypass_break: true
+    destructible: passthrough,lava
+    death_materials: chorus_plant,all_air,crimson_roots
+    name: Virus
+    seed_radius: 3
+    radius: 24
+    yradius: 24
+    move: 4
+    delay: 3000
+    max_blocks: 10000
+    min_blocks: 100
+    birth_range: 26
+    live_range: 32
+    cooldown: 0
+    allow_max_range: false
+    transparent: transparent_to_construction
+    check_destructible: true
+    target_max_range: 500
+    target_min_range: 0
+    message_type: evil
+    targets: player
+    target_mode: hunt
+    concurrent: true
+    birth_rules: 1,2,3
+    live_rules: 1,2,3
+    diagonal_birth_rules: 0,1
+    diagonal_live_rules: 0,1
+    undo: 20000
+    undo_speed: 20
+    create_mage: false
+    keep_target: true
+    arena: otherside
+    materials:
+    - lava
