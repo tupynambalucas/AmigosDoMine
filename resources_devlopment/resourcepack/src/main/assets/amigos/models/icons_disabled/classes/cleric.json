@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_full_disabled",
+    "textures": {
+        "particle": "amigos:icons/spells/gills",
+        "texture": "amigos:icons/spells/gills"
+    }
+}

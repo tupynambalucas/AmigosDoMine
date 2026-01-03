@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_full",
+    "textures": {
+        "particle": "amigos:icons/attributes/wisdom",
+        "texture": "amigos:icons/attributes/wisdom"
+    }
+}

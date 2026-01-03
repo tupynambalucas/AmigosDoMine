@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon",
+    "textures": {
+        "particle": "amigos:icons/upgrades/cyclemode",
+        "texture": "amigos:icons/upgrades/cyclemode"
+    }
+}

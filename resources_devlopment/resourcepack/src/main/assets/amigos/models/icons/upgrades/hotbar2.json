@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon",
+    "textures": {
+        "particle": "amigos:icons/upgrades/hotbar2",
+        "texture": "amigos:icons/upgrades/hotbar2"
+    }
+}

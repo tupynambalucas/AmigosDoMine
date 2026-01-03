@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_disabled",
+    "textures": {
+        "particle": "amigos:icons/spells/superdome",
+        "texture": "amigos:icons/spells/superdome"
+    }
+}

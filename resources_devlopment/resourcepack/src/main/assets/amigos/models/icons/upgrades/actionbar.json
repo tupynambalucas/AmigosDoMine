@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon",
+    "textures": {
+        "particle": "amigos:gui/actionbar",
+        "texture": "amigos:gui/actionbar"
+    }
+}

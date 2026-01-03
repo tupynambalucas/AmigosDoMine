@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_full",
+    "textures": {
+        "particle": "amigos:icons/classes/druid",
+        "texture": "amigos:icons/classes/druid"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon",
+    "textures": {
+        "particle": "amigos:icons/upgrades/mode_rightclick",
+        "texture": "amigos:icons/upgrades/mode_rightclick"
+    }
+}

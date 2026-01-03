@@ -1,7 +1,0 @@
-{
-    "parent" : "magic:base/icon_full",
-    "textures": {
-        "particle": "magic:icons/classes/sorcerer",
-        "texture": "magic:icons/classes/sorcerer"
-    }
-}

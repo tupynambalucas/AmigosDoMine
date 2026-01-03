@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_full",
+    "textures": {
+        "particle": "amigos:icons/classes/warlock",
+        "texture": "amigos:icons/classes/warlock"
+    }
+}

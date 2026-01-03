@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon",
+    "textures": {
+        "particle": "amigos:icons/spells/nuke",
+        "texture": "amigos:icons/spells/nuke"
+    }
+}

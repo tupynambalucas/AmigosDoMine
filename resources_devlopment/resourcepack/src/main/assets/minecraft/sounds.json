@@ -1,0 +1,1083 @@
+{
+    "magic.bonk": {
+        "sounds": [
+            "amigos:spells/bonk1",
+            "amigos:spells/bonk2",
+            "amigos:spells/bonk3",
+            "amigos:spells/bonk4"
+        ],
+        "category": "player"
+    },
+    "magic.sonic": {
+        "sounds": [
+            "amigos:spells/sonic"
+        ],
+        "category": "player"
+    },
+    "magic.crack": {
+        "sounds": [
+            {
+                "name": "amigos:spells/crack1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/crack1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/crack1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/crack1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/crack1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.electrify": {
+        "sounds": [
+            {
+                "name": "amigos:spells/electrify1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/electrify1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/electrify1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/electrify1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/electrify1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.hit": {
+        "sounds": [
+            "amigos:spells/hit1",
+            "amigos:spells/hit2",
+            "amigos:spells/hit3",
+            "amigos:spells/hit4"
+        ],
+        "category": "player"
+    },
+    "magic.shimmer_crack": {
+        "sounds": [
+            {
+                "name": "amigos:spells/shimmer_crack1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/shimmer_crack1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/shimmer_crack1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/shimmer_crack1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/shimmer_crack1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.shimmer": {
+        "sounds": [
+            {
+                "name": "amigos:spells/shimmer1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/shimmer1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/shimmer1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/shimmer1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/shimmer1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.zap_crack": {
+        "sounds": [
+            {
+                "name": "amigos:spells/zap_crack1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/zap_crack1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/zap_crack1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/zap_crack1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/zap_crack1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.zap": {
+        "sounds": [
+            {
+                "name": "amigos:spells/zap1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/zap1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/zap1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/zap1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/zap1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.zap_big": {
+        "sounds": [
+            {
+                "name": "amigos:spells/zap_big1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/zap_big1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/zap_big1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/zap_big1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/zap_big1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.teleport": {
+        "sounds": [
+            {
+                "name": "amigos:spells/teleport1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/teleport1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/teleport1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/teleport1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/teleport1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            },
+            {
+                "name": "amigos:spells/teleport2",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/teleport2",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/teleport2",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/teleport2",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/teleport2",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.shield": {
+        "sounds": [
+            {
+                "name": "amigos:spells/shield1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/shield1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/shield1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/shield1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/shield1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.burn": {
+        "sounds": [
+            {
+                "name": "amigos:spells/burn1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/burn1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/burn1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/burn1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/burn1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.ignite": {
+        "sounds": [
+            {
+                "name": "amigos:spells/ignite1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/ignite1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/ignite1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/ignite1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/ignite1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.shimmer_quiet": {
+        "sounds": [
+            {
+                "name": "amigos:spells/shimmer_quiet1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/shimmer_quiet1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/shimmer_quiet1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/shimmer_quiet1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/shimmer_quiet1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.flying": {
+        "sounds": [
+            {
+                "name": "amigos:spells/flying1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/flying1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/flying1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/flying1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/flying1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.paperturn": {
+        "sounds": [
+            {
+                "name": "amigos:spells/paperturn1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/paperturn1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/paperturn1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/paperturn1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/paperturn1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.wandup": {
+        "sounds": [
+            {
+                "name": "amigos:spells/wandup1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/wandup1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/wandup1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/wandup1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/wandup1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.wanddown": {
+        "sounds": [
+            {
+                "name": "amigos:spells/wanddown1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/wanddown1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/wanddown1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/wanddown1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/wanddown1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.shimmer_big": {
+        "sounds": [
+            {
+                "name": "amigos:spells/shimmer_big1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/shimmer_big1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/shimmer_big1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/shimmer_big1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/shimmer_big1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.shield_boom": {
+        "sounds": [
+            {
+                "name": "amigos:spells/shield_boom1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/shield_boom1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/shield_boom1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/shield_boom1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/shield_boom1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.zap_up": {
+        "sounds": [
+            {
+                "name": "amigos:spells/zap_up1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/zap_up1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/zap_up1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/zap_up1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/zap_up1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "magic.vanish": {
+        "sounds": [
+            {
+                "name": "amigos:spells/vanish1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1,
+                "weight": 3
+            },
+            {
+                "name": "amigos:spells/vanish1",
+                "stream": false,
+                "volume": 0.9,
+                "pitch": 0.7
+            },
+            {
+                "name": "amigos:spells/vanish1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "name": "amigos:spells/vanish1",
+                "stream": false,
+                "volume": 0.8,
+                "pitch": 1.2
+            },
+            {
+                "name": "amigos:spells/vanish1",
+                "stream": false,
+                "volume": 1,
+                "pitch": 1.3
+            }
+        ],
+        "category": "player"
+    },
+    "flute.1c": {
+        "sounds": [
+            "amigos:flute/1cmid"
+        ],
+        "category": "player"
+    },
+    "flute.2csharp": {
+        "sounds": [
+            "amigos:flute/2csharp"
+        ],
+        "category": "player"
+    },
+    "flute.3d": {
+        "sounds": [
+            "amigos:flute/3d"
+        ],
+        "category": "player"
+    },
+    "flute.4dsharp": {
+        "sounds": [
+            "amigos:flute/4dsharp"
+        ],
+        "category": "player"
+    },
+    "flute.5e": {
+        "sounds": [
+            "amigos:flute/5e"
+        ],
+        "category": "player"
+    },
+    "flute.6f": {
+        "sounds": [
+            "amigos:flute/6f"
+        ],
+        "category": "player"
+    },
+    "flute.7fsharp": {
+        "sounds": [
+            "amigos:flute/7fsharp"
+        ],
+        "category": "player"
+    },
+    "flute.8g": {
+        "sounds": [
+            "amigos:flute/8g"
+        ],
+        "category": "player"
+    },
+    "flute.9gsharp": {
+        "sounds": [
+            "amigos:flute/9gsharp"
+        ],
+        "category": "player"
+    },
+    "flute.10a": {
+        "sounds": [
+            "amigos:flute/10a"
+        ],
+        "category": "player"
+    },
+    "flute.11asharp": {
+        "sounds": [
+            "amigos:flute/11asharp"
+        ],
+        "category": "player"
+    },
+    "flute.12b": {
+        "sounds": [
+            "amigos:flute/12b"
+        ],
+        "category": "player"
+    },
+    "flute.13coctave": {
+        "sounds": [
+            "amigos:flute/13coctave"
+        ],
+        "category": "player"
+    },
+    "flute.14csharp": {
+        "sounds": [
+            "amigos:flute/14csharp"
+        ],
+        "category": "player"
+    },
+    "flute.15d": {
+        "sounds": [
+            "amigos:flute/15d"
+        ],
+        "category": "player"
+    },
+    "flute.16dsharp": {
+        "sounds": [
+            "amigos:flute/16dsharp"
+        ],
+        "category": "player"
+    },
+    "flute.17e": {
+        "sounds": [
+            "amigos:flute/17e"
+        ],
+        "category": "player"
+    },
+    "flute.18f": {
+        "sounds": [
+            "amigos:flute/18f"
+        ],
+        "category": "player"
+    },
+    "flute.19fsharp": {
+        "sounds": [
+            "amigos:flute/19fsharp"
+        ],
+        "category": "player"
+    },
+    "flute.20g": {
+        "sounds": [
+            "amigos:flute/20g"
+        ],
+        "category": "player"
+    },
+    "flute.21gsharp": {
+        "sounds": [
+            "amigos:flute/21gsharp"
+        ],
+        "category": "player"
+    },
+    "flute.22a": {
+        "sounds": [
+            "amigos:flute/22a"
+        ],
+        "category": "player"
+    },
+    "flute.23asharp": {
+        "sounds": [
+            "amigos:flute/23asharp"
+        ],
+        "category": "player"
+    },
+    "flute.24b": {
+        "sounds": [
+            "amigos:flute/24b"
+        ],
+        "category": "player"
+    },
+    "magic.saberon": {
+        "category": "player",
+        "sounds": [
+            {
+                "weight": 3,
+                "pitch": 1,
+                "volume": 1.3,
+                "stream": false,
+                "name": "amigos:saber/saberon"
+            },
+            {
+                "pitch": 0.7,
+                "volume": 1.4,
+                "stream": false,
+                "name": "amigos:saber/saberon"
+            },
+            {
+                "pitch": 0.8,
+                "volume": 1.2,
+                "stream": false,
+                "name": "amigos:saber/saberon"
+            },
+            {
+                "pitch": 1.1,
+                "volume": 1.3,
+                "stream": false,
+                "name": "amigos:saber/saberon"
+            }
+        ]
+    },
+    "magic.saberoff": {
+        "category": "player",
+        "sounds": [
+            {
+                "weight": 3,
+                "pitch": 1,
+                "volume": 1,
+                "stream": false,
+                "name": "amigos:saber/saberoff"
+            },
+            {
+                "pitch": 0.7,
+                "volume": 0.9,
+                "stream": false,
+                "name": "amigos:saber/saberoff"
+            },
+            {
+                "pitch": 0.8,
+                "volume": 1,
+                "stream": false,
+                "name": "amigos:saber/saberoff"
+            },
+            {
+                "pitch": 1.2,
+                "volume": 0.8,
+                "stream": false,
+                "name": "amigos:saber/saberoff"
+            },
+            {
+                "pitch": 1.3,
+                "volume": 1,
+                "stream": false,
+                "name": "amigos:saber/saberoff"
+            }
+        ]
+    },
+    "magic.saberhum": {
+        "category": "player",
+        "sounds": [
+            {
+                "pitch": 1,
+                "volume": 5,
+                "stream": false,
+                "name": "amigos:saber/saberhum"
+            }
+        ]
+    },
+    "magic.saberhit": {
+        "category": "player",
+        "sounds": [
+            {
+                "weight": 3,
+                "pitch": 1,
+                "volume": 1,
+                "stream": false,
+                "name": "amigos:saber/saberhit"
+            },
+            {
+                "pitch": 0.7,
+                "volume": 0.9,
+                "stream": false,
+                "name": "amigos:saber/saberhit"
+            },
+            {
+                "pitch": 0.8,
+                "volume": 1,
+                "stream": false,
+                "name": "amigos:saber/saberhit"
+            },
+            {
+                "pitch": 1.2,
+                "volume": 0.8,
+                "stream": false,
+                "name": "amigos:saber/saberhit"
+            },
+            {
+                "pitch": 1.3,
+                "volume": 1,
+                "stream": false,
+                "name": "amigos:saber/saberhit"
+            }
+        ]
+    },
+    "magic.saberswing": {
+        "category": "player",
+        "sounds": [
+            "amigos:saber/saberswing1",
+            "amigos:saber/saberswing2",
+            "amigos:saber/saberswing3",
+            "amigos:saber/saberswing4",
+            "amigos:saber/saberswing5",
+            "amigos:saber/saberswing6",
+            "amigos:saber/saberswing7",
+            "amigos:saber/saberswing8"
+        ]
+    },
+    "magic.ringing": {
+        "sounds": [
+            "amigos:spells/ringing1"
+        ],
+        "category": "player"
+    },
+    "magic.ghost_breath": {
+        "sounds": [
+            "amigos:halloween/ghost_breath"
+        ],
+        "category": "player"
+    },
+    "magic.scarecrow": {
+        "sounds": [
+            "amigos:halloween/scarecrow"
+        ],
+        "category": "player"
+    },
+    "magic.swipe": {
+        "sounds": [
+            "amigos:halloween/swipe"
+        ],
+        "category": "player"
+    },
+    "magic.igor": {
+        "sounds": [
+            "amigos:halloween/igor"
+        ],
+        "category": "player"
+    },
+    "magic.werewolf": {
+        "sounds": [
+            "amigos:halloween/werewolf"
+        ],
+        "category": "player"
+    }
+}

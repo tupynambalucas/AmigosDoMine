@@ -1,0 +1,285 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "entries": [
+            {
+                "threshold": 18001,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/old_survival_wand1"
+                }
+            },
+            {
+                "threshold": 18002,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/old_survival_wand2"
+                }
+            },
+            {
+                "threshold": 18003,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/survival_wand1"
+                }
+            },
+            {
+                "threshold": 18004,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/survival_wand2"
+                }
+            },
+            {
+                "threshold": 18005,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/staff_survival1"
+                }
+            },
+            {
+                "threshold": 18006,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/staff_gandalf"
+                }
+            },
+            {
+                "threshold": 18007,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/staff_wolf"
+                }
+            },
+            {
+                "threshold": 18008,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/wolf_wand"
+                }
+            },
+            {
+                "threshold": 18009,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/staff_magicka"
+                }
+            },
+            {
+                "threshold": 18010,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/moon_wand"
+                }
+            },
+            {
+                "threshold": 18011,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:broomsticks/broomstick"
+                }
+            },
+            {
+                "threshold": 18012,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:weapons/blaster"
+                }
+            },
+            {
+                "threshold": 18015,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/hat_cloak"
+                }
+            },
+            {
+                "threshold": 18016,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/hat_eye"
+                }
+            },
+            {
+                "threshold": 18017,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/magic_hat"
+                }
+            },
+            {
+                "threshold": 18018,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/ocarina"
+                }
+            },
+            {
+                "threshold": 18024,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/flat/skinny"
+                }
+            },
+            {
+                "threshold": 18025,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/flat/black"
+                }
+            },
+            {
+                "threshold": 18026,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/flat/brown"
+                }
+            },
+            {
+                "threshold": 18027,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/flat/elder"
+                }
+            },
+            {
+                "threshold": 18028,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/flat/wolf"
+                }
+            },
+            {
+                "threshold": 18029,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:broomsticks/broomstick2"
+                }
+            },
+            {
+                "threshold": 18030,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/crystalball"
+                }
+            },
+            {
+                "threshold": 18031,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/enchantedbook"
+                }
+            },
+            {
+                "threshold": 18032,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/extinguisher"
+                }
+            },
+            {
+                "threshold": 18035,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/riverglow"
+                }
+            },
+            {
+                "threshold": 18036,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/lixwglow"
+                }
+            },
+            {
+                "threshold": 18037,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/wandb"
+                }
+            },
+            {
+                "threshold": 18038,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/sortinghat"
+                }
+            },
+            {
+                "threshold": 18039,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/staff_survival2"
+                }
+            },
+            {
+                "threshold": 18040,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/totem"
+                }
+            },
+            {
+                "threshold": 18041,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/green_wand"
+                }
+            },
+            {
+                "threshold": 18042,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/nothing"
+                }
+            },
+            {
+                "threshold": 18043,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/gauntlet"
+                }
+            },
+            {
+                "threshold": 18044,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/magmawand"
+                }
+            },
+            {
+                "threshold": 18045,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons/spells/wand"
+                }
+            },
+            {
+                "threshold": 18046,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons_disabled/spells/wand"
+                }
+            },
+            {
+                "threshold": 18047,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons/spells/laser"
+                }
+            },
+            {
+                "threshold": 18048,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons_disabled/spells/laser"
+                }
+            }
+        ],
+        "fallback": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/blaze_rod"
+        }
+    }
+}

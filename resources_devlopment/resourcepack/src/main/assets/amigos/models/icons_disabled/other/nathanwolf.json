@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_full_disabled",
+    "textures": {
+        "particle": "amigos:icons/other/nathanwolf",
+        "texture": "amigos:icons/other/nathanwolf"
+    }
+}

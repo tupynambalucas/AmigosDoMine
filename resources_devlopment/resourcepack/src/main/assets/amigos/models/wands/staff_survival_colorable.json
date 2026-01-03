@@ -1,0 +1,6 @@
+{
+    "parent": "amigos:wands/staff_survival",
+    "textures": {
+        "1": "amigos:other/survivalwand3_colorable"
+    }
+}

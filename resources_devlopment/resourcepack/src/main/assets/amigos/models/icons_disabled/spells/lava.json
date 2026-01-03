@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_disabled",
+    "textures": {
+        "particle": "amigos:icons/spells/lava",
+        "texture": "amigos:icons/spells/lava"
+    }
+}

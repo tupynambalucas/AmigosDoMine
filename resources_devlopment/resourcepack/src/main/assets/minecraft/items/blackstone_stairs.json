@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "entries": [
+            {
+                "threshold": 18017,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/hat_cloak"
+                }
+            }
+        ],
+        "fallback": {
+            "type": "minecraft:model",
+            "model": "minecraft:block/blackstone_stairs"
+        }
+    }
+}

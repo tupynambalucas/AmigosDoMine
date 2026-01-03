@@ -1,0 +1,46 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "entries": [
+            {
+                "threshold": 18001,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:mobs/dragon/dragon_base"
+                }
+            },
+            {
+                "threshold": 18002,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:mobs/dragon/dragon_wing_left"
+                }
+            },
+            {
+                "threshold": 18003,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:mobs/dragon/dragon_wing_right"
+                }
+            },
+            {
+                "threshold": 18004,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/staff_survival_colorable"
+                }
+            }
+        ],
+        "fallback": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/leather_horse_armor",
+            "tints": [
+                {
+                    "type": "minecraft:dye",
+                    "default": -6265536
+                }
+            ]
+        }
+    }
+}

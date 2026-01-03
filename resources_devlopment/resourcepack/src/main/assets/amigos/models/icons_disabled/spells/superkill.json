@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_disabled",
+    "textures": {
+        "particle": "amigos:icons/spells/superkill",
+        "texture": "amigos:icons/spells/superkill"
+    }
+}

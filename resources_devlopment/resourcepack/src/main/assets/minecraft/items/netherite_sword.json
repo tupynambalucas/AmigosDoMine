@@ -1,0 +1,82 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "entries": [
+            {
+                "threshold": 18001,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:weapons/emerald_sword"
+                }
+            },
+            {
+                "threshold": 18002,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/sword_master"
+                }
+            },
+            {
+                "threshold": 18008,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:weapons/emerald_sword"
+                }
+            },
+            {
+                "threshold": 18009,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/valkglow"
+                }
+            },
+            {
+                "threshold": 18010,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/whitedagger"
+                }
+            },
+            {
+                "threshold": 18011,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:weapons/demon_sword"
+                }
+            },
+            {
+                "threshold": 18012,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/felmglow"
+                }
+            },
+            {
+                "threshold": 18013,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/rivenglow"
+                }
+            },
+            {
+                "threshold": 18014,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/silver"
+                }
+            },
+            {
+                "threshold": 18015,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:wands/lavad"
+                }
+            }
+        ],
+        "fallback": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_sword"
+        }
+    }
+}

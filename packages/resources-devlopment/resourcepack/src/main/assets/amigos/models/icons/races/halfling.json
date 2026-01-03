@@ -1,7 +1,0 @@
-{
-    "parent" : "magic:base/icon_full",
-    "textures": {
-        "particle": "magic:icons/races/halfling",
-        "texture": "magic:icons/races/halfling"
-    }
-}

@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_full",
+    "textures": {
+        "particle": "amigos:icons/generic/up_arrow",
+        "texture": "amigos:icons/generic/up_arrow"
+    }
+}

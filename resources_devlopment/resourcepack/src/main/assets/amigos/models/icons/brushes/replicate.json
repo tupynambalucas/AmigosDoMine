@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon",
+    "textures": {
+        "particle": "amigos:icons/brushes/replicate",
+        "texture": "amigos:icons/brushes/replicate"
+    }
+}

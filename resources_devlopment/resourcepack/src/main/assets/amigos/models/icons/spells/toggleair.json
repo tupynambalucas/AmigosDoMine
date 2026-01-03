@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon",
+    "textures": {
+        "particle": "amigos:icons/spells/toggleair",
+        "texture": "amigos:icons/spells/toggleair"
+    }
+}

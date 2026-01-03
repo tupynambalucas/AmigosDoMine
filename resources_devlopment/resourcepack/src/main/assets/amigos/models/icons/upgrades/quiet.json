@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon",
+    "textures": {
+        "particle": "amigos:icons/upgrades/quiet",
+        "texture": "amigos:icons/upgrades/quiet"
+    }
+}

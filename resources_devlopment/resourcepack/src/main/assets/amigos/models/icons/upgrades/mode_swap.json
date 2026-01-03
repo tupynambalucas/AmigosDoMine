@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon",
+    "textures": {
+        "particle": "amigos:icons/upgrades/mode_swap",
+        "texture": "amigos:icons/upgrades/mode_swap"
+    }
+}

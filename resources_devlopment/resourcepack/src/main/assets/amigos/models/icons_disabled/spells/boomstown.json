@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_disabled",
+    "textures": {
+        "particle": "amigos:icons/spells/boomstown",
+        "texture": "amigos:icons/spells/boomstown"
+    }
+}

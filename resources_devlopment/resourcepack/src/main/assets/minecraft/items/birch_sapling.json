@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "entries": [
+            {
+                "threshold": 18001,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:broomsticks/broomstick2"
+                }
+            }
+        ],
+        "fallback": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/birch_sapling"
+        }
+    }
+}

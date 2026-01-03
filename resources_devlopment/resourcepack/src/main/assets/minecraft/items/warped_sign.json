@@ -1,0 +1,68 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "entries": [
+            {
+                "threshold": 18001,
+                "model": {
+                    "type": "model",
+                    "model": "amigos:icons/upgrades/alphabetizer"
+                }
+            },
+            {
+                "threshold": 18002,
+                "model": {
+                    "type": "model",
+                    "model": "amigos:icons/upgrades/quickcast_enable"
+                }
+            },
+            {
+                "threshold": 18003,
+                "model": {
+                    "type": "model",
+                    "model": "amigos:icons/brushes/default"
+                }
+            },
+            {
+                "threshold": 18004,
+                "model": {
+                    "type": "model",
+                    "model": "amigos:icons/spells/superbackup"
+                }
+            },
+            {
+                "threshold": 18005,
+                "model": {
+                    "type": "model",
+                    "model": "amigos:icons_disabled/spells/superbackup"
+                }
+            },
+            {
+                "threshold": 18006,
+                "model": {
+                    "type": "model",
+                    "model": "amigos:icons/upgrades/actionbar"
+                }
+            },
+            {
+                "threshold": 18007,
+                "model": {
+                    "type": "model",
+                    "model": "amigos:icons/upgrades/bossbar"
+                }
+            },
+            {
+                "threshold": 18008,
+                "model": {
+                    "type": "model",
+                    "model": "amigos:icons/upgrades/nogui"
+                }
+            }
+        ],
+        "fallback": {
+            "type": "model",
+            "model": "item/warped_sign"
+        }
+    }
+}

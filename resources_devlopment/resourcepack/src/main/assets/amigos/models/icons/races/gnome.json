@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_full",
+    "textures": {
+        "particle": "amigos:icons/races/gnome",
+        "texture": "amigos:icons/races/gnome"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_full",
+    "textures": {
+        "particle": "amigos:icons/classes/barbarian",
+        "texture": "amigos:icons/classes/barbarian"
+    }
+}

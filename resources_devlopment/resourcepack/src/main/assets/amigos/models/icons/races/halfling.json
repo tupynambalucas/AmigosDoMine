@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_full",
+    "textures": {
+        "particle": "amigos:icons/races/halfling",
+        "texture": "amigos:icons/races/halfling"
+    }
+}

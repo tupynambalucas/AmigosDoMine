@@ -1,0 +1,2340 @@
+{
+    "providers": [
+        {
+            "type": "space",
+            "advances": {
+                "": -1,
+                "": -2,
+                "": -3,
+                "": -4,
+                "": -5,
+                "": -6,
+                "": -7,
+                "": -8,
+                "": -16,
+                "": -32,
+                "": -64,
+                "": -128,
+                "": -256,
+                "": -512,
+                "": -1024,
+                "": 1,
+                "": 2,
+                "": 3,
+                "": 4,
+                "": 5,
+                "": 6,
+                "": 7,
+                "": 8,
+                "": 16,
+                "": 32,
+                "": 64,
+                "": 128,
+                "": 256,
+                "": 512,
+                "": 1024
+            }
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:gui/empty.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "file": "amigos:gui/cooldown.png",
+            "ascent": 10,
+            "type": "bitmap",
+            "chars": [
+                ""
+            ],
+            "height": 16
+        },
+        {
+            "file": "amigos:gui/hotbar_slot.png",
+            "ascent": 13,
+            "type": "bitmap",
+            "chars": [
+                ""
+            ],
+            "height": 22
+        },
+        {
+            "file": "amigos:gui/hotbar_active_slot.png",
+            "ascent": 13,
+            "type": "bitmap",
+            "chars": [
+                ""
+            ],
+            "height": 22
+        },
+        {
+            "file": "amigos:gui/actionbar.png",
+            "ascent": 0,
+            "type": "bitmap",
+            "chars": [
+                ""
+            ],
+            "height": 64
+        },
+        {
+            "file": "amigos:gui/bossbar.png",
+            "ascent": 0,
+            "type": "bitmap",
+            "chars": [
+                ""
+            ],
+            "height": 64
+        },
+        {
+            "file": "amigos:gui/nogui.png",
+            "ascent": 0,
+            "type": "bitmap",
+            "chars": [
+                ""
+            ],
+            "height": 64
+        },
+        {
+            "file": "amigos:icons/other/nathanwolf.png",
+            "ascent": 10,
+            "type": "bitmap",
+            "chars": [
+                ""
+            ],
+            "height": 16
+        },
+        {
+            "file": "amigos:gui/bar.png",
+            "ascent": -10,
+            "type": "bitmap",
+            "chars": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "height": 5
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/brushes/default.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/brushes/clone.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/brushes/copy.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/brushes/erase.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/brushes/map.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/brushes/replicate.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/brushes/schematic.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/default.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/absorb.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/admission.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/airscooter.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/alter.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/animate.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/anvil.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow10.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow2.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow3.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow4.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow5.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow6.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow7.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow8.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrow9.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/arrowrain.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/backup.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/blast.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/blaster.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/blessing.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/blind.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/blink.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/blob.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/bomb.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/boom.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/boomstown.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/boon.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/bow.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/box.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/breach.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/bridge.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/broom.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/brushselect.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/bubble.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/buyshop.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/cage.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/camera.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/capture.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/cat.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/chainlightning.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/chop.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/cloak.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/cluster.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/collapse.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/column.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/commit.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/convert.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/counterspell.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/cure.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/curse.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/day.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/defender.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/disarm.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/disintegrate.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/dragonball.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/earth.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/earthquake.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/emp.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/entangle.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/extinguish.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/familiar.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/farm.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/feather.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/fill.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/fire.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/fireball.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/flamethrower.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/flare.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/flashbang.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/flatten.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/fling.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/floodfill.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/force.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/forest.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/frost.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/fury.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/fxdemo.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/gasp.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/gather.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/gatling.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/ghast.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/gills.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/glide.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/glider.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/grab.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/grenade.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/grow.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/harden.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/hat.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/heal.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/healing.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/homing.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/hunter.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/icbm.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/iceshards.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/invincible.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/iterate.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/kill.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/laser.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/lava.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/levitate.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/life.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/life3.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/lift.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/light.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/lightning.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/lockpick.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/magichat.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/map.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/meteor.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/mine.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/missile.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/mob.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/monster.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/mount.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/music.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/neutron.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/night.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/nuke.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/paint.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/paste.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/peek.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/permafrost.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/petrify.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/phase.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/phasebackup.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/pickpocket.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/pillar.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/place.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/platform.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/poison.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/pollinate.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/polymorph.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/portal.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/projectile.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/protection_all.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/protection_explosions.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/protection_falling.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/protection_fire.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/protection_physical.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/protection_projectiles.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/pull.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/purpleblast.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/push.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/railgun.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/rainbow.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/raise.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/randomtp.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/recall.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/recurse.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/reflect.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/regenerate.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/repair.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/rocket.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/rocketlauncher.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/rollback.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/rubberize.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/sandblast.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/secure.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/sellshop.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/sharpen_sword.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/shell.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/shrink.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/shuriken.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/silence.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/simulate.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/simulate3.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/singularity.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/smash.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/smite.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/sniper.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/sparkle.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/sphere.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/spider.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/sponge.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/stash.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/sticky.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/stream.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/stun.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superalter.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superbackup.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superblast.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superblob.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superbox.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/supercollapse.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superconvert.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/supercube.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/supercylinder.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superdisc.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superdome.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superemp.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superfly.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/supergather.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superhemisphere.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superkill.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superlaser.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superpyramid.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superregenerate.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superrepair.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/superring.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/supershell.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/supertorch.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/tag.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/tame.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/tendril.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/tent.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/testdummy.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/time.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/toggleair.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/torch.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/tornado.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/torture.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/toss.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/tracking.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/trash.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/tree.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/tunnel.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/upgrades.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/vanish.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/virus.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/volley.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/walls.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/wand.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/wave.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/wear.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/weather.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/webbing.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/whip.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/wither.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/wolf.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/wolfhouse.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/workbench.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/worm.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "amigos:icons/spells/wound.png",
+            "ascent": 10,
+            "height": 16,
+            "chars": [
+                ""
+            ]
+        }
+    ]
+}

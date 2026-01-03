@@ -1,0 +1,125 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "entries": [
+            {
+                "threshold": 18001,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "amigos:other/mirror_shield"
+                    },
+                    "on_true": {
+                        "type": "minecraft:model",
+                        "model": "amigos:other/mirror_shield_blocking"
+                    }
+                }
+            },
+            {
+                "threshold": 18010,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons/spells/protection_all"
+                }
+            },
+            {
+                "threshold": 18011,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons_disabled/spells/protection_all"
+                }
+            },
+            {
+                "threshold": 18012,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons/spells/protection_explosions"
+                }
+            },
+            {
+                "threshold": 18013,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons_disabled/spells/protection_explosions"
+                }
+            },
+            {
+                "threshold": 18014,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons/spells/protection_falling"
+                }
+            },
+            {
+                "threshold": 18015,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons_disabled/spells/protection_falling"
+                }
+            },
+            {
+                "threshold": 18016,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons/spells/protection_fire"
+                }
+            },
+            {
+                "threshold": 18017,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons_disabled/spells/protection_fire"
+                }
+            },
+            {
+                "threshold": 18018,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons/spells/protection_physical"
+                }
+            },
+            {
+                "threshold": 18019,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons_disabled/spells/protection_physical"
+                }
+            },
+            {
+                "threshold": 18020,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons/spells/protection_projectiles"
+                }
+            },
+            {
+                "threshold": 18021,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons_disabled/spells/protection_projectiles"
+                }
+            }
+        ],
+        "fallback": {
+            "type": "minecraft:condition",
+            "on_false": {
+                "type": "minecraft:special",
+                "base": "minecraft:item/shield",
+                "model": {
+                    "type": "minecraft:shield"
+                }
+            },
+            "on_true": {
+                "type": "minecraft:special",
+                "base": "minecraft:item/shield_blocking",
+                "model": {
+                    "type": "minecraft:shield"
+                }
+            },
+            "property": "minecraft:using_item"
+        }
+    }
+}

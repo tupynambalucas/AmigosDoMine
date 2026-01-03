@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_disabled",
+    "textures": {
+        "particle": "amigos:icons/spells/collapse",
+        "texture": "amigos:icons/spells/collapse"
+    }
+}

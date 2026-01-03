@@ -1,0 +1,33 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "entries": [
+            {
+                "threshold": 18001,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons/spells/meteor"
+                }
+            },
+            {
+                "threshold": 18002,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:icons_disabled/spells/meteor"
+                }
+            },
+            {
+                "threshold": 18003,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "amigos:other/atm2"
+                }
+            }
+        ],
+        "fallback": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/melon_seeds"
+        }
+    }
+}

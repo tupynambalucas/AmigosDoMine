@@ -1,0 +1,7 @@
+{
+    "parent" : "amigos:base/icon_disabled",
+    "textures": {
+        "particle": "amigos:other/no",
+        "texture": "amigos:other/no"
+    }
+}
